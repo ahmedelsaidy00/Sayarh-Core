@@ -1,0 +1,2586 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<localizationDictionary culture="ar">
+	<texts>
+		<text name="System.Menus.AdminMenu" value="قوائم الأدمن" />
+		<text name="System.Menus.StoreMenu" value="قوائم المتجر" />
+		<text name="System.Menus.CompanyMenu" value="قوائم الشركة" />
+		<text name="System.Menus.MainProviderMenu" value="قوائم مزود الخدمة" />
+		<text name="System.Menus.BranchMenu" value="قوائم الفرع" />
+		<text name="System.Menus.UserProvMenu" value="قوائم المحطة" />
+
+		<text name="InternalServerError" value="حدث خطأ أثناء تنفيذ الطلب!" />
+		<text name="ValidationError" value="الطلب غير صحيح، يرجى إدخال البيانات المطلوبة بطريقة صحيحة!" />
+		<text name="AreYouSure" value="هل انت متأكد من تنفيذ الطلب؟" />
+		<text name="Cancel" value="إلغاء" />
+		<text name="Yes" value="موافق" />
+		<!--Common.Tools-->
+		<text name="Common.Tools.FullScreen" value="كامل الشاشة" />
+		<text name="Common.Tools.Remove" value="حذف" />
+		<text name="Common.Tools.CollapseExpand" value="طي/توسيع" />
+		<text name="Common.Tools.Reload" value="تحميل" />
+		<text name="Common.Tools.SetAsDefault" value="تغير للافتراضي" />
+		<text name="Common.Tools.IsDefault" value="الافتراضي" />
+		<!--Common-->
+		<text name="Common.SystemTitle" value="سيارة آب" />
+		<text name="Common.Filter" value="تنقية" />
+		<text name="Common.Any" value="الكل" />
+		<text name="Common.Reyal" value="ريال" />
+		<text name="Common.Deleted" value="محذوف" />
+		<text name="Common.NotDeleted" value="غير محذوف" />
+		<text name="Common.CreateSiteMap" value="SiteMap انشاء ملف" />
+		<text name="Common.Active" value="نشط" />
+		<text name="Common.NotActive" value="غير نشط" />
+		<text name="Common.Approve" value="قبول" />
+		<text name="Common.NotApprove" value="رفض" />
+		<text name="Common.Passive" value="غير نشط" />
+		<text name="Common.Blocked" value="محظور" />
+		<text name="Common.UnBlocked" value="نشط" />
+		<text name="Common.Create" value="انشاء" />
+		<text name="Common.CreateNew" value="إضافة جديد" />
+		<text name="Common.CreateWithSecretCode" value="إنشاء بواسطة كود سري" />
+		<text name="Common.View" value="عرض" />
+		<text name="Common.ChangeBranch" value="تغيير الفرع" />
+		<text name="Common.Edit" value="تعديل" />
+		<text name="Common.EditData" value="تعديل البيانات" />
+		<text name="Common.Delete" value="حذف" />
+		<text name="Common.HardDelete" value="الحذف النهائي من قواعد البيانات" />
+		<text name="Common.Restore" value="استرجاع" />
+		<text name="Common.Save" value="حفظ" />
+		<text name="Common.Loading" value="تحميل البيانات ..." />
+		<text name="Common.Options" value="خيارات" />
+		<text name="Common.ShowDeleted" value="السجلات المحذوفة" />
+		<text name="Common.Yes" value="نعم" />
+		<text name="Common.No" value="لا" />
+		<text name="Common.Ok" value="موافق" />
+		<text name="Common.Cancel" value="إلغاء" />
+		<text name="Common.Language" value="اللغة" />
+		<text name="Common.Arabic" value="العربية" />
+		<text name="Common.English" value="الإنجليزية" />
+		<text name="Common.Logout" value="خروج" />
+		<text name="Common.CopyRights" value="جميع الحقوق محفوظة  ©  سيارة آب {0} " />
+		<text name="Common.CopyRightsSocialMedia" value="جميع الحقوق محفوظة  © لشركة الحسام للبرمجيات {0} " />
+		<text name="Common.Al7osam" value="الحسام" />
+		<text name="Common.System" value="النظام" />
+		<text name="Common.Next" value="التالي" />
+		<text name="Common.Previous" value="السابق" />
+		<text name="Common.Category" value="التصنيف" />
+		<text name="Common.Send" value="إرسال" />
+		<text name="Common.ErrorOccurred" value="حدث خطأ" />
+		<text name="Common.DevelopedBy" value="تصميم وتطوير شركة" />
+		<text name="Common.InformationSystemsAndWebSolutions" value="لنظم المعلومات وحلول الويب " />
+		<text name="Common.Newsletter" value="النشرة البريدية" />
+		<text name="Common.SubscribeNow" value="اشترك معنا الآن ليصلك جديد اخبارنا" />
+		<text name="Common.Details" value="التفاصيل" />
+		<text name="Common.Message" value="الرسالة" />
+		<text name="Common.Female" value="انثي" />
+		<text name="Common.Male" value="ذكر" />
+		<text name="Common.247SUPPORT" value="24/7 دعم فني" />
+		<text name="Common.EmailUs" value="راسلنا" />
+		<text name="Common.OpeningTime" value="مواعيد العمل" />
+		<text name="Common.GetInTouch" value="تواصل معنا" />
+		<text name="Common.BusinessHours" value="ساعات العمل" />
+		<text name="Common.Closed" value="الجمعه : مغلق" />
+		<text name="Common.SUPPORT" value="دعم فني 24/7 طوال ايام الاسبوع" />
+		<text name="Common.SearchResult" value="نتيجة البحث" />
+		<text name="Common.SelectAll" value="الكل" />
+		<text name="Common.Whatsapp" value="واتساب " />
+		<text name="Common.Facebook" value="فيس بوك" />
+		<text name="Common.Twitter" value="تويتر" />
+		<text name="Common.Instagram" value="انستجرام" />
+		<text name="Common.Telegram" value="تيليجرام" />
+		<text name="Common.GooglePlus" value="جوجل بلس" />
+		<text name="Common.YouTube" value="يوتيوب" />
+		<text name="Common.Linkedin" value="لينكد إن" />
+		<text name="Common.Maroof" value="معروف" />
+		<text name="Common.Tiktok" value="تيك توك" />
+		<text name="Common.SupportNumber" value="رقم الدعم" />
+		<text name="Common.Latitude" value="خط العرض" />
+		<text name="Common.Longitude" value="خط الطول" />
+		<text name="Common.Rate" value="التقييم" />
+		<text name="Common.Order" value="الترتيب" />
+		<text name="Common.Code" value="الكود" />
+		<text name="Common.None" value="بدون" />
+		<text name="Common.ChooseType" value="إختر النوع" />
+		<text name="Common.Without" value="بدون" />
+		<text name="Common.AM" value="ص" />
+		<text name="Common.PM" value="م" />
+		<text name="Common.ChangeImage" value="تغيير الصورة" />
+		<text name="Common.ChangeImageOrFile" value="تغيير" />
+		<text name="Common.SelectImage" value="اختيار صورة" />
+		<text name="Common.SelectImageOrFile" value="اختيار صورة أو ملف" />
+		<text name="Common.ChangeFile" value="تغيير الملف" />
+		<text name="Common.SelectFile" value="اختيار الملف" />
+		<text name="Common.NoPhotoUplaoded" value="لم يتم تحميل الصوره" />
+		<text name="Common.AddressOnGoogle" value="العنوان علي الخريطة" />
+		<text name="Common.UniformNumber" value="الرقم الموحد" />
+		<text name="Common.Fax" value="فاكس" />
+		<text name="Common.Telephone" value="رقم الهاتف" />
+		<text name="Common.PhoneNumber" value="رقم الموبايل " />
+		<text name="Common.ShippingAddress" value="عنوان الشحن" />
+		<text name="Common.Mobile" value="رقم الجوال" />
+		<text name="Common.Email" value="البريد الإلكتروني" />
+		<text name="Common.Subject" value="الموضوع" />
+		<text name="Common.UsernameOrEmailAddress" value="البريد الإلكتروني/اسم المستخدم" />
+		<text name="Common.Address" value="العنوان" />
+		<text name="Common.Password" value="كلمة المرور" />
+		<text name="Common.OldPassword" value="كلمة المرور الحاليه" />
+		<text name="Common.NewPassword" value=" كلمة المرور الجديده" />
+		<text name="Common.ThereIsNoFavoriteHere" value="لا يوجد دروس في المفضله" />
+		<text name="Common.PdfFile" value="ملف Pdf" />
+		<text name="Common.Books" value="الكتب" />
+		<text name="Common.SelectBook" value="إختيار كتاب" />
+		<text name="Common.MonthlySubscriptionAmount" value="مبلغ الإشتراك الشهري" />
+		<text name="Common.ExcelFile" value="الملف" />
+		<text name="Common.CreationTime" value="تاريخ الانشاء" />
+		<text name="Common.AdvertisementNumber" value="رقم الإعلان" />
+		<text name="Common.ConfirmPassword" value="تأكيد كلمة المرور" />
+		<text name="Common.UserName" value="اسم المستخدم" />
+		<text name="Common.Name" value="الإسم" />
+		<text name="Common.Position" value="المنصب" />
+		<text name="Common.Photo" value="الصورة" />
+		<text name="Common.Download" value="تحميل" />
+		<text name="Common.IsDefault" value="إفتراضي" />
+		<text name="Common.Notes" value="ملاحظات" />
+		<text name="Common.Note" value="ملاحظة" />
+		<text name="Common.Date" value="التاريخ" />
+		<text name="Common.Activate" value="تنشيط" />
+		<text name="Common.Deactivate" value="الغاء التنشيط" />
+		<text name="Common.ChangeStatus" value="تغير الحالة" />
+		<text name="Common.Select" value="-- إختر --" />
+		<text name="Common.Selected" value="عناصر مختاره" />
+		<text name="Common.SelectedItems" value="عناصر مختاره" />
+		<text name="Common.Checkall" value="إختيار الكل" />
+		<text name="Common.Uncheckall" value="الغاءالكل" />
+		<text name="Common.Gender" value="النوع" />
+		<text name="Common.Confirm" value="تأكيد" />
+		<text name="Common.ConfirmDelete" value="تأكيد الحذف" />
+		<text name="Common.Saturday" value="السبت" />
+		<text name="Common.Sunday" value="الأحد" />
+		<text name="Common.Monday" value="الأثنين" />
+		<text name="Common.Tuesday" value="الثلاثاء" />
+		<text name="Common.Wednesday" value="الأربعاء" />
+		<text name="Common.Thursday" value="الخميس" />
+		<text name="Common.Friday" value="الجمعة" />
+		<text name="Common.Days" value=" يوم " />
+		<text name="Common.DayOfWeek" value=" أيام الإسبوع " />
+		<text name="Common.BasicData" value="البيانات الاساسية" />
+		<text name="Common.NotSet" value="لم يتم التعيين" />
+		<text name="Common.Add" value="إضافة" />
+		<text name="Common.Remove" value="حذف" />
+		<text name="Common.From" value="من" />
+		<text name="Common.To" value="إلي" />
+		<text name="Common.Back" value="رجوع" />
+		<text name="Common.Print" value=" طباعة" />
+		<text name="Common.Free" value="مجانية" />
+		<text name="Common.NotFree" value="غير مجانية" />
+		<text name="Common.SaveChanges" value="حفظ التغيرات" />
+		<text name="Common.MainPages" value="الصفحات الرئيسية" />
+		<text name="Common.AddItem" value="اضافة عنصر"/>
+		<text name="Common.CantDelete" value="لايمكن حذف العنصر من قواعدالبيانات لاستخدامه في جداول اخري"/>
+		<text name="Common.Valid" value="الرقم مقبول"/>
+		<text name="Common.ValidMobileNo" value="  يجب ان يكون بالشكل التالي '9665xxxxxxxx'"/>
+		<text name="Common.ValidFaxNo" value="  يجب ان يكون بالشكل التالي'01xxxxxxxx'"/>
+		<text name="Common.ValidPhoneNo" value="  يجب ان يكون بالشكل التالي'01xxxxxxxx' "/>
+		<text name="Common.ValidIdentityId" value="	رقم الهوية لابد ان يكون 10 ارقام  "/>
+		<text name="Common.Id" value="الرمز" />
+		<text name="Common.SaveContinue" value="حفظ وتابع" />
+		<text name="Common.ImportFromExcel" value="استيراد من اكسيل" />
+		<text name="Common.ExportExcel" value="تصدير اكسيل" />
+		<text name="Common.ExcelFormat" value="تحميل الاكسيل" />
+		<text name="Common.Export" value="تصدير" />
+		<text name="Common.Profile" value="الصفحة الشخصية" />
+		<text name="Common.PersonalInfo" value="البيانات الشخصية" />
+		<text name="Common.PersonalOrders" value="الطلبات الشخصية" />
+		<text name="Common.OrderDetails" value="تفاصيل الطلب" />
+		<text name="Common.Price" value="السعر" />
+		<text name="Common.Duration" value="المدة" />
+		<text name="Common.Show" value="إظهار" />
+		<text name="Common.Hide" value="إخفاء" />
+		<text name="Common.Serial" value="م" />
+		<text name="Common.ArabicTerms" value="الشروط والاحكام العربى" />
+		<text name="Common.EnglishTerms" value="الشروط والاحكام الإنجليزى" />
+		<text name="Common.ArabicPrivacy" value="سياسة الخصوصية العربى" />
+		<text name="Common.EnglishPrivacy" value="سياسة الخصوصية الإنجليزى" />
+		<text name="Common.Available" value="متاح"/>
+		<text name="Common.UnAvailable" value="غير متاح"/>
+		<text name="Common.KiloMeter" value="كم"/>
+		<text name="Common.ExpireDate" value="تاريخ الانتهاء"/>
+		<text name="Common.IsExpiredSubscription" value="الإشتراك منتهي"/>
+		<text name="Common.Minute" value="دقيقه"/>
+		<text name="Common.IsGift" value="هدية"/>
+		<text name="Common.NewsLetter" value="النشرة البريدية" />
+		<text name="Common.Error.AlreadyExist" value=" نفس الاسم موجود بالفعل" />
+		<text name="Common.EnteryDay" value="اليوم" />
+		<text name="Common.EnteryMonth" value="الشهر" />
+		<text name="Common.FinalTime" value="اخر معاد لتقديم الاقرار" />
+		<text name="Common.Share" value="مشاركة" />
+		<text name="Common.Url" value="رابط فيديو" />
+		<text name="Common.FuelType" value="نوع الوقود" />
+		<text name="Common.DeliveyWay" value="نوع التوصيل" />
+		<text name="Common.Reject" value="رفض" />
+		<text name="Common.DateFrom" value="التاريخ من" />
+		<text name="Common.DateTo" value="التاريخ ألي" />
+
+		<text name="Pages.Profile.Note" value="ملحوظه" />
+		<text name="Pages.Profile.NotePhoto" value="يجب تحميل الصور بصيغة{0}.ويكون حجمها {1}" />
+		<text name="Pages.Profile.BlogNotePhoto" value="يجب تحميل الصور بصيغة{0}.ويكون حجم صورة القائمة {1} و صور التفاصيل {2}" />
+		<!--Currency-->
+		<text name="Common.RiyalCurrency" value="ريال" />
+		<!--common messages-->
+		<text name="Common.Message.ActionSuccess" value="تم تنفيذ الطلب" />
+		<text name="Common.Message.SettingsChanged" value="إعدادات النظام تغيرت، سوف ستم إعاده تحميل البرنامج" />
+		<text name="Common.Message.PermissionsChanged" value="صلاحيات النظام تغيرت، سوف ستم إعاده تحميل البرنامج" />
+		<text name="Common.Message.Confirm.Delete" value="هل أنت متأكد من حذف السجل(ات)؟" />
+		<text name="Common.Message.Confirm.DeleteClient" value="هل أنت متأكد من حذف السجل(ات)؟" />
+		<text name="Common.Message.Confirm.HardDelete" value="هل أنت متأكد من حذف السجل(ات) من قواعد البيانات ؟" />
+		<text name="Common.Message.Confirm.AcceptRequest" value="هل تريد أضافه ألاعضاء؟" />
+		<text name="Common.Message.Confirm.Restore" value="هل أنت متأكد من استرجاع السجل(ات)؟" />
+		<text name="Common.Message.Confirm.Accept" value="هل أنت متأكد من القبول؟" />
+		<text name="Common.Message.Confirm.Refuse" value="هل أنت متأكد من الرفض؟" />
+		<text name="Common.Message.Confirm.Complete" value="هل أنت متأكد من الإنهاء؟" />
+		<text name="Common.Message.Confirm.ChangeStatus" value="هل أنت متأكد من تغيير الحالة؟" />
+		<text name="Common.Message.Confirm.Deactive" value="هل أنت متأكد من تغيير الحالة لغير نشط؟" />
+		<text name="Common.Message.Confirm.Active" value="هل أنت متأكد من تغيير الحالة لنشط؟" />
+		<text name="Common.Message.Confirm.ManageActive" value="هل أنت متأكد من تغيير الحالة؟" />
+		<text name="Common.Message.Confirm.VisibleInMap" value="هل أنت متأكد من تغيير الحالة؟" />
+		<text name="Common.Message.Delete" value="تم حذف السجل" />
+		<text name="Common.Message.Save" value="تم حفظ السجل" />
+		<text name="Common.Message.StaticData" value="سوف يتم تجاهل الحذف للعناصر الثابتة" />
+		<text name="Common.Message.NotFound" value="لا يوجد خدمات مجانيه بهذا الكود" />
+		<text name="Common.Message.FoundAndUsed" value="هذا الكود تم استخدامة من قبل" />
+		<text name="Common.Message.ElementNotFound" value="لا يوجد عنصر بالهويه {0}" />
+		<text name="Common.Message.CopySuccess" value="تم نسخ الرابط" />
+		<text name="Common.Message.EmploymentSuccess" value="تم ارسال البيانات بنجاح" />
+		<text name="Common.Message.SiteMapCreated" value="تم انشاء الملف بنجاح" />
+
+		<!--Common Errors-->
+		<text name="Common.Error.StaticData" value="هذا العنصر ثابت ولا يمكن حذفه" />
+		<text name="Common.Error.AjaxError" value="لم يتم تنفيذ الطلب" />
+		<text name="Common.Error.AjaxErrorDetails" value="يرجى المحاولة مرة أخرى، أو الإتصال بمدير النظام" />
+		<text name="Common.Error.InvalidForm" value="يوجد أخطاء في النموذج" />
+		<text name="Common.Error.Required" value="الحقل مطلوب" />
+		<text name="Common.Error.Name" value="يجب ادخال الاسم بالكامل" />
+		<text name="Common.Error.InvalidEmail" value="البريد الالكتروني غير صحيح" />
+		<text name="Common.Error.TextLength" value="هذا الحقل يجب ان يحتوي على {0} حرف" />
+		<text name="Common.Error.InvalidUrl" value="الموقع الالكتروني غير صحيح" />
+		<text name="Common.Error.InvalidNumber" value="الرقم غير صحيح" />
+		<text name="Common.Error.InvalidNumberPattern" value="يجب أن يحتوي رقم الجوال على 9 أرقام (5xxxxxxxx)" />
+		<text name="Common.Error.InvalidPhoneNumber" value="الرقم غير صحيح برجاء ادخال رقم صحيح" />
+		<text name="Common.Error.InvalidUserName" value="اسم المستخدم يجب ان يحتوي فقط علي ارقام او احرف او نقطة فاصلة" />
+		<text name="Common.Error.Invalid" value="الحقل غير صحيح" />
+		<text name="Common.Error.InvalidLookup" value="ابحث واختر عنصر من القائمة" />
+		<text name="Common.Error.MaxLength" value="الحد الاقصى يكون [{0}]حرف او رقم" />
+		<text name="Common.Error.DecimalOnly" value="ارقام عشرية فقط" />
+		<text name="Common.Error.InvalidInputs" value="بيانات خاطئة , ادخل الحقول بشكل سليم" />
+		<text name="Common.Error.EmailExists" value="يوجد مستخدم مسجل بهذا البريد الإلكتروني" />
+		<text name="Common.Error.PhoneNoExists" value="يوجد مستخدم مسجل بهذا الجوال" />
+		<text name="Common.Error.PasswordLength" value="يجب أن تتكون كلمة المرور من 6 أحرف على الأقل" />
+		<text name="Common.Error.PasswordsMatching" value="كلمات المرور غير متطابقة " />
+		<text name="Common.Error.NeedLogin" value="قم بتسجيل الدخول أولا  " />
+		<text name="Common.Error.LoginModelError" value="خطأ في اسم المستخدم او كلمة المرور " />
+		<text name="Common.Error.InvalidFileType" value="نوع ملف غير صالح" />
+		<text name="Common.Error.InvalidFileSize" value="حجم ملف غير صالح" />
+		<text name="Common.Error.UploadError" value="حدث خطأ اثناء الرفع" />
+		<text name="Common.Error.OrderNotCreated" value="لم يتم إنشاء طلب الدفع"/>
+		<text name="Common.Message.ChooseDefaultImage" value="إختر صورة أخري إفتراضية" />
+		<text name="Common.Message.DiscountIsGreater" value="الخصم اكبر من السعر" />
+		<text name="Common.Message.ChooseBranches" value="اختر فروع أولاً" />
+		<text name="Common.Message.ChooseFuelTypes" value="اختر انواع الوقود المدعومة" />
+		<!--System Messages-->
+		<text name="Messages.InvalidForm" value="المدخلات غير صحيحة" />
+		<text name="Messages.InvalidLogin" value="خطأ في اسم المستخدم أو كلمة المرور" />
+		<text name="Messages.UserIsNotActive" value="حساب المستخدم [{0}] غير مغعل" />
+		<text name="Messages.InvalidTenant" value="لا يوجد هيئة بإسم [{0}]" />
+		<text name="Messages.TenantIsNotActive" value="حساب الهيئة [{0}] غير مغعل" />
+		<text name="Messages.LoginFailed" value="خطأ في تسجيل الدخول" />
+
+		<text name="Messages.LoginFailedDeactivateCompany" value="خطأ في تسجيل الدخول بسبب تعطيل حساب الشركة " />
+		<text name="Messages.LoginFailedDeactivateBranch" value="خطأ في تسجيل الدخول بسبب تعطيل حساب الفرع " />
+
+		<text name="Messages.LoginToBranch" value="سيتم تسجيل الدخول لفرع {0} " />
+		<text name="Messages.LoginToMainBranch" value="سيتم تسجيل الدخول للفرع الرئيسي {0} " />
+		<text name="Messages.LoginToProvider" value="سيتم تسجيل الدخول لفرع {0} " />
+		<text name="Messages.LoginToMainProvider" value="سيتم تسجيل الدخول للفرع الرئيسي {0} " />
+		<!--DataTable-->
+		<text name="Common.DataTable.SelectedCount" value="_TOTAL_ سجلات محددة" />
+		<text name="Common.DataTable.AjaxRequestGeneralError" value="لم يتم تنفيذ الطلب، يرجى التأكد من الإتصال بالإنترنت" />
+		<text name="Common.DataTable.LengthMenu" value="إظهار _MENU_" />
+		<text name="Common.DataTable.Info" value="العثور على _TOTAL_" />
+		<text name="Common.DataTable.InfoFiltered" value="(منتقاة من إجمالي _MAX_)" />
+		<text name="Common.DataTable.InfoEmpty" value="لا توجد سجلات للعرض" />
+		<text name="Common.DataTable.EmptyTable" value="لا توجد سجلات في قاعدة البيانات" />
+		<text name="Common.DataTable.ZeroRecords" value="لا توجد سجلات مطابقة لحقول للتنقية" />
+		<text name="Common.DataTable.Paginate.Previous" value="سابق" />
+		<text name="Common.DataTable.Paginate.Next" value="تالي" />
+		<text name="Common.DataTable.Paginate.Last" value="أخير" />
+		<text name="Common.DataTable.Paginate.First" value="أول" />
+		<text name="Common.DataTable.Paginate.Page" value="صفحة" />
+		<text name="Common.DataTable.Paginate.PageOf" value="من" />
+		<text name="Common.DataTable.Reset" value="إعادة ضبط" />
+		<text name="Common.DataTable.Columns" value="الأعمدة المعروضة" />
+		<text name="Common.DataTable.NoRecordsSelected" value="لم يتم اختيار سجلات" />
+		<!--Database Common Columns-->
+		<text name="Common.FullName" value="الإسم بالكامل" />
+		<text name="Common.Number" value="الرقم" />
+		<text name="Common.Description" value="الوصف" />
+		<text name="Common.DescriptionAr" value="الوصف العربي" />
+		<text name="Common.DescriptionEn" value="الوصف الإنجليزي" />
+		<text name="Common.DescriptionTr" value="الوصف التركي" />
+		<text name="Common.DescriptionFr" value="الوصف الفرنسي" />
+		<text name="Common.DescriptionUr" value="الوصف الأوردي" />
+		<text name="Common.DescriptionBn" value="الوصف البنغالي" />
+		<text name="Common.DescriptionFi" value="الوصف الفليبيني" />
+		<text name="Common.DescriptionEs" value="الوصف الأسباني" />
+		<text name="Common.DescriptionDe" value="الوصف الألماني" />
+		<text name="Common.DisplayName" value="الإسم المعروض" />
+		<text name="Common.ArabicName" value="الإسم العربى" />
+		<text name="Common.EnglishName" value="الإسم الإنجليزى" />
+		<text name="Common.NameTr" value="الإسم التركي" />
+		<text name="Common.NameFr" value="الإسم الفرنسي" />
+		<text name="Common.NameUr" value="الإسم الأوردي" />
+		<text name="Common.NameBa" value="الإسم البانجالي" />
+		<text name="Common.NameFi" value="الإسم الفيليبيني" />
+		<text name="Common.NameSp" value="الإسم الأسباني" />
+		<text name="Common.NameDe" value="الإسم الألماني" />
+		<text name="Common.ArabicDescription" value="الوصف العربى" />
+		<text name="Common.EnglishDescription" value="الوصف الإنجليزى" />
+		<text name="Common.CreatedBy" value="أنشا بواسطة" />
+		<text name="Common.CreatedOn" value="تاريخ الإنشاء" />
+		<text name="Common.ModifiedBy" value="عدل بواسطة" />
+		<text name="Common.ModifiedOn" value="تاريخ التعديل" />
+		<text name="Common.DeletedBy" value="حذف بواسطة" />
+		<text name="Common.DeletedOn" value="تاريخ الحذف" />
+		<text name="Common.Status" value="الحالة" />
+		<text name="Common.Actions" value="إجرائات" />
+		<text name="Common.Search" value="بحث" />
+		<text name="Common.CancelSearch" value="إلغاء البحث" />
+		<text name="Common.All" value=" -- الكل -- " />
+		<text name="Common.By" value="بواسطة" />
+		<text name="Common.EmailAddress" value="البريد الإلكتروني" />
+		<text name="Common.SecretCode" value="الكود السري" />
+		<text name="Common.Type" value="النوع" />
+		<text name="Common.OrderType" value="نوع الطلب" />
+		<text name="Common.OrderStatus" value="  حاله الطلب" />
+		<text name="Common.OrderPending" value="قيد الانتظار" />
+		<text name="Common.OrderCompeleted" value="منتهي" />
+		<text name="Common.Complete" value="انهاء" />
+		<text name="Common.Pending" value="قيد الإنتظار" />
+		<text name="Common.InCart" value="في السله" />
+		<text name="Common.ChooseTypeFirst" value="إختر النوع أولا" />
+		<text name="Common.ReservationDate" value="تاريخ الحجز" />
+		<text name="Common.TotalPrice" value="السعر الكلي" />
+		<text name="Common.Discount" value="قيمة الخصم" />
+		<text name="Common.Quantity" value="كمية المخزون" />
+		<text name="Common.IsAvialable" value="متاح" />
+		<text name="Common.IsSpecial" value="مميز" />
+		<text name="Common.IsVisible" value="مرئي" />
+		<text name="Common.NotSpecial" value="غير مميز" />
+
+		<text name="Common.NotVisible" value="غير مرئي" />
+		<text name="Common.SpecialBtn" value="إضافتة للقائمة المميزة" />
+		<text name="Common.NotSpecialBtn" value="حذفة من القائمة المميزة" />
+		<text name="Common.VisibleBtn" value="مرئي" />
+		<text name="Common.NotVisibleBtn" value="غير مرئي" />
+		<text name="Common.Title" value="العنوان" />
+		<text name="Common.ArabicTitle" value="العنوان العربي" />
+		<text name="Common.EnglishTitle" value="العنوان الإنجليزي" />
+		<text name="Common.Video" value="فيديو" />
+		<text name="Common.Video1" value="فيديو1" />
+		<text name="Common.Video2" value="فيديو2" />
+		<text name="Common.ClickHere" value="اضغط هنا" />
+		<text name="Common.MediaType" value="نوع الوسائط المرفقة" />
+		<text name="Common.Approved" value="موافق عليه" />
+		<text name="Common.NotApproved" value="مرفوض" />
+		<text name="Common.SelectStatus" value="إختر الحالة" />
+		<text name="Common.SelectCategory" value="إختر التصنيف" />
+		<text name="Common.SelectMedaiType" value="إختر نوع الوسط المرفق" />
+		<text name="Common.StartDate" value="تاريخ البداية" />
+		<text name="Common.EndDate" value="تاريخ النهاية" />
+		<text name="Common.Images" value="الصور" />
+		<text name="Common.New" value="جديد" />
+		<text name="Common.Updated" value="تم التعديل" />
+		<text name="Common.AcceptRequest" value="قبول "/>
+		<text name="Common.Accept" value="قبول"/>
+		<text name="Common.Accepted" value="مقبول"/>
+		<text name="Common.Refuse" value="رفض"/>
+		<text name="Common.Refused" value="مرفوض"/>
+		<text name="Common.Snapchat" value="سناب شات "/>
+		<text name="Common.Attachfile" value="أرفاق ملف" />
+		<text name="Common.ChangeImageOrPDF" value="تغيير الصورة او PDf" />
+		<text name="Common.SelectImageOrPDF" value="اختيار صورة او PDF" />
+		<text name="Common.ShowPDF" value="عرض الPDF" />
+		<text name="Common.IsAdditional" value="اضافي" />
+		<text name="Common.Additional" value="اضافي" />
+		<text name="Common.NotAdditional" value="رئيسي" />
+		<text name="Common.NotificationText" value="نص الرساله" />
+		<text name="Common.Notifications" value="التنبيهات" />
+		<text name="Common.DeleteAll" value="حذف الكل"/>
+		<text name="Common.DeleteSelected" value="حذف المُختار"/>
+		<text name="Common.HasPaid" value="مدفوع"/>
+		<text name="Common.NotPaid" value="غير مدفوع"/>
+		<text name="Common.Refunded" value="مُرتجع"/>
+		<text name="Common.SendToAll" value="إرسال للكل" />
+		<text name="Common.SendToSelected" value="إرسال للمختار" />
+		<text name="Common.EmptyListToBeExported" value="لا يوجد بيانات للتصدير الى اكسيل" />
+
+		<text name="Common.CopiedSuccessfully" value="تم نسخ النص 👌🏻" />
+		<text name="Common.Attachments" value="المرفقات" />
+		<text name="Common.Errors" value="الاخطاء" />
+
+		<text name="Common.FiltrationTimes.Title" value="تصنيف حسب" />
+		<text name="Common.FiltrationTimes.Today" value="اليوم" />
+		<text name="Common.FiltrationTimes.LastWeek" value="منذ اسبوع" />
+		<text name="Common.FiltrationTimes.LastMonth" value="منذ شهر" />
+		<text name="Common.FiltrationTimes.LastYear" value="منذ عام" />
+
+		<text name="Common.Message.Confirm.SendMessagesToClients" value="هل انت متأكد من إرسال رسائل للمستخدم/المستخدمين" />
+
+		<text name="Common.Fileupload.Preview" value="معاينة الملف" />
+		<text name="Common.Fileupload.Progress" value="التقدم" />
+		<!--File upload-->
+		<text name="FileUpload.FileName" value="الإسم" />
+		<text name="FileUpload.FileSize" value="الحجم" />
+		<text name="FileUpload.Progress" value="التقدم" />
+		<text name="FileUpload.Status" value="الحالة" />
+		<text name="FileUpload.Preview" value="معاينة" />
+		<text name="Common.NotePhoto" value="يجب تحميل الصور بصيغة (gif | png | jpeg) وبمقاس {0} " />
+
+
+		<!-- AbpWeb -->
+		<text name="AbpWeb.InternalServerError" value="حدث خطأ أثناء تنفيذ الطلب!" />
+		<text name="AbpWeb.ValidationError" value="الطلب غير صحيح، يرجى إدخال البيانات المطلوبة بطريقة صحيحة!" />
+		<text name="AbpWeb.AreYouSure" value="هل انت متأكد من تنفيذ الطلب؟" />
+		<text name="AbpWeb.Cancel" value="إلغاء" />
+		<text name="AbpWeb.Yes" value="موافق" />
+		<!--Identity-->
+		<text name="Identity.DuplicateUserName" value="الاسم {0} مستخدم بالفعل." />
+		<text name="Identity.DuplicateEmail" value="البريد الإلكتروني {0} مستخدم بالفعل." />
+		<text name="Identity.DuplicatePhoneNumber" value="رقم الجوال {0} مستخدم بالفعل." />
+		<!--Permissions-->
+		<text name="Permissions.Common.Read" value="عرض" />
+		<text name="Permissions.Common.Write" value="إضافة و تعديل " />
+		<text name="Permissions.Common.Delete" value="حذف" />
+		<text name="Permissions.Common.AcceptRequest" value="قبول الطلب"/>
+		<text name="Permissions.Common.ClearExplicit" value="إلغاء الصلاحيات الحصرية" />
+		<text name="Permissions.Common.AccessDeniedTitle" value="دخول غير مصرح" />
+		<text name="Permissions.Common.AccessDeniedMessage" value="لا تملك صلاحية: {0}" />
+
+		<text name="Pages.RolePermissions.Title" value="صلاحيات الدور" />
+		<text name="Pages.UserPermissions.Title" value="صلاحيات المستخدم" />
+		<text name="Permission.Settings" value="الإعدادات" />
+		<text name="Permission.Roles" value="الادوار" />
+		<text name="Permission.RolePermissions" value="صلاحيات الادوار" />
+		<text name="Permission.Users" value="المستخدمين" />
+		<text name="Permission.ContactMessages" value="طلبات التواصل" />
+		<text name="Permission.Notifications" value="الإشعارات" />
+		<text name="Permission.SendNotifications" value="ارسال الإشعارات" />
+		<text name="Permission.NotificationSettings" value="إعدادات الإشعارات" />
+		<!--ParentPermissions-->
+		<text name="Permission.UsersAndRolesPermissions" value="المستخدمين والادوار" />
+		<text name="Permission.ContentPagesPermissions" value="الصفحات الرئيسية" />
+		<!--AdminsPermissions-->
+		<text name="Permission.Admins" value=" المديرين" />
+		<text name="Permission.AdminPermissions" value="صلاحيات  المديرين" />
+		<text name="Permission.CompanyPermissions" value="صلاحيات  الشركات" />
+		<text name="Permission.MainProvidersPermissions" value="صلاحيات  مقدم الخدمة" />
+		<text name="Permission.ProvidersPermissions" value="صلاحيات  الفروع" />
+		<text name="Permission.ProviderJournals" value="تفاصيل القيود" />
+		<text name="Permission.AdminJournals" value="تفاصيل القيود" />
+		<text name="Permission.MainProviderJournals" value="تفاصيل القيود" />
+		<!--SitePagesPermissions-->
+		<text name="Permission.SitePages" value="صفحات التطبيق" />
+		<text name="Permission.Categories" value="التصنيفات" />
+		<text name="Permission.CarTypes" value="انواع المركبات" />
+		<text name="Permission.Cities" value="المدن"/>
+		<text name="Permission.Packages" value="الباقات"/>
+		<text name="Permission.Subscriptions" value="إشتراكات الباقات"/>
+		<text name="Permission.CompanySubscriptions" value="إشتراك الباقات"/>
+		<text name="Permission.Announcements" value="البانر الإعلاني"/>
+		<text name="Permission.Coupons" value="الكوبونات"/>
+
+		<text name="Permission.Regions" value="المناطق"/>
+		<text name="Permission.Clients" value="العملاء"/>
+		<text name="Permission.ClientAddresses" value="عناوين العميل"/>
+		<text name="Permission.Products" value="المنتجات"/>
+		<text name="Permission.ProductUnits" value="الوحدات"/>
+		<text name="Permission.Wallets" value="المحفظة" />
+		<text name="Permission.CompanyWallets" value="محفظة الشركة" />
+		<text name="Permission.AdminCompanyWallets" value="محفظة الشركة" />
+		<text name="Permission.CompanyBranchWallets" value="محفظة الفروع" />
+		<text name="Permission.BranchWallets" value="محفظة الفروع" />
+		<text name="Permission.Advertisements" value="الإعلانات" />
+		<text name="Permission.Offers" value="عروض السعر" />
+		<text name="Permission.Bids" value="المزايدات" />
+		<text name="Permission.Questions" value="الأسئله"/>
+		<text name="Permission.NewsLetter" value="النشرة البريدية" />
+		<text name="Permission.FeesSettings" value="إعدادات رسوم الإعلانات" />
+		<text name="Permission.Report" value="البلاغات" />
+		<text name="Permission.Stores" value="المتاجر" />
+		<text name="Permission.GiftSettings" value="إرسال رصيد الهدية" />
+		<text name="Permission.Projects" value="المشروعات" />
+		<text name="Permission.Units" value="الوحدات" />
+		<text name="Permission.Employments" value="التوظيف" />
+		<text name="Permission.Libraries" value="المكتبة" />
+		<text name="Permission.Services" value="الخدمات" />
+		<text name="Permission.WorkTeam" value="فريق العمل" />
+		<text name="Permission.TrainingTeam" value="فريق التدريب" />
+		<text name="Permission.Consultants" value="المستشارين" />
+		<text name="Permission.Committees" value="اللجان والبرامج" />
+		<text name="Permission.Meetings" value="محاضر الاجتماعات" />
+		<text name="Permission.Rules" value="الأنظمة واللوائح" />
+		<text name="Permission.Blogs" value="المقالات" />
+		<text name="Permission.OurPartners" value="شركاء النجاح" />
+		<text name="Permission.Gallary" value="معرض الصور" />
+		<text name="Permission.Companies" value="الشركات" />
+		<text name="Permission.CompanyBranchInfo" value="بيانات الشركة" />
+		<text name="Permission.CompanyBranchEmployees" value="المستخدمين" />
+		<text name="Permission.CompanyBranchNotifications" value="الإشعارات" />
+		<text name="Permission.Branches" value="الفروع" />
+		<text name="Permission.CompanyBranches" value="الفروع" />
+
+		<text name="Permission.BranchFuelTransIns" value="عمليات ادخال الوقود" />
+		<text name="Permission.BranchRequests" value="طلبات الوقود" />
+		<text name="Permission.CompanyBranchRequests" value="طلبات الوقود" />
+		<text name="Permission.CompanyBranchInvoices" value="فواتير الإستهلاك الشهري" />
+		<text name="Pages.AdminsAndSettings.Title" value="الصلاحيات والإعدادات" />
+		<text name="Pages.AdminPermissions.Title" value="صلاحيات  المديرين" />
+		<text name="Permission.ProviderInfo" value="معلومات الفرع"/>
+		<text name="Permission.ProviderNotifications" value="الإشعارات"/>
+		<text name="Permission.ProviderFuelPriceChangeRequests" value="طلبات تغيير أسعار الوقود"/>
+		<text name="Permission.MainProviderFuelPriceChangeRequests" value="طلبات تغيير أسعار الوقود"/>
+		<text name="Permission.AdminFuelPriceChangeRequests" value="طلبات تغيير أسعار الوقود"/>
+		<text name="Permission.MainProviders" value="مقدمين الخدمات"/>
+		<text name="Permission.Providers" value="الفروع"/>
+		<text name="Permission.AdminProviders" value="فروع مقدي الخدمات"/>
+		<text name="Permission.Workers" value="العمال"/>
+		<text name="Permission.ProviderWorkers" value="العمال"/>
+		<text name="Permission.MainProviderWorkers" value="العمال"/>
+		<text name="Permission.RequestOrders" value="الطلبيات"/>
+
+		<text name="Permission.BranchPermissions" value="صلاحيات الفرع"/>
+		<text name="Permission.BranchInfo" value="بيانات الفرع"/>
+
+		<text name="Permission.BranchEmployees" value="المستخدمين"/>
+		<text name="Permission.Veichles" value="المركبات"/>
+		<text name="Permission.BranchVeichles" value="المركبات"/>
+		<text name="Permission.CompanyBranchVeichles" value="المركبات"/>
+		<text name="Permission.VeichleTransferRecords" value="سجل نقل المركبات"/>
+		<text name="Permission.VeichleTripsRecords" value="سجل رحلات المركبات"/>
+
+		<text name="Permission.WorkerTransferRecords" value="سجل العمال "/>
+
+
+		<text name="Permission.BranchVeichleRoutes" value="خطوط السير"/>
+		<text name="Permission.Drivers" value="السائقين"/>
+		<text name="Permission.CompanyBranchDrivers" value="السائقين"/>
+		<text name="Permission.CompanyBranchProviders" value="حظر المحطات"/>
+		<text name="Permission.CompanyProviders" value="حظر المحطات"/>
+		<text name="Permission.BranchDriverVeichles" value="مركبات السائق"/>
+		<text name="Permission.CompanyBranchDriverVeichles" value="مركبات السائق"/>
+		<text name="Permission.BranchFuelTransOuts"  value="عمليات اخراج الوقود"/>
+		<text name="Permission.CompanyBranchFuelTransOuts"  value="استهلاك الوقود"/>
+		<text name="Permission.BranchNotifications" value="الإشعارات"/>
+		<text name="Permission.BranchFuelGroups" value="مجموعات استهلاك الوقود"/>
+
+
+		<text name="Permission.Brands" value="ماركة المركبات"/>
+		<text name="Permission.Models" value="موديل المركبات"/>
+
+
+		<text name="Permission.MainProviderInfo" value="بيانات مزود الخدمة" />
+		<text name="Permission.MainProvidersEmployees" value="المستخدمين" />
+		<text name="Permission.MainProviderNotifications" value="الإشعارات" />
+
+		<text name="Permission.StationTransactions" value="العمليات" />
+		<text name="Permission.ProviderFuelTransactions" value="العمليات" />
+		<text name="Permission.ProviderMaintainTransactions" value="عمليات الصيانة" />
+		<text name="Permission.OilTransactions" value="عمليات تغيير الزيت" />
+		<text name="Permission.ProviderWashTransactions" value="عمليات الغسيل" />
+
+		<text name="Permission.MainProviderStationTransactions" value="العمليات" />
+		<text name="Permission.MainProviderFuelTransactions" value="العمليات" />
+		<text name="Permission.AdminFuelTransactions" value="عمليات الوقود " />
+		<text name="Permission.AdminProviderRevenue" value="إيرادات مزود الخدمة" />
+		<text name="Permission.MainProviderMaintainTransactions" value="عمليات الصيانة" />
+		<text name="Permission.MainProviderOilTransactions" value="عمليات تغيير الزيت" />
+		<text name="Permission.MainProviderWashTransactions" value="عمليات الغسيل" />
+
+
+		<text name="Permission.CompanyStationTransactions" value="العمليات" />
+		<text name="Permission.CompanyBranchFuelTransactions" value="العمليات" />
+		<text name="Permission.CompanyMaintainTransactions" value="عمليات الصيانة" />
+		<text name="Permission.CompanyOilTransactions" value="عمليات تغيير الزيت" />
+		<text name="Permission.CompanyWashTransactions" value="عمليات الغسيل" />
+
+
+		<text name="Permission.ProviderInvoices" value="الفواتير الضريبة" />
+		<text name="Permission.MainProviderInvoices" value="الفواتير الضريبة" />
+		<text name="Permission.AdminInvoices" value="الفواتير الضريبة" />
+		<text name="Permission.ProviderVouchers" value="سدادات الأرصدة" />
+		<text name="Permission.AdminVouchers" value="سدادات الأرصدة" />
+		<text name="Permission.MainProviderVouchers" value="سدادات الأرصدة" />
+		<text name="Permission.ElectronicInvoices" value="الفواتير الضريبة" />
+		<text name="Permission.ProviderReports" value="التقارير" />
+		<text name="Permission.MainProviderReports" value="التقارير" />
+		<text name="Permission.CompanyBranchReports" value="التقارير" />
+
+		<text name="Permission.Banks" value="البنوك" />
+		<text name="Permission.BranchesLogin" value="تسجيل دخول الفروع" />
+		<text name="Permission.StationsLogin" value="تسجيل دخول المحطات" />
+
+		<text name="Permission.ChipDevices" value="أنواع الأجهزة" />
+		<text name="Permission.ChipNumbers" value="الشرائح الذكية" />
+
+		<text name="Permission.RegisterationRequests" value="طلبات التسجيل" />
+		<text name="Permission.CompanyTypes" value="تصنيف الشركات" />
+		<text name="Permission.MainProviderFuelPumps" value="مضخات الوقود" />
+		<text name="Permission.AdminFuelPumps" value="مضخات الوقود" />
+		<text name="Permission.FuelPumps" value="مضخات الوقود" />
+		<text name="Permission.CompanyBranchAccountStatement" value="كشف الحساب" />
+		<text name="Permission.MainProviderAccountStatement" value="كشف الحساب" />
+		<text name="Permission.ProviderAccountStatement" value="كشف الحساب" />
+		<text name="Permission.AnnouncmentBanners"  value="البانر الاعلاني" />
+		<text name="Permission.MainProviderHelpAndSupport"  value="الدعم و المساعدة" />
+		<text name="Permission.CompanyBranchHelpAndSupport"  value="الدعم و المساعدة" />
+		<text name="Permission.AdminHelpAndSupport"  value="الدعم و المساعدة" />
+		<text name="Permission.BranchHelpAndSupport"  value="الدعم و المساعدة" />
+		<text name="Permission.ProviderHelpAndSupport"  value="الدعم و المساعدة" />
+		<text name="Permission.EntityChanges"  value="عرض التعديلات السابقة" />
+
+		<!--Pages.Roles-->
+		<text name="Pages.Roles.Title" value="إدارة الادوار" />
+		<text name="Pages.Roles.ModalTitle" value="الدور" />
+
+		<!--Settings-->
+		<text name="Pages.Settings.Title" value="اعدادات النظام" />
+		<text name="Settings.Groups.CachingSettings" value="الكاش" />
+		<text name="Settings.Groups.Email" value="البريد الإلكتروني" />
+		<text name="Settings.EmailConfirmationRequiredForLogin.Description" value="تأكيد البريد الإلكتروني مطلوب قبل تسجيل الدخول" />
+		<text name="Settings.EmailConfirmationRequiredForLogin" value="تأكيد البريد الإلكتروني مطلوب" />
+
+		<text name="Settings.Mail.Host" value="مضيف" />
+		<text name="Settings.Mail.Port" value="Port" />
+		<text name="Settings.Mail.UserName" value="اسم المستخدم" />
+		<text name="Settings.Mail.Password" value="كلمة المرور" />
+		<text name="Settings.Mail.Domain" value="نطاق" />
+		<text name="Settings.Mail.EnableSsl" value="تمكين SSL" />
+		<text name="Settings.Mail.UseDefaultCredentials" value="استخدام شهاده معتمده" />
+		<text name="Settings.Mail.DefaultFromAddress" value="عنوان افتراضي" />
+		<text name="Settings.Mail.DefaultFromDisplayName" value="إسم عرض افتراضي" />
+
+		<text name="Settings.Groups.Display" value="اعدادات اللغة" />
+		<text name="Settings.FavouriteLanguage" value="اللغة المفضلة" />
+		<text name="Settings.Groups.List" value="إعدادات جداول البيانات" />
+		<text name="Settings.SaveDataTableState" value="حفظ حالة جداول البيانات" />
+		<text name="Settings.SaveDataTableState.Description" value="جداول البيانات سوف تحتفظ بالحالة السابقة عند الرجوع إليها مره أخرى" />
+
+		<text name="Settings.Groups.Public" value="اعدادات عامه" />
+		<text name="Settings.Groups.GiftSettings" value="اعدادات رصيد الهدية" />
+		<text name="Settings.Groups.FuelSettings" value="اعدادات اسعار الوقود" />
+
+		<text name="Settings.DefualtNotificationDelay" value="عدد ايام ارسال تنبيهات الاقساط" />
+		<text name="Settings.DefualtNotificationDelay.Description" value="عدد ايام ارسال تنبيهات الاقساط"/>
+
+		<text name="Settings.Vat" value="ضريبة القيمة المضافة"/>
+		<text name="Settings.InsurancePercentage" value="نسبة التأمين"/>
+		<text name="Settings.SpecialCommission" value="رسوم الإعلان المميز"/>
+		<text name="Settings.Commission" value="رسوم الإعلان"/>
+		<text name="Settings.ActivateRegisterGiftAmount" value="تفعيل رصيد الهدية عند التسجيل"/>
+		<text name="Settings.GiftAmount" value="رصيد الهدية"/>
+
+		<text name="Settings._91_PriceForLitre" value="سعر لتر 91"/>
+		<text name="Settings._95_PriceForLitre" value="سعر لتر 95"/>
+		<text name="Settings._Diesel_PriceForLitre" value="سعر لتر الديزل"/>
+
+		<text name="Settings.InvoiceSettings" value="إعدادات الفاتورة"/>
+		<text name="Settings.FuelSettings" value="إعدادات الوقود و التعبئة"/>
+		<text name="Settings.CompanyName" value="اسم الشركة"/>
+		<text name="Settings.TaxNumber" value="الرقم الضريبي"/>
+		<text name="Settings.CompanyAddress" value="عنوان الشركة"/>
+		<text name="Settings.RegNo" value="رقم السجل التجاري"/>
+		<text name="Settings.TaxNumberLength" value="عدد أحرف الرقم الضريبي"/>
+		<text name="Settings.RegNoLength" value="عدد أحرف السجل التجاري"/>
+
+		<text name="Settings.BankAccountPrintText" value="إظهار نص طباعة الحساب البنكي "/>
+		<text name="Settings.ForceUpdate" value="تفعيل التحديث الإجباري"/>
+
+		<text name="Settings._91color" value="لون وقود 91"/>
+		<text name="Settings._95color" value="لون وقود 95"/>
+		<text name="Settings._Dieselcolor" value="لون وقود ديزل"/>
+
+		<text name="Settings.ActivateTimeBetweenFuelTransaction" value="تفعيل الوقت بين كل عملية وقود"/>
+		<text name="Settings.TimeBetweenFuelTransaction" value="الوقت بين كل عملية وقود"/>
+
+
+
+		<text name="Pages.Al7osam.Title" value="جميع الحقوق محفوظة © سيارة آب  2024 | تطوير"/>
+		<text name="Pages.Al7osam.Name" value="الحسام للبرمجيات"/>
+
+		<!--ConfirmRegisteration-->
+		<text name="Registeration.Confirm" value="تأكيد التسجيل" />
+		<text name="Registeration.ConfirmMessage" value="برجاء توثيق بريدك الإلكتروني" />
+		<text name="Pages.ConfirmRegisteration.RegisterationSuccess" value="تم  التسجيل بنجاح" />
+		<text name="Pages.ConfirmRegisteration.AlreadyActivated" value="تم تفعيل الحساب بالفعل " />
+		<text name="Pages.ConfirmRegisteration.ActivedSuccess" value="تم تفعيل الحساب برجاء تسجيل الدخول" />
+		<text name="Pages.ConfirmRegisteration.WaitActivation" value="انتظر رسالة تفعيل حسابك علي البريد الإلكتروني" />
+		<text name="Pages.ConfirmRegisteration.NotifyAdmin" value="قام المستخدم {0} بالتسجيل" />
+		<text name="Pages.ConfirmRegisteration.ActivationMail" value="لقد تم تفعيل حسابك قم بتسجيل الدخول {0}" />
+		<text name="Pages.ConfirmRegisteration.NotFound" value="لايوجد حساب بهذا العنوان برجاء التسجيل" />
+		<text name="Pages.ConfirmRegisteration.ConfirmationFaild" value="حدث خطأ اثناء تفعيل الحساب" />
+		<!--Page ResetPassword -->
+		<text name="Pages.ResetPassword.ResetPassword" value="إعادة تعيين كلمة المرور" />
+		<text name="Pages.ResetPassword.checkEmail" value=" يرجى التحقق من بريدك الإلكتروني لإعادة تعيين كلمة المرور" />
+		<text name="Pages.ResetPassword.ResetPasswordMessage" value="طلبت مؤخرا تغيير كلمه السر لحسابك اضغط علي الزر ادناه لتعيينه" />
+		<text name="Pages.ConfirmEmail.checkEmail" value=" يرجى التحقق من بريدك الإلكتروني لتأكيد الدخول" />
+		<text name="Pages.ResetPassword.SuccessfullyReset" value="تم  تغير كلمة المرور بنجاح" />
+		<!-- Home Page -->
+		<text name="Pages.Home.Title" value="الرئيسية" />
+		<text name="Pages.Home.MyData" value="بياناتى" />
+		<text name="Pages.Home.ChangePassword" value="تغيير كلمة المرور" />
+		<text name="Pages.HomePage.Title" value="الرئيسية" />
+		<!--Page Users -->
+		<text name="Pages.Users.Title" value="المستخدمين" />
+		<text name="Pages.Users.ModalTitle" value="المستخدم"/>
+		<text name="Pages.Admins.Title" value="إعدادات المستخدمين" />
+		<text name="Pages.Admins.ModalTitle" value="المدير" />
+
+		<text name="Pages.Users.Phone" value="رقم الجوال" />
+		<text name="Pages.Users.SMSInfo" value="سوف يتم إرسال كلمة المرور على رقم الجوال" />
+		<text name="Pages.Users.PersonalInfo" value="البيانات الشخصية" />
+		<text name="Pages.Users.UserInfo" value="بيانات الحساب" />
+		<text name="Pages.Users.FirstName" value="الإسم الأول" />
+		<text name="Pages.Users.Surname" value="الإسم الأخير" />
+
+		<text name="Pages.Users.ManagerFirstName" value="الإسم الأول للمسئول" />
+		<text name="Pages.Users.ManagerSurname" value="الإسم الأخير للمسئول" />
+
+
+		<text name="Pages.Users.UserName" value="اسم المستخدم" />
+		<text name="Pages.Users.EmailAddress" value="البريد الإلكتروني" />
+		<text name="Pages.Users.Password" value="كلمة المرور" />
+		<text name="Pages.Users.New" value="مستخدم جديد" />
+		<text name="Pages.Users.Avatar" value="الصوره" />
+		<text name="Pages.Users.Website" value="رابط الويب" />
+		<text name="Pages.Users.Twitter" value="حساب تويتر" />
+		<text name="Pages.Users.Snapchat" value="حساب سناب شات" />
+		<text name="Pages.Users.Instagram" value="حساب الانستقرام" />
+		<text name="Pages.Users.Facebook" value="حساب الفيس بوك" />
+		<text name="Pages.Users.UserType" value="نوع العميل" />
+		<text name="Pages.Users.UserType.Person" value="فرد" />
+		<text name="Pages.Users.BirthDate" value="تاريخ الميلاد" />
+
+		<text name="Pages.Users.ChangePassword" value="تغيير كلمه المرور" />
+		<text name="Pages.Users.OldPassword" value="كلمه المرور القديمة" />
+		<text name="Pages.Users.NewPassword" value="كلمة المرور الجديدة" />
+		<text name="Pages.Users.ConfirmPassword" value="تأكيد كلمة المرور" />
+		<text name="Pages.Users.ConfirmNewPassword" value="تأكيد كلمة المرور الجديدة" />
+		<text name="Pages.Users.DifferentNewPassword" value="كلمة المرور الجديدة مشابهه لكلمة المرور القديمة" />
+		<text name="Pages.Users.DifferentPassword" value="تأكيد كلمة المرور الجديدة لابد ان تشابه كلمة المرور الجديدة" />
+		<text name="Pages.Users.Adresses" value="عناوين العميل" />
+		<text name="Pages.Users.SubscriptionDate" value="آخر تاريخ اشتراك"/>
+		<text name="Pages.Users.IsActiveSubscription" value="حالة الإشتراك"/>
+
+		<text name="Pages.Users.ChangeEmailAddress" value="تعديل البريد الإلكتروني"/>
+		<text name="Pages.Users.OldEmailAddress" value="البريد الإلكتروني الحالي"/>
+		<text name="Pages.Users.NewEmailAddress" value="البريد الإلكتروني الجديد"/>
+
+		<text name="Pages.Users.ChangePhoneNumber" value="تعديل رقم الجوال"/>
+		<text name="Pages.Users.OldPhoneNumber" value="رقم الجوال الحالي"/>
+		<text name="Pages.Users.NewPhoneNumber" value="رقم الجوال الجديد"/>
+
+		<text name="Pages.Users.SendActivationCode" value="إرسال كود التفعيل"/>
+		<text name="Pages.Users.ActivationCode" value=" كود التفعيل"/>
+		<text name="Pages.Users.ConfirmEmailAddress" value="تأكيد البريد الإلكتروني"/>
+		<text name="Pages.Users.ConfirmPhoneNumber" value="تأكيد رقم الجوال"/>
+
+		<!--Page.Users.Error -->
+		<text name="Pages.Users.Error.AlreadyExist" value="مستخدم بنفس البيانات موجود بالفعل" />
+		<text name="Pages.Users.Error.AlreadyExistEmail" value="مستخدم بنفس البريد الالكتروني موجود بالفعل" />
+		<text name="Pages.Users.Error.AlreadyExistPhone" value="مستخدم بنفس الرقم موجود بالفعل" />
+		<text name="Pages.Users.Error.AlreadyExistUserName" value="مستخدم بنفس اسم المستخدم موجود بالفعل" />
+		<text name="Pages.Users.Error.InCompeleteData" value="حدث خطأ, بيانات غير مكتملة" />
+		<text name="Pages.Users.Error.NotExistUserEmail" value=".لا يوجد مستخدم مسجل بهذ البريد الالكتروني" />
+		<text name="Pages.Users.Error.InvalidToken" value=". الكود السري غير صالح" />
+		<text name="Pages.Users.Error.NotExist" value=".المستخدم غير موجود مسبقاً" />
+		<text name="Pages.Users.Error.PasswordChanged" value="تم تغيير كلمة المرور بنجاح" />
+		<text name="Pages.Users.Error.PasswordInCorrect" value="كلمة المرور القديمة غير صحيحة" />
+		<!--Page.Users.Messages-->
+		<text name="Pages.Users.Messages.SuccessSendEmail" value="تم ارسال البريد الإلكتروني بنجاح" />
+		<text name="Pages.Users.Messages.FailedSendEmail" value="فشل في ارسال البريد الإلكتروني" />
+		<text name="Pages.Users.Message.LoginSuccessfully" value="تم تسجيل الدخول بنجاح"/>
+
+		<!--Page Login -->
+		<text name="Pages.Login.LoginOrRegister" value="التسجيل / الدخول" />
+		<text name="Pages.Login.Title" value="التسجيل و الدخول" />
+		<text name="Pages.Login.AreRegistered" value="هل لديك حساب؟" />
+		<text name="Pages.Login.Login" value="تسجيل دخول" />
+		<text name="Pages.Login.UserName" value="اسم المستخدم" />
+		<text name="Pages.Login.UserNameOrEmail" value="اسم المستخدم او البريد الإلكتروني" />
+		<text name="Pages.Login.Password" value="كلمة المرور" />
+		<text name="Pages.Login.RememberMe" value="تذكرني" />
+		<text name="Pages.Login.ForgotPassword" value="نسيت كلمة المرور!" />
+		<text name="Pages.Login.ForgotPassword.Description" value="ادخل البريد الإلكتروني لإستعادة كلمة المرور" />
+		<text name="Pages.Login.Email" value="البريد الإلكتروني" />
+		<text name="Pages.Login.Reset" value="استعادة" />
+		<text name="Pages.Login.InvalidForm" value="ادخل اسم المستخدم وكلمة المرور" />
+		<text name="Pages.Login.FoundationName" value="اسم المؤسسة" />
+		<text name="Pages.Login.LoginAccountInfo" value="بيانات الدخول" />
+		<text name="Pages.Login.InvalidRole" value="دور غير صالح" />
+		<text name="Pages.Login.LoginFront" value="دخول" />
+		<text name="Pages.Login.DontHavAccount" value="ليس لديك حساب؟" />
+		<text name="Pages.Login.RegisterNow" value="سجل الآن" />
+		<text name="Pages.Login.InMinutes" value="في دقايق فعّل حسابك وابدأ المزايدة" />
+
+		<!--Page Contact -->
+		<text name="Pages.Contact.Subject" value="الموضوع" />
+		<text name="Pages.Contact.AdvNum" value="رقم الإعلان" />
+		<text name="Pages.Contact.Name" value="الإسم" />
+		<text name="Pages.Contact.Phone" value=" رقم التليفون" />
+		<text name="Pages.Contact.Email" value="البريد الإلكتروني" />
+		<text name="Pages.Contact.Message" value="الرسالة" />
+		<text name="Pages.Contact.SendMessage" value="إرسل الرسالة" />
+		<text name="Pages.Contact.ContactMessages" value="طلبات التواصل" />
+		<text name="Pages.Contact.ContactLetters" value="المتابعين" />
+		<text name="Pages.Contact.Messages" value="الرسائل" />
+		<text name="Pages.Contact.Submit" value="إرسل" />
+		<text name="Pages.Contact.SubmitComment" value="إرسل" />
+		<text name="Pages.Contact.ContactMessage.ConfirmDelete" value="هل أنت متأكد من الحذف؟" />
+		<text name="Pages.Contact.date" value="تاريخ المتابعة" />
+		<text name="Pages.Contact.Subscribe" value="إشترك" />
+		<text name="Pages.Contact.EnterEmail" value="أدخل البريد هنا" />
+		<text name="Pages.Contact.Info" value="بيانات الإتصال" />
+		<text name="Pages.Contact.Address" value="العنوان" />
+		<text name="Pages.Contact.MailUs" value="البريد الالكتروني" />
+		<text name="Pages.Contact.Phones" value="الهواتف" />
+		<text name="Pages.Contact.Fax" value="الفاكس" />
+		<text name="Pages.Contact.Inbox" value="الرسائل الواردة" />
+		<text name="Pages.Contact.SendEmail" value="إرسال للبريد الإلكترونى" />
+		<text name="Pages.Contact.Show" value="عرض الرسالة" />
+		<text name="Pages.Contact.NewMessage" value="رساله جديدة"/>
+		<text name="Pages.Contact.Error.MessageIsDeleted" value="تم حذف هذة الرسالة من قبل"/>
+		<text name="Pages.CompanyType.Error.HasTypes" value="هذا النوع مرتبط بفئة اخري"/>
+		<text name="Pages.Contact.Reply" value="الرد"/>
+		<text name="Pages.Contact.EditReply" value="تعديل رسالة الرد"/>
+		<text name="Pages.Contact.ReplyMessage" value="الرد علي الرسالة"/>
+		<text name="Pages.Contact.AdNumberOptional" value="رقم الإعلان (إختياري)"/>
+		<text name="Pages.Contact.ReasonForRequestingContact" value="سبب طلب التواصل"/>
+		<text name="Pages.Contact.SubjectType" value="نوع الموضوع"/>
+
+		<!--Contact Message Status-->
+		<text name="Common.IsSeen" value="مقروءة" />
+		<text name="Common.NotSeen" value="غير مقروءة" />
+		<!--Followers-->
+		<text name="Pages.Followers.Title" value="المتابعين" />
+		<text name="Pages.Followers.Error.AlreadyExistEmail" value="متابع بنفس البريد الإلكتروني موجود بالفعل" />
+		<text name="Pages.Followers.Email" value="البريد الإلكتروني" />
+		<text name="Pages.Followers.FollowDate" value="تاريخ المتابعة" />
+		<!--Pages.Messages.loadolder-->
+		<text name="Pages.Messages.LoadOlder" value="تحميل المزيد "/>
+		<text name="Pages.Messages.NoMessages" value=" لا يوجد رسائل "/>
+		<!--Pages.Dashboard-->
+		<text name="Pages.Dashboard.Title" value="لوحة التحكم"/>
+		<text name="Pages.ControlPanel.Title" value="لوحة التحكم"/>
+		<!--Pages.SitePages-->
+		<text name="Pages.SitePages.Title" value="صفحات التطبيق"/>
+		<text name="Pages.ContactUs.Title" value="تواصل معنا"/>
+		<text name="Pages.ContactUs.AddNumber" value="اضافة رقم"/>
+		<text name="Pages.ContactUs.Address" value="فرع المهندسين"/>
+		<text name="Pages.ContactUs.Address1" value="فرع الشيخ زايد"/>
+		<text name="Pages.ContactUs.Address2" value="فرع مصر الجديدة"/>
+		<text name="Pages.ContactUs.AddressAr" value="العنوان بالعربي"/>
+		<text name="Pages.ContactUs.Address1Ar" value="عنوان فرع الشيخ زايد العربي"/>
+		<text name="Pages.ContactUs.Address2Ar" value="عنوان فرع مصر الجديدة العربي"/>
+		<text name="Pages.ContactUs.AddressEn" value="العنوان بالإنجليزي"/>
+		<text name="Pages.ContactUs.Address1En" value="عنوان فرع الشيخ زايدالإنجليزي "/>
+		<text name="Pages.ContactUs.Address2En" value="عنوان فرع مصر الجديدةالإنجليزي"/>
+		<text name="Pages.ContactUs.SocialLinks" value="روابط التواصل الاجتماعي"/>
+		<text name="Pages.Terms.Title" value="الشروط و الأحكام"/>
+		<text name="Pages.Privacy.Title" value="سياسة الخصوصية"/>
+		<text name="Pages.UsagePolicy.Title" value="سياسة الإستخدام"/>
+		<text name="Pages.RefundPolicy.Title" value="سياسة الإسترجاع"/>
+		<text name="Pages.Intro.Title" value="المقدمة"/>
+		<text name="Pages.AdvertisingBanner.Title" value="البانر الاعلانى"/>
+		<text name="Pages.BeforeAndAfters.Error.AlreadyExistMorThanTow" value="لا يمكن اضافة اكثر من عنصرين للمميزه "/>
+		<text name="Pages.keepintouchwithus.Title" value="أبقى علي تواصل معنا"/>
+		<text name="Pages.yourletter.Title" value="رسالتك"/>
+		<text name="Pages.Followuson.Title" value="تابعنا علي"/>
+		<text name="Pages.RelatedArticles.Title" value="مقالات ذات صلة"/>
+		<text name="Pages.BeforeAfters.ThereAreNoBeforeAfters" value="لا توجد صور قبل وبعد"/>
+		<text name="Pages.Faq.ThereFaqs" value="لا توجد اسئله متعلقة بهذه الخدمه"/>
+		<text name="Pages.CosmeticInformations.ThereCosmeticInformations" value="لا توجد معلومات تجميلية"/>
+
+		<text name="Pages.SitePages.AddQuestion" value="إضافة سؤال"/>
+		<text name="Pages.SitePages.Question" value="السؤال"/>
+		<text name="Pages.SitePages.QuestionAr" value="السؤال بالعربي" />
+		<text name="Pages.SitePages.QuestionEn" value="السؤال بالإنجليزي" />
+		<text name="Pages.SitePages.SolutionAr" value="الإجابة بالعربي" />
+		<text name="Pages.SitePages.SolutionEn" value="الإجابة بالإنجليزي" />
+		<text name="Pages.SitePages.NewQuestion" value="إضافة سؤال جديد" />
+		<text name="Pages.SitePages.QuestionAdded" value="تم إضافة السؤال, برجاء الحفظ" />
+
+
+
+
+
+
+		<text name="Pages.SitePages.GoalEn" value="هدفنا بالانجليزي" />
+		<text name="Pages.SitePages.MsgEn" value="رسالتنا بالانجليزي" />
+		<text name="Pages.SitePages.ValueEn" value="قيمنا بالانجليزي" />
+		<text name="Pages.SitePages.Error.Required" value="هذا الحقل مطلوب" />
+		<text name="Pages.SitePages.EmployPhoto" value="صورة التوظيف" />
+		<text name="Pages.SitePages.CurrentProjectsTitleAr" value="نص المشاريع الحاليه بالعربية" />
+		<text name="Pages.SitePages.CurrentProjectsTitleEn" value="نص المشاريع الحاليه بالانجليزية" />
+		<text name="Pages.SitePages.SoonProjectsTitleAr" value="نص المشاريع القادمة بالعربية" />
+		<text name="Pages.SitePages.SoonProjectsTitleEn" value="نص المشاريع القادمة بالانجليزية" />
+		<text name="Pages.ProjectTitles.Title" value="نصوص المشاريع " />
+
+
+
+
+
+
+
+
+
+		<!--Dashboard-->
+		<text name="Pages.statistics.Title" value="الإحصائيات" />
+		<text name="Pages.statistics.AllProviders" value="كل الفروع" />
+		<text name="Pages.statistics.ChooseProvider" value="اختر الفرع" />
+		<text name="Dashboard.MostActiveClients" value="العملاء الاكثر نشاطا" />
+		<text name="Dashboard.MostActiveEmployees" value="المستخدمين الاكثر نشاطا" />
+		<text name="Dashboard.MostActive" value="الاكثر نشاطا" />
+		<text name="Dashboard.ViewAllClients" value="عرض كل العملاء" />
+		<text name="Dashboard.ViewAllEmployees" value="عرض كل المستخدمين" />
+		<text name="Dashboard.ViewAllServices" value="عرض كل الخدمات" />
+		<text name="Dashboard.Client" value="عميل" />
+		<text name="Dashboard.Employee" value="مستخدم" />
+		<text name="Dashboard.Service" value="خدمة"/>
+		<text name="Dashboard.Order" value="طلب" />
+		<text name="Dashboard.CompletedOrders" value="مكتمل" />
+		<text name="Dashboard.OnTheWayOrders" value="في الطريق" />
+		<text name="Dashboard.AllOrders" value="كل الطلبات" />
+		<text name="Dashboard.PendingOrders" value="طلبات قيد الأنتظار" />
+		<text name="Dashboard.Months" value="الشهور" />
+		<text name="Dashboard.ByLitre" value="الاستهلاك بالليتر" />
+		<text name="Dashboard.ByRiyal" value="الاستهلاك بالريال" />
+
+		<text name="Dashboard.MainProviderWelcome" value="اهلا بك في لوحة تحكم المحطة" />
+		<text name="Dashboard.AddNewBranch" value="اضافة فرع جديد" />
+
+		<text name="Dashboard.Jan" value="يناير" />
+		<text name="Dashboard.Feb" value="فبراير" />
+		<text name="Dashboard.Mar" value="مارس" />
+		<text name="Dashboard.Apr" value="أبريل" />
+		<text name="Dashboard.May" value="مايو" />
+		<text name="Dashboard.June" value="يونيو" />
+		<text name="Dashboard.July" value="يوليو" />
+		<text name="Dashboard.Aug" value="أغسطس" />
+		<text name="Dashboard.Sep" value="سبتمبر" />
+		<text name="Dashboard.Oct" value="أكتوبر" />
+		<text name="Dashboard.Nov" value="نوفمبر" />
+		<text name="Dashboard.Dec" value="ديسمبر" />
+
+
+		<!--Pages.Notifications-->
+		<text name="Pages.Notifications.Title" value="الإشعارات"/>
+		<text name="Pages.Notifications.ReadAll" value=" قراءة الكل "/>
+		<text name="Pages.Notifications.DeleteAll" value="حذف الكل"/>
+		<text name="Pages.Notifications.DeleteSelected" value="حذف المُختار"/>
+		<text name="Pages.Notifications.General" value="إشعارات عامة"/>
+		<text name="Pages.Notifications.Orders" value="إشعارات الطلبات"/>
+		<text name="Pages.Notifications.NewNotifications" value="إشعار جديد"/>
+		<text name="Pages.Notifications.Student" value=" الطالب"/>
+		<text name="Pages.Notifications.HasAdded" value=" قام "/>
+		<text name="Pages.Notifications.HasAdded2" value=" قام بإضافة"/>
+		<text name="Pages.Notifications.HasSend" value="قام بإرسال"/>
+		<text name="Pages.Notifications.HasSend2" value="قامت بإرسال"/>
+		<text name="Pages.Notifications.YouHave" value=" لديك "/>
+		<text name="Pages.Notifications.NewMessage" value="رسالة جديدة"/>
+		<text name="Pages.Notifications.NewsLetter" value="إشترك فى النشره البريديه"/>
+		<text name="Pages.Notifications.NewComplaint" value="شكوى جديدة"/>
+		<text name="Pages.Notifications.NewRequest" value="طلب  جديد"/>
+		<text name="Pages.Notifications.NewQuestion" value="سؤال جديد"/>
+		<text name="Pages.Notifications.NewRegisteration" value="قام بإنشاء حساب جديد "/>
+		<text name="Pages.Notifications.NewProviderRegisteration" value="بالتسجيل كمقدم خدمة جديد"/>
+		<text name="Pages.Notifications.NewComment" value="بإرسال تعليق جديد"/>
+		<text name="Pages.Notifications.AcceptOrder" value="بقبول طلب جديد"/>
+		<text name="Pages.Notifications.RefuseOrder" value="برفض طلب جديد"/>
+		<text name="Pages.Notifications.EndOrder" value="بانهاء طلب"/>
+		<text name="Pages.Notifications.NewArticleAdded" value="بإضافة مقال جديد"/>
+		<text name="Pages.Notifications.ArticleEdited" value="بتعديل مقال"/>
+		<text name="Pages.Notifications.NewArtisticToolAdded" value="بإضافة أداة فنية جديد"/>
+		<text name="Pages.Notifications.ArtisticToolEdited" value="بتعديل أداة فنية"/>
+		<text name="Pages.Notifications.NewArtisticWorkAdded" value="بإضافة عمل فني جديد"/>
+		<text name="Pages.Notifications.ArtisticWorkEdited" value="بتعديل عمل فني"/>
+		<text name="Pages.Notifications.NewCourseAdded" value="بإضافة دورة جديدة"/>
+		<text name="Pages.Notifications.CourseEdited" value="بتعديل  دورة  "/>
+		<text name="Pages.Notifications.NewOnlineCourseAdded" value="بإضافة دورة أونلاین جديدة"/>
+		<text name="Pages.Notifications.OnlineCourseEdited" value="بتعديل دورة أونلاین"/>
+		<text name="Pages.Notifications.NewEventAdded" value="بإضافة فعالیة جديدة"/>
+		<text name="Pages.Notifications.EventEdited" value="بتعديل فعالیة"/>
+		<text name="Pages.Notifications.NewApplication" value="بإرسال طلب وظيفة"/>
+		<text name="Pages.Notifications.NewJobAdded" value="بإضافة وظيفة جديدة"/>
+		<text name="Pages.Notifications.JobEdited" value="بتعديل وظيفة"/>
+		<text name="Pages.Notifications.NewOrderCheckOut" value="بطلب جديد"/>
+		<text name="Pages.Notifications.OrderPrepared" value="تم تجهيز طلبك بنجاح"/>
+		<text name="Pages.Notifications.OrderShipped" value="تم شحن طلبك بنجاح"/>
+		<text name="Pages.Notifications.SetShippingCost" value="تم تحديد قيمة الشحن لطلبك"/>
+		<text name="Pages.Notifications.OrderCompleted" value=" إنهاء الطلب"/>
+		<text name="Pages.Notifications.OrderOnTheWay" value="الطلب فى الطريق"/>
+		<text name="Pages.Notifications.OrderAccepted" value="إستلام الطلب"/>
+		<text name="Pages.Notifications.OrderConfirmed" value="تأكيد الطلب"/>
+		<text name="Pages.Notifications.NotFoundNotifications" value="لا توجد إشعارات"/>
+		<text name="Pages.Notifications.SharingVideo" value="أرسل لك فيديو {0}"/>
+		<text name="Pages.Notifications.ConfirmDeleteAll" value="سيتم حذف جميع الإشعارات"/>
+		<text name="Pages.Notifications.ConfirmDelete" value="سيتم حذف هذا الإشعار"/>
+
+		<text name="Pages.Notifications.NewReport" value="بلاغ جديد"/>
+		<text name="Pages.Notifications.NewAdvertisement" value="إعلان جديد"/>
+		<text name="Pages.Notifications.NewEmploymentMessage" value="طلب توظيف جديد"/>
+		<text name="Pages.Notifications.LogOut" value="سيتم تسجيل الخروج بسبب تعديل الشركة و الفرع"/>
+
+		<!--Notifications-->
+		<text name="Notifications" value="الاشعارات" />
+		<text name="Pages.Notifications.ProductApproved" value="وافق علي الطلب المقدم منك" />
+		<text name="Pages.Notifications.ProductRefused" value="رفض الطلب المقدم منك" />
+		<text name="Pages.Notifications.NewChat" value="ارسل لك رسالة جديدة بخصوص المنتج" />
+		<text name="Pages.Notifications.SendGroupRequest" value="0}يريد الإنضام للمجموعة}"/>
+		<text name="Pages.Notifications.AcceptGroupRequest" value="تم قبول طلبك بألانضمام لمجموعة{0}"/>
+		<text name="Pages.Notifications.RefuseGroupRequest" value="0}تم رفض  طلبك بألانضمام لمجموعه}"/>
+		<text name="Pages.Notifications.ManageBlokingMessages" value="0}لقد تم حظر المحادثه بألكتابه فى المجموعه }"/>
+		<text name="Pages.Notifications.SendChatRequest" value="يريد التحدث معك{0}"/>
+		<text name="Pages.Notifications.AcceptChatRequest" value="0}تم قبول طلبك للتحدث مع}"/>
+		<text name="Pages.Notifications.SendFollowRequest" value="0}يريد متابعتك}"/>
+		<text name="Pages.Notifications.AcceptFollowRequest" value="0}قد وافق على طلبك}"/>
+		<text name="Pages.Notifications.Client" value="العميل"/>
+		<text name="Pages.Notifications.NewAppointmentRequest" value="طلب حجز جديد"/>
+		<text name="Pages.Notifications.QuestionReply" value="تم الرد على السؤال الخاص بك"/>
+		<text name="Pages.Notifications.NewSubscribePackage" value="قامت بالإشتراك فى باقة"/>
+		<text name="Pages.Notifications.NewSubscribePackageToYou" value="تم إنشاء إشتراك جديد لك من قبل الإدارة"/>
+		<text name="Pages.Notifications.SubscriptionExpired" value="انتهي الإشتراك"/>
+		<text name="Pages.Notifications.NewReservation" value="حجز جديد"/>
+		<text name="Pages.Notifications.NewTicket" value="قامت بفتح تذكرة جديدة"/>
+		<text name="Pages.Notifications.NewTicketDetail" value="قامت بإضافة تعليق على التذكرة"/>
+		<text name="Pages.Notifications.TicketCompleted" value="تم انهاء التذكرة "/>
+		<text name="Pages.Notifications.RenewSubscription" value="تم تجديد الإشتراك"/>
+		<text name="Pages.Notifications.RenewSubscriptionWalletError" value="لم يتم تجديد الإشتراك لعدم وجود رصيد كافي في المحفظة"/>
+		<text name="Pages.Notifications.UpgradeSubscription" value="قامت بترقية الإشتراك"/>
+
+		<text name="Pages.Notifications.BranchFuelTransactionMsg" value="تم تعبئة الوقود للمركبة {0} رقم {1} من محطة {2} / {3}"/>
+		<text name="Pages.Notifications.ProviderFuelTransactionMsg" value="تم تعبئة الوقود للمركبة {0} رقم {1} من فرع {2} / {3}"/>
+		<text name="Pages.Notifications.DriverFuelTransactionMsg" value="تم تعبئة وقود المركبة رقم {0} بنجاح"/>
+
+		<text name="Pages.Notifications.BranchWalletDepositMsg" value="تم شحن رصيد المحفظة بقيمة {0} ريال"/>
+		<text name="Pages.Notifications.BranchWalletRefundMsg" value="تم الخصم من رصيد المحفظة بقيمة {0} ريال"/>
+
+		<text name="Pages.Notifications.BranchWalletTransferDepositMsg" value="تم تحويل رصيد للمحفظة بقيمة {0} ريال من فرع {1}"/>
+		<text name="Pages.Notifications.BranchWalletTransferRefundMsg" value="تم تحويل رصيد لمحفظة فرع {0} بقيمة {1} ريال"/>
+
+		<!--Pages.SendNotifications-->
+		<text name="Pages.SendNotifications.SendTo" value="إرسال الي" />
+		<text name="Pages.SendNotifications.Choose" value="اختر" />
+		<text name="Pages.SendNotifications.ToSelected" value="لأشخاص محددة" />
+		<text name="Pages.SendNotifications.ToAll" value=" للكل" />
+		<text name="Pages.SendNotifications.ToCity" value=" مدينة" />
+		<text name="Pages.SendNotifications.Title" value="إرسال تنبيهات" />
+
+		<text name="Pages.SendNotifications.NotificationType" value="الإشعار الى ؟" />
+		<text name="Pages.SendNotifications.Mobile" value="التطبيق  و الموقع" />
+		<text name="Pages.SendNotifications.Email" value="البريد الإلكتروني" />
+		<text name="Pages.SendNotifications.Both" value="كلاهما" />
+		<!--ContactMessages-->
+		<text name="Pages.ContactMessages.Contact" value="رسائل عامة" />
+		<text name="Pages.ContactMessages.Suggestion" value="إقتراحات" />
+		<text name="Pages.ContactMessages.Modify" value="تعديلات" />
+		<text name="Pages.ContactMessages.EditLocation" value="تعديل موقع على الخريطة" />
+
+
+		<!--Pages.AboutUs-->
+		<text name="Pages.AboutUs.Title" value="عن التطبيق" />
+		<text name="Pages.AboutUs.ArabicAbout" value= "حالة النظام" />
+		<text name="Pages.AboutUs.EnglishAbout" value="حالة النظام بالإنجليزي" />
+		<text name="Pages.AboutUs.PdfFile" value="تقرير الساعة" />
+
+		<!--Lookups -->
+		<text name="Pages.Definitions.Title" value="التعريفات"/>
+
+		<text name="Pages.Users.UserIsNotActiveAndCanNotLogin" value="هذا المستخدم غير نشط و لا يمكنة تسجيل الدخول"/>
+		<text name="Pages.Users.UserEmailIsNotConfirmedAndCanNotLogin" value="البريد الالكترونى غير مفعل ولا يمكنة تسجيل الدخول"/>
+		<text name="UserPhoneNumberIsNotConfirmedAndCanNotLogin" value="رقم الجوال غير مفعل و لا يمكنة تسجيل الدخول"/>
+		<text name="Pages.DoctorMemberships.Error.ElmentNotFound" value="هذه الباقة ليست موجودة"/>
+
+		<!--Categories-->
+		<text name="Pages.Categories.Title" value="التصنيفات"/>
+		<text name="Pages.Categories.ModalTitle" value="التصنيف"/>
+		<text name="Pages.Categories.Cars" value="مركبات"/>
+		<text name="Pages.Categories.RealEstates" value="عقارات"/>
+		<text name="Pages.Categories.Other" value="اخرى"/>
+		<text name="Pages.Categories.Error.AlreadyExist" value="تصنيف بنفس الاسم موجود بالفعل"/>
+		<text name="Pages.Categories.NoData" value="لا يوجد تصنيفات"/>
+		<text name="Pages.Categories.Error.HasAdvertisements" value="هذا التصنيف يحتوي علي بعض الإعلانات"/>
+		<text name="Pages.Categories.Error.HasSubCategories" value="هذا التصنيف يحتوي علي بعض التصنيفات الفرعية"/>
+
+		<!--SubCategories-->
+		<text name="Pages.SubCategories.Name" value="التصنيفات الفرعيه"/>
+		<text name="Pages.SubCategories.SubCategoryName" value="التصنيف الفرعي"/>
+		<text name="Pages.SubCategories.SecondSubCategoryName" value="التصنيف الفرعي الثاني"/>
+
+
+		<!--Register-->
+		<text name="Pages.Register.Title" value="تسجيل جديد"/>
+		<text name="Pages.Register.SignUp" value="تسجيل"/>
+		<text name="Pages.Register.AlreadyHaveAccount" value="لديك حساب بالفعل ?"/>
+		<text name="Pages.Register.SignIn" value="تسجيل الدخول"/>
+		<text name="Pages.Register.AgreeTo" value="أنا أوافق علي "/>
+		<text name="Pages.Register.Terms" value="الشروط و الأحكام"/>
+		<text name="Pages.Register.PhoneNumberPlaceholder" value="رقم الجوال 05xxxxxxxx"/>
+		<text name="Pages.Register.PasswordLength" value="يجب أن تتكون كلمة المرور من 6 أحرف على الأقل" />
+		<text name="Pages.Register.ErrorAcceptPrivacyAndTerms" value="يجب الموافقة علي الشروط و الأحكام أولاً"/>
+		<text name="Pages.Register.SuccessfullyConfirmed" value="لقد تم تأكيد بريدك الإلكتروني بنجاح يمكنك تسجيل الدخول الأن"/>
+		<text name="Pages.Register.CanNotConfirm" value="مستخدم او رقم تفعيل غير صحيح"/>
+		<text name="Pages.Register.ConfirmUserNotFound" value="مستخدم غير موجود"/>
+		<text name="Pages.Register.AlreadyConfirmed" value="حسابك مفعل بالفعل"/>
+		<text name="Pages.Register.TypeConfirmationCode" value="أدخل كود التفعيل"/>
+		<text name="Pages.Register.Activate" value="تأكيد"/>
+		<text name="Pages.Register.CodeNotRecieved" value="لم استلم كود التفعيل؟"/>
+		<text name="Pages.Register.Resend" value="إعادة إرسال "/>
+		<text name="Pages.Register.Error.AlreadyExistEmail" value="هذا البريد الإلكتروني مستخدم من قبل" />
+		<text name="Pages.Register.Error.AlreadyExistPhone" value="هذا الرقم مستخدم من قبل" />
+		<text name="Pages.Register.Error.SelectAtLeastOneCategory" value="اختر على الأقل قسم واحد" />
+		<text name="Pages.Register.Error.RegisterWithUsBuy" value="سجل معنا و اشترى و اعرض منتجاتك" />
+		<text name="Pages.Register.SelectTheCategories" value="اختر الأقسام على جوك" />
+		<text name="Pages.Register.StartTouring" value="بدء التجول" />
+		<text name="Pages.Register.ToVerifyYourAccountEnterTheCode" value=" لتأكيد حسابك قم بإدخال الكود المكون من 4 ارقام المرسل الى الرقم" />
+		<text name="Pages.Register.BackToLogin" value="الرجوع الي شاشة " />
+
+
+
+		<text name="Pages.ForgotPassword.Title" value="نسيت كلمة المرور" />
+		<text name="Pages.ForgotPassword.Send" value="إرسال" />
+		<text name="Pages.ForgotPassword.Save" value="حفظ" />
+
+
+
+		<!--Mobile API Messages-->
+		<text name="MobileApi.Messages.LoginFirst" value="قم بتسجيل الدخول أولا"/>
+		<text name="MobileApi.Messages.UserNotExsist" value="المستخدم غير موجود"/>
+		<text name="MobileApi.Messages.PasswordChanged" value="تم تغيير كلمة المرور بنجاح"/>
+		<text name="MobileApi.Messages.InvalidPassword" value="كلمة المرور غير صحيحة"/>
+		<text name="MobileApi.Messages.InvalidUserNameOrEmailAddress" value="خطأ في إسم المستخدم أو البريد الإلكتروني"/>
+		<text name="MobileApi.Messages.InvalidEmailAddress" value="خطأ البريد الإلكتروني"/>
+		<text name="MobileApi.Messages.InvalidPhoneNumber" value="خطأ في رقم الجوال أو كلمة المرور"/>
+		<text name="MobileApi.Messages.UserNotActive" value="هذا الحساب معلق حاليا"/>
+		<text name="MobileApi.Messages.BranchOrCompanyNotActive" value="حساب الشركة أو الفرع معلق حاليا"/>
+		<text name="MobileApi.Messages.ProviderOrMainNotActive" value="حساب مزود الخدمة أو الفرع معلق حاليا"/>
+		<text name="MobileApi.Messages.InvalidNewPassword" value="كلمة المرور غير صحيحة"/>
+		<text name="MobileApi.Messages.InvalidOldPassword" value="كلمة المرور القديمة غير صحيحة"/>
+		<text name="MobileApi.Messages.InvalidUserNameOrPassword" value="خطأ في إسم المستخدم أو البريد الإلكتروني"/>
+		<text name="MobileApi.Messages.NoRecords" value=" لا توجد بيانات للعرض"/>
+		<text name="MobileApi.Messages.ErrorOccurred" value="حدث خطأ"/>
+		<text name="MobileApi.Messages.AlreadyCreated" value="تم استكمال العملية بالفعل"/>
+		<text name="MobileApi.Messages.NoSupscrip" value="غير مشترك"/>
+		<text name="MobileApi.Messages.OrderCreated" value="تم انشاء الطلب بنجاح "/>
+		<text name="MobileApi.Messages.SentSuccessfully" value="تم الإرسال بنجاح"/>
+		<text name="MobileApi.Messages.EmailSentSuccessfully" value="تم الإرسال بنجاح" />
+		<text name="MobileApi.Messages.AddedToFavorites" value="تمت الإضافة الي القائمة المفضلة" />
+		<text name="MobileApi.Messages.RemovedFromFavorites" value="تم الحذف من القائمة المفضلة" />
+		<text name="MobileApi.Messages.AlreadyExistsInFavorites" value="موجود بالفعل فى القائمه المفضله" />
+		<text name="MobileApi.Messages.SubscribedSuccessfully" value="تم الإشتراك بنجاح" />
+		<text name="MobileApi.Messages.CommentAddedSuccessfully" value="تم إضافة التعليق بنجاح" />
+		<text name="MobileApi.Messages.FailedToComment" value="حدث خطأ فى إضافة التعليق" />
+		<text name="MobileApi.Messages.FailedToSubscribe" value="حدث خطأ فى الإشتراك" />
+		<text name="MobileApi.Messages.UpdatedSuccessfully" value="تم التعديل بنجاح" />
+		<text name="MobileApi.Messages.VideoUploaded" value="تم إضافة الفيديو" />
+		<text name="MobileApi.Messages.VideoUpdated" value="تم تعديل الفيديو" />
+		<text name="MobileApi.Messages.NoVideoRecords" value="لا يوجد فيديوهات" />
+		<text name="MobileApi.Messages.FollowedSuccessfully" value="تمت المتابعه بنجاح "/>
+		<text name="MobileApi.Messages.UnFollowedSuccessfully" value="عدم متابعه"/>
+		<text name="MobileApi.Messages.VideoSharedSuccessfully" value="تم إرسال الفيديو" />
+		<text name="MobileApi.Messages.VideoSharedBefore" value="تم إرسال هذا الفيديو من قبل " />
+		<text name="MobileApi.Messages.GroupCreatedSuccessfully" value="تم إنشاء الجروب" />
+		<text name="MobileApi.Messages.GroupUpdatedSuccessfully" value="تم تعديل بيانات الجروب" />
+		<text name="MobileApi.Messages.NoGroupRecords" value="لا توجد مجموعات" />
+		<text name="MobileApi.Messages.GroupNotFound" value="المجموعة غير موجودة" />
+		<text name="MobileApi.Messages.RequestSent" value="تم ارسال الطلب بنجاح"/>
+		<text name="MobileApi.Messages.SendRequestBefore" value="لقدارسلت طلب بالفعل"/>
+		<text name="MobileApi.Messages.RemovedMember" value="لقد تم حذف العضو"/>
+		<text name="MobileApi.Messages.BlockedMember" value="لقد تم حظر العضو"/>
+		<text name="MobileApi.Messages.UnBlockedMember" value="لقد تم إلغاء حظر العضو"/>
+		<text name="MobileApi.Messages.AddMember" value="تم اضافه عضو جديد"/>
+		<text name="MobileApi.Messages.BlockTextMessage" value="تم حظر المحادثة بالكتابة"/>
+		<text name="MobileApi.Messages.UnBlockTextMessage" value="تم السماح بالكتابة"/>
+		<text name="MobileApi.Messages.JoinAvailable" value="تم السماح بطلبات الإضافه"/>
+		<text name="MobileApi.Messages.JoinUnAvailable" value="تم حظر طلبات الإضافه "/>
+		<text name="MobileApi.Messages.LeaveGroup" value="تمت مغادره المجموعه"/>
+		<text name="MobileApi.Messages.NoGroupRequstesRecords" value="لا يوجد طلبات إضافه"/>
+		<text name="MobileApi.Messages.NoGroupMembersRecords" value="لا يوجد أعضاء"/>
+		<text name="MobileApi.Messages.AcceptRequest" value="تم قبول طلب الإضافه"/>
+		<text name="MobileApi.Messages.YouShouldbeAdmin" value="يجب ان تكون أدمن المجموعة"/>
+		<text name="MobileApi.Messages.DeleteRequest" value="تم مسح طلب الإضافه"/>
+		<text name="MobileApi.Messages.NoUsersRecords" value="لا يوجد أشخاص"/>
+		<text name="MobileApi.Messages.UserNotFound" value="المستخدم غير موجود"/>
+		<text name="MobileApi.Messages.ChatAccpted" value="تم قبول طلب المحادثه"/>
+		<text name="MobileApi.Messages.SendRequest" value="إرسل طلب"/>
+		<text name="MobileApi.Messages.ChatRequestAccpted" value="تم قبول طلب المحادثه"/>
+		<text name="MobileApi.Messages.ChatRequestdeleted" value="تم رفض طلب المحادثه"/>
+		<text name="MobileApi.Messages.GroupDeleted" value="تم حذف ألمجموعه"/>
+		<text name="MobileApi.Messages.ShouldBeAdmin" value="يجب أن تكون مدير ألمجموعه"/>
+		<text name="MobileApi.Messages.ProfileImageUpdated" value="تم تحديث الصورة الشخصية بنجاح"/>
+		<text name="MobileApi.Messages.VideoDeleted" value="تم حذف الفيديو"/>
+		<text name="MobileApi.Messages.VideoDeletionPermission" value="لا تمتلك صلاحية الحذف"/>
+		<text name="MobileApi.Messages.VideoIsSaved" value="تم حفظ الفيديو في قائمة التشغيل"/>
+		<text name="MobileApi.Messages.VideoExistsInSaved" value="الفيديو موجود بالفعل في قائمة التشغيل"/>
+		<text name="MobileApi.Messages.DeletedFromPlayList" value="تم حذف الفيديو من قائمة التشغيل"/>
+		<text name="MobileApi.Messages.VideoIsIgnored" value="تم تجاهل الفيديو"/>
+		<text name="MobileApi.Messages.ExistsInWatchLaterBefore" value="موجود بالفعل في المشاهدة لاحقا"/>
+		<text name="MobileApi.Messages.WatchLaterSuccess" value="سيتم المشاهدة في وقت اخر"/>
+		<text name="MobileApi.Messages.UpdateChatMethodSuccess" value="تم تغيير طريقة المحادثة"/>
+		<text name="MobileApi.Messages.ReservationSucceded" value="تم الحجز بنجاح"/>
+		<text name="MobileApi.Messages.SubscribePackage" value="تم الإشتراك فى الباقة"/>
+		<text name="MobileApi.Messages.ConfirmPhoneNumber" value="قم بتأكيد رقم الجوال" />
+		<text name="MobileApi.Messages.RegisteredSuccessfully" value="تم التسجيل بنجاح" />
+		<text name="MobileApi.Messages.UserNotfound" value="هذا العميل غير موجود" />
+		<text name="MobileApi.Messages.ProfileImageChangedSuccessfully" value="تم تغيير الصوره الشخصيه بنجاح" />
+		<text name="MobileApi.Messages.AddedToComparisons" value="تمت الإضافة الي المقارنه" />
+		<text name="MobileApi.Messages.RemovedFromComparisons" value="تم الحذف من المقارنه" />
+		<text name="MobileApi.Messages.AlreadyExistsInComparisons" value="موجود بالفعل فى المقارنه" />
+
+		<text name="MobileApi.Messages.IsLogedinFromAnthorDevice" value="تم التسجيل من جهاز اخر" />
+		<text name="MobileApi.Messages.TransferedToAnotherProvider" value="تم نقلك الى محطة أخري يجب إعادة تسجيل الدخول" />
+		<text name="MobileApi.Messages.RequestSentSuccessfully" value="تم إرسال الطلب بنجاح"/>
+		<text name="MobileApi.Messages.CodeMessage" value="رمز التفعيل لتطبيق سيارة آب : {0}" />
+		<text name="MobileApi.Messages.ConfirmationCodeError" value="كود التفعيل غير صحيح" />
+		<text name="MobileApi.Messages.UserTypeNotValid" value="نوع المستخدم غير صالح" />
+		<text name="MobileApi.Messages.LogoutSuccessfully" value="تم تسجيل الخروج بنجاح" />
+		<text name="MobileApi.Messages.PasswordCreatedSuccessfully" value="تم تغيير كلمة المرور بنجاح" />
+		<text name="MobileApi.Messages.AddedSuccessfully" value="تم الإنشاء بنجاح" />
+		<text name="MobileApi.Messages.DeletedSuccessfully" value="تم الحذف بنجاح" />
+		<text name="MobileApi.Messages.LoadCv" value="يجب رفع CV قبل الارسال" />
+		<text name="MobileApi.DriverVeichles.Messages.NoRecords" value="لا يوجد مركبات للسائق" />
+		<text name="MobileApi.DriverCode.Messages.CodeConfirmedSuccessfully" value="كود السائق صحيح" />
+		<text name="MobileApi.DriverCode.Messages.CodeConfirmedUnSuccessfully" value="كود السائق غير صحيح" />
+
+		<text name="MobileApi.Messages.AddressUsedInOrders" value="هذا العنوان مستخدم في بعض الطلبات" />
+		<text name="MobileApi.Messages.BeforePicsCreated" value="تم إرفاق الصور" />
+		<text name="MobileApi.Messages.SuccessTransaction" value="تم تنفيذ العملية بنجاح" />
+		<text name="MobileApi.Messages.FaildTransaction" value="حدث خطا أثناء تنفيذ العملية" />
+
+
+		<text name="Pages.Header.Logout"  value="تسجيل الخروج" />
+		<text name="Service.ExistDetail"  value="النص موجود بالفعل" />
+
+
+
+
+
+		<!--Companies-->
+		<text name="Pages.Companies.Title" value="الشركات"/>
+		<text name="Pages.Companies.ModalTitle" value="الشركة"/>
+		<text name="Pages.Companies.CompanyInfo" value="بيانات الشركة"/>
+		<text name="Pages.Companies.NewCompany" value="شركة جديدة"/>
+		<text name="Pages.Companies.IsFuel" value="وقود"/>
+		<text name="Pages.Companies.IsClean" value="غسيل"/>
+		<text name="Pages.Companies.IsMaintain" value="صيانة"/>
+		<text name="Pages.Companies.CounterPicIsRequired" value="صورة العداد إلزامية ؟"/>
+
+		<!--Employees-->
+		<text name="Pages.Employees.Title" value="المستخدمين"/>
+		<text name="Pages.Employees.ModalTitle" value="المستخدم"/>
+		<text name="Pages.Employees.BranchesPermissions" value="صلاحية دخول الفروع"/>
+		<text name="Pages.Employees.AllBranches" value="كل الفروع"/>
+
+		<!--Providers-->
+		<text name="Pages.Providers.FuelTypes" value="انواع البنزين المدعومه"/>
+		<text name="Pages.Providers.Diezel" value="ديزل"/>
+
+
+		<!--Branches-->
+		<text name="Pages.Branches.Title" value="الفروع"/>
+		<text name="Pages.Branches.ModalTitle" value="الفرع"/>
+		<text name="Pages.Branches.CompanyBranch" value="فرع الشركة"/>
+		<text name="Pages.Branches.NewBranch" value="فرع جديد"/>
+		<text name="Pages.Branches.BranchCode" value="كود الفرع"/>
+		<text name="Pages.Branches.BranchInfo" value="بيانات الفرع"/>
+		<text name="Pages.Branches.TaxNo" value="الرقم الضريبي"/>
+		<text name="Pages.Branches.RegNo" value="رقم السجل التجاري"/>
+		<text name="Pages.Branches.Iban" value="رقم الايبان"/>
+		<text name="Pages.Branches.BranchPrices" value="أسعار الفرع"/>
+		<text name="Pages.Branches.FuelEighteenPrice" value="سعر بنزين 80"/>
+		<text name="Pages.Branches.FuelNinetyOnePrice" value="سعر بنزين 91"/>
+		<text name="Pages.Branches.FuelNinetyFivePrice" value="سعر بنزين 95"/>
+		<text name="Pages.Branches.SolarPrice" value="سعر ديزل"/>
+		<text name="Pages.Branches.PendingFuelEighteenPrice" value="سعر بنزين 80 المطلوب"/>
+		<text name="Pages.Branches.PendingFuelNinetyOnePrice" value="سعر بنزين 91 المطلوب"/>
+		<text name="Pages.Branches.PendingFuelNinetyFivePrice" value="سعر بنزين 95 المطلوب"/>
+		<text name="Pages.Branches.PendingSolarPrice" value="سعر الديزل المطلوب"/>
+		<text name="Pages.Branches.InternalWashingPrice" value="سعر الغسيل الداخلي"/>
+		<text name="Pages.Branches.ExternalWashingPrice" value="سعر الغسيل الخارجي"/>
+		<text name="Pages.Branches.ThreeThousandKiloOilPrice" value="سعر زيت الكيلو ثلاثة آلاف"/>
+		<text name="Pages.Branches.FiveThousandKiloOilPrice" value="سعر زيت الكيلو خمسة آلاف"/>
+		<text name="Pages.Branches.TenThousandKiloOilPrice" value="سعر زيت الكيلو عشرة آلاف"/>
+
+		<text name="Pages.Branches.UpdateManager" value="تعيين مدير تشغيل"/>
+		<text name="Pages.Branches.Manager" value="مدير التشغيل "/>
+		<text name="Pages.Branches.ManagerName" value="اسم المسؤول"/>
+		<text name="Pages.Branches.UpdateBranch" value="تعديل الفرع"/>
+
+		<!--City-->
+		<text name="Pages.Cities.Title" value="المدن"/>
+		<text name="Pages.Cities.ModalTitle" value="المدينة"/>
+		<text name="Pages.Cities.ChooseCity" value="أختر المدينة"/>
+		<text name="Pages.Cities.Error.AlreadyExist" value="هذة المدينة موجودة بالفعل" />
+
+		<!--Providers-->
+		<text name="Pages.Providers.ModalTitle" value="الفرع" />
+		<text name="Pages.Providers.Title" value="الفروع" />
+		<text name="Pages.Providers.ProviderInfo" value="بيانات الفرع"/>
+		<text name="Pages.Providers.NewProvider" value="فرع جديد"/>
+
+		<text name="Pages.Providers.IsFuel" value="يدعم تزويد الوقود"/>
+		<text name="Pages.Providers.IsOil" value="يدعم تغيير زيت السيارة"/>
+		<text name="Pages.Providers.IsClean" value="يدعم الغسيل"/>
+		<text name="Pages.Providers.IsMaintain" value="يدعم الصيانة"/>
+		<text name="Pages.Providers.ManagerName" value="مدير الفرع"/>
+		<text name="Pages.Providers.WorkersCount" value="عدد العمال"/>
+		<text name="Pages.Providers.FuelPrices" value="أسعار الوقود"/>
+		<text name="Pages.Providers.StationInfo" value="بيانات المحطة"/>
+
+		<text name="Pages.Providers.AccountInfo" value="بيانات حساب مدير الفرع"/>
+
+		<text name="Pages.Providers.Services" value="خدمات المحطة"/>
+		<text name="Pages.Providers.Services.Market" value="سوبر ماركت"/>
+		<text name="Pages.Providers.Services.Atm" value="صراف آلي"/>
+
+		<text name="Pages.Providers.VisibleInMap" value="مرئي"/>
+
+		<text name="Pages.MainProviders.ModalTitle" value="مقدم الخدمة" />
+		<text name="Pages.MainProviders.Title" value="مقدمين الخدمات" />
+		<text name="Pages.MainProviders.MainProviderInfo" value="بيانات مقدم الخدمة"/>
+		<text name="Pages.MainProviders.NewMainProvider" value="مقدم خدمة جديد"/>
+		<text name="Pages.MainProviders.BankFile" value="صورة خطاب البنك تكون مصدقه من الغرفة التجاريه"/>
+		<text name="Pages.MainProviders.BankFileName" value="صورة خطاب البنك"/>
+
+		<text name="Pages.MainProviders.City" value="المدينة"/>
+		<text name="Pages.MainProviders.Region" value="المنطقة"/>
+		<text name="Pages.MainProviders.District" value="الحي"/>
+		<text name="Pages.MainProviders.PostalCode" value="رقم البريد"/>
+		<text name="Pages.MainProviders.BoxNumber" value="رقم الصندوق"/>
+		<text name="Pages.MainProviders.Street" value="الشارع"/>
+		<text name="Pages.MainProviders.BuildingNumber" value="رقم المبني "/>
+		<text name="Pages.MainProviders.AdditionalCode" value="الرمز الإضافي"/>
+		<text name="Pages.MainProviders.UnitNumber" value="وحدة الرقم"/>
+		<text name="Pages.MainProviders.AcccountType" value="نوع الخدمة"/>
+
+		<text name="Pages.MainProviders.AddExternalInvoice" value="ارفاق الفاتورة الضريبية "/>
+
+
+		<text name="Common.IsFuel" value="بنزين"/>
+		<text name="Common.IsMaintain" value="صيانة"/>
+		<text name="Common.IsOil" value="زيت"/>
+		<text name="Common.IsClean" value="تنظيف"/>
+
+		<text name="Pages.Workers.Title" value="العمال"/>
+		<text name="Pages.Workers.ModalTitle" value="العامل"/>
+
+		<text name="Pages.Workers.IsFuel" value="تزويد الوقود"/>
+		<text name="Pages.Workers.IsOil" value="تغيير زيت السيارة"/>
+		<text name="Pages.Workers.IsClean" value="الغسيل"/>
+		<text name="Pages.Workers.IsMaintain" value="الصيانة"/>
+
+		<!--Veichles-->
+		<text name="Pages.Veichles.Title" value="المركبات"/>
+		<text name="Pages.Veichles.ModalTitle" value="المركبة"/>
+		<text name="Pages.Veichles.NewVeichle" value="اضافة مركبة"/>
+		<text name="Pages.Veichles.VeichleInfo" value="بيانات المركبة"/>
+		<text name="Pages.Veichles.VeichlePic" value="صور المركبة"/>
+		<text name="Pages.Veichles.WorkingDays" value="أيام العمل"/>
+		<text name="Pages.Veichles.YearOfIndustry" value="عام الصناعة"/>
+		<text name="Pages.Veichles.ChooseYearOfIndustry" value="اختر عام الصناعة"/>
+		<text name="Pages.Veichles.AdditionalInformation" value="معلومات إضافية"/>
+		<text name="Pages.Veichles.ConsumptionInfo" value="بيانات الاستهلاك"/>
+		<text name="Pages.Veichles.DriverInfo" value="بيانات السائق"/>
+		<text name="Pages.Veichles.AddDriverInfo" value="إضافة بيانات السائق"/>
+
+		<text name="Pages.Veichles.ConsumptionType" value="طريقة الاستهلاك"/>
+		<text name="Pages.Veichles.ConsumptionType.Group" value="اختيار مجموعة"/>
+		<text name="Pages.Veichles.ConsumptionType.Trip" value="رحلة"/>
+
+		<text name="Pages.VeichlesAndDrivers.Title" value="المركبات و السائقين"/>
+
+
+		<text name="Pages.VeichleTrips.Title" value="رحلة"/>
+		<text name="Pages.VeichleTrips.TripNumber" value="رقم الرحلة"/>
+		<text name="Pages.VeichleTrips.StartDate" value="تاريخ البداية"/>
+		<text name="Pages.VeichleTrips.EndDate" value="تاريخ النهاية"/>
+		<text name="Pages.VeichleTrips.MaxLitersCount" value="أقصى استهلاك للرحلة بالليتر"/>
+		<text name="Pages.VeichleTrips.MaxConsumption" value="أقصى استهلاك "/>
+		<text name="Pages.VeichleTrips.ConsumptionBySar" value="الاستهلاك بالريال"/>
+		<text name="Pages.VeichleTrips.CurrentConsumption" value="الاستهلاك الحالي"/>
+		<text name="Pages.VeichleTrips.IsActive" value="مفعل"/>
+		<text name="Pages.VeichleTrips.NotActive" value="غير مفعل"/>
+
+
+		<text name="Pages.Veichles.BodyNumber" value="رقم الهيكل"/>
+		<text name="Pages.Veichles.Mark" value=" ماركة المركبة "/>
+		<text name="Pages.Veichles.Model" value="موديل المركبة"/>
+		<text name="Pages.Veichles.SimNumber" value="رقم شريحة SIM"/>
+		<text name="Pages.Veichles.FuelType" value="نوع الوقود المستخدم"/>
+		<text name="Pages.Veichles.TankSize" value="سعة الخزان باللتر"/>
+		<text name="Pages.Veichles.FuelAverageUsage" value="معدل الاستهلاك الوقود لكل كم"/>
+		<text name="Pages.Veichles.KiloCount" value="عداد الكيلوات"/>
+		<text name="Pages.Veichles.InternalNumber" value="رقم المركبة الداخلي"/>
+
+		<text name="Pages.Veichles.Fuel_Balance" value="رصيد الوقود"/>
+		<text name="Pages.Veichles.Maintain_Balance" value="رصيد الصيانة"/>
+		<text name="Pages.Veichles.Oil_Balance" value="رصيد الزيت"/>
+		<text name="Pages.Veichles.Wash_Balance" value="رصيد التنظيف"/>
+
+		<text name="Pages.Veichles.MoneyBalance" value="الرصيد بمبلغ "/>
+		<text name="Pages.Veichles.Balance" value="الرصيد "/>
+		<text name="BalanceInLitre" value="{0} لتر"/>
+		<text name="BalanceInSar"  value="{0} ريال"/>
+		<text name="Pages.Veichles.FuelLitreBalance"  value="الرصيد باللتر "/>
+		<text name="Pages.Veichles.MoneyBalanceStartDate" value="تاريخ نهاية الرصيد"/>
+		<text name="Pages.Veichles.MoneyBalanceEndDate" value="تاريخ نهاية الرصيد"/>
+		<text name="Pages.Veichles.IsCurrent" value="الحالية ؟"/>
+
+
+		<text name="Pages.Veichles.VeichleType" value="نوع المركبة"/>
+		<text name="Pages.Veichles.VeichleType.Bus" value="حافلة"/>
+		<text name="Pages.Veichles.VeichleType.Private" value="خصوصي"/>
+		<text name="Pages.Veichles.VeichleType.Transport" value="نقل"/>
+		<text name="Pages.Veichles.VeichleType.Taxi" value="أجرة"/>
+		<text name="Pages.Veichles.VeichleType.Truck" value="شاحنة"/>
+		<text name="Pages.Veichles.VeichleType.Van" value="فان"/>
+		<text name="Pages.Veichles.VeichleType.Motorcycle" value="دراجة بخارية"/>
+		<text name="Pages.Veichles.VeichleType.HeavyEquipment" value="معدات ثقيلة"/>
+		<text name="Pages.Veichles.VeichleType.PrivateTransfer" value="نقل خاص"/>
+		<text name="Pages.Veichles.VeichleType.Diplomat" value="دبلوماسي"/>
+
+		<text name="Pages.Veichles.PlateNumber" value="أرقام اللوحة بالعربية"/>
+		<text name="Pages.Veichles.PlateNumberEn" value="أرقام اللوحة بالإنجليزية"/>
+
+		<text name="Pages.Veichles.PlateLetters" value="حروف اللوحة بالعربية"/>
+		<text name="Pages.Veichles.PlateLettersEn" value="حروف اللوحة بالإنجليزية"/>
+
+		<text name="Pages.Veichles.FullPlateNumbers" value="لوحة المركبة"/>
+		<text name="Pages.Veichles.Status" value="الحالة"/>
+
+		<text name="Pages.Veichles.AddDriver" value="إضافة سائق"/>
+		<text name="Pages.Veichles.AttachDriver" value="اسناد سائق للمركبة"/>
+		<text name="Pages.Veichles.CurrentDriver" value="السائق الحالي"/>
+
+		<text name="Pages.Veichles.Messages.NotRegisteredVeichle" value="هذه المركبة غير مسجلة في النظام"/>
+		<text name="Pages.Veichles.Messages.DriverDonnotHaveCar" value="هذا السائق غير مرتبط بأي مركبة"/>
+		<text name="Pages.Veichles.Messages.NotRegisteredChipNumber" value="هذه الشريحة غير مسجلة في النظام"/>
+		<text name="Pages.Veichles.Messages.CarRegisteredWithAnotherChip" value="المركبة مرتبطة بشريحة أخرى"/>
+		<text name="Pages.Veichles.Messages.VeichleUpdated" value="تم تحديث بيانات المركبة"/>
+
+		<text name="Pages.Veichles.Messages.VeichleUpdatedNotification" value="تم تحديث بيانات المركبة {0} رقم {1}"/>
+		<text name="Pages.Veichles.Messages.CodeIsCorrect" value="تم التأكيد"/>
+		<text name="Pages.Veichles.Messages.CodeNotCorrect" value="الكود غير صحيح"/>
+
+		<text name="Pages.Veichles.Messages.FuelTypeError" value="نوع وقود المركبة غير محدد"/>
+		<text name="Pages.Veichles.Messages.ProviderFuelTypeError" value="أنواع الوقود غير محدده للمحطة"/>
+		<text name="Pages.Veichles.Messages.FuelTypeNotAvailable" value="نوع الوقود غير متاح في المحطة"/>
+
+		<text name="Pages.Veichles.Messages.ChipNumberAlreadyLinked" value="هذه الشريحة مرتبطة على مركبة أخرى"/>
+
+		<text name="Pages.Veichles.Messages.ChipNumberError" value="خطأ في بيانات الشريحة"/>
+		<text name="Pages.Veichles.Messages.ChooseBranch" value="يجب إختيار الفرع"/>
+
+		<text name="Pages.Veichles.Messages.PlateLettersError" value="لم يتم تحديد حروف و أرقام المركبة"/>
+		<text name="Pages.Veichles.Messages.PlateLettersExists" value="حروف و أرقام المركبة موجودة بالفعل"/>
+		<text name="Pages.Veichles.Messages.NotAvailableInThisDay" value="المركبة غير متاحة اليوم"/>
+		<text name="Pages.Veichles.Notes" value="ملاحظات"/>
+		<text name="Pages.Veichles.Notes.BrandAndModel" value="يجب اختيار ماركة و موديل المركبة من الاختيارات المتاحه في النظام"/>
+		<text name="Pages.Veichles.Notes.FuelType" value="يجب تحديد نوع الوقود"/>
+		<text name="Pages.Veichles.Notes.Driver" value="بيانات السائق"/>
+
+
+		<text name="Pages.FuelTypes._80" value="80"/>
+		<text name="Pages.FuelTypes._91" value="91"/>
+		<text name="Pages.FuelTypes._95" value="95"/>
+		<text name="Pages.FuelTypes.Diesel" value="ديزل"/>
+
+
+		<!--FuelTransIns-->
+		<text name="Pages.FuelTransIns.Title" value="عمليات ادخال الوقود" />
+		<text name="Pages.FuelTransIns.ModalTitle" value="عمليات ادخال الوقود"/>
+		<text name="Pages.FuelTransIns.Quantity" value="الكمية"/>
+
+
+		<!--MaintainTransIns-->
+		<text name="Pages.MaintainTransIns.Title" value="عمليات ادخال الصيانة"/>
+		<text name="Pages.MaintainTransIns.ModalTitle" value="عمليات ادخال الصيانة"/>
+		<text name="Pages.MaintainTransIns.Quantity" value="الكمية"/>
+
+		<!--WashTransIns-->
+		<text name="Pages.WashTransIns.Title" value="عمليات ادخال الغسيل"/>
+		<text name="Pages.WashTransIns.ModalTitle" value="عمليات ادخال الغسيل"/>
+		<text name="Pages.WashTransIns.Quantity" value="الكمية"/>
+
+		<!--OilTransIns-->
+		<text name="Pages.OilTransIns.Title" value="عمليات ادخال الزيت"/>
+		<text name="Pages.OilTransIns.ModalTitle" value="عمليات ادخال الزيت"/>
+		<text name="Pages.OilTransIns.Quantity" value="الكمية"/>
+
+
+		<!--BranchRequests-->
+		<text name="Pages.BranchRequests.Title" value="طلبات الوقود"/>
+		<text name="Pages.BranchRequests.ModalTitle" value="طلب الوقود"/>
+
+
+
+		<!--Drivers-->
+		<text name="Pages.Drivers.Title" value="السائقين"/>
+		<text name="Pages.Drivers.ModalTitle" value="السائق"/>
+		<text name="Pages.Drivers.DriverCode" value="كود السائق"/>
+		<text name="Pages.Drivers.NewDriver" value="سائق جديد"/>
+		<text name="Pages.Drivers.DriverInfo" value="بيانات السائق"/>
+		<text name="Pages.Drivers.Licence" value="الرخصة"/>
+		<text name="Pages.Drivers.LicenceExpireDate" value="تاريخ نهاية الرخصة"/>
+		<text name="Pages.Drivers.VeichlesCount" value="عدد المركبات "/>
+
+		<!--VeichleRoutes-->
+		<text name="Pages.VeichleRoutes.Title" value="خطوط السير"/>
+		<text name="Pages.VeichleRoutes.ModalTitle" value="خط السير"/>
+		<text name="Pages.VeichleRoutes.StartDate" value="تاريخ البداية"/>
+		<text name="Pages.VeichleRoutes.EndDate" value="تاريخ النهاية"/>
+		<text name="Pages.VeichleRoutes.Notes" value="ملاحظات"/>
+
+
+		<!--BranchProviders-->
+		<text name="Pages.BranchProviders.Title"  value="حظر المحطات"/>
+		<text name="Pages.BranchProviders.ModalTitle"  value="حظر محطة"/>
+		<text name="Pages.BranchProviders.Error.AlreadyExist" value=" مزود الخدمة موجود بالفعل"/>
+
+		<!--DriverVeichles-->
+		<text name="Pages.DriverVeichles.Title" value="مركبات السائق"/>
+		<text name="Pages.DriverVeichles.ModalTitle" value="المركبة"/>
+
+		<!--BranchRequest-->
+		<text name="Pages.BranchRequest.Quantity" value="الكمية"/>
+		<text name="Pages.BranchRequest.Status" value="الحالة"/>
+		<text name="Pages.BranchRequest.DeliveyWay" value="نوع التوصيل"/>
+		<text name="Pages.BranchRequest.FuelType" value="نوع الوقود"/>
+		<text name="Pages.BranchRequest.Plane" value="طائرة"/>
+		<text name="Pages.BranchRequest.Car" value="مركبة"/>
+		<text name="Pages.BranchRequestStatus.New" value="جديد"/>
+		<text name="Pages.BranchRequestStatus.Accepted" value="موافق علية"/>
+		<text name="Pages.BranchRequestStatus.Rejected" value="مرفوض"/>
+		<text name="Pages.BranchRequestStatus._80" value="80"/>
+		<text name="Pages.BranchRequestStatus._92" value="92"/>
+		<text name="Pages.BranchRequestStatus._95" value="95"/>
+		<text name="Pages.BranchRequestStatus.DeliveyDate" value="تاريخ التوصيل"/>
+		<text name="Pages.Notifications.NewBranchRequest" value="لديك طلبية وقود جديدة"/>
+		<text name="Pages.BranchRequests.Rejected" value="برفض طلبية الوقود"/>
+		<text name="Pages.Branch.Name" value="اسم الفرع"/>
+		<text name="Pages.Notifications.Branch" value=" الفرع"/>
+		<text name="Pages.OrderRequest.NewRequestOrder" value="لديك عرض جديد على الطلبية رقم : {0}"/>
+
+		<!--RequestOrders-->
+		<text name="Pages.RequestOrders.Title" value="الطلبيات"/>
+		<text name="Pages.RequestOrders.ModalTitle" value="الطلبية"/>
+
+		<!--FuelTransOut-->
+		<text name="Pages.FuelTransOuts.Title" value="عمليات اخراج الوقود"/>
+		<text name="Pages.FuelTransOuts.ModalTitle" value="عملية اخراج الوقود"/>
+		<text name="Pages.FuelTransOuts.Quantity" value="الكمية"/>
+		<text name="Pages.FuelTransOuts.BeforeBoxPic" value="صورة المضخة قبل التعبئة"/>
+		<text name="Pages.FuelTransOuts.AfterBoxPic" value="صورة المضخة بعد التعبئة"/>
+		<text name="Pages.FuelTransOuts.CounterPic" value="صورة العداد"/>
+		<text name="Pages.FuelTransOuts.BeforeCounterPic" value="صورة العداد قبل التعبئة"/>
+		<text name="Pages.FuelTransOuts.AfterCounterPic" value="صورة العداد بعد التعبئة"/>
+
+		<text name="Pages.FuelTransOuts.FuelConsumption" value="إستهلاك الوقود"/>
+		<text name="Pages.FuelTransOuts.LitersCount" value="عدد اللترات"/>
+		<text name="Pages.FuelTransOuts.Amount" value="التكلفة"/>
+
+
+		<!--MaintainTransOuts-->
+		<text name="Pages.MaintainTransOuts.Title" value="عمليات الصيانة"/>
+		<text name="Pages.MaintainTransOuts.ModalTitle" value="عمليات الصيانة"/>
+		<text name="Pages.MaintainTransOuts.Quantity" value="الكمية"/>
+		<text name="Pages.MaintainTransOuts.CounterPic" value="صورة العداد"/>
+
+
+		<!--WashTransOuts-->
+		<text name="Pages.WashTransOuts.Title" value="عمليات الغسيل"/>
+		<text name="Pages.WashTransOuts.ModalTitle" value="عمليات الغسيل"/>
+		<text name="Pages.WashTransOuts.Quantity" value="الكمية"/>
+		<text name="Pages.WashTransOuts.BeforeCarPic" value="صورة السيارة قبل"/>
+		<text name="Pages.WashTransOuts.AfterCarPic" value="صورة السيارة بعد"/>
+
+		<!--OilTransOuts-->
+		<text name="Pages.OilTransOuts.Title" value="عمليات تغيير الزيت"/>
+		<text name="Pages.OilTransOuts.ModalTitle" value="عمليات تغيير الزيت"/>
+		<text name="Pages.OilTransOuts.Quantity" value="الكمية"/>
+		<text name="Pages.OilTransOuts.CounterPic"  value="صورة العداد"/>
+
+
+
+
+
+
+		<text name="Pages.StoresPackages.Error.PickYourPayType" value="برجاء اختيار نوع الدفع"/>
+		<text name="Pages.Wallets.PaymentId" value="PaymentId"/>
+		<text name="Pages.Wallets.CheckOutId" value="CheckOutId"/>
+		<text name="Common.Day" value="يوم"/>
+		<text name="Common.Month" value="شهر"/>
+		<text name="Common.Year" value="سنة"/>
+
+		<text name="Common.ChoosePackageType" value="--اختار نوع الباقة--"/>
+		<text name="Settings.PackageStatus" value="حالة الباقة"/>
+
+		<!--FuelGroups-->
+		<text name="Pages.FuelGroups.Title" value="مجموعات استهلاك الوقود"/>
+		<text name="Pages.FuelGroups.ModalTitle" value="مجموعة استهلاك الوقود"/>
+		<text name="Pages.FuelGroups.Group" value="مجموعة"/>
+
+		<text name="Pages.FuelGroups.Amount" value="الاستهلاك بمبلغ"/>
+		<text name="Pages.FuelGroups.PeriodType" value="طريقة الإستهلاك"/>
+		<text name="Pages.FuelGroups.PeriodType.Daily" value="يومي"/>
+		<text name="Pages.FuelGroups.PeriodType.Weekly" value="اسبوعي"/>
+		<text name="Pages.FuelGroups.PeriodType.Monthly" value="شهري"/>
+		<text name="Pages.FuelGroups.Transferable" value="قابل للترحيل"/>
+
+
+		<text name="Pages.FuelGroups.GroupType" value="نوع الاستهلاك"/>
+		<text name="Pages.FuelGroups.GroupType.Liter" value="الاستهلاك باللتر"/>
+		<text name="Pages.FuelGroups.GroupType.Period" value="محدد بمدة"/>
+		<text name="Pages.FuelGroups.GroupType.Open" value="مفتوح"/>
+
+
+		<text name="Pages.FuelGroups.PeriodConsumptionType" value="الاستهلاك"/>
+		<text name="Pages.FuelGroups.PeriodConsumptionType.Money" value="الاستهلاك بمبلغ"/>
+		<text name="Pages.FuelGroups.PeriodConsumptionType.Litre" value="الاستهلاك باللتر"/>
+
+		<text name="Pages.FuelGroups.MaximumRechargeAmount" value="أقصى مبلغ للتعبئة في المرة الواحدة"/>
+
+		<!--Brands-->
+		<text name="Pages.Brands.Title" value="ماركة المركبات"/>
+		<text name="Pages.Brands.ModalTitle" value="الماركة"/>
+		<text name="Pages.Brands.Error.AlreadyExist" value="هذه الماركة موجودة بالفعل"/>
+
+
+		<!--Models-->
+		<text name="Pages.Models.Title" value="موديل المركبات"/>
+		<text name="Pages.Models.ModalTitle" value="الموديل"/>
+		<text name="Pages.Models.Error.AlreadyExist" value="هذا الموديل موجود بالفعل"/>
+
+		<!--VeichleTransferRecords-->
+		<text name="Pages.VeichleTransferRecords.Title" value="سجل نقل المركبات"/>
+		<text name="Pages.VeichleTransferRecords.ModalTitle" value="نقل المركبات"/>
+		<text name="Pages.VeichleTransferRecords.ChangeBranch" value="تغيير الفرع"/>
+		<text name="Pages.VeichleTransferRecords.SourceBranch" value="من فرع"/>
+		<text name="Pages.VeichleTransferRecords.TargetBranch" value="إلى فرع"/>
+		<text name="Pages.VeichleTransferRecords.ChooseVeichlesFirst" value="اختر المركبات أولا"/>
+		<text name="Pages.VeichleTransferRecords.CreatedOn" value="تاريخ النقل"/>
+
+
+		<!--WorkerTransferRecords-->
+		<text name="Pages.WorkerTransferRecords.Title" value="سجل العمال "/>
+		<text name="Pages.WorkerTransferRecords.ModalTitle" value="سجل العمال "/>
+		<text name="Pages.WorkerTransferRecords.ChangeProvider" value="تغيير الفرع"/>
+		<text name="Pages.WorkerTransferRecords.SourceProvider" value="من فرع"/>
+		<text name="Pages.WorkerTransferRecords.TargetProvider" value="إلى فرع"/>
+		<text name="Pages.WorkerTransferRecords.ChooseWorkersFirst" value="اختر العمال أولا"/>
+		<text name="Pages.WorkerTransferRecords.CreatedOn" value="تاريخ النقل"/>
+		<text name="Pages.WorkerTransferRecords.CreatedBy" value="نقل بواسطة"/>
+
+
+		<!--VeichleTripsRecords-->
+		<text name="Pages.VeichleTripsRecords.Title" value="سجل رحلات المركبات"/>
+		<text name="Pages.VeichleTripsRecords.ModalTitle" value="رحلات المركبات"/>
+
+		<!--FuelPriceChangeRequests-->
+		<text name="Pages.FuelPriceChangeRequests.Title" value="طلبات تغيير أسعار الوقود"/>
+		<text name="Pages.FuelPriceChangeRequests.ModalTitle" value="طلب تغيير سعر الوقود"/>
+		<text name="Pages.FuelPriceChangeRequests.OldPrice" value="السعر القديم"/>
+		<text name="Pages.FuelPriceChangeRequests.NewPrice" value="السعر الجديد"/>
+		<text name="Pages.FuelPriceChangeRequests.File" value="الصورة"/>
+		<text name="Pages.FuelPriceChangeRequests.Status" value="الحالة"/>
+
+		<text name="Pages.FuelPriceChangeRequests.Messages.Approved" value="تم قبول طلب تغيير سعر الوقود"/>
+		<text name="Pages.FuelPriceChangeRequests.Messages.Refused" value="تم رفض طلب تغيير سعر الوقود"/>
+		<text name="Pages.FuelPriceChangeRequests.Messages.New" value="طلب تغيير سعر الوقود جديد"/>
+
+
+		<text name="Pages.FuelPriceChangeRequests.Status.New" value="جديد"/>
+		<text name="Pages.FuelPriceChangeRequests.Status.Accepted" value="موافق علية"/>
+		<text name="Pages.FuelPriceChangeRequests.Status.Rejected" value="مرفوض"/>
+
+
+		<text name="Pages.StationTransactions.Title" value="العمليات" />
+		<text name="Pages.StationTransactions.StationTransactions" value="العمليات" />
+		<text name="Pages.StationTransactions.TransactionDetails" value="تفاصيل العملية" />
+		<text name="Pages.StationTransactions.FuelTransactions" value="العمليات" />
+		<text name="Pages.StationTransactions.FuelTransactions.Header" value="Header" />
+		<text name="Pages.StationTransactions.MaintainTransactions" value="عمليات الصيانة" />
+		<text name="Pages.StationTransactions.OilTransactions" value="عمليات تغيير الزيت" />
+		<text name="Pages.StationTransactions.WashTransactions" value="عمليات الغسيل" />
+
+
+		<text name="Pages.Invoices.Title" value="الفواتير الضريبة" />
+		<text name="Pages.Invoices.ModalTitle" value="الفاتورة" />
+		<text name="Pages.Invoices.InvoiceInfo" value="تفاصيل الفاتورة" />
+		<text name="Pages.Invoices.NewInvoice" value="فاتورة جديدة" />
+		<text name="Pages.Invoices.ElectronicInvoices" value="الفواتير الضريبة" />
+		<text name="Pages.Invoices.StatementOfAccount" value="كشف الحساب" />
+		<text name="Pages.Invoices.Payments" value="سدادات الأرصدة" />
+		<text name="Pages.Invoices.Amount" value="المبلغ" />
+		<text name="Pages.Invoices.TotalAmount" value="المبلغ الإجمالي" />
+		<text name="Pages.Invoices.Discount" value="الخصم" />
+		<text name="Pages.Invoices.Taxes" value="الضرائب" />
+		<text name="Pages.Invoices.Net" value="إجمالي المبلغ" />
+		<text name="Pages.Invoices.Code" value="رقم الفاتورة" />
+		<text name="Pages.Invoices.CreationTime" value="تاريخ الفاتورة" />
+		<text name="Pages.Invoices.TransactionCreationTime" value="تاريخ العملية" />
+		<text name="Pages.Invoices.IsTaxable" value="شامل الضريبة" />
+		<text name="Pages.Invoices.CreateInvoice" value="إنشاء الفاتورة" />
+
+		<text name="Pages.Invoices.PeriodFrom" value="الفترة من" />
+		<text name="Pages.Invoices.PeriodTo" value="الفترة الى" />
+
+		<text name="Pages.Invoices.Search" value="تطبيق" />
+		<text name="Pages.Invoices.Transactions" value="تفاصيل العمليات" />
+		<text name="Pages.Invoices.TransactionType" value="نوع العملية" />
+
+		<text name="Pages.Invoices.TransactionType.Fuel" value="صرف الوقود" />
+		<text name="Pages.Invoices.TransactionType.Oil" value="تغيير الزيت" />
+		<text name="Pages.Invoices.TransactionType.Maintain" value="صيانة" />
+		<text name="Pages.Invoices.TransactionType.Wash" value="غسيل" />
+
+		<text name="Pages.Invoices.Messages.New" value="طلب فاتورة جديدة"/>
+		<text name="Pages.Invoices.Iban" value="الايبان والفاتورة"/>
+		<text name="Pages.Invoices.Month" value="الشهر"/>
+
+		<text name="Pages.Invoices.ExternalCode" value="كود الفاتورة"/>
+		<text name="Pages.Invoices.FilePath" value=" إرفاق الفاتورة "/>
+		<text name="Pages.Invoices.Messages.AttatchFilePath" value="يجب إرفاق الفاتورة أولاً "/>
+
+
+		<text name="Pages.AccountStatement.Title" value="كشف الحساب" />
+		<text name="Pages.AccountStatement.Code" value="رقم المستند" />
+		<text name="Pages.AccountStatement.Type" value="البيان" />
+		<text name="Pages.AccountStatement.Debit" value="مدين" />
+		<text name="Pages.AccountStatement.Credit" value="دائن" />
+
+		<text name="Pages.AccountStatement.WalletCharge" value="شحن محفظة" />
+		<text name="Pages.AccountStatement.Package" value="قيمة اشتراك الباقة" />
+
+
+		<text name="Pages.Reports.Title" value="التقارير" />
+		<text name="Pages.Reports.ModalTitle" value="التقرير" />
+		<text name="Pages.Reports.CompanyReport" value="كشف حساب شركة" />
+		<text name="Pages.Reports.BranchReport" value="كشف حساب فرع" />
+		<text name="Pages.Reports.FuelReport" value="العمليات في مدة" />
+		<text name="Pages.Reports.WashReport" value="عمليات صرف الغسيل في مدة" />
+		<text name="Pages.Reports.OilReport" value="عمليات تغيير الزيت في مدة" />
+		<text name="Pages.Reports.MaintainReport" value="عمليات الصيانة في مدة" />
+		<text name="Pages.Reports.InvoicesReport" value="الفواتير الضريبة" />
+		<text name="Pages.Reports.VouchersReport" value="سدادات الفواتير" />
+		<text name="Pages.Reports.Chips" value="تقرير تركيب الشرائح " />
+		<text name="Pages.Reports.RFID" value="تقرير تركيب RFID" />
+		<text name="Pages.Reports.Fuel" value="الوقود" />
+		<text name="Pages.Reports.Clean" value="الغسيل" />
+		<text name="Pages.Reports.Maintain" value="الخدمات" />
+
+		<text name="Pages.Reports.BranchesConsumption" value="اجمالي استهلاك الفروع" />
+		<text name="Pages.Reports.VisitingStations" value="التردد على المحطات" />
+		<text name="Pages.Reports.VeichlesConsumption" value="معدل استهلاك المركبة" />
+		<text name="Pages.Reports.MonthlyConsumption" value="الاستهلاك الشهري" />
+
+		<text name="Pages.Reports.TotalPrice" value="اجمالي التكلفة" />
+		<text name="Pages.Reports.TotalQuantity" value="اجمالي الاستهلاك بالليتر" />
+		<text name="Pages.Reports.BranchBalance" value="الرصيد المتبقي حاليا" />
+
+
+		<text name="Pages.Reports.ChoosePeriodsFirst" value="اختر الفترة من و الى أولاً" />
+		<text name="Pages.Reports.ChooseProviderFirst" value="اختر الفرع أولاً" />
+		<text name="Pages.Reports.NoRecords" value="لا توجد بيانات" />
+		
+		
+		
+		
+		<text name="Pages.FuelReports.FuelType" value="نوع الوقود / Type Of Fuel" />
+		<text name="Pages.FuelReports.FuelPrice" value="سعر الوحدة / Unit Price" />
+		<text name="Pages.FuelReports.TotalQuantity" value="الكمية / QTY" />
+		<text name="Pages.FuelReports.Total" value="الإجمالي غ.ش.ض / Total WithOut Vat"/>
+		<text name="Pages.FuelReports.TaxValue" value="15%ضريبة القيمة المضافة / Vat Value 15%"/>
+		<text name="Pages.FuelReports.TotalWithTax" value="الإجمالي مع الضريبة / Total with Vat"/> 
+		<text name="Pages.FuelReports.FuelTransactions" value="التقرير الشهري لاستهلاك الوقود"/> 
+		<text name="Pages.FuelReports.FuelTransactionsEn" value="consumption bills report"/> 
+		<text name="Pages.FuelReports.TotalValues" value="الإجمالي / Total"/> 
+		<text name="Pages.FuelReports.ValueReyal" value="القيمة بالريال السعودي / Value In Saudi Riyals "/> 
+		<text name="Pages.FuelReports.Company" value="الشركة"/> 
+		<text name="Pages.FuelReports.CompanyEn" value="Company"/> 
+		<text name="Pages.FuelReports.Period" value="فترة التقرير من / إلي"/> 
+		<text name="Pages.FuelReports.PeriodEn" value="Report Date from - to"/> 
+		<text name="Pages.FuelReports.ChooseMonth" value="برجاء اختيار الشهر أولا"/> 
+		
+		
+		
+
+		<text name="Pages.Statistics.ActiveWorkers" value="عدد العمال الفعالين" />
+		<text name="Pages.Statistics.NotActiveWorkers" value="عدد العمال الغير فعالين " />
+		<text name="Pages.Statistics.Fuel91Amount" value="صرف وقود 91 " />
+		<text name="Pages.Statistics.Fuel95Amount" value="صرف وقود 95 " />
+		<text name="Pages.Statistics.FuelDesielAmount" value="صرف وقود ديزل " />
+		<text name="Pages.Statistics.FuelTransactionCount" value="عدد طلبات تغيير الوقود " />
+		<text name="Pages.Statistics.FuelTransactionAmount" value="قيمة طلبات تغيير الوقود " />
+		<text name="Pages.Statistics.InvoicesAmount" value="قيمة الفواتير" />
+		<text name="Pages.Statistics.InvoicesCount" value="عدد الفواتير" />
+
+		<text name="Pages.Statistics.LiveSubscriptionCount" value="الاشتراكات النشطة" />
+		<text name="Pages.Statistics.PendingSubscriptionCount" value="الاشتراكات المعلقة" />
+		<text name="Pages.Statistics.ExpiredSubscriptionCount" value="الاشتراكات المنتهية" />
+		<text name="Pages.Statistics.SubscriptionAmount" value="قيمة الإشتراكات" />
+
+		<text name="Pages.Statistics.MaintainTransactionAmount" value="قيمة عمليات الصيانة" />
+		<text name="Pages.Statistics.MaintainTransactionCount" value="عدد عمليات الصيانة" />
+		<text name="Pages.Statistics.OilTransactionAmount" value="قيمة عمليات تغيير الزيت" />
+		<text name="Pages.Statistics.OilTransactionCount" value="عدد عمليات تغيير الزيت" />
+
+		<text name="Pages.Statistics.WashTransactionAmount" value="قيمة عمليات الغسيل" />
+		<text name="Pages.Statistics.WashTransactionCount" value="عدد عمليات الغسيل" />
+
+		<text name="Pages.Statistics.CompaniesCount" value="عدد الشركات" />
+		<text name="Pages.Statistics.BranchesCount" value="عدد الفروع" />
+		<text name="Pages.Statistics.MainProvidersCount" value="عدد مزودي الخدمات" />
+		<text name="Pages.Statistics.ProvidersCount" value="عدد الفروع" />
+		<text name="Pages.Statistics.DriversCount" value="عدد السائقين" />
+		<text name="Pages.Statistics.VeichelsCount" value="عدد المركبات" />
+		<text name="Pages.Statistics.WorkersCount" value="عدد العمال" />
+		<text name="Pages.Statistics.PendingCompaniesTransactionsCount" value="عمليات المحفظة تحت المراجعة" />
+		<text name="Pages.Statistics.FuelChangePricesCount" value="طلبات تغيير أسعار الوقود" />
+		<text name="Pages.Statistics.WalletAmount" value="رصيد المحفظة" />
+		<text name="Pages.Statistics.SubscriptionEndDate" value="إنتهاء الإشتراك" />
+		<text name="Pages.Statistics.BranchAmounts" value="أرصدة الفروع" />
+		<text name="Pages.Statistics.Expired" value="انتهى الاشتراك" />
+
+		<text name="Pages.Statistics.StatsType" value="طريقة العرض" />
+		<text name="Pages.Statistics.StatsType.Price" value="بالسعر" />
+		<text name="Pages.Statistics.StatsType.Litre" value="بالكمية" />
+
+
+		<text name="Pages.Vouchers.Title" value="سدادات الأرصدة" />
+		<text name="Pages.Vouchers.ModalTitle" value="السداد" />
+		<text name="Pages.Vouchers.TotalAmount" value="اجمالي الأرصدة المطالبة" />
+		<text name="Pages.Vouchers.Note" value="ملاحظة" />
+		<text name="Pages.Vouchers.TotalFuelTransouts" value="إجمالي عمليات صرف الوقود" />
+		<text name="Pages.Vouchers.FilePath" value="صورة السداد" />
+		<text name="Pages.Vouchers.Messages.New" value="سداد جديد" />
+
+
+		<text name="Pages.Journals.Title" value="تفاصيل القيود" />
+		<text name="Pages.Journals.ModalTitle" value="القيد" />
+		<text name="Pages.Journals.JournalDetails" value="تفاصيل القيد" />
+		<text name="Pages.Journals.JournalType" value="نوع القيد" />
+		<text name="Pages.Journals.JournalType.Invoice" value="فاتورة" />
+		<text name="Pages.Journals.JournalType.Vouchar" value="سداد" />
+
+
+		<text name="Pages.JournalDetails.Debit" value="مدين" />
+		<text name="Pages.JournalDetails.Credit" value="دائن" />
+		<text name="Pages.JournalDetails.AccountType" value="الحساب" />
+		<text name="Pages.JournalDetails.AccountType.Branch" value="فرع" />
+		<text name="Pages.JournalDetails.AccountType.Company" value="شركة" />
+		<text name="Pages.JournalDetails.AccountType.Provider" value="فرع" />
+		<text name="Pages.JournalDetails.AccountType.MainProvider" value="مقدم خدمة" />
+		<text name="Pages.JournalDetails.AccountType.SayarahApp" value="سيارة آب" />
+
+
+		<!--Wallets-->
+		<text name="Pages.Wallets.MainTitle" value="المحفظة"/>
+		<text name="Pages.Wallets.CompanyWallet" value="محفظة الشركة"/>
+		<text name="Pages.Wallets.Title" value="عمليات المحفظة"/>
+		<text name="Pages.Wallets.CreateNew" value="إضافة عملية جديدة"/>
+		<text name="Pages.Wallets.ModalTitle" value="المحفظة"/>
+		<text name="Pages.Wallets.Code" value="رقم العملية"/>
+		<text name="Pages.Wallets.Amount" value="المبلغ"/>
+		<text name="Pages.Wallets.PointValue" value="قيمه النقاط"/>
+		<text name="Pages.Wallets.PointCount" value="عدد النقاط"/>
+		<text name="Pages.Wallets.Order" value="المحفظة"/>
+		<text name="Pages.Wallets.User" value="المحفظة"/>
+		<text name="Pages.Wallets.WalletAmount" value="رصيد المحفظة"/>
+		<text name="Pages.Wallets.FuelAmount" value="رصيد الوقود"/>
+		<text name="Pages.Wallets.CleanAmount" value="رصيد الغسيل"/>
+		<text name="Pages.Wallets.MaintainAmount" value="رصيد الخدمات"/>
+		<text name="Pages.Wallets.ConsumptionAmount" value="إجمالي الإستهلاك"/>
+		<text name="Pages.Wallets.RefundFailed" value="الرصيد المراد خصمة أكبر من رصيد المحفظة"/>
+		<text name="Pages.Wallets.BranchAmountNotEnoughForCarAmount" value="رصيد محفظة الفرع لا يكفي لتغطية رصيد محفظة السيارة"/>
+		<text name="Pages.Wallets.VeichleMoneyBalanceNotEnough" value="رصيد المركبة غير كافي لإتمام العملية"/>
+		<text name="Pages.Wallets.VeichleLitreBalanceNotEnough" value="رصيد المركبة غير كافي لإتمام العملية"/>
+		<text name="Pages.Wallets.TransferFailed" value="الرصيد المراد تحويلة أكبر من رصيد المحفظة"/>
+		<text name="Pages.Wallets.CompanyBranchDepositFailed" value="رصيد الشركة أقل من الرصيد المراد إيداعه للفرع"/>
+		<text name="Pages.Wallets.CompanyWalletAmount" value="رصيد محفظة الشركة الحالي هو {0} ريال"/>
+		<text name="Pages.Wallets.BranchWalletAmount" value="رصيد محفظة الفرع الحالي هو {0} ريال"/>
+
+		<text name="Pages.Wallets.TransferDepositWalletAmount" value="ايداع من عملية تحويل من فرع {0}"/>
+		<text name="Pages.Wallets.TransferRefundWalletAmount" value="استرداد من عملية تحويل من فرع {0}"/>
+
+		<text name="Pages.Wallets.BranchDepositNote" value="إيداع في رصيد محفظة فرع {0}"/>
+		<text name="Pages.Wallets.BranchRefundNote" value="استرداد من رصيد محفظة فرع {0}"/>
+
+		<text name="Pages.Wallets.TotalAmount" value="المبلغ الإجمالي"/>
+		<text name="Pages.Wallets.Note" value="ملاحظة"/>
+		<text name="Pages.Wallets.TransactionType" value="نوع العملية"/>
+
+		<text name="Pages.Wallets.TransactionType.Deposit" value="إيداع"/>
+		<text name="Pages.Wallets.TransactionType.Refund" value="استرداد"/>
+		<text name="Pages.Wallets.TransactionType.SystemCommission" value="عمولة النظام"/>
+		<text name="Pages.Wallets.TransactionType.DepositAdmin" value="إيداع أدمن"/>
+		<text name="Pages.Wallets.TransactionType.RefundAdmin" value="استرداد أدمن"/>
+		<text name="Pages.Wallets.TransactionType.Consumption" value="استهلاك"/>
+
+		<text name="Pages.Wallets.TransferAmount" value="تحويل رصيد لفرع آخر"/>
+		<text name="Pages.Wallets.BranchWalletAmountNotEnough" value="رصيد الفرع غير كافي لإجراء العملية"/>
+		<text name="Pages.Wallets.WalletAmountNotEnough" value="رصيد المحفظة غير كافي لإجراء العملية"/>
+
+		<text name="Pages.Wallets.SubscriptionNote" value="دفع اشتراك باقة"/>
+		<text name="Pages.Wallets.UpgradeSubscriptionNote" value="ترقية الباقة"/>
+		<text name="Pages.Wallets.FuelTransNote" value="دفع عملية صرف وقود"/>
+		<text name="Pages.Wallets.OilTransNote" value="دفع عملية تغيير زيت"/>
+		<text name="Pages.Wallets.washTransNote" value="دفع عملية تنظيف"/>
+		<text name="Pages.Wallets.MaintainTransNote" value="دفع عملية صيانة"/>
+
+
+		<text name="Pages.Wallets.DepositStatus" value="حالة الإيداع"/>
+		<text name="Pages.Wallets.DepositStatus.Pending" value="جاري المراجعة"/>
+		<text name="Pages.Wallets.DepositStatus.Accepted" value="موافق علية"/>
+		<text name="Pages.Wallets.DepositStatus.Refused" value="مرفوض"/>
+
+		<text name="Pages.Wallets.Messages.New" value="طلب شحن للمحفظة"/>
+		<text name="Pages.Wallets.Messages.Approved" value="تم قبول طلب شحن المحفظة"/>
+		<text name="Pages.Wallets.Messages.Refused" value="تم رفض طلب شحن المحفظة"/>
+
+		<text name="Pages.Wallets.Messages.AttachReceiptImage" value="يجب إرفاق صورة الإيصال"/>
+
+
+
+		<text name="Pages.Wallets.FuelWallet" value="محفظة الوقود"/>
+		<text name="Pages.Wallets.CleanWallet" value="محفظة الغسيل"/>
+		<text name="Pages.Wallets.MaintainWallet" value="محفظة الخدمات"/>
+
+
+		<text name="Pages.Wallets.CurrentBalance" value="الرصيد الحالي"/>
+		<text name="Pages.Wallets.CurrentWalletBalance" value="رصيد المحفظة"/>
+		<text name="Pages.Wallets.WalletRechargeReceipt" value="ايصال شحن المحفظة"/>
+
+		<!--Banks-->
+		<text name="Pages.Banks.Title" value="البنوك"/>
+		<text name="Pages.Banks.ModalTitle" value="البنك"/>
+
+		<text name="Pages.Banks.Errors.HasTransactions" value="هذا البنك تم استخدامة في عمليات شحن محفظة الشركات"/>
+
+		<text name="Pages.Banks.Name" value="اسم البنك"/>
+		<text name="Pages.Banks.Iban" value="رقم الأيبان"/>
+		<text name="Pages.Banks.AccountNumber" value="رقم الحساب"/>
+		<text name="Pages.Banks.AccountName" value="اسم الحساب"/>
+
+		<text name="Pages.Banks.BeneficiaryBank" value="بنك المستفيد"/>
+		<text name="Pages.Banks.BeneficiaryName" value="اسم المستفيد"/>
+
+		<text name="Pages.Banks.ReceiptImage" value="صورة الإيصال"/>
+
+		<text name="Pages.Banks.Send" value="إرسال"/>
+
+		<text name="Pages.Banks.BankTransfer" value="التحويل البنكي"/>
+		<text name="Pages.Banks.ChooseBank" value="قم بإختيار البنك"/>
+
+		<text name="Pages.Banks.ReceiptImageNotes" value=" الرجاء التأكد من الإيصال يحتوي على :"/>
+		<text name="Pages.Banks.ReceiptImageNotes.One" value="ظهور التاريخ و الوقت بالتفصيل."/>
+		<text name="Pages.Banks.ReceiptImageNotes.Two" value="ظهور اخر 4 او 3 ارقام من رقم الحساب المرسل مع الإسم."/>
+		<text name="Pages.Banks.ReceiptImageNotes.Three" value="ظهور رقم و إسم حساب المستلم."/>
+
+
+
+		<!--Packages-->
+		<text name="Pages.Packages.Title" value="الباقات"/>
+		<text name="Pages.Packages.PackagesAndSubscriptions" value="الباقات والإشتراكات"/>
+		<text name="Pages.Packages.ModalTitle" value="الباقة"/>
+		<text name="Pages.Packages.PackageName" value="إسم الباقة"/>
+		<text name="Pages.Packages.PackageDesc" value="وصف الباقة"/>
+		<text name="Pages.Packages.ChoosePackageType" value="--اختار نوع الباقة--"/>
+		<text name="Pages.Packages.PackageType" value="نوع الباقة"/>
+		<text name="Pages.Packages.PackageType.Monthly" value="شهري"/>
+		<text name="Pages.Packages.PackageType.Yearly" value="سنوي"/>
+
+		<text name="Pages.Packages.VeichlesFrom" value="عدد المركبات من "/>
+		<text name="Pages.Packages.VeichlesTo" value="عدد المركبات إلى "/>
+		<text name="Pages.Packages.VeichlesCount" value="عدد المركبات "/>
+		<text name="Pages.Packages.NfcCount" value="عدد الشرائح"/>
+		<text name="Pages.Packages.AttachNfc" value="تركيب الشريحة"/>
+		<text name="Pages.Packages.AttachNfcPrice" value="سعر تركيب الشرائح"/>
+		<text name="Pages.Packages.MonthlyPrice" value="السعر الشهري"/>
+		<text name="Pages.Packages.YearlyPrice" value="السعر السنوي"/>
+		<text name="Pages.Packages.SimPrice" value="سعر الشريحة"/>
+
+		<text name="Pages.Packages.SubscribePackage" value="إشتراك في باقة"/>
+		<text name="Pages.Packages.VeichlesCountPrices" value="السعر لكل المركبات"/>
+		<text name="Pages.Packages.SubscribePrice" value="سعر الاشتراك"/>
+		<text name="Pages.Packages.PricesNote" value="ملاحظة : الاسعار للسيارة الواحدة"/>
+		<text name="Pages.Packages.NoPackage" value="لا توجد باقة متاحة لعدد المركبات : {0} "/>
+		<text name="Pages.Packages.NoVeichlesSelected" value="لم يتم اختيار عدد مركبات"/>
+		<text name="Pages.Packages.ViewPackages" value="عرض الباقات المتاحة"/>
+
+		<text name="Pages.Packages.SuitablePackage" value="الباقة المناسبة"/>
+
+		<text name="Pages.Packages.PackageSettings" value="إعدادات الباقة"/>
+		<text name="Pages.Packages.RenewNoteOne" value="تفعيل خدمة التجديد التلقائي"/>
+		<text name="Pages.Packages.RenewNoteTwo" value="يحميك من توقف الخدمة المفاجئ."/>
+
+		<text name="Pages.Packages.Price" value="سعر الباقة"/>
+		<text name="Pages.Packages.Packge" value="الباقة الحالية"/>
+		<text name="Pages.Packages.YouHaveNoSubscribe" value="انت غير مشترك فى باقة حاليا"/>
+		<text name="Pages.Packages.CompanyNoSubscribe" value="الشركة غير مشتركة فى باقة حاليا"/>
+		<text name="Pages.Packages.VeichlesCountExceeded" value="تم الوصول للحد الأقصى لعدد المركبات داخل الباقة الحالية"/>
+		<text name="Pages.Packages.SubscribeNow" value="إشترك الآن"/>
+		<text name="Pages.Packages.Error.AlreadyExist" value="هذه الباقة موجودة بالفعل"/>
+		<text name="Pages.Packages.Error.NotExist" value="هذه الباقة ليست موجودة"/>
+
+		<text name="Pages.Packages.Error.InconsistencyInVehicleNumbers" value="هناك تضارب في أعداد المركبات مع أحد الباقات "/>
+
+
+		<!--Subscriptions-->
+		<text name="Pages.Subscriptions.Title" value="إشتراكات الباقات"/>
+		<text name="Pages.Subscriptions.ModalTitle" value="إشتراك الباقة"/>
+		<text name="Pages.Subscriptions.RenewSubscription" value="تجديد إشتراك الباقة"/>
+		<text name="Pages.Subscriptions.ExtendSubscription" value="زيادة مدة الإشتراك"/>
+		<text name="Pages.Subscriptions.IncreaseVeichles" value="إضافة مركبات للإشتراك"/>
+		<text name="Pages.Subscriptions.Name" value="اسم الباقة"/>
+		<text name="Pages.Subscriptions.Code" value="كود الإشتراك"/>
+		<text name="Pages.Subscriptions.EndDate" value="تاريخ الإنتهاء"/>
+		<text name="Pages.Subscriptions.UserName" value="اسم المستخدم"/>
+		<text name="Pages.Subscriptions.Error.YouAlreadySubscribedInfreePackage" value="لقد اشتركت فى هذه الباقة المجانية مرة بالفعل"/>
+		<text name="Pages.Subscription.Error.ElmentNotFound" value="هذه الباقة غير موجودة"/>
+		<text name="Pages.Subscriptions.Error.DonotHaveEnoughMoney" value="المحفظة لا تحتوى على مبلغ كافى"/>
+		<text name="Pages.Subscriptions.Subscribe" value="إشتراك"/>
+		<text name="Pages.Subscriptions.CompletePayment" value="قم بإتمام عمليه الدفع ليتم الاشتراك فى الباقة"/>
+		<text name="Pages.Subscriptions.YouHaveSubscribe" value="انت بالفعل مشترك فى باقة حالياً"/>
+		<text name="Pages.Subscriptions.YouHavePendingSubscription" value="لديك اشتراك تحت المراجعة الآن"/>
+		<text name="Pages.Subscriptions.NowYouHavePackage" value="انت الان مشترك فى الباقة"/>
+		<text name="Pages.Subscriptions.SubscribeDate" value="تاريخ الإشتراك"/>
+		<text name="Pages.Subscriptions.Status" value="حالة الإشتراك"/>
+
+		<text name="Pages.Subscriptions.TransactionType" value="نوع العملية"/>
+		<text name="Pages.Subscriptions.TransactionType.Subscribe" value="إشتراك"/>
+		<text name="Pages.Subscriptions.TransactionType.Renew" value="تجديد الباقة"/>
+		<text name="Pages.Subscriptions.TransactionType.Upgrade" value="ترقية الباقة"/>
+
+
+		<text name="Pages.Subscriptions.SubscriptionsDetails" value="تفاصيل الإشتراك"/>
+		<text name="Pages.Subscriptions.SubscriptionsPayment" value="الدفع"/>
+		<text name="Pages.Subscriptions.SelectPaymethodError" value="يجب اختيار طريقة الدفع أولا"/>
+		<text name="Pages.Subscriptions.Paymethod" value="طريقة الدفع"/>
+		<text name="Pages.Subscriptions.Paymethod.Visa" value="فيزا"/>
+		<text name="Pages.Subscriptions.Paymethod.Wallet" value="المحفظة"/>
+		<text name="Pages.Subscriptions.Paymethod.BankTransfer" value="تحويل / إيداع بنكي"/>
+
+		<text name="Pages.Subscriptions.WalletNote" value="رصيد المحفظة الحالي هو {0} ريال"/>
+
+		<text name="Pages.Subscriptions.Messages.Approved" value="تم قبول طلب الاشتراك في الباقة"/>
+		<text name="Pages.Subscriptions.Messages.Refused" value="تم رفض طلب الاشتراك في الباقة"/>
+		<text name="Pages.Subscriptions.Messages.Expired" value="تم انتهاء مدة الاشتراك في الباقة"/>
+
+		<text name="Pages.Subscriptions.Messages.AreYouSureToRenew" value="هل أنت متأكد من تجديد الإشتراك؟"/>
+		<text name="Pages.Subscriptions.Messages.AreYouSureToSubscribe" value="هل أنت متأكد من الإشتراك؟"/>
+		<text name="Pages.Subscriptions.Messages.AreYouSureToUpgrade" value="هل أنت متأكد من ترقية الإشتراك؟"/>
+		<text name="Pages.Subscriptions.Messages.RenewSuccess" value="تم تجديد الإشتراك بنجاح"/>
+
+		<text name="Pages.Subscriptions.Error.NotExist" value="الإشتراك غير موجود من قبل"/>
+		<text name="Pages.Subscriptions.RequestChips" value="طلب شرايح او RFID بدل فاقد "/>
+		<text name="Pages.Subscriptions.UpgradePackage" value="ترقية الباقة"/>
+		<text name="Pages.Subscriptions.RenewPackage" value="تجديد الباقة"/>
+
+		<text name="Pages.Subscriptions.ConfirmSubscription" value="تأكيد الإشتراك"/>
+		<text name="Pages.Subscriptions.ConfirmUpgradePackage" value="تأكيد ترقية الإشتراك"/>
+		<text name="Pages.Subscriptions.ConfirmRenew" value="تأكيد تجديد الإشتراك"/>
+
+		<text name="Pages.Subscriptions.UpgradeVeichlesCount" value="عدد المركبات الإضافية"/>
+
+		<text name="Pages.ChipDevices.Title" value="أنواع الأجهزة" />
+		<text name="Pages.ChipDevices.ModalTitle" value="الجهاز" />
+		<text name="Pages.ChipDevices.Code" value="الشفرة" />
+		<text name="Pages.ChipDevices.Status" value="الحالة" />
+		<text name="Pages.ChipDevices.Reason" value="ملاحظات المستخدم علي الحالة" />
+		<text name="Pages.ChipDevices.Error.AlreadyExist" value="هذا الجهاز موجود بالفعل" />
+
+		<text name="Pages.ChipNumbers.Title" value="الشرائح الذكية" />
+		<text name="Pages.ChipNumbers.Code" value="الشفرة" />
+		<text name="Pages.ChipNumbers.ModalTitle" value="الشريحة" />
+		<text name="Pages.ChipNumbers.ReleaseNumber" value="رقم الإصدار" />
+		<text name="Pages.ChipNumbers.PartnerInfo" value="تفاصيل الشريك" />
+		<text name="Pages.ChipNumbers.Partners" value="الشركاء" />
+
+		<text name="Pages.ChipNumbers.Error.AlreadyExist" value="هذة الشريحة موجودة بالفعل" />
+
+		<text name="Pages.ChipNumbers.ActivationDate" value="تاريخ التفعيل" />
+		<text name="Pages.ChipNumbers.ChipInfo" value="تفاصيل الشريحة" />
+		<text name="Pages.ChipNumbers.Status" value="الحالة" />
+		<text name="Pages.ChipNumbers.Status.Unused" value="غير مستخدمة" />
+		<text name="Pages.ChipNumbers.Status.Used" value="مستخدمة" />
+		<text name="Pages.ChipNumbers.Status.Linked" value="تم الربط" />
+		<text name="Pages.ChipNumbers.Status.Blocked" value="تم الحظر" />
+		<text name="Pages.ChipNumbers.Status.Broken" value="معطلة" />
+		<text name="Pages.ChipNumbers.Status.Archived" value="مؤرشفة" />
+
+
+		<text name="Pages.RegisterationRequests.Title" value="طلبات التسجيل" />
+		<text name="Pages.RegisterationRequests.ModalTitle" value="طلب التسجيل" />
+		<text name="Pages.RegisterationRequests.AccountType" value="نوع الحساب" />
+		<text name="Pages.RegisterationRequests.AccountType.FuelProvider" value="محطة وقود" />
+		<text name="Pages.RegisterationRequests.AccountType.Company" value="حساب شركة" />
+		<text name="Pages.RegisterationRequests.AccountType.CleanProvider" value="محطة غسيل" />
+		<text name="Pages.RegisterationRequests.AccountType.ServicesProvider" value="محطة خدمات" />
+
+		<text name="Pages.RegisterationRequests.PhoneNumberConfirmed" value="الجوال مفعل ؟" />
+		<text name="Pages.RegisterationRequests.EmailAddressConfirmed" value="البريد مفعل ؟" />
+		<text name="Pages.RegisterationRequests.RefuseReason" value="سبب الرفص" />
+
+		<text name="Pages.RegisterationRequests.Status" value="الحالة" />
+		<text name="Pages.RegisterationRequests.Status.Pending" value="قيد الإنتظار" />
+		<text name="Pages.RegisterationRequests.Status.Accepted" value="موافق علية" />
+		<text name="Pages.RegisterationRequests.Status.Refused" value="مرفوض" />
+		<text name="Pages.RegisterationRequests.Status.DuringCreation" value="خلال الإنشاء" />
+		<text name="Pages.RegisterationRequests.ErrorSending" value="حدث خطأ أثناء الإرسال" />
+
+		<text name="Pages.RegisterationRequests.ShouldConfirmPhone" value="يجب تأكيد رقم الجوال أولا" />
+		<text name="Pages.RegisterationRequests.ShouldConfirmEmail" value="يجب تأكيد البريد الإلكتروني أولا" />
+		<text name="Pages.RegisterationRequests.Register" value="تسجيل الحساب" />
+
+		<text name="Pages.RegisterationRequests.SuccessTitle" value="تم تسجيل طلب الإنضمام" />
+		<text name="Pages.RegisterationRequests.SuccessDesc" value="انتظر تفعيل حسابك من خلال إدارة المنصة" />
+
+		<text name="Pages.RegisterationRequests.Messages.New" value="طلب تسجيل جديد" />
+
+
+		<text name="DetailsSections.MainData" value="البيانات الأساسية" />
+		<text name="DetailsSections.Documents" value="الوثائق" />
+		<text name="DetailsSections.BankInfo" value="البيانات البنكية" />
+		<text name="DetailsSections.NationalAddress" value="العنوان الوطني" />
+		<text name="DetailsSections.Services" value="خدمات المحطة " />
+		<text name="DetailsSections.FuelTypes" value="أنواع الوقود" />
+
+
+		<text name="DetailsSections.Invoices" value="الفواتير" />
+		<text name="DetailsSections.Other" value="أخرى" />
+
+		<text name="Pages.CompanyTypes.Title" value="تصنيف الشركات" />
+		<text name="Pages.CompanyTypes.ModalTitle" value="تصنيف الشركة" />
+
+		<text name="Pages.FuelPumps.Title" value="مضخات الوقود" />
+		<text name="Pages.FuelPumps.ModalTitle" value="مضخة الوقود" />
+		<text name="Pages.FuelPumps.QrCode" value="Qr Code" />
+		<text name="Pages.FuelPumps.Code" value="رقم المضخة" />
+		<text name="Pages.FuelPumps.Count" value="عدد المضخات" />
+		<text name="Pages.FuelPumps.NoSelectedPumps" value="لم يتم تحديد مضخات" />
+		<text name="Pages.FuelPumps.Error.AlreadyExist" value="مضخة بنفس الرقم موجوده بالفعل" />
+
+
+		<text name="Pages.ArtificialIntelligence.Title" value="توصيات (ذكاء اصطناعي)" />
+
+		<text name="Pages.Orders.Title" value="الطلبات" />
+		<text name="Pages.Orders.Fuel" value="الوقود" />
+		<text name="Pages.Orders.BanProvider" value="حظر محطة" />
+		<text name="Pages.Orders.FuelProvider" value="حظر محطة وقود" />
+		<text name="Pages.Orders.FuelProvider.Errors.AlreadyExistMainProvider" value="تم حظر مزود الخدمة بالفعل" />
+		<text name="Pages.Orders.FuelProvider.Errors.AlreadyExistProvider" value="تم حظر الفرع بالفعل" />
+		<text name="Pages.Orders.FuelDelivery" value="توصيل الوقود" />
+
+		<text name="Pages.Orders.TransOut" value="عمليات الإستهلاك" />
+		<text name="Pages.Orders.Invoices" value="فواتير الضريبية" />
+		<text name="Pages.Orders.CompanyInvoices" value="فواتير الإستهلاك الشهري" />
+
+
+		<text name="Pages.AnnouncmentBanners.Title"  value="البانر الاعلاني" />
+		<text name="Pages.AnnouncmentBanners.ModalTitle" value="البانر الاعلاني" />
+		<text name="Pages.AnnouncmentBanners.AnnouncementUserType" value="البانر لـ" />
+		<text name="Pages.AnnouncmentBanners.AnnouncementUserType.Company" value=" الشركات" />
+		<text name="Pages.AnnouncmentBanners.AnnouncementUserType.MainProvider" value="مقدمين الخدمات" />
+		<text name="Pages.AnnouncmentBanners.AnnouncementUserType.Branch" value="فروع الشركات" />
+		<text name="Pages.AnnouncmentBanners.AnnouncementUserType.Provider" value="المحطات" />
+
+
+
+		<text name="Pages.SyarahApp.Locations"  value="مواقع سيارة اب" />
+		<text name="Pages.SyarahApp.Locations.FuelLocations"  value="مواقع محطات الوقود" />
+		<text name="Pages.SyarahApp.Locations.WashLocations"  value="موقع الغسيل" />
+		<text name="Pages.SyarahApp.Locations.MaintainLocations"  value="موقع الصيانة" />
+		<text name="Pages.SyarahApp.Locations.ElectricCarsLocations"  value="محطات شحن السيارات الكهربائية" />
+
+
+		<text name="Pages.HelpAndSupport.Title"  value="الدعم و المساعدة" />
+		<text name="Pages.HelpAndSupport.Ticket"  value="تذكرة" />
+		<text name="Pages.HelpAndSupport.TicketSystem"  value="نظام التذاكر" />
+		<text name="Pages.HelpAndSupport.TicketList"  value="قائمة التذاكر" />
+		<text name="Pages.HelpAndSupport.NewTicket"  value="تذاكر الدعم" />
+		<text name="Pages.HelpAndSupport.CompaniesNewTicket"  value="تذاكر دعم الشركات" />
+		<text name="Pages.HelpAndSupport.MainProvidersNewTicket"  value="تذاكر دعم المحطات" />
+		<text name="Pages.HelpAndSupport.ProvidersNewTicket"  value="تذاكر دعم فروع مزودي الخدمات" />
+		<text name="Pages.HelpAndSupport.BranchesNewTicket"  value="تذاكر دعم فروع الشركات" />
+
+		<text name="Pages.Tickets.Title"  value="التذاكر" />
+		<text name="Pages.Tickets.ModalTitle"  value="التذكرة" />
+		<text name="Pages.Tickets.NewTicket"  value="فتح تذكرة جديدة" />
+		<text name="Pages.Tickets.ProblemCategory"  value="التصنيف" />
+		<text name="Pages.Tickets.Description"  value="الوصف" />
+		<text name="Pages.Tickets.FilePath"  value="صورة أو ملف" />
+		<text name="Pages.Tickets.Code"  value="رقم التذكرة" />
+		<text name="Pages.Tickets.Comment"  value="التعليق" />
+
+		<text name="Pages.Tickets.TicketComments"  value="التعليقات" />
+
+		<text name="Pages.Tickets.TicketStatus"  value="الحالة" />
+
+		<text name="Pages.Tickets.TicketStatus.Pending"  value="قيد المراجعة" />
+		<text name="Pages.Tickets.TicketStatus.Completed"  value="تمت" />
+
+		<text name="Pages.Tickets.ProblemCategories.Dashboard"  value="الإحصائيات" />
+		<text name="Pages.Tickets.ProblemCategories.Wallet"  value="عمليات المحفظة" />
+		<text name="Pages.Tickets.ProblemCategories.Supscriptions"  value="الإشتراكات و الباقات" />
+		<text name="Pages.Tickets.ProblemCategories.Employees"  value="المستخدمين" />
+		<text name="Pages.Tickets.ProblemCategories.Branches"  value="الفروع" />
+		<text name="Pages.Tickets.ProblemCategories.Veichles"  value="المركبات" />
+		<text name="Pages.Tickets.ProblemCategories.Drivers"  value="السائقين" />
+		<text name="Pages.Tickets.ProblemCategories.Trips"  value="الرحلات" />
+		<text name="Pages.Tickets.ProblemCategories.VeichlesTransfer"  value="سجل نقل المركبات" />
+		<text name="Pages.Tickets.ProblemCategories.Invoices"  value="الفواتير" />
+		<text name="Pages.Tickets.ProblemCategories.Locations"  value="مواقع سيارة آب" />
+		<text name="Pages.Tickets.ProblemCategories.Workers"  value="العمال" />
+		<text name="Pages.Tickets.ProblemCategories.WorkersTransfersRecords"  value="سجل العمال" />
+		<text name="Pages.Tickets.ProblemCategories.FuelPriceChangeRequests"  value="طلبات تغيير أسعار الوقود" />
+		<text name="Pages.Tickets.ProblemCategories.Other"  value="أخرى" />
+
+
+		<text name="Pages.AuditLogs.Title"  value="Audit Logs" />
+		<text name="Pages.AuditLogs.ServiceName"  value="نوع العملية" />
+		<text name="Pages.AuditLogs.MethodName"  value="العملية" />
+		<text name="Pages.AuditLogs.ExecutionTime"  value="وقت التنفيذ" />
+
+
+		<text name="Pages.EntityChanges.Title"  value="التعديلات السابقة" />
+		<text name="Pages.EntityChanges.EntityTypeFullName"  value="النوع" />
+		<text name="Pages.EntityChanges.EntityId"  value="Entity Id" />
+		<text name="Pages.EntityChanges.ChangeType"  value="نوع التغيير" />
+		<text name="Pages.EntityChanges.ChangeTime"  value="وقت التعديل" />
+		<text name="Pages.EntityChanges.ChangeType.Created"  value="إنشاء" />
+		<text name="Pages.EntityChanges.ChangeType.Updated"  value="تعديل" />
+		<text name="Pages.EntityChanges.ChangeType.Deleted"  value="حذف" />
+
+
+		<!--ServicesNames-->
+		<text name="BranchRequestAppService"  value="طلبات الوقود"/>
+		<text name="RequestOrderAppService"  value="الطلبيات"/>
+		<text name="ChipDeviceAppService"  value="أنواع الأجهزة" />
+		<text name="ChipNumberAppService"  value="الشرائح الذكية" />
+		<text name="BranchAppService"  value="الفروع"/>
+		<text name="BranchProviderAppService"  value="حظر المحطات"/>
+		<text name="CompanyAppService"  value="الشركات"/>
+		<text name="DriverAppService"  value="السائقين" />
+		<text name="DriverVeichleAppService"  value="مركبات السائق" />
+		<text name="InvoiceAppService"  value="الفواتير الضريبية" />
+		<text name="VoucherAppService"  value="سدادات الأرصدة" />
+		<text name="FuelPriceChangeRequestAppService"  value="طلبات تغيير أسعار الوقود"/>
+		<text name="MainProviderAppService"  value="مزودي الخدمات" />
+		<text name="ProviderAppService"  value="المحطات" />
+		<text name="WorkerAppService"  value="العمال" />
+		<text name="WorkerTransferRecordAppService"   value="سجل العمال "/>
+		<text name="RegisterationRequestAppService"  value="طلبات التسجيل" />
+		<text name="SubscriptionAppService"  value="إشتراكات الباقات"/>
+		<text name="SubscriptionTransactionAppService"  value="إشتراكات الباقات"/>
+		<text name="FuelTransInAppService"  value="عمليات ادخال الوقود" />
+		<text name="FuelTransOutAppService" value="عمليات اخراج الوقود"/>
+		<text name="FuelGroupAppService" value="مجموعات استهلاك الوقود"/>
+		<text name="VeichleAppService"  value="المركبات" />
+		<text name="VeichleRouteAppService"  value="خطوط السير" />
+		<text name="VeichleTransferRecordAppService" value="سجل نقل المركبات"/>
+		<text name="VeichleTripAppService"  value="الرحلات" />
+		<text name="BranchWalletTransactionAppService"  value="محفظة الفروع" />
+		<text name="CompanyWalletTransactionAppService"  value="محفظة الشركات" />
+
+
+		<text name="Sayarah.BranchRequests.BranchRequest" value="طلبات الوقود"/>
+		<text name="Sayarah.BranchRequests.RequestOrder"  value="الطلبيات"/>
+		<text name="Sayarah.Authorization.Users.User"  value="المستخدمين"/>
+		<text name="Sayarah.Chips.ChipNumber"  value="الشرائح الذكية" />
+		<text name="Sayarah.Drivers.DriverVeichle"   value="مركبات السائق" />
+		<text name="Sayarah.Invoices.Invoice" value="الفواتير الضريبية" />
+		<text name="Sayarah.Invoices.Voucher"  value="سدادات الأرصدة" />
+		<text name="Sayarah.Packages.Package" value="الباقات"/>
+		<text name="Sayarah.Packages.Subscription"   value="إشتراكات الباقات"/>
+		<text name="Sayarah.Packages.SubscriptionTransaction"   value="إشتراكات الباقات"/>
+		<text name="Sayarah.Providers.FuelPriceChangeRequest"  value="طلبات تغيير أسعار الوقود"/>
+		<text name="Sayarah.Providers.WorkerTransferRecord"  value="سجل العمال "/>
+		<text name="Sayarah.RegisterationRequests.RegisterationRequest"  value="طلبات التسجيل" />
+		<text name="Sayarah.Tickets.Ticket"  value="تذاكر الدعم" />
+		<text name="Sayarah.Transactions.FuelTransIn" value="عمليات ادخال الوقود" />
+		<text name="Sayarah.Transactions.FuelTransOut"  value="عمليات اخراج الوقود"/>
+		<text name="Sayarah.Transactions.MaintainTransIn"   value="عمليات ادخال الصيانة"/>
+		<text name="Sayarah.Transactions.MaintainTransOut"   value="عمليات صرف الصيانة"/>
+		<text name="Sayarah.Transactions.WashTransIn"  value="عمليات ادخال الغسيل"/>
+		<text name="Sayarah.Transactions.WashTransOut"  value="عمليات صرف الغسيل"/>
+		<text name="Sayarah.Veichles.Veichle"  value="المركبات" />
+		<text name="Sayarah.Veichles.VeichleRoute"  value="خطوط السير" />
+		<text name="Sayarah.Veichles.VeichleTransferRecord"  value="سجل نقل المركبات"/>
+		<text name="Sayarah.Veichles.VeichleTrip"  value="الرحلات" />
+		<text name="Sayarah.Wallets.BranchWalletTransaction"   value="محفظة الفروع" />
+		<text name="Sayarah.Wallets.CompanyWalletTransaction"   value="محفظة الشركات" />
+		<text name="Pages.AdminNav.Transactions" value="العمليات" />
+		<text name="Pages.ProviderRevenue.Title" value="إيرادات مزود الخدمة" />
+		<text name="Pages.ProviderRevenue.VouchersAmount" value="اجمالي تحويلات" />
+		<text name="Pages.ProviderRevenue.TransactionsAmount" value="اجمالي العمليات" />
+		<text name="Pages.ProviderRevenue.ClaimBalance" value="رصيد المطالبة " />
+		<text name="Pages.MainProvidersBankInfo.Title" value="البيانات البنكية للمحطات" />
+		<text name="Pages.StationTransactions.FuelFillingOperations" value="عمليات تعبئة الوقود" />
+		<text name="Pages.StationTransactions.ModalFuelFillingOperations" value="عملية تعبئة الوقود" />
+		<text name="Pages.FuelTransOuts.FuelPrice" value="سعر الوقود" />
+		<text name="Pages.FuelTransOuts.ThisOperation" value="لا يسمح  باجراء هذة العملية" />
+		<text name="Pages.Banks.PreviewImage" value="معاينة الملف أو الصورة" />
+		<text name="Pages.Reports.FrequencyReport" value="تقرير التردد على المحطات" />
+		<text name="Pages.Reports.RowsNumber" value="الرقم التسلسلي" />
+		<text name="Pages.Reports.NumbersCount" value="عدد المرات" />
+		<text name="Pages.Reports.VeichlCreationTime" value="تاريخ أنشاء المركبة" />
+		<text name="Pages.FrequencyReport.Title" value="التردد على المحطات" />
+		<text name="Permission.CompanyFrequencyReport" value="تقرير التردد على المحطات" />
+		<text name="Permission.CompanyConsumptionReport" value="تقرير معدل الاستهلاك للمركبة" />
+		<text name="Pages.Reports.ConsumptionReport" value="معدل الاستهلاك للمركبة" />
+		<text name="Pages.Reports.Consumptionratio" value="نسبة الاستهلاك"/>
+		<text name="Permission.BranchConsumptionReport" value="تقرير معدل الاستهلاك للمركبة"/>
+		<text name="Permission.BranchFrequencyReport" value="تقرير التردد على المحطات"/>
+		<text name="Pages.Drivers.DriverName" value="اسم السائق"/>
+		<text name="Pages.Statistics.Subscriptions" value="الإشتراكات" />
+		<text name="Pages.Statistics.SubscriptionsEndDate" value="تاريخ إنتهاء الإشتراك" />
+		<text name="Pages.Statistics.SubscribePackage" value="اشتراك في باقة" />
+		<text name="Pages.Company.Dashboard.FuelStatistics" value="احصائيات الوقود" />
+		<text name="Pages.Company.Dashboard.CleanStatistics" value="احصائيات الغسيل" />
+		<text name="Pages.Company.Dashboard.ServiceStatistics" value="احصائيات الخدمات" />
+		<text name="Pages.Company.Dashboard.ExportToImage" value="تصدير الي صورة" />
+		<text name="Pages.CompanyLayout.Main" value="الرئيسي" />
+		<text name="Pages.WalletDetails.LastShipmentDate" value="تاريخ اخر شحن" />
+		<text name="Pages.WalletDetails.IBanTransfer" value="اي بان للتحويل من خارج" />
+		<text name="Pages.WalletDetails.TransferAccountGroup" value="رقم الحساب  للتحويل من داخل" />
+		<text name="Pages.WalletDetails.NoBanksNow" value="لا يوجد بنوك حاليا" />
+		<text name="Pages.WalletDetails.BankAccountDetails" value="بيانات الحساب البنكي" />
+		<text name="Pages.WalletDetails.TaxInvoice" value="فاتورة ضريبية" />
+		<text name="Pages.WalletDetails.SellerInfo" value="معلومات البائع" />
+		<text name="Pages.WalletDetails.SellerName" value="اسم البائع" />
+		<text name="Pages.WalletDetails.SellerAddress" value="عنوان البائع" />
+		<text name="Pages.WalletDetails.BuyerInformation" value="معلومات المشتري" />
+		<text name="Pages.WalletDetails.BuyerName" value="اسم المشتري" />
+		<text name="Pages.WalletDetails.BuyerAddress" value="عنوان المشتري" />
+		<text name="Pages.WalletDetails.Item" value="البند" />
+		<text name="Pages.WalletDetails.SubscriptionType" value="نوع الإشتراك" />
+		<text name="Pages.WalletDetails.VeichlePrice" value="سعر المركبة" />
+		<text name="Pages.WalletDetails.SubtotalWithoutTax" value="المجموع الفرعي بدون الضريبة" />
+		<text name="Pages.WalletDetails.TaxValue" value="قيمة الضريبة" />
+		<text name="Pages.WalletDetails.TotalIncludingVAT" value="المجموع شامل ضريبة القيمة المضافة" />
+		<text name="Pages.WalletDetails.Total" value="المجموع" />
+		<text name="Pages.WalletDetails.ValueAddedTax" value="ضريبة القيمة المضافة 15" />
+		<text name="Pages.WalletDetails.TotalWithTax" value="المجموع مع الضريبة 15" />
+		<text name="Pages.WalletDetails.SubscriptionDetails" value="تفاصيل الاشتراك" />
+		<text name="Pages.Subscriptions.AllowedVeichlesCount" value="عدد المركبات المتاحة"/>
+		<text name="Pages.walletBalance" value="رصيد المحفظة" />
+		<text name="Pages.Reports.VeichleConsumptionReport" value="تقرير أستهلاك المركبة" />
+		<text name="Permission.VeichleConsumptionReport" value="تقرير أستهلاك المركبة" />
+		<text name="Permission.BranchVeichleConsumptionReport" value="تقرير أستهلاك المركبة" />
+		<text name="Pages.Reports.VeichleConsumption" value="أستهلاك المركبة" />
+		<text name="Pages.Reports.ReservedBalance" value="الرصيد المحجوز" />
+		<text name="Pages.Wallets.CurrentFuelAmount" value="رصيد الوقود الحالي"/>
+		<text name="Pages.Wallets.OldSubscriptions" value="الاشتراكات السابقة"/>
+		<text name="Pages.Subscriptions.SubscriptionStatus.Effective" value="فعال"/>
+		<text name="Pages.Subscriptions.SubscriptionStatus.Ended" value="منتهي"/>
+		<text name="Pages.Subscriptions.SubscriptionStatus.TotalBeforeTax" value="الإجمالي قبل الضريبة"/>
+		<text name="Pages.Subscriptions.SubscriptionStatus.TotalIncludingTax" value="الإجمالي شامل الضريبة"/>
+		<text name="Pages.AdminEmployees.Title" value="موظفين الشرائح"/>
+		<text name="Permission.AdminEmployees" value="موظف الشرائح"/>
+		<text name="Pages.AdminEmployeePermissions.Title" value="صلاحيات موظفين الشرائح"/>
+		<text name="Pages.AdminEmployees.ModalTitle" value=" موظف الشرائح"/>
+
+
+
+
+		<text name="Pages.BranchWallet.AmountForm" value=" المبلغ من"/>
+		<text name="Pages.BranchWallet.AmountTo" value=" المبلغ من"/>
+
+		<text name="Pages.BranchWallet.AddNewTrip" value="إضافة رحلة جديدة"/>
+		<text name="Pages.BranchWallet.SelectTrip" value="اختيار رحلة"/>
+		<text name="Pages.Trips.TripsHistory" value="سجل الرحلات"/>
+		<text name="Pages.AccountSystem.Balance" value="الرصيد"/>
+		<text name="Pages.AccountSystem.Attachments" value="مرفقات"/>
+
+
+		<text name="Pages.CompanyInvoice.InvoiceCreationDate" value="تاريخ إنشاء الفاتورة"/>
+		<text name="Pages.CompanyInvoice.Fuel" value="وقود"/>
+		<text name="Pages.Products.ModalTitle" value="المنتج"/>
+		<text name="Pages.Products.UnitPrice" value="سعر الوحدة"/>
+		<text name="Pages.Products.TaxPercentage" value="نسبة الضريبة"/>
+		<text name="Pages.Report.TotalPrice" value="الاجمالي"/>
+		<text name="Pages.Reports.ServiceProviderRevenue" value="ايراد مزود الخدمة"/>
+		<text name="Pages.Reports.Station" value="المحطة"/>
+		<text name="Pages.Reports.Operations" value="عمليات"/>
+		<text name="Pages.Reports.ServiceProvider" value="مزود الخدمة"/>
+		<text name="Pages.Locations.SearchByName" value="ابحث بالإسم"/>
+
+		<text name="Pages.MainProviders.TotalBalancesClaimed" value="اجمالي الارصدة المطالبة"/>
+		<text name="Pages.MainProviders.ThereAreNoMovements" value="لا توجد حركات في هذه الفتره"/>
+		<text name="Pages.ManageEmailAddress.ReSend" value="اعادة الارسال"/>
+		<text name="Pages.ManageEmailAddress.CodeSent" value="تم إرسال كود التفعيل للإيميل"/>
+		<text name="Pages.MainProvider.WorkerName" value="اسم العامل"/>
+
+		<text name="Permission.GasStationLocations" value="مواقع محطات الوقود"/>
+		<text name="Permission.CarChargingStations" value="محطات شحن السيارات الكهربائية"/>
+		<text name="Permission.BranchDrivers" value="سائقين الفرع"/>
+		<text name="Pages.Login.RecoverPassword" value="استعادة كلمة المرور"/>
+		<text name="Pages.Login.CreateAccount" value="إنشاء حساب"/>
+		<text name="Pages.ChipsNumbers.ItsRelatedToOtherCompany" value="هذة الشريحة مربوطة بشركة أخري"/>
+		<text name="Pages.ChipsNumbers.ItsRelatedToOtherBranch" value="هذة الشريحة مربوطة بفرع أخر"/>
+		<text name="Pages.ChipsNumbers.NotLinkedToVehicles" value="لم يتم الربط مع المركبات"/>
+
+		<text name="Pages.InvoiceCompany.Print" value="طباعة / Print"/>
+		<text name="Pages.InvoiceCompany.TaxInvoice" value="فاتورة ضريبية / Tax Invoice"/>
+		<text name="Pages.InvoiceCompany.RowsNumber" value="الرقم التسلسلي/ Serial Number" />
+		<text name="Pages.InvoiceCompany.InvoiceCreationDate" value="تاريخ إنشاء الفاتورة / Invoice Creation Date"/>
+		<text name="Pages.InvoiceCompany.StartDate" value="تاريخ البداية / Start Date"/>
+		<text name="Pages.InvoiceCompany.EndDate" value="تاريخ النهاية / End Date"/>
+		<text name="Pages.InvoiceCompany.SellerInfo" value="معلومات البائع / Seller Information"/>
+		<text name="Pages.InvoiceCompany.SellerName" value="إسم البائع / Seller Name"/>
+		<text name="Pages.InvoiceCompany.SellerAddress" value="عنوان البائع / Seller Address"/>
+		<text name="Pages.InvoiceCompany.TaxNumber" value="الرقم الضريبي / Tax Number"/>
+		<text name="Pages.InvoiceCompany.RegNo" value="رقم السجل التجاري / Commercial Record"/>
+		<text name="Pages.InvoiceCompany.BuyerInformation" value="معلومات المشتري / Buyer Information"/>
+		<text name="Pages.InvoiceCompany.BuyerName" value="إسم المشتري / Buyer Name"/>
+		<text name="Pages.InvoiceCompany.BuyerAddress" value="عنوان المشتري / Buyer Address"/>
+		<text name="Pages.InvoiceCompany.Product" value="المنتج / Product"/>
+		<text name="Pages.InvoiceCompany.Quantity" value="الكمية (لتر) / Quantity(Liter)"/>
+		<text name="Pages.InvoiceCompany.SubtotalWithoutTax" value="السعر غ.ش.ض / Total WithOut Vat"/>
+		<text name="Pages.InvoiceCompany.TaxPercentage" value="نسبة الضريبة / Vat %"/>
+		<text name="Pages.InvoiceCompany.TaxValue" value="ضريبة القيمة المضافة / Vat Value"/>
+		<text name="Pages.InvoiceCompany.TotalIncludingVAT" value="الإجمالي ش.ض  / Total With Vat"/>
+		<text name="Pages.InvoiceCompany.Fuel" value="وقود  / Fuel"/>
+		<text name="Pages.InvoiceCompany.Total" value="الإجمالي غ.ش.ض / Total WithOut Vat"/>
+		<text name="Pages.InvoiceCompany.ValueAddedTax" value="ضريبة القيمة المضافة %15 / Vat 15"/>
+		<text name="Pages.InvoiceCompany.TotalWithTax" value="الإجمالي مع الضريبة / Total with Vat"/>
+		<text name="Pages.invoices.Code" value="رقم الفاتورة" />
+		<text name="Pages.Station.Name" value="أسم المحطة" />
+		<text name="Permission.BranchFuelTransactions" value="عمليات تعبئة الوقود" />
+		<text name="Pages.WalletsPending.Title" value="عمليات تحت المراجعة" />
+		<text name="Pages.WalletsPending.Code" value="الكود" />
+		<text name="Pages.Reports.AccountStatement" value="كشف حساب" />
+		<text name="Pages.Reports.TotalBalances" value="اجمالي الارصدة" />
+		<text name="Pages.Dashboard.CompanyWalletBalance" value="رصيد محفظة الشركة" />
+		<text name="Pages.Dashboard.CompanyBranchWalletBalance" value="رصيد محفظة الشركة + الفروع" />
+		<text name="Pages.Reports.ProvidersConsumption" value="إجمالي صرف الوقود الفروع" />
+		<text name="Permission.MainProviderConsumptionReport" value="تقرير صرف الوقود الفروع" />
+		<text name="Pages.Invoices.FullPeriod" value="الفترة" />
+		<text name="Pages.Invoices.Total" value="الاجمالي" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!--<text name="Pages.Statistics.DriversCount" value="عدد السائقين" />
+		<text name="Pages.Statistics.VeichelsCount" value="عدد المركبات" />
+		<text name="Pages.Statistics.BranchesCount" value="عدد الفروع" />
+		<text name="Common.RiyalCurrency" value="ريال" />
+		<text name="Pages.Company.Dashboard.ServiceStatistics" value="احصائيات الخدمات" />
+		<text name="Pages.Company.Dashboard.ExportToImage" value="تصدير الي صورة" />
+		<text name="Pages.CompanyLayout.Main" value="الرئيسي" />
+		<text name="Pages.WalletDetails.LastShipmentDate" value="تاريخ اخر شحن" />
+		<text name="Pages.WalletDetails.IBanTransfer" value="اي بان للتحويل من خارج" />
+		<text name="Pages.WalletDetails.TransferAccountGroup" value="رقم الحساب للتحويل من داخل" />
+		<text name="Pages.WalletDetails.NoBanksNow" value="لا يوجد بنوك حاليا" />
+		<text name="Pages.SubscriptionEndDate" value="تاريخ إنتهاء الإشتراك" />
+		<text name="Pages.Package.Renew" value="تجديد الباقة" />
+		<text name="Pages.Package.Subscribe" value="اشتراك في باقة" />
+		<text name="Pages.Package.SubscribeNow" value="إشترك الآن" />
+		<text name="Pages.Statistics.Fuel" value="احصائيات الوقود" />
+		<text name="Pages.Statistics.Washing" value="احصائيات الغسيل" />-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</texts>
+</localizationDictionary>

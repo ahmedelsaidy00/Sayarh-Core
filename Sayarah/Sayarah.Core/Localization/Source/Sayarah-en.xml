@@ -1,0 +1,2476 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<localizationDictionary culture="en">
+	<texts>
+		<text name="System.Menus.AdminMenu" value="AdminMenu" />
+		<text name="System.Menus.StoreMenu" value="StoreMenu" />
+		<text name="System.Menus.CompanyMenu" value="CompanyMenu" />
+		<text name="System.Menus.MainProviderMenu" value="MainProviderMenu" />
+		<text name="System.Menus.BranchMenu" value="BranchMenu" />
+		<text name="System.Menus.UserProvMenu" value="UserProvMenu" />
+		<text name="InternalServerError" value="An internal error occured during your request!" />
+		<text name="ValidationError" value="Your request is not valid, please provide required data properly!" />
+		<text name="AreYouSure" value="Are you sure?" />
+		<text name="Cancel" value="Cancel" />
+		<text name="Yes" value="OK" />
+		<!--Common.Tools-->
+		<text name="Common.Tools.FullScreen" value="Fullscreen" />
+		<text name="Common.Tools.Remove" value="Remove" />
+		<text name="Common.Tools.CollapseExpand" value="Collapse/Expand" />
+		<text name="Common.Tools.Reload" value="Reload" />
+		<text name="Common.Tools.SetAsDefault" value="Set As Default" />
+		<text name="Common.Tools.IsDefault" value="IsDefault" />
+		<!--Common-->
+		<text name="Common.Number" value="Number" />
+		<text name="Common.SystemTitle" value="Syarah app" />
+		<text name="Common.Filter" value="Filter" />
+		<text name="Common.Any" value="Any" />
+		<text name="Common.Reyal" value="SAR" />
+		<text name="Common.Deleted" value="Deleted" />
+		<text name="Common.NotDeleted" value="Not deleted" />
+		<text name="Common.CreateSiteMap" value="Create SiteMap " />
+		<text name="Common.Active" value="Active" />
+		<text name="Common.NotActive" value="Not Active" />
+		<text name="Common.Approve" value="Approve" />
+		<text name="Common.NotApprove" value="Not Approve" />
+		<text name="Common.Passive" value="Passive" />
+		<text name="Common.Blocked" value="Blocked" />
+		<text name="Common.UnBlocked" value="UnBlocked" />
+		<text name="Common.Create" value="Create" />
+		<text name="Common.CreateNew" value="Create New" />
+		<text name="Common.CreateWithSecretCode" value="Create With SecretCode" />
+		<text name="Common.View" value="View" />
+		<text name="Common.ChangeBranch" value="Change Branch" />
+		<text name="Common.Edit" value="Edit" />
+		<text name="Common.EditData" value="Edit Data" />
+		<text name="Common.Delete" value="Delete" />
+		<text name="Common.HardDelete" value="delete form database" />
+		<text name="Common.Restore" value="Restore" />
+		<text name="Common.Save" value="Save" />
+		<text name="Common.Loading" value="Loading data ..." />
+		<text name="Common.Options" value="Options" />
+		<text name="Common.ShowDeleted" value="Show Deleted" />
+		<text name="Common.Yes" value="Yes" />
+		<text name="Common.No" value="No" />
+		<text name="Common.Ok" value="OK" />
+		<text name="Common.Cancel" value="Cancel" />
+		<text name="Common.Language" value="Language" />
+		<text name="Common.Arabic" value="Arabic" />
+		<text name="Common.English" value="English" />
+		<text name="Common.Logout" value="Log Out" />
+		<text name="Common.CopyRights" value="Copyright © All Rights Reserved Syarah App {0} | Powered by" />
+		<text name="Common.CopyRightsSocialMedia" value="Copyright© Al7osam Company {0} , All Rights Reserved" />
+		<text name="Common.Al7osam" value="Al7osam" />
+		<text name="Common.System" value="System" />
+		<text name="Common.Next" value="Next" />
+		<text name="Common.Previous" value="Previous" />
+		<text name="Common.Category" value="Category" />
+		<text name="Common.Send" value="Send" />
+		<text name="Common.ErrorOccurred" value="ErrorOccurred" />
+		<text name="Common.DevelopedBy" value="Developed by" />
+		<text name="Common.InformationSystemsAndWebSolutions" value="for Information systems and Web Solutions" />
+		<text name="Common.Newsletter" value="Newsletter" />
+		<text name="Common.SubscribeNow" value="Subscribe now to keep in touch with us" />
+		<text name="Common.Details" value="Details" />
+		<text name="Common.Female" value="Female" />
+		<text name="Common.Male" value="Male" />
+		<text name="Common.247SUPPORT" value="24/7 SUPPORT" />
+		<text name="Common.SearchResult" value="Search Result" />
+		<text name="Common.EmailUs" value="Email us" />
+		<text name="Common.OpeningTime" value="Opening Time" />
+		<text name="Common.GetInTouch" value="Get in touch" />
+		<text name="Common.BusinessHours" value="Business Hours" />
+		<text name="Common.Closed" value="Friday : Closed" />
+		<text name="Common.SUPPORT" value="Support Hours in 24/7 Everyday" />
+		<text name="Common.SelectAll" value="Select all" />
+		<text name="Common.Facebook" value="Facebook" />
+		<text name="Common.Whatsapp" value="Whatsapp " />
+		<text name="Common.Twitter" value="Twitter" />
+		<text name="Common.Instagram" value="Instagram" />
+		<text name="Common.Telegram" value="Telegram" />
+		<text name="Common.GooglePlus" value="Google plus" />
+		<text name="Common.Rate" value="Rate" />
+		<text name="Common.YouTube" value="YouTube" />
+		<text name="Common.Linkedin" value="Linkedin" />
+		<text name="Common.Maroof" value="Maroof" />
+		<text name="Common.Tiktok" value="Tiktok" />
+		<text name="Common.SupportNumber" value="Support number" />
+		<text name="Common.Latitude" value="Latitude" />
+		<text name="Common.Longitude" value="Longitude" />
+		<text name="Common.Order" value="Order" />
+		<text name="Common.Code" value="Code" />
+		<text name="Common.None" value="None" />
+		<text name="Common.ChooseType" value="Choose Type" />
+		<text name="Common.Without" value="Without" />
+		<text name="Common.Date" value="Date" />
+		<text name="Common.AM" value="AM" />
+		<text name="Common.PM" value="PM" />
+		<text name="Common.ChangeImage" value="Change image" />
+		<text name="Common.ChangeImageOrFile" value="Change" />
+
+		<text name="Common.SelectImage" value="Select image" />
+		<text name="Common.SelectImageOrFile" value="Select image / file" />
+		<text name="Common.ChangeFile" value="Change File" />
+		<text name="Common.SelectFile" value="Select File" />
+		<text name="Common.NoPhotoUplaoded" value="No Photo uploaded" />
+		<text name="Common.AddressOnGoogle" value="Address On Google" />
+		<text name="Common.UniformNumber" value="Uniform Number" />
+		<text name="Common.Fax" value="Fax" />
+		<text name="Common.Telephone" value="Telephone" />
+		<text name="Common.PhoneNumber" value="Telephone" />
+		<text name="Common.Mobile" value="Mobile" />
+		<text name="Common.UsernameOrEmailAddress" value="Username Or EmailAddress" />
+		<text name="Common.Email" value="Email" />
+		<text name="Common.Subject" value="Subject" />
+		<text name="Common.Address" value="Address" />
+		<text name="Common.Password" value="Password" />
+		<text name="Common.OldPassword" value="Current Password" />
+		<text name="Common.NewPassword" value="New Password" />
+		<text name="Common.ThereIsNoFavoriteHere" value="There Is No Favorite Lessons Here" />
+		<text name="Common.PdfFile" value="Pdf File" />
+		<text name="Common.Books" value="Books" />
+		<text name="Common.SelectBook" value="Select book" />
+		<text name="Common.MonthlySubscriptionAmount" value="Monthly subscription amount" />
+		<text name="Common.ConfirmPassword" value="Confirm password" />
+		<text name="Common.AdvertisementNumber" value="Advertisement Number" />
+		<text name="Common.UserName" value="User name" />
+		<text name="Common.Name" value="Name" />
+		<text name="Common.Position" value="Position" />
+		<text name="Common.Photo" value="Photo" />
+		<text name="Common.Download" value="Download" />
+		<text name="Common.IsDefault" value="Is Default" />
+		<text name="Common.Notes" value="Notes" />
+		<text name="Common.Note" value="Note" />
+		<text name="Common.Activate" value="Activate" />
+		<text name="Common.Deactivate" value="Deactivate" />
+		<text name="Common.ChangeStatus" value="Change status" />
+		<text name="Common.Select" value="-- Select --" />
+		<text name="Common.Selected" value="Selected" />
+		<text name="Common.SelectedItems" value="Selected" />
+		<text name="Common.Checkall" value="Check all" />
+		<text name="Common.Uncheckall" value="Uncheck all" />
+		<text name="Common.Gender" value="Gender" />
+		<text name="Common.Confirm" value="Confirm" />
+		<text name="Common.ConfirmDelete" value="Confirm Delete" />
+		<text name="Common.Saturday" value="Saturday" />
+		<text name="Common.Sunday" value="Sunday" />
+		<text name="Common.Monday" value="Monday" />
+		<text name="Common.Tuesday" value="Tuesday" />
+		<text name="Common.Wednesday" value="Wednesday" />
+		<text name="Common.Thursday" value="Thursday" />
+		<text name="Common.Friday" value="Friday" />
+		<text name="Common.Days" value=" Day " />
+		<text name="Common.DayOfWeek" value=" Days Of Week " />
+		<text name="Common.BasicData" value="Basic Data" />
+		<text name="Common.NotSet" value="Not Set" />
+		<text name="Common.Add" value="Add" />
+		<text name="Common.Remove" value="Remove" />
+		<text name="Common.From" value="From" />
+		<text name="Common.To" value="To" />
+		<text name="Common.Back" value="Back" />
+		<text name="Common.Print" value=" Print" />
+		<text name="Common.Free" value="For Free" />
+		<text name="Common.NotFree" value="Not Free" />
+		<text name="Common.MainPages" value="Main Pages" />
+		<text name="Common.SaveChanges" value="Save Changes" />
+		<text name="Common.AddItem" value="Add Item"/>
+		<text name="Common.CantDelete" value="can not delete the record from database because it used in another tabel"/>
+		<text name="Common.Valid" value="Valid"/>
+		<text name="Common.ValidMobileNo" value=" Incorrect number should be in the following format '9665xxxxxxxx'"/>
+		<text name="Common.ValidFaxNo" value=" Incorrect number should be in the following format '01xxxxxxxx'"/>
+		<text name="Common.ValidPhoneNo" value=" Incorrect number should be in the following format '01xxxxxxxx'"/>
+		<text name="Common.ValidIdentityId" value="Identity number must be 10 digits"/>
+		<text name="Common.Id" value="ID" />
+		<text name="Common.ImportFromExcel" value="Import from excel" />
+		<text name="Common.ExportExcel" value="Export excel" />
+		<text name="Common.ExcelFormat" value="Excel Format" />
+		<text name="Common.Export" value="Export" />
+		<text name="Common.Profile" value="Profile" />
+		<text name="Common.PersonalInfo" value="Personal Info" />
+		<text name="Common.PersonalOrders" value="Personal Orders " />
+		<text name="Common.OrderDetails" value="Order Details" />
+		<text name="Common.Price" value="Price" />
+		<text name="Common.Duration" value="Duration" />
+		<text name="Common.Show" value="Show" />
+		<text name="Common.Hide" value="Hide" />
+		<text name="Common.Serial" value="Serial" />
+		<text name="Common.ArabicTerms" value="Arabic Terms" />
+		<text name="Common.EnglishTerms" value="English Terms" />
+		<text name="Common.ArabicPrivacy" value="Arabic Privacy" />
+		<text name="Common.EnglishPrivacy" value="English Privacy" />
+		<text name="Common.Available" value="Available"/>
+		<text name="Common.UnAvailable" value="UnAvailable"/>
+		<text name="Common.KiloMeter" value="KM"/>
+		<text name="Common.ExpireDate" value="Expire Date"/>
+		<text name="Common.IsExpiredSubscription" value="Subscription Expired"/>
+		<text name="Common.Minute" value="Minute"/>
+		<text name="Common.IsGift" value="Is Gift"/>
+		<text name="Common.NewsLetter" value="Newsletter" />
+		<text name="Common.Url" value="Video Url" />
+		<text name="Common.FuelType" value="Fuel Type" />
+		<text name="Common.DeliveyWay" value="Delivery Way" />
+		<text name="Common.ExcelFile" value="Excel File" />
+		<text name="Common.CreationTime" value="Creation Time" />
+		<text name="Common.DateFrom" value="Date From" />
+		<text name="Common.DateTo" value="Date To" />
+		<text name="Common.Error.AlreadyExist" value="Already Exist" />
+
+		<text name="Pages.Profile.Note" value="Note" />
+		<text name="Pages.Profile.NotePhoto" value="you must upload photo with format {0}. and its size {1}" />
+		<text name="Pages.Profile.BlogNotePhoto" value="you must upload photo with format {0}. and its list image size {1} and images in details {2}" />
+		<!--Currency-->
+		<text name="Common.RiyalCurrency" value="SAR" />
+		<!--common messages-->
+		<text name="Common.Message.ActionSuccess" value="Request completed" />
+		<text name="Common.Message.SettingsChanged" value="System settings changed, applcation will reload." />
+		<text name="Common.Message.PermissionsChanged" value="System permissions changed, applcation will reload." />
+		<text name="Common.Message.Confirm.Delete" value="Are you sure to delete selected record(s)?" />
+		<text name="Common.Message.Confirm.DeleteClient" value="Are you sure to delete selected record(s)?" />
+		<text name="Common.Message.Confirm.HardDelete" value="Are you sure to delete selected record(s) from DataBase?" />
+		<text name="Common.Message.Confirm.Restore" value="Are you sure to restore selected record(s)?" />
+		<text name="Common.Message.Confirm.AcceptRequest" value="Are you sure to Accept Request(s)?" />
+		<text name="Common.Message.Confirm.Accept" value="Are you sure to Accept Request(s)?" />
+		<text name="Common.Message.Confirm.Refuse" value="Are you sure to Refuse Request(s)?" />
+		<text name="Common.Message.Confirm.Complete" value="Are you sure to Complete Request(s)?" />
+		<text name="Common.Message.Confirm.ChangeStatus" value="Are you sure to change status?" />
+		<text name="Common.Message.Confirm.Deactive" value="Are you sure to change status?" />
+		<text name="Common.Message.Confirm.Active" value="Are you sure to change status?" />
+		<text name="Common.Message.Confirm.ManageActive" value="Are you sure to change status?" />
+		<text name="Common.Message.Confirm.VisibleInMap" value="Are you sure to change status?" />
+
+		<text name="Common.Message.Delete" value="Record deleted" />
+		<text name="Common.Message.Save" value="Record saved" />
+		<text name="Common.Message.StaticData" value="Static items will be ignored from deletion" />
+		<text name="Common.Message.NotFound" value="There is no free activities with this Secret Code" />
+		<text name="Common.Message.FoundAndUsed" value="This code has been used before" />
+		<text name="Common.Message.ElementNotFound" value="No element with id {0}" />
+		<text name="Common.Message.EmploymentSuccess" value="Data Has Been Sent Successfully" />
+		<text name="Common.Message.SiteMapCreated" value="SiteMap File Has Been Created SuccessFully" />
+
+
+		<text name="Common.EnteryDay" value="Day" />
+		<text name="Common.EnteryMonth" value="Month" />
+		<text name="Common.FinalTime" value="Last Time To Send Report:" />
+
+		<!--Common Errors-->
+		<text name="Common.Error.StaticData" value="This item is static and can not be removed." />
+		<text name="Common.Error.AjaxError" value="Could not complete request." />
+		<text name="Common.Error.AjaxErrorDetails" value="Please try again, or call system administrator" />
+		<text name="Common.Error.InvalidForm" value="You have some form errors" />
+		<text name="Common.Error.Required" value="Field is required" />
+		<text name="Common.Error.Name" value="Full name must be entered" />
+		<text name="Common.Error.InvalidEmail" value="Invalid email address" />
+		<text name="Common.Error.TextLength" value="this input should contain {0} letter" />
+		<text name="Common.Error.InvalidUrl" value="Invalid Webte Url" />
+		<text name="Common.Error.InvalidNumber" value="Invalid number" />
+		<text name="Common.Error.InvalidNumberPattern" value="يجب أن يحتوي رقم الجوال على 9 أرقام (5xxxxxxxx)" />
+
+		<text name="Common.Error.InvalidPhoneNumber" value="Please enter a valid PhoneNumber" />
+		<text name="Common.Error.Invalid" value="Invalid field" />
+		<text name="Common.Error.InvalidUserName" value="Username must contains letters and numbers and dot only" />
+		<text name="Common.Error.InvalidLookup" value="Find and select item from the list" />
+		<text name="Common.Error.MaxLength" value="Max Length is [{0}] character or number" />
+		<text name="Common.Error.DecimalOnly" value="Only decimal format is allowed" />
+		<text name="Common.Error.InvalidInputs" value="Some invalid inputs ,Please enter data correctly" />
+		<text name="Common.Error.EmailExists" value="Employee with the same email exists" />
+		<text name="Common.Error.PhoneNoExists" value="Employee with the same phoneNo exists" />
+		<text name="Common.Error.PasswordLength" value="Password must be at least 6 characters" />
+		<text name="Common.Error.PasswordsMatching" value="Passwords don't match " />
+		<text name="Common.Error.NeedLogin" value="You Must Login at First  " />
+		<text name="Common.Error.LoginModelError" value="Error in username or password" />
+		<text name="Common.Error.InvalidFileType" value="Invalid file type" />
+		<text name="Common.Error.InvalidFileSize" value="Invalid file size" />
+		<text name="Common.Error.UploadError" value="An error occurred while uploading" />
+		<text name="Common.Error.OrderNotCreated" value="Order not created"/>
+		<text name="Common.Message.ChooseDefaultImage" value="Choose another photo to be default" />
+
+		<text name="Common.Message.DiscountIsGreater" value="discount greater than price" />
+		<text name="Common.Message.CopySuccess" value="Copied To Clipboard" />
+		<text name="Common.Message.ChooseBranches" value="Choose Branches First" />
+		<text name="Common.Message.ChooseFuelTypes" value="Choose Supported Fuel Types" />
+
+		<!--System Messages-->
+		<text name="Messages.InvalidForm" value="Your form is invalid" />
+		<text name="Messages.InvalidLogin" value="Invalid username or password" />
+		<text name="Messages.UserIsNotActive" value="User [{0}] account is suspended" />
+		<text name="Messages.InvalidTenant" value="No Organization found with the name [{0}]" />
+		<text name="Messages.TenantIsNotActive" value="Organization [{0}] account is suspended" />
+		<text name="Messages.Followers.ExistEmail" value="This E-mail is already Exist" />
+		<text name="Messages.Followers.Succeed" value="Email Sent Successfully" />
+		<text name="Messages.Error" value="Error occured ! ,please try again" />
+		<text name="Messages.Comments.Succeed" value="Comment added successfully" />
+		<text name="Messages.ContactMessage.Succeed" value="Message sent successfully" />
+		<text name="Messages.LoginFailed" value="Login Failed" />
+		<text name="Messages.LoginFailedDeactivateCompany" value="Login Failed Company Account Is Deactivated" />
+		<text name="Messages.LoginFailedDeactivateBranch" value="Login Failed Branch Account Is Deactivated" />
+
+		<text name="Messages.LoginToBranch" value="You will be logged in to branch {0}." />
+		<text name="Messages.LoginToMainBranch" value="You will be logged in to main branch {0}." />
+		<text name="Messages.LoginToProvider" value="You will be logged in to station {0}." />
+		<text name="Messages.LoginToMainProvider" value="You will be logged in to main station {0}." />
+
+		<!--DataTable-->
+		<text name="Common.DataTable.SelectedCount" value="_TOTAL_ records selected" />
+		<text name="Common.DataTable.AjaxRequestGeneralError" value="Could not complete request. Please check your internet connection" />
+		<text name="Common.DataTable.LengthMenu" value="View _MENU_" />
+		<text name="Common.DataTable.Info" value="Found total _TOTAL_" />
+		<text name="Common.DataTable.InfoFiltered" value="(filtered from total _MAX_)" />
+		<text name="Common.DataTable.InfoEmpty" value="No records found to view" />
+		<text name="Common.DataTable.EmptyTable" value="No data available in database" />
+		<text name="Common.DataTable.ZeroRecords" value="No records found matching filter fields" />
+		<text name="Common.DataTable.Paginate.Previous" value="Prev" />
+		<text name="Common.DataTable.Paginate.Next" value="Next" />
+		<text name="Common.DataTable.Paginate.Last" value="Last" />
+		<text name="Common.DataTable.Paginate.First" value="First" />
+		<text name="Common.DataTable.Paginate.Page" value="Page" />
+		<text name="Common.DataTable.Paginate.PageOf" value="of" />
+		<text name="Common.DataTable.Reset" value="Reset" />
+		<text name="Common.DataTable.Columns" value="Displayed Columns" />
+		<text name="Common.DataTable.NoRecordsSelected" value="No record selected" />
+		<!--Database Common Columns-->
+		<text name="Common.FullName" value="Name" />
+		<text name="Common.NameEn" value="Name" />
+		<text name="Common.Description" value="Description" />
+		<text name="Common.DescriptionAr" value="Arabic Description" />
+		<text name="Common.DescriptionEn" value="English Description" />
+		<text name="Common.DescriptionTr" value="Turkish Description" />
+		<text name="Common.DescriptionFr" value="French Description" />
+		<text name="Common.DescriptionUr" value="Urdu Description" />
+		<text name="Common.DescriptionBn" value="Bengali Description" />
+		<text name="Common.DescriptionFi" value="Filipino Description" />
+		<text name="Common.DescriptionEs" value="Spanish Description" />
+		<text name="Common.DescriptionDe" value="German Description" />
+
+		<text name="Common.DisplayName" value="Display Name" />
+		<text name="Common.ArabicName" value="Arabic Name" />
+		<text name="Common.NameTr" value="Turkish name" />
+		<text name="Common.NameFr" value="French name" />
+		<text name="Common.NameUr" value="Urdu name" />
+		<text name="Common.NameBa" value="Bengali name" />
+		<text name="Common.NameFi" value="Filipino name" />
+		<text name="Common.NameSp" value="Spanish name" />
+		<text name="Common.NameDe" value="German name" />
+		<text name="Common.EnglishDescription" value="English Description" />
+		<text name="Common.ArabicDescription" value="Arabic Description" />
+		<text name="Common.EnglishName" value="English Name" />
+		<text name="Common.CreatedBy" value="Created By" />
+		<text name="Common.CreatedOn" value="Creation Date" />
+		<text name="Common.ModifiedBy" value="Modified By" />
+		<text name="Common.ModifiedOn" value="Modification Date" />
+		<text name="Common.DeletedBy" value="Deleted By" />
+		<text name="Common.DeletedOn" value="Deletion Date" />
+		<text name="Common.Status" value="Status" />
+		<text name="Common.Actions" value="Actions" />
+		<text name="Common.Search" value="Search" />
+		<text name="Common.CancelSearch" value="Cancel Search" />
+		<text name="Common.All" value=" -- All -- " />
+		<text name="Common.By" value="By" />
+		<text name="Common.EmailAddress" value="Email Address" />
+		<text name="Common.SecretCode" value="Secret Code" />
+		<text name="Common.Type" value="Type" />
+		<text name="Common.OrderType" value="Order Type" />
+		<text name="Common.OrderStatus" value="Order Status" />
+		<text name="Common.OrderPending" value="Pending" />
+		<text name="Common.InCart" value="In Cart" />
+		<text name="Common.OrderCompeleted" value="Completed" />
+		<text name="Common.Complete" value="Complete" />
+		<text name="Common.Pendeng" value="Pendeng" />
+		<text name="Common.ChooseTypeFirst" value="Choose Type first" />
+		<text name="Common.ReservationDate" value="Reservation Date" />
+		<text name="Common.TotalPrice" value="Total Price" />
+		<text name="Common.Discount" value="Discount" />
+		<text name="Common.Quantity" value="Quantity" />
+		<text name="Quantity" value="Quantity" />
+		<text name="TotalPrice" value="Total Price" />
+		<text name="Common.IsAvialable" value="Avialable" />
+		<text name="Common.IsSpecial" value="Special" />
+		<text name="Common.IsVisible" value="Visible" />
+		<text name="Common.NotSpecial" value="Not Special" />
+		<text name="Common.NotVisible" value="Not Visible" />
+		<text name="Common.SpecialBtn" value="Make product special" />
+		<text name="Common.NotSpecialBtn" value="Make product not special" />
+		<text name="Common.VisibleBtn" value="Make product visible" />
+		<text name="Common.NotVisibleBtn" value="Make product not visible" />
+		<text name="Common.Title" value="Title" />
+		<text name="Common.ArabicTitle" value="Arabic Name" />
+		<text name="Common.EnglishTitle" value="English Name" />
+		<text name="Common.Video" value="Video" />
+		<text name="Common.Video1" value="Video1" />
+		<text name="Common.Video2" value="Video2" />
+		<text name="Common.ClickHere" value="Click Here" />
+		<text name="Common.MediaType" value="Media Type" />
+		<text name="Common.Approved" value="Approved" />
+		<text name="Common.NotApproved" value="Not approved" />
+		<text name="Common.SelectStatus" value="Select status" />
+		<text name="Common.SelectCategory" value="Select category" />
+		<text name="Common.SelectMedaiType" value="Select medai type" />
+		<text name="Common.StartDate" value="Start date" />
+		<text name="Common.EndDate" value="End date" />
+		<text name="Common.Images" value="Images" />
+		<text name="Common.New" value="New" />
+		<text name="Common.Updated" value="Updated" />
+		<text name="Common.AcceptRequest" value="Accept"/>
+		<text name="Common.Accept" value="Accept"/>
+		<text name="Common.Accepted" value="Accepted"/>
+		<text name="Common.Refuse" value="Refuse"/>
+		<text name="Common.Refused" value="Refused"/>
+		<text name="Common.Snapchat" value="Snap chat "/>
+		<text name="Common.Attachfile" value="Attach a file" />
+		<text name="Common.ChangeImageOrPDF" value="Change PDF" />
+		<text name="Common.SelectImageOrPDF" value="Select PDF" />
+		<text name="Common.ShowPDF" value="Show PDF" />
+		<text name="Common.IsAdditional" value="IsAdditional" />
+		<text name="Common.Additional" value="IsAdditional" />
+		<text name="Common.NotAdditional" value="IsMain" />
+		<text name="Common.NotificationText" value="Notification Text" />
+		<text name="Common.Notifications" value="Notifications" />
+		<text name="Common.DeleteAll" value="Delete All"/>
+		<text name="Common.DeleteSelected" value="Delete Selected"/>
+		<text name="Common.HasPaid" value="Has paid"/>
+		<text name="Common.NotPaid" value="Not paid"/>
+		<text name="Common.Refunded" value="Refunded"/>
+		<text name="Common.SendToAll" value="Send to all" />
+		<text name="Common.SendToSelected" value="Send to selected" />
+		<text name="Common.EmptyListToBeExported" value="There is no data to be exported" />
+		<text name="Common.Reject" value="Reject" />
+
+		<text name="Common.CopiedSuccessfully" value="text is copied 👌🏻 " />
+		<text name="Common.Attachments" value="Attachments" />
+		<text name="Common.Errors" value="Errors" />
+		
+		<text name="Common.FiltrationTimes.Title" value="Filtration" />
+		<text name="Common.FiltrationTimes.Today" value="Today" />
+		<text name="Common.FiltrationTimes.LastWeek" value="Last Week" />
+		<text name="Common.FiltrationTimes.LastMonth" value="Last Month" />
+		<text name="Common.FiltrationTimes.LastYear" value="Last Year" />
+
+
+		<text name="Common.Message.Confirm.SendMessagesToClients" value="Are you sure to send message to user(s)" />
+		<text name="Common.Fileupload.Preview" value="File Preview" />
+		<text name="Common.Fileupload.Progress" value="Progress" />
+
+		<!-- File upload -->
+		<text name="FileUpload.FileName" value="Name" />
+		<text name="FileUpload.FileSize" value="Size" />
+		<text name="FileUpload.Progress" value="Progress" />
+		<text name="FileUpload.Status" value="Status" />
+		<text name="FileUpload.Preview" value="Preview" />
+		<text name="Common.NotePhoto" value="Images must be loaded in (gif | png | jpeg) format with size" />
+
+		<!-- AbpWeb -->
+		<text name="AbpWeb.InternalServerError" value="An internal error occured during your request!" />
+		<text name="AbpWeb.ValidationError" value="Your request is not valid, please provide required data properly!" />
+		<text name="AbpWeb.AreYouSure" value="Are you sure?" />
+		<text name="AbpWeb.Cancel" value="Cancel" />
+		<text name="AbpWeb.Yes" value="OK" />
+		<!--Identity-->
+		<text name="Identity.DuplicateUserName" value="Name {0} is already taken." />
+		<text name="Identity.DuplicateEmail" value="Email '{0}' is already taken." />
+		<text name="Identity.DuplicatePhoneNumber" value="PhoneNumber '{0}' is already taken." />
+		<!--Permissions-->
+		<text name="Permissions.Common.Read" value="Read" />
+		<text name="Permissions.Common.Write" value="Write" />
+		<text name="Permissions.Common.Delete" value="Delete" />
+		<text name="Permissions.Common.AcceptRequest" value="Accept"/>
+		<text name="Permissions.Common.ClearExplicit" value="Clear explicit permissions" />
+		<text name="Permissions.Common.AccessDeniedTitle" value="Access Denied" />
+		<text name="Permissions.Common.AccessDeniedMessage" value="You dont have permission: {0}" />
+
+		<text name="Pages.RolePermissions.Title" value="Role Permissions" />
+		<text name="Pages.UserPermissions.Title" value="User Permissions" />
+		<text name="Permission.Settings" value="Settings" />
+		<text name="Permission.Roles" value="Roles" />
+		<text name="Permission.RolePermissions" value="Role Permissions" />
+		<text name="Permission.Users" value="Users" />
+		<text name="Permission.ContactMessages" value="Communication requests" />
+		<text name="Pages.Contact.ContactLetters" value="Followers" />
+		<text name="Permission.TermsAndConditions" value="Terms And Conditions" />
+		<text name="Permission.Notifications" value="Notifications" />
+		<text name="Permission.SendNotifications" value="Send Notifications" />
+		<text name="Permission.NotificationSettings" value="Notification Settings" />
+		<!--ParentPermissions-->
+		<text name="Permission.UsersAndRolesPermissions" value="Users And Roles Permissions" />
+		<text name="Permission.ContentPagesPermissions" value="Content Pages" />
+		<!--AdminsPermissions-->
+		<text name="Permission.Admins" value="Admins" />
+		<text name="Permission.AdminPermissions" value="Admin Permissions" />
+		<text name="Permission.CompanyPermissions" value="Company Permissions" />
+		<text name="Permission.MainProvidersPermissions" value="Main Providers Permissions" />
+		<text name="Permission.ProvidersPermissions" value="Providers Permissions" />
+		<text name="Permission.ProviderJournals" value="Journals" />
+		<text name="Permission.AdminJournals" value="Journals" />
+		<text name="Permission.MainProviderJournals" value="Journals" />
+
+		<!--SitePagesPermissions-->
+		<text name="Permission.SitePages" value="App Pages" />
+		<text name="Permission.Categories" value="Categories" />
+		<text name="Permission.CarTypes" value="CarTypes" />
+
+		<text name="Permission.Cities" value="Cities"/>
+		<text name="Permission.Packages" value="Packages"/>
+		<text name="Permission.Subscriptions" value="Subscription packages"/>
+		<text name="Permission.CompanySubscriptions" value="Subscription packages"/>
+		<text name="Permission.Announcements" value="Announcements Slider"/>
+		<text name="Permission.Coupons" value="Coupons"/>
+
+		<text name="Permission.Regions" value="Regions"/>
+		<text name="Permission.Clients" value="Clients"/>
+		<text name="Permission.ClientAddresses" value="Client Addresses"/>
+		<text name="Permission.Products" value="Products"/>
+		<text name="Permission.ProductUnits" value="Product units"/>
+		<text name="Permission.Wallets" value="Wallets" />
+		<text name="Permission.CompanyWallets" value="Company Wallets" />
+		<text name="Permission.AdminCompanyWallets" value="Company Wallets" />
+		<text name="Permission.CompanyBranchWallets" value="Branch Wallets" />
+		<text name="Permission.BranchWallets" value="Branch Wallets" />
+		<text name="Permission.Advertisements" value="Advertisements" />
+		<text name="Permission.Offers" value="Offers" />
+		<text name="Permission.Bids" value="Bids" />
+		<text name="Permission.Questions" value="Questions"/>
+		<text name="Permission.NewsLetter" value="Newsletter" />
+		<text name="Permission.FeesSettings" value="Advertisements fees settings" />
+		<text name="Permission.Report" value="Report" />
+		<text name="Permission.Stores" value="Stores" />
+		<text name="Permission.Projects" value="Projects" />
+		<text name="Permission.Units" value="Units" />
+		<text name="Permission.Libraries" value="Library" />
+		<text name="Permission.Employments" value="Employments" />
+		<text name="Permission.GiftSettings" value="Send Gift Amount" />
+		<text name="Permission.Services" value="Services" />
+		<text name="Permission.WorkTeam" value="Work Team" />
+		<text name="Permission.TrainingTeam" value="Training Team" />
+		<text name="Permission.Consultants" value="Consultants" />
+		<text name="Permission.Committees" value="Committees and Programs" />
+		<text name="Permission.Meetings" value="Meeting Minutes" />
+		<text name="Permission.Rules" value="Rules and Regulations" />
+		<text name="Permission.Blogs" value="Blog" />
+		<text name="Permission.OurPartners" value="Our Partners" />
+		<text name="Permission.Gallary" value="Gallary" />
+		<text name="Permission.BranchFuelTransIns" value="Fuel Transactions" />
+		<text name="Permission.BranchRequests" value="Branch Requests" />
+		<text name="Permission.CompanyBranchRequests" value="Branch Requests" />
+		<text name="Permission.CompanyBranchInvoices" value="Monthly consumption invoices" />
+		<text name="Pages.AdminsAndSettings.Title" value="Permissions and Settings" />
+		<text name="Pages.AdminPermissions.Title" value="Admin Permissions" />
+		<text name="Permission.ProviderInfo" value="Provider Info"/>
+		<text name="Permission.ProviderNotifications" value="Provider Notifications"/>
+		<text name="Permission.ProviderFuelPriceChangeRequests" value="Fuel Price Change Requests"/>
+		<text name="Permission.MainProviderFuelPriceChangeRequests" value="Fuel Price Change Requests"/>
+		<text name="Permission.AdminFuelPriceChangeRequests" value="Fuel Price Change Requests"/>
+
+		<text name="Permission.Providers" value="Providers"/>
+		<text name="Permission.AdminProviders" value="Providers Stations"/>
+		<text name="Permission.Workers" value="Workers"/>
+		<text name="Permission.ProviderWorkers" value="Workers"/>
+		<text name="Permission.MainProviderWorkers" value="Workers"/>
+		<text name="Permission.MainProviders" value="Main Providers"/>
+		<text name="Permission.RequestOrders" value="Request orders"/>
+
+		<text name="Permission.BranchPermissions" value="Branch Permissions"/>
+		<text name="Permission.BranchInfo" value="Branch Info"/>
+		<text name="Permission.BranchEmployees" value="Branch Employees"/>
+		<text name="Permission.Veichles" value="Veichles"/>
+		<text name="Permission.BranchVeichles" value="Veichles"/>
+		<text name="Permission.VeichleTransferRecords" value="Veichle Transfer Records"/>
+		<text name="Permission.VeichleTripsRecords" value="Veichle Trips Records"/>
+		<text name="Permission.WorkerTransferRecords" value="Workers Transfer Records"/>
+
+		<text name="Permission.CompanyBranchVeichles" value="Veichles"/>
+		<text name="Permission.BranchVeichleRoutes" value="Veichle Routes"/>
+		<text name="Permission.Drivers" value="Drivers"/>
+		<text name="Permission.CompanyBranchDrivers" value="Drivers"/>
+		<text name="Permission.CompanyBranchProviders" value="Branch Providers"/>
+		<text name="Permission.CompanyProviders" value="Company Providers"/>
+		<text name="Permission.BranchDriverVeichles" value="Driver Veichles"/>
+		<text name="Permission.CompanyBranchDriverVeichles" value="Driver Veichles"/>
+		<text name="Permission.CompanyBranchFuelTransOuts"  value="Fuel Trans Outs"/>
+		<text name="Permission.BranchFuelTransOuts"  value="Fuel Trans Outs"/>
+		<text name="Permission.BranchNotifications" value="Notifications"/>
+		<text name="Permission.BranchFuelGroups" value="Fuel Groups"/>
+		<text name="Permission.CompanyBranchInfo" value="Company Info" />
+		<text name="Permission.CompanyBranchEmployees" value="Employees" />
+		<text name="Permission.CompanyBranchNotifications" value="Notifications" />
+
+		<text name="Permission.Brands" value="Brands"/>
+		<text name="Permission.Models" value="Models"/>
+
+
+		<text name="Permission.MainProviderInfo" value="Main Providers Info" />
+		<text name="Permission.MainProvidersEmployees" value="Employees" />
+		<text name="Permission.MainProviderNotifications" value="Notifications" />
+
+		<text name="Permission.StationTransactions" value="Station Transactions" />
+		<text name="Permission.ProviderFuelTransactions" value="Fuel Transactions" />
+		<text name="Permission.ProviderMaintainTransactions" value="Maintain Transactions" />
+		<text name="Permission.OilTransactions" value="Oil Transactions" />
+		<text name="Permission.ProviderWashTransactions" value="Wash Transactions" />
+
+		<text name="Permission.MainProviderStationTransactions" value="Station Transactions" />
+		<text name="Permission.MainProviderFuelTransactions" value="Fuel Transactions" />
+		<text name="Permission.AdminFuelTransactions" value="Fuel Transactions" />
+		<text name="Permission.AdminProviderRevenue" value="Provider Revenue" />
+		<text name="Permission.MainProviderMaintainTransactions" value="Maintain Transactions" />
+		<text name="Permission.MainProviderOilTransactions" value="Oil Transactions" />
+		<text name="Permission.MainProviderWashTransactions" value="Wash Transactions" />
+
+		<text name="Permission.CompanyStationTransactions" value="Station Transactions" />
+		<text name="Permission.CompanyBranchFuelTransactions" value="Fuel Transactions" />
+		<text name="Permission.CompanyMaintainTransactions" value="Maintain Transactions" />
+		<text name="Permission.CompanyOilTransactions" value="Oil Transactions" />
+		<text name="Permission.CompanyWashTransactions" value="Wash Transactions" />
+
+
+		<text name="Permission.ProviderInvoices" value="Invoices" />
+		<text name="Permission.MainProviderInvoices" value="Invoices" />
+		<text name="Permission.AdminInvoices" value="Invoices" />
+		<text name="Permission.ProviderVouchers" value="Vouchers" />
+		<text name="Permission.AdminVouchers" value="Vouchers" />
+		<text name="Permission.MainProviderVouchers" value="Vouchers" />
+		<text name="Permission.ElectronicInvoices" value="Electronic Invoices" />
+		<text name="Permission.ProviderReports" value="Reports" />
+		<text name="Permission.MainProviderReports" value="Reports" />
+		<text name="Permission.CompanyBranchReports" value="Reports" />
+		<text name="Permission.Banks" value="Banks" />
+
+		<text name="Permission.BranchesLogin" value="Branches Login" />
+		<text name="Permission.StationsLogin" value="Stations Login" />
+
+		<text name="Permission.ChipDevices" value="Chip devices types" />
+		<text name="Permission.ChipNumbers" value="Smart chips" />
+
+		<text name="Permission.RegisterationRequests" value="Registeration Requests" />
+		<text name="Permission.CompanyTypes" value="Company Types" />
+		<text name="Permission.MainProviderFuelPumps" value="Fuel Pumps" />
+		<text name="Permission.AdminFuelPumps" value="Fuel Pumps" />
+		<text name="Permission.FuelPumps" value="Fuel Pumps" />
+
+		<text name="Permission.CompanyBranchAccountStatement" value="Account Statement" />
+		<text name="Permission.MainProviderAccountStatement" value="Account Statement" />
+		<text name="Permission.ProviderAccountStatement" value="Account Statement" />
+		<text name="Permission.AnnouncmentBanners" value="Advertising Banners" />
+		<text name="Permission.MainProviderHelpAndSupport"  value="Help And Support" />
+		<text name="Permission.CompanyBranchHelpAndSupport"  value="Help And Support" />
+		<text name="Permission.AdminHelpAndSupport"  value="Help And Support" />
+		<text name="Permission.BranchHelpAndSupport"  value="Help And Support" />
+		<text name="Permission.ProviderHelpAndSupport"  value="Help And Support" />
+
+		<text name="Permission.EntityChanges"  value="Entity Changes" />
+
+		<!--Pages.Roles-->
+		<text name="Pages.Roles.Title" value="Roles Management" />
+		<text name="Pages.Roles.ModalTitle" value="Role" />
+
+		<!--Settings-->
+		<text name="Pages.Settings.Title" value="System Settings" />
+		<text name="Settings.Groups.CachingSettings" value="Caching" />
+		<text name="Settings.Groups.Email" value="Email" />
+		<text name="Settings.EmailConfirmationRequiredForLogin.Description" value="Email confirmation is required for login" />
+		<text name="Settings.EmailConfirmationRequiredForLogin" value="Email confirmation is required" />
+
+		<text name="Settings.Mail.Host" value="Host" />
+		<text name="Settings.Mail.Port" value="Port" />
+		<text name="Settings.Mail.UserName" value="User Name" />
+		<text name="Settings.Mail.Password" value="Password" />
+		<text name="Settings.Mail.Domain" value="Domain" />
+		<text name="Settings.Mail.EnableSsl" value="Enable Ssl" />
+		<text name="Settings.Mail.UseDefaultCredentials" value="Use Default Credentials" />
+		<text name="Settings.Mail.DefaultFromAddress" value="Default From Address" />
+		<text name="Settings.Mail.DefaultFromDisplayName" value="Default From Display Name" />
+
+		<text name="Settings.Groups.Display" value="Language settings" />
+		<text name="Settings.FavouriteLanguage" value="Favourite language" />
+		<text name="Settings.Groups.List" value="Data tables settings" />
+		<text name="Settings.SaveDataTableState" value="Save datable state" />
+		<text name="Settings.SaveDataTableState.Description" value="Datatable will save last state when opened again" />
+
+		<text name="Settings.Groups.Public" value="Public Settings" />
+		<text name="Settings.Groups.GiftSettings" value="Gift Amount Settings" />
+		<text name="Settings.Groups.FuelSettings" value="Fuel Prices Settings" />
+
+
+		<text name="Settings.DefualtNotificationDelay" value="Defualt Notification Delay" />
+		<text name="Settings.DefualtNotificationDelay.Description" value="Defualt Notification Delay"/>
+
+
+		<text name="Settings.Vat" value="Vat"/>
+		<text name="Settings.ValueAddedTax" value="Value Added Tax"/>
+		<text name="Settings.ValueAddedTax.Value" value="vat"/>
+		<text name="Settings.InsurancePercentage" value="Insurance Percentage"/>
+		<text name="Settings.SpecialCommission" value="Special Commission"/>
+		<text name="Settings.Commission" value="Commission"/>
+		<text name="Settings.ActivateRegisterGiftAmount" value="Activate Register Gift Amount"/>
+		<text name="Settings.GiftAmount" value="Gift Amount"/>
+
+		<text name="Settings._91_PriceForLitre" value="91 litre price"/>
+		<text name="Settings._95_PriceForLitre" value="95 litre price"/>
+		<text name="Settings._Diesel_PriceForLitre" value="Diesel litre price"/>
+
+
+		<text name="Settings.InvoiceSettings" value="Invoice Settings"/>
+		<text name="Settings.FuelSettings" value="Fuel Settings"/>
+		<text name="Settings.CompanyName" value="Company Name"/>
+		<text name="Settings.TaxNumber" value="Tax Number"/>
+		<text name="Settings.CompanyAddress" value="Company Address"/>
+		<text name="Settings.RegNo" value="Reg No"/>
+		<text name="Settings.TaxNumberLength" value="Tax Number Length"/>
+		<text name="Settings.RegNoLength" value="Reg No Length"/>
+		<text name="Settings.BankAccountPrintText" value="Bank account print text"/>
+		<text name="Settings.ForceUpdate" value="Activate Force Update"/>
+
+		<text name="Settings._91color" value="Fuel 91 color"/>
+		<text name="Settings._95color" value="Fuel 95 color"/>
+		<text name="Settings._Dieselcolor" value="Fuel Diesel color"/>
+
+		<text name="Settings.ActivateTimeBetweenFuelTransaction" value="Activate the time between each fuel transaction"/>
+		<text name="Settings.TimeBetweenFuelTransaction" value="Time between each fueling transaction"/>
+
+		<text name="Pages.Al7osam.Title" value="All Rights Reserved © Syarah App 2024 | Development"/>
+		<text name="Pages.Al7osam.Name" value="Al7osam Software"/>
+
+		<!--ConfirmRegisteration-->
+		<text name="Registeration.Confirm" value="Confirm Registeration" />
+		<text name="Registeration.ConfirmMessage" value="Please confirm your email address" />
+		<text name="Pages.ConfirmRegisteration.RegisterationSuccess" value="Registeration Success" />
+		<text name="Pages.ConfirmRegisteration.AlreadyActivated" value="Your account has been activated before " />
+		<text name="Pages.ConfirmRegisteration.ActivedSuccess" value="Your Account is activated Please login" />
+		<text name="Pages.ConfirmRegisteration.WaitActivation" value="Wait for your account activation email" />
+		<text name="Pages.ConfirmRegisteration.NotifyAdmin" value="Consultant {0} has registered" />
+		<text name="Pages.ConfirmRegisteration.ActivationMail" value="Your account has been activated login now {0}" />
+		<text name="Pages.ConfirmRegisteration.NotFound" value="There is no account found please register" />
+		<text name="Pages.ConfirmRegisteration.ConfirmationFaild" value="Error has occured during activation account" />
+		<!--Page ResetPassword -->
+		<text name="Pages.ResetPassword.ResetPassword" value="Reset Password" />
+		<text name="Pages.ResetPassword.checkEmail" value="  Please check your email to reset your password." />
+		<text name="Pages.ResetPassword.ResetPasswordMessage" value="You Request to reset your Password for your account click here to rest" />
+		<text name="Pages.ConfirmEmail.checkEmail" value=" Please check your email to Confirm Email." />
+		<text name="Pages.ResetPassword.SuccessfullyReset" value=" your password successfully reseted" />
+		<!-- Home Page -->
+		<text name="Pages.Home.Title" value="Home" />
+		<text name="Pages.Home.MyData" value="My Data" />
+		<text name="Pages.Home.ChangePassword" value="Change Password" />
+		<text name="Pages.HomePage.Title" value="HomePage" />
+		<!--Page Users -->
+		<text name="Pages.Users.Title" value="Users" />
+		<text name="Pages.Users.ModalTitle" value="User"/>
+		<text name="Pages.Admins.Title" value="Admins" />
+		<text name="Pages.Admins.ModalTitle" value="Admin" />
+
+		<text name="Pages.Users.Phone" value="Phone" />
+		<text name="Pages.Users.SMSInfo" value="Password will be sent on the Mobile number" />
+		<text name="Pages.Users.PersonalInfo" value="Personal Info" />
+		<text name="Pages.Users.UserInfo" value="Account Info" />
+		<text name="Pages.Users.FirstName" value="First Name" />
+		<text name="Pages.Users.Surname" value="Surname" />
+
+		<text name="Pages.Users.ManagerFirstName" value="First Name" />
+		<text name="Pages.Users.ManagerSurname" value="Surname" />
+
+		<text name="Pages.Users.UserName" value="User Name" />
+		<text name="Pages.Users.EmailAddress" value="Email" />
+		<text name="Pages.Users.Password" value="Password" />
+		<text name="Pages.Users.New" value="New user" />
+		<text name="Pages.Users.Avatar" value="Avatar" />
+		<text name="Pages.Users.Website" value="Website" />
+		<text name="Pages.Users.Twitter" value="Twitter" />
+		<text name="Pages.Users.Snapchat" value="Snapchat" />
+		<text name="Pages.Users.Instagram" value="Instagram" />
+		<text name="Pages.Users.Facebook" value="Facebook" />
+		<text name="Pages.Users.Adresses" value="Adresses" />
+		<text name="Pages.Users.SubscriptionDate" value="Last Subscription Date"/>
+		<text name="Pages.Users.IsActiveSubscription" value="Subscription Status"/>
+
+		<text name="Pages.Users.UserType" value="Client type" />
+		<text name="Pages.Users.UserType.Person" value="Person" />
+		<text name="Pages.Users.BirthDate" value="Birth date" />
+
+		<text name="Pages.Users.ChangePassword" value="Change Password" />
+		<text name="Pages.Users.OldPassword" value="Old Password" />
+		<text name="Pages.Users.NewPassword" value="New Password" />
+		<text name="Pages.Users.ConfirmPassword" value="Confirm Password" />
+		<text name="Pages.Users.ConfirmNewPassword" value="Confirm password" />
+		<text name="Pages.Users.DifferentNewPassword" value="New password like old password" />
+		<text name="Pages.Users.DifferentPassword" value="Confirm password must be like new password" />
+
+		<text name="Pages.Users.ChangeEmailAddress" value="Change Email Address"/>
+		<text name="Pages.Users.OldEmailAddress" value="Old Email Address"/>
+		<text name="Pages.Users.NewEmailAddress" value="New Email Address"/>
+
+		<text name="Pages.Users.ChangePhoneNumber" value="Change Phone Number"/>
+		<text name="Pages.Users.OldPhoneNumber" value="Old Phone Number"/>
+		<text name="Pages.Users.NewPhoneNumber" value="New Phone Number"/>
+
+		<text name="Pages.Users.SendActivationCode" value="Send Activation Code"/>
+		<text name="Pages.Users.ActivationCode" value="Activation Code"/>
+
+		<!--Page.Users.Error -->
+		<text name="Pages.Users.Error.AlreadyExist" value="user with the same Data is already exists" />
+		<text name="Pages.Users.Error.AlreadyExistEmail" value=" user with the same email is already exists" />
+		<text name="Pages.Users.Error.AlreadyExistPhone" value="user with the same PhoneNumber is already exists" />
+		<text name="Pages.Users.Error.AlreadyExistUserName" value="user with the same UserName is already exists" />
+		<text name="Pages.Users.Error.InCompeleteData" value="InCompelete Data" />
+		<text name="Pages.Users.Error.NotExistUserEmail" value="There is no user registered with this email address ." />
+		<text name="Pages.Users.Error.InvalidToken" value="Invalid Secret Code ." />
+		<text name="Pages.Users.Error.NotExist" value="user does not already exist ." />
+		<text name="Pages.Users.Error.PasswordChanged" value="Password changed successfully" />
+		<text name="Pages.Users.Error.PasswordInCorrect" value="old password is incorrect" />
+		<!--Page.Users.Messages-->
+		<text name="Pages.Users.Messages.SuccessSendEmail" value="Email sent successfully" />
+		<text name="Pages.Users.Messages.FailedSendEmail" value="Failed to send email" />
+		<text name="Pages.Users.Message.LoginSuccessfully" value="Login successfully"/>
+		<text name="Pages.CompanyType.Error.HasTypes" value="Company Type Has Types "/>
+
+		<!--Page Login -->
+		<text name="Pages.Login.LoginOrRegister" value="Login / Register" />
+		<text name="Pages.Login.Title" value="Login and Register" />
+		<text name="Pages.Login.AreRegistered" value="Already have an account?" />
+		<text name="Pages.Login.Login" value="Login" />
+		<text name="Pages.Login.UserName" value="User name" />
+		<text name="Pages.Login.UserNameOrEmail" value="User Name Or Email Address" />
+		<text name="Pages.Login.Password" value="Password" />
+		<text name="Pages.Login.RememberMe" value="Remember me" />
+		<text name="Pages.Login.ForgotPassword" value="Forgot Password!" />
+		<text name="Pages.Login.ForgotPassword.Description" value="Enter your e-mail address below to reset your password." />
+		<text name="Pages.Login.Email" value="Email" />
+		<text name="Pages.Login.Reset" value="Reset" />
+		<text name="Pages.Login.InvalidForm" value="Enter username and password." />
+		<text name="Pages.Login.FoundationName" value="Foundation Name" />
+		<text name="Pages.Login.LoginAccountInfo" value="Login Info" />
+		<text name="Pages.Login.InvalidRole" value="Invalid role" />
+		<text name="Pages.Login.LoginFront" value="Login" />
+		<text name="Pages.Login.DontHavAccount" value="Don't have an account?" />
+		<text name="Pages.Login.RegisterNow" value="Register now" />
+		<text name="Pages.Login.InMinutes" value="In minutes, activate your account and start bidding" />
+
+		<!--Page Contact -->
+		<text name="Pages.Contact.Subject" value="Subject" />
+		<text name="Pages.Contact.AdvNum" value="Advertising number" />
+		<text name="Pages.Contact.Name" value="Name" />
+		<text name="Pages.Contact.Phone" value="Phone Number" />
+		<text name="Pages.Contact.SubmitComment" value="Submit Comment" />
+		<text name="Pages.Contact.Submit" value="Submit" />
+		<text name="Pages.Contact.Email" value="Email" />
+		<text name="Pages.Contact.Message" value="Message" />
+		<text name="Pages.Contact.SendMessage" value="Send Message" />
+		<text name="Pages.Contact.ContactMessages" value="Communication requests" />
+		<text name="Pages.NewsLetter.Title" value="Messages" />
+		<text name="Pages.Contact.ContactMessage.ConfirmDelete" value="Are you sure to delete ?" />
+		<text name="Pages.Contact.Subscribe" value="Subscribe" />
+		<text name="Pages.Contact.EnterEmail" value="Enter your email here .." />
+		<text name="Pages.Contact.ContactWithUs" value="Contact with us" />
+		<text name="Pages.Contact.date" value="date" />
+		<text name="Pages.Contact.Info" value="Contact Info" />
+		<text name="Pages.Contact.Address" value="Address" />
+		<text name="Pages.Contact.MailUs" value="Mail Us" />
+		<text name="Pages.Contact.Phones" value="Phones" />
+		<text name="Pages.Contact.Fax" value="Fax" />
+		<text name="Pages.Contact.Inbox" value="Inbox" />
+		<text name="Pages.Contact.SendEmail" value="Send Email" />
+		<text name="Pages.Contact.Show" value="Show Message" />
+		<text name="Pages.Contact.NewMessage" value="New Message"/>
+		<text name="Pages.Contact.Error.MessageIsDeleted" value="This message was previously deleted"/>
+		<text name="Pages.Contact.Reply" value="Reply Message"/>
+		<text name="Pages.Contact.EditReply" value="Edit Reply Message"/>
+		<text name="Pages.Contact.ReplyMessage" value="Reply Message"/>
+		<text name="Pages.Contact.AdNumberOptional" value="Ad number (optional)"/>
+		<text name="Pages.Contact.ReasonForRequestingContact" value="Reason for requesting contact"/>
+		<text name="Pages.Contact.SubjectType" value="Subject Type"/>
+
+
+		<!--Contact Message Status-->
+		<text name="Common.IsSeen" value="Is Seen" />
+		<text name="Common.NotSeen" value="Not Seen" />
+		<!--Followers-->
+		<text name="Pages.Followers.Title" value="Followers" />
+		<text name="Pages.Followers.Error.AlreadyExistEmail" value="Follower with same email already exists" />
+		<text name="Pages.Followers.Email" value="Email" />
+		<text name="Pages.Followers.FollowDate" value="Follow Date" />
+		<!--Pages.Messages.loadolder-->
+		<text name="Pages.Messages.LoadOlder" value=" Load Older "/>
+		<text name="Pages.Messages.NoMessages" value=" No Messages "/>
+		<!--Pages.Dashboard-->
+		<text name="Pages.Dashboard.Title" value="Dashboard"/>
+		<text name="Pages.ControlPanel.Title" value="Control Panel"/>
+		<!--Pages.SitePages-->
+		<text name="Pages.SitePages.Title" value="App Pages"/>
+		<text name="Pages.ContactUs.Title" value="Contact Us"/>
+		<text name="Pages.ContactUs.AddNumber" value="AddNumber"/>
+		<text name="Pages.ContactUs.Address" value="Mohandessin branch"/>
+		<text name="Pages.ContactUs.Address1" value="Sheikh Zayed branch"/>
+		<text name="Pages.ContactUs.Address2" value="Heliopolis branch"/>
+		<text name="Pages.ContactUs.AddressAr" value="Address of the Arab Mohandessin branch"/>
+		<text name="Pages.ContactUs.Address1Ar" value="Address of Sheikh Zayed Arab Branch"/>
+		<text name="Pages.ContactUs.Address2Ar" value="Address of Heliopolis Arab Branch"/>
+		<text name="Pages.ContactUs.AddressEn" value="Address of the English Engineers Branch"/>
+		<text name="Pages.ContactUs.Address1En" value="Address of Sheikh Zayed Branch English "/>
+		<text name="Pages.ContactUs.Address2En" value="Heliopolis Branch English address"/>
+		<text name="Pages.ContactUs.SocialLinks" value="Social Links"/>
+		<text name="Pages.Terms.Title" value="Terms"/>
+		<text name="Pages.Privacy.Title" value="Privacy"/>
+		<text name="Pages.UsagePolicy.Title" value="Terms of Use"/>
+		<text name="Pages.RefundPolicy.Title" value="Return Policy"/>
+
+		<text name="Pages.Intro.Title" value="Introduction"/>
+		<text name="Pages.AdvertisingBanner.Title" value="Advertising banner"/>
+		<text name="Pages.BeforeAndAfters.Error.AlreadyExistMorThanTow" value="It is not possible to add more than two elements to the feature "/>
+		<text name="Pages.keepintouchwithus.Title" value="keep in touch with us"/>
+		<text name="Pages.yourletter.Title" value="your letter"/>
+		<text name="Pages.Followuson.Title" value="Follow us on"/>
+		<text name="Pages.RelatedArticles.Title" value="Related Articles"/>
+		<text name="Pages.BeforeAfters.ThereAreNoBeforeAfters" value="There are no before and after pictures"/>
+		<text name="Pages.Faq.ThereFaqs" value="There are no questions related to this service"/>
+		<text name="Pages.CosmeticInformations.ThereCosmeticInformations" value="No cosmetic information"/>
+
+		<text name="Pages.SitePages.AddQuestion" value="Add Question"/>
+		<text name="Pages.SitePages.Question" value="Question"/>
+		<text name="Pages.SitePages.QuestionAr" value="Arabic Question" />
+		<text name="Pages.SitePages.QuestionEn" value="English Question" />
+		<text name="Pages.SitePages.SolutionAr" value="Arabic Solution" />
+		<text name="Pages.SitePages.SolutionEn" value="English Solution" />
+		<text name="Pages.SitePages.NewQuestion" value="Add New Question" />
+		<text name="Pages.SitePages.QuestionAdded" value="Question Added, pls save Data" />
+
+
+
+		<text name="Pages.SitePages.GoalAr" value="Our Goal Ar" />
+		<text name="Pages.SitePages.MsgAr" value="Our Message Ar" />
+		<text name="Pages.SitePages.ValueAr" value="Our Valuable Ar" />
+
+
+		<text name="Pages.SitePages.GoalEn" value="Our Goal" />
+		<text name="Pages.SitePages.MsgEn" value="Our Message" />
+		<text name="Pages.SitePages.ValueEn" value="Our Valuable" />
+		<text name="Pages.SitePages.Error.Required" value="This Field Is Required" />
+		<text name="Pages.SitePages.EmployPhoto" value="Employ Photo" />
+		<text name="Pages.SitePages.CurrentProjectsTitleAr" value="Current Projects Title in Arabic" />
+		<text name="Pages.SitePages.CurrentProjectsTitleEn" value="Current Projects Title in English" />
+		<text name="Pages.SitePages.SoonProjectsTitleAr" value="Upcoming Projects Title in Arabic" />
+		<text name="Pages.SitePages.SoonProjectsTitleEn" value="Upcoming Projects Title in English" />
+		<text name="Pages.ProjectTitles.Title" value="Project Titles" />
+
+
+
+
+
+
+		<!--Dashboard-->
+		<text name="Pages.statistics.Title" value="Statistics" />
+		<text name="Pages.statistics.AllProviders" value="All Stations" />
+		<text name="Pages.statistics.ChooseProvider" value="Choose provider" />
+
+		<text name="Dashboard.MostActiveClients" value="Most Active Clients" />
+		<text name="Dashboard.MostActiveEmployees" value="Most Active Employees" />
+		<text name="Dashboard.MostActive" value="Most Active" />
+		<text name="Dashboard.ViewAllClients" value="View All Clients" />
+		<text name="Dashboard.ViewAllEmployees" value="View All Employees" />
+		<text name="Dashboard.ViewAllServices" value="View All Services" />
+		<text name="Dashboard.Client" value="Client" />
+		<text name="Dashboard.Employee" value="Employee" />
+		<text name="Dashboard.Service" value="Service"/>
+		<text name="Dashboard.Order" value="Order" />
+		<text name="Dashboard.CompletedOrders" value="Completed" />
+		<text name="Dashboard.OnTheWayOrders" value="On The Way" />
+		<text name="Dashboard.AllOrders" value="All Orders" />
+		<text name="Dashboard.PendingOrders" value="Pending Orders" />
+		<text name="Dashboard.Months" value="Months" />
+		<text name="Dashboard.ByLitre" value="Fuel Quantity (Liters)" />
+		<text name="Dashboard.ByRiyal" value="Fuel Amount (Riyal)" />
+
+		<text name="Dashboard.MainProviderWelcome" value="Welcome to the station dashboard" />
+		<text name="Dashboard.AddNewBranch" value="Add New Branch" />
+
+		<text name="Dashboard.Jan" value="January" />
+		<text name="Dashboard.Feb" value="February" />
+		<text name="Dashboard.Mar" value="March" />
+		<text name="Dashboard.Apr" value="April" />
+		<text name="Dashboard.May" value="May" />
+		<text name="Dashboard.June" value="June" />
+		<text name="Dashboard.July" value="July" />
+		<text name="Dashboard.Aug" value="August" />
+		<text name="Dashboard.Sep" value="September" />
+		<text name="Dashboard.Oct" value="October" />
+		<text name="Dashboard.Nov" value="November" />
+		<text name="Dashboard.Dec" value="December" />
+
+
+
+		<!--Pages.Notifications-->
+		<text name="Pages.Notifications.Title" value="Notifications"/>
+		<text name="Pages.Notifications.ReadAll" value=" Make As Read All "/>
+		<text name="Pages.Notifications.DeleteAll" value=" Delete All "/>
+		<text name="Pages.Notifications.DeleteSelected" value="Delete Selected"/>
+		<text name="Pages.Notifications.General" value="General"/>
+		<text name="Pages.Notifications.Orders" value="Orders"/>
+		<text name="Pages.Notifications.NewNotifications" value="New Notifications"/>
+		<text name="Pages.Notifications.Client" value="The Client"/>
+		<text name="Pages.Notifications.HasAdded" value="Has "/>
+		<text name="Pages.Notifications.HasAdded2" value="Has added"/>
+		<text name="Pages.Notifications.HasSend" value="Has Send"/>
+		<text name="Pages.Notifications.HasSend2" value="Has Send"/>
+		<text name="Pages.Notifications.YouHave" value=" You Have "/>
+		<text name="Pages.Notifications.NewMessage" value="new message"/>
+		<text name="Pages.Notifications.NewsLetter" value="Subscribe to the newsletter"/>
+		<text name="Pages.Notifications.NewComplaint"  value="new complaint"/>
+		<text name="Pages.Notifications.NewRequest" value="new request"/>
+		<text name="Pages.Notifications.NewQuestion" value="new question"/>
+		<text name="Pages.Notifications.NewRegisteration" value="created a new account"/>
+		<text name="Pages.Notifications.NewProviderRegisteration" value="New Provider Registeration"/>
+		<text name="Pages.Notifications.NewComment" value="New comment"/>
+		<text name="Pages.Notifications.AcceptOrder" value="Accept Order"/>
+		<text name="Pages.Notifications.RefuseOrder" value="Refuse Order"/>
+		<text name="Pages.Notifications.EndOrder" value="End Order"/>
+		<text name="Pages.Notifications.NewArticleAdded" value="Added new article"/>
+		<text name="Pages.Notifications.ArticleEdited" value="Edited article"/>
+		<text name="Pages.Notifications.NewArtisticToolAdded" value="Added new artisticTool"/>
+		<text name="Pages.Notifications.ArtisticToolEdited" value="Edited artisticTool"/>
+		<text name="Pages.Notifications.NewArtisticWorkAdded" value="Added new artisticWork"/>
+		<text name="Pages.Notifications.ArtisticWorkEdited" value="Edited artisticWork"/>
+		<text name="Pages.Notifications.NewCourseAdded" value="Added new course"/>
+		<text name="Pages.Notifications.CourseEdited" value="Edited course"/>
+		<text name="Pages.Notifications.NewOnlineCourseAdded" value="Added new online course"/>
+		<text name="Pages.Notifications.OnlineCourseEdited" value="Edited online course"/>
+		<text name="Pages.Notifications.NewEventAdded" value="Added new event"/>
+		<text name="Pages.Notifications.EventEdited" value="Edited event"/>
+		<text name="Pages.Notifications.NewApplication" value="New application"/>
+		<text name="Pages.Notifications.NewJobAdded" value="Added new job"/>
+		<text name="Pages.Notifications.JobEdited" value="Edited job"/>
+		<text name="Pages.Notifications.OrderPrepared" value="your order is prepared successfully"/>
+		<text name="Pages.Notifications.OrderShipped" value="your order is shipped successfully"/>
+		<text name="Pages.Notifications.SetShippingCost" value="The shipping value has been determined for your order"/>
+		<text name="Pages.Notifications.NewOrderCheckOut" value="new order checkOut"/>
+		<text name="Pages.Notifications.OrderCompleted" value="Completed Order"/>
+		<text name="Pages.Notifications.OrderOnTheWay" value="Order On The Way"/>
+		<text name="Pages.Notifications.OrderAccepted" value="Accepted Order"/>
+		<text name="Pages.Notifications.OrderConfirmed" value="Order Confirmed"/>
+		<text name="Pages.Notifications.NotFoundNotifications" value="Not Found Notifications"/>
+		<text name="Pages.Notifications.SharingVideo" value="{0} sent you a video"/>
+		<text name="Pages.Notifications.ConfirmDeleteAll" value="All notifications will be deleted"/>
+		<text name="Pages.Notifications.ConfirmDelete" value="this notification will be deleted"/>
+		<text name="Notifications" value="Notifications" />
+		<text name="Pages.Notifications.ProductApproved" value="approved your product" />
+		<text name="Pages.Notifications.ProductRefused" value="refused your product" />
+		<text name="Pages.Notifications.NewChat" value="send new chat message to you for product" />
+		<text name="Pages.Notifications.SendGroupRequest" value="User[{0}]Has sent aRequest to join your group"/>
+		<text name="Pages.Notifications.AcceptGroupRequest" value="Your Request have been approved by {0} group"/>
+		<text name="Pages.Notifications.RefuseGroupRequest" value="Your Request to join {0} group is refused"/>
+		<text name="Pages.Notifications.ManageBlokingMessages" value="Text Messages have been blocked in {0} group "/>
+		<text name="Pages.Notifications.SendChatRequest" value="User [{0}] Want to talk with you"/>
+		<text name="Pages.Notifications.AcceptChatRequest" value="User [{0}] Accpted Your Request For Chating"/>
+		<text name="Pages.Notifications.SendFollowRequest" value="User [{0}] Want to Follow you"/>
+		<text name="Pages.Notifications.AcceptFollowRequest" value="User [{0}] Accepted your Follow"/>
+		<text name="Pages.Notifications.NewAppointmentRequest" value="New Appointment Request"/>
+		<text name="Pages.Notifications.QuestionReply" value="Your question has been answered"/>
+		<text name="Pages.Notifications.NewSubscribePackage" value="Subscribed to the application"/>
+		<text name="Pages.Notifications.NewSubscribePackageToYou" value="A new subscription has been created for you by the administration"/>
+		<text name="Pages.Notifications.SubscriptionExpired" value="Subscription Has Expired"/>
+		<text name="Pages.Notifications.NewReservation" value="New Reservation"/>
+		<text name="Pages.Notifications.NewReport" value="New Report"/>
+		<text name="Pages.Notifications.NewAdvertisement" value="New advertisement"/>
+		<text name="Pages.Notifications.NewEmploymentMessage" value="New Employment Request"/>
+		<text name="Pages.Notifications.RenewSubscription" value="Subscription has been renewed"/>
+		<text name="Pages.Notifications.RenewSubscriptionWalletError" value="The subscription was not renewed due to insufficient balance in the wallet."/>
+		<text name="Pages.Notifications.UpgradeSubscription" value="Subscription has been upgraded"/>
+		<text name="Pages.Notifications.NewTicket" value="opened new ticket"/>
+		<text name="Pages.Notifications.NewTicketDetail" value="added new ticket comment"/>
+
+		<text name="Pages.Notifications.TicketCompleted" value="Ticket is completed"/>
+
+
+		<text name="Pages.Notifications.LogOut" value="you will be logged out"/>
+
+		<text name="Pages.Notifications.BranchFuelTransactionMsg" value="Vehicle {0} number {1} was refueled at station {2} / {3}."/>
+		<text name="Pages.Notifications.ProviderFuelTransactionMsg" value="Fuel has been filled for vehicle {0} No. {1} from branch {2} / {3}."/>
+		<text name="Pages.Notifications.DriverFuelTransactionMsg" value="Vehicle No. {0} has been successfully refueled."/>
+
+		<text name="Pages.Notifications.BranchWalletDepositMsg" value="The wallet balance has been charged with the amount of {0} riyals."/>
+		<text name="Pages.Notifications.BranchWalletRefundMsg" value="The wallet balance was deducted in the amount of {0} riyals."/>
+
+		<text name="Pages.Notifications.BranchWalletTransferDepositMsg" value="A balance of {0} riyals was transferred to the wallet from branch {1}."/>
+		<text name="Pages.Notifications.BranchWalletTransferRefundMsg" value="A balance of {1} riyals has been transferred to the wallet of branch {0}."/>
+
+		<!--Pages.SendNotifications-->
+		<text name="Pages.SendNotifications.SendTo" value="Send To" />
+		<text name="Pages.SendNotifications.Choose" value="Choose" />
+		<text name="Pages.SendNotifications.ToSelected" value=" Selected" />
+		<text name="Pages.SendNotifications.ToAll" value=" All" />
+		<text name="Pages.SendNotifications.ToCity" value=" City" />
+		<text name="Pages.SendNotifications.Title" value="Send Notifications" />
+
+
+		<text name="Pages.SendNotifications.NotificationType" value="Notification For" />
+		<text name="Pages.SendNotifications.Mobile" value="Mobile and website" />
+		<text name="Pages.SendNotifications.Email" value="Email" />
+		<text name="Pages.SendNotifications.Both" value="Both" />
+
+
+		<!--Pages.AboutUs-->
+		<text name="Pages.AboutUs.Title" value="About Us" />
+		<text name="Pages.AboutUs.ArabicAbout" value= "Arabic System Status" />
+		<text name="Pages.AboutUs.EnglishAbout" value="English System Status" />
+		<text name="Pages.AboutUs.PdfFile" value="Clock Report" />
+		<!--Lookups -->
+		<text name="Pages.Definitions.Title" value="Definitions"/>
+		<!--Pages.Coupons-->
+		<text name="Pages.Coupons.Title" value="Coupons"/>
+		<text name="Pages.Coupons.ModalTitle" value="Coupon"/>
+		<text name="Pages.Coupons.InvalidCode" value="Invalid code"/>
+		<text name="Pages.Coupons.ExpiredCode" value="Expired code"/>
+		<text name="Pages.Coupons.Error.AlreadyExist" value="Coupon already exist"/>
+		<text name="Pages.Coupons.DiscountTypes.Title" value="Discount type"/>
+		<text name="Pages.Coupons.DiscountTypes.Choose" value=" Choose discount type"/>
+		<text name="Pages.Coupons.DiscountTypes.Amount" value="Amount"/>
+		<text name="Pages.Coupons.DiscountTypes.Percentage" value="Percentage"/>
+		<text name="Pages.Coupons.Value" value="Value"/>
+		<text name="Pages.Coupons.UsageNumber" value="Usage number"/>
+		<text name="Pages.Coupons.UsedCount" value="Used count"/>
+		<text name="Pages.Coupons.UseCoupon.Title" value="Use Coupon"/>
+		<text name="Pages.Coupons.UsedStatus.NonUsed" value="Terminated"/>
+		<text name="Pages.Coupons.UsedStatus.IsUsed" value="Is available"/>
+		<text name="Pages.Coupons.Finish" value="Finish Coupon"/>
+		<text name="Pages.Coupons.RateStore" value="You can rate store"/>
+		<text name="Pages.Coupons.Code" value="Coupon Code"/>
+		<text name="Pages.Coupons.Type" value="Discount Type"/>
+		<text name="Pages.Coupons.CouponCode" value="Coupon Code"/>
+		<text name="Pages.Coupons.ForFamous" value="For Famous"/>
+		<text name="Pages.Coupons.PersonName" value="Famous Name"/>
+		<text name="Pages.Coupons.RepeatForUser" value="Repeat For Same User"/>
+		<text name="Pages.Coupons.CouponsNumber" value="Number Of Copies"/>
+		<text name="Pages.Coupons.Error.HasOrders" value="This coupon is used on some orders"/>
+
+		<text name="Pages.Categories.Title" value="Categories"/>
+		<text name="Pages.Categories.ModalTitle" value="Category"/>
+		<text name="Pages.Categories.Cars" value="Cars"/>
+		<text name="Pages.Categories.RealEstates" value="Real estates"/>
+		<text name="Pages.Categories.Other" value="Other"/>
+		<text name="Pages.Categories.Error.AlreadyExist" value="Category with same name already exist"/>
+		<text name="Pages.Categories.NoData" value="There is no categories"/>
+		<text name="Pages.Categories.Error.HasAdvertisements" value="This category contains some advertisements"/>
+		<text name="Pages.Categories.Error.HasSubCategories" value="This category contains some sub categories"/>
+
+
+
+
+
+		<!--Register-->
+		<text name="Pages.Register.Title" value="Register"/>
+		<text name="Pages.Register.SignUp" value="Sign Up"/>
+		<text name="Pages.Register.AlreadyHaveAccount" value="Already have an account ?"/>
+		<text name="Pages.Register.SignIn" value="Sign in"/>
+		<text name="Pages.Register.AgreeTo" value="I agree to "/>
+		<text name="Pages.Register.Terms" value="terms and Conditions"/>
+		<text name="Pages.Register.PhoneNumberPlaceholder" value="Phone Number 05xxxxxxxx"/>
+		<text name="Pages.Register.PasswordLength" value="Password must be at least 6 characters" />
+		<text name="Pages.Register.ErrorAcceptPrivacyAndTerms" value="You must agree to the terms and conditions first"/>
+		<text name="Pages.Register.SuccessfullyConfirmed" value="Your email has been successfully confirmed. you can login now."/>
+		<text name="Pages.Register.SuccessfullyPhoneNumberConfirmed" value="Your Phone Number has been successfully confirmed. you can login now."/>
+		<text name="Pages.Register.CanNotConfirm" value="User or confirmation code not valid"/>
+		<text name="Pages.Register.ConfirmUserNotFound" value="User not found"/>
+		<text name="Pages.Register.AlreadyConfirmed" value="Already Confirmed"/>
+		<text name="Pages.Register.TypeConfirmationCode" value="Type confirmation code"/>
+		<text name="Pages.Register.Activate" value="Confirm"/>
+		<text name="Pages.Register.CodeNotRecieved" value="I did not receive the activation code?"/>
+		<text name="Pages.Register.Resend" value="Resend "/>
+		<text name="Pages.Register.Error.AlreadyExistEmail" value="this email is already used" />
+		<text name="Pages.Register.Error.AlreadyExistPhone" value="this phone number is already used" />
+		<text name="Pages.Register.Error.SelectAtLeastOneCategory" value="Select at least one category" />
+		<text name="Pages.Register.Error.RegisterWithUsBuy" value="Register with us, buy and display your products" />
+		<text name="Pages.Register.SelectTheCategories" value="Select the categories on your mood" />
+		<text name="Pages.Register.StartTouring" value="Start touring" />
+		<text name="Pages.Register.ToVerifyYourAccountEnterTheCode" value="To verify your account, enter the 4-digit code sent to the number" />
+		<text name="Pages.Register.BackToLogin" value="Back to " />
+
+		<text name="Pages.ForgotPassword.Title" value="Forgot password" />
+		<text name="Pages.ForgotPassword.Send" value="Send" />
+		<text name="Pages.ForgotPassword.Save" value="Save" />
+
+		<!--Mobile API Messages-->
+		<text name="MobileApi.Messages.LoginFirst" value="Login First"/>
+		<text name="MobileApi.Messages.UserNotExsist" value="User Not Exsists"/>
+		<text name="MobileApi.Messages.PasswordChanged" value="Password changed successfully"/>
+		<text name="MobileApi.Messages.InvalidPassword" value="Invalid Password"/>
+		<text name="MobileApi.Messages.InvalidUserNameOrEmailAddress" value="Invalid userName or emailAddress"/>
+		<text name="MobileApi.Messages.InvalidEmailAddress" value="Invalid emailAddress"/>
+		<text name="MobileApi.Messages.InvalidPhoneNumber" value="Invalid phone number or password"/>
+		<text name="MobileApi.Messages.InvalidUserNameOrPassword" value="Invalid userName or emailAddress"/>
+		<text name="MobileApi.Messages.UserNotActive" value="This account is currently suspended"/>
+		<text name="MobileApi.Messages.BranchOrCompanyNotActive" value="The company or branch account is currently suspended."/>
+		<text name="MobileApi.Messages.ProviderOrMainNotActive" value="The service provider or branch account is currently suspended."/>
+
+		<text name="MobileApi.Messages.InvalidNewPassword" value="Invalid New Password"/>
+		<text name="MobileApi.Messages.InvalidOldPassword" value="Invalid Old Password"/>
+		<text name="MobileApi.Messages.NoRecords" value="There is no data"/>
+		<text name="MobileApi.Messages.ErrorOccurred" value="Error Occurred"/>
+		<text name="MobileApi.Messages.AlreadyCreated" value="Already Created"/>
+		<text name="MobileApi.Messages.SentSuccessfully" value="Sent successfully"/>
+		<text name="MobileApi.Messages.EmailSentSuccessfully" value="Email Sent Successfully" />
+		<text name="MobileApi.Messages.AddedToFavorites" value="Added to favorites" />
+		<text name="MobileApi.Messages.RemovedFromFavorites" value="Removed from favorites" />
+		<text name="MobileApi.Messages.AlreadyExistsInFavorites" value="Already in the favorites" />
+		<text name="MobileApi.Messages.SubscribedSuccessfully" value="Subscribed successfully" />
+		<text name="MobileApi.Messages.CommentAddedSuccessfully" value="Comment added successfully" />
+		<text name="MobileApi.Messages.FailedToComment" value="There was an error adding the comment" />
+		<text name="MobileApi.Messages.FailedToSubscribe" value="A subscription error occurred" />
+		<text name="MobileApi.Messages.UpdatedSuccessfully" value="Updated Successfully" />
+		<text name="MobileApi.Messages.VideoUploaded" value="The video has been added" />
+		<text name="MobileApi.Messages.VideoUpdated" value="The video has been updated" />
+		<text name="MobileApi.Messages.NoVideoRecords" value="There is no videos" />
+		<text name="MobileApi.Messages.VideoSharedSuccessfully" value="The video has been sent" />
+		<text name="MobileApi.Messages.VideoSharedBefore" value="this video has been sent before" />
+		<text name="MobileApi.Messages.FollowedSuccessfully" value="The Follow has succeed"/>
+		<text name="MobileApi.Messages.UnFollowedSuccessfully" value="UnFollow"/>
+		<text name="MobileApi.Messages.GroupCreatedSuccessfully" value="The group is created" />
+		<text name="MobileApi.Messages.GroupUpdatedSuccessfully" value="The group data has been modified" />
+		<text name="MobileApi.Messages.NoGroupRecords" value="There is no groups" />
+		<text name="MobileApi.Messages.GroupNotFound" value="group not found" />
+		<text name="MobileApi.Messages.RequestSent" value="Your Request is sent Successfully"/>
+		<text name="MobileApi.Messages.SendRequestBefore" value="You arlready have sent arequest"/>
+		<text name="MobileApi.Messages.RemovedMember" value="Member removed"/>
+		<text name="MobileApi.Messages.BlockedMember" value="Member is blocked"/>
+		<text name="MobileApi.Messages.UnBlockedMember" value="Member is unblocked"/>
+		<text name="MobileApi.Messages.AddMember" value="Added new Member"/>
+		<text name="MobileApi.Messages.BlockTextMessage" value="text messages is blocked"/>
+		<text name="MobileApi.Messages.UnBlockTextMessage" value="text messages is available"/>
+		<text name="MobileApi.Messages.JoinAvailable" value="Allow Join Requstes "/>
+		<text name="MobileApi.Messages.JoinUnAvailable" value="Block Join Requstes"/>
+		<text name="MobileApi.Messages.LeaveGroup" value="Leave Group"/>
+		<text name="MobileApi.Messages.NoGroupRequstesRecords" value="no requstes found"/>
+		<text name="MobileApi.Messages.NoGroupMembersRecords" value="no members found"/>
+		<text name="MobileApi.Messages.AcceptRequest" value="Request Accepted"/>
+		<text name="MobileApi.Messages.ShouldBeAdmin" value="You are't an admin"/>
+		<text name="MobileApi.Messages.DeleteRequest" value="Delete Request"/>
+		<text name="MobileApi.Messages.NoUsersRecords" value="no Users found"/>
+		<text name="MobileApi.Messages.UserNotFound" value="User not found"/>
+		<text name="MobileApi.Messages.ChatAccpted" value="Your Chat Request Accpted"/>
+		<text name="MobileApi.Messages.SendRequest" value="Send Request"/>
+		<text name="MobileApi.Messages.ChatRequestAccpted" value="Your Chat Request Accpted"/>
+		<text name="MobileApi.Messages.ChatRequestdeleted" value="Your Chat Request Refused"/>
+		<text name ="MobileApi.Messages.GroupDeleted" value="Group is Deleted"/>
+		<text name="MobileApi.Messages.ProfileImageUpdated" value="Profile image is updated succeffully "/>
+		<text name="MobileApi.Messages.VideoDeleted" value="Video Deleted"/>
+		<text name="MobileApi.Messages.VideoDeletionPermission" value="you don't have prmission to delete"/>
+		<text name="MobileApi.Messages.VideoIsSaved" value="The video has been saved to the playlist"/>
+		<text name="MobileApi.Messages.VideoExistsInSaved" value="The video is already exists in playlist"/>
+		<text name="MobileApi.Messages.DeletedFromPlayList" value="The video has been deleted from the playlist"/>
+		<text name="MobileApi.Messages.VideoIsIgnored" value="Video Is Ignored"/>
+		<text name="MobileApi.Messages.ExistsInWatchLaterBefore" value="already exists in watch later videos"/>
+		<text name="MobileApi.Messages.WatchLaterSuccess" value="Will be watched at another time"/>
+		<text name="MobileApi.Messages.UpdateChatMethodSuccess" value="Conversation method has changed"/>
+		<text name="MobileApi.Messages.ReservationSucceded" value="Successfully booked"/>
+		<text name="MobileApi.Messages.SubscribePackage" value="Subscribe Package"/>
+		<text name="MobileApi.Messages.ConfirmPhoneNumber" value="Confirm PhoneNumber" />
+		<text name="MobileApi.Messages.RegisteredSuccessfully" value="Registered Successfully" />
+		<text name="MobileApi.Messages.UserNotfound" value="This client does not exist" />
+		<text name="MobileApi.Messages.ProfileImageChangedSuccessfully" value="The profile picture has been changed successfully" />
+		<text name="MobileApi.Messages.AddedToComparisons" value="Added to comparisons" />
+		<text name="MobileApi.Messages.RemovedFromComparisons" value="Removed from comparisons" />
+		<text name="MobileApi.Messages.AlreadyExistsInComparisons" value="Already exists in comparisons" />
+
+		<text name="MobileApi.Messages.IsLogedinFromAnthorDevice" value="You are logged in from another device" />
+		<text name="MobileApi.Messages.TransferedToAnotherProvider" value="You have been transferred to another station. You must log in again." />
+
+		<text name="MobileApi.Messages.RequestSentSuccessfully" value="Request Sent Successfully"/>
+		<text name="MobileApi.Messages.CodeMessage" value="Activation Code for Syarah : {0}" />
+		<text name="MobileApi.Messages.ConfirmationCodeError" value="Error in confirmation code" />
+		<text name="MobileApi.Messages.UserTypeNotValid" value="user type not valid" />
+		<text name="MobileApi.Messages.LogoutSuccessfully" value="You are logged out successfully" />
+		<text name="MobileApi.Messages.PasswordCreatedSuccessfully" value="Password changed successfully" />
+		<text name="MobileApi.Messages.AddedSuccessfully" value="Created successfully" />
+		<text name="MobileApi.Messages.DeletedSuccessfully" value="Deleted successfully" />
+		<text name="MobileApi.Messages.LoadCv" value="Please Load CV First" />
+		<text name="MobileApi.Messages.AddressUsedInOrders" value="This address is used in some orders" />
+		<text name="MobileApi.DriverVeichles.Messages.NoRecords" value="There are no driver cars" />
+		<text name="MobileApi.DriverCode.Messages.CodeConfirmedSuccessfully" value="Driver code confirmed successfully" />
+		<text name="MobileApi.DriverCode.Messages.CodeConfirmedUnSuccessfully" value="Driver code is not correct" />
+
+		<text name="MobileApi.Messages.SuccessTransaction" value="The transaction was successfully completed." />
+		<text name="MobileApi.Messages.BeforePicsCreated" value="Pictures attached" />
+		<text name="MobileApi.Messages.FaildTransaction" value="An error occurred while performing the transaction." />
+
+		<!--Companies-->
+		<text name="Pages.Companies.Title" value="Companies"/>
+		<text name="Pages.Companies.ModalTitle" value="Company"/>
+		<text name="Pages.Companies.CompanyInfo" value="Company info"/>
+		<text name="Pages.Companies.NewCompany" value="New Company"/>
+		<text name="Pages.Companies.IsFuel" value="Fuel"/>
+		<text name="Pages.Companies.IsClean" value="Washing"/>
+		<text name="Pages.Companies.IsMaintain" value="Maintain"/>
+		<text name="Pages.Companies.CounterPicIsRequired" value="Counter Pic Is Required"/>
+
+		<!--Employees-->
+		<text name="Pages.Employees.Title" value="Employees"/>
+		<text name="Pages.Employees.ModalTitle" value="Employee"/>
+		<text name="Pages.Employees.BranchesPermissions" value="Branches Permissions"/>
+		<text name="Pages.Employees.AllBranches" value="All Branches"/>
+
+		<!--Providers-->
+		<text name="Pages.Providers.FuelTypes" value="Fuel Types"/>
+		<text name="Pages.Providers.Diezel" value="Diesel"/>
+
+		<!--Branches-->
+		<text name="Pages.Branches.Title" value="Branches"/>
+		<text name="Pages.Branches.ModalTitle" value="Branch"/>
+		<text name="Pages.Branches.CompanyBranch" value="Company Branch"/>
+		<text name="Pages.Branches.NewBranch" value="New Branch"/>
+		<text name="Pages.Branches.BranchCode" value="Branch Code"/>
+		<text name="Pages.Branches.BranchInfo" value="Branch info"/>
+		<text name="Pages.Branches.TaxNo" value="Tax Number"/>
+		<text name="Pages.Branches.RegNo" value="Reg Number"/>
+		<text name="Pages.Branches.Iban" value="Iban"/>
+		<text name="Pages.Branches.BranchPrices" value="Branch Prices"/>
+		<text name="Pages.Branches.FuelEighteenPrice" value="Price of 80 octane gasoline"/>
+		<text name="Pages.Branches.FuelNinetyOnePrice" value="Price of 91 octane gasoline"/>
+		<text name="Pages.Branches.FuelNinetyFivePrice" value="Price of 95 octane gasoline"/>
+		<text name="Pages.Branches.SolarPrice" value="Price of diesel fuel"/>
+		<text name="Pages.Branches.PendingFuelEighteenPrice" value="Requested price of 80 octane gasoline"/>
+		<text name="Pages.Branches.PendingFuelNinetyOnePrice" value="Requested price of 91 octane gasoline"/>
+		<text name="Pages.Branches.PendingFuelNinetyFivePrice" value="Requested price of 95 octane gasoline"/>
+		<text name="Pages.Branches.PendingSolarPrice" value="Requested price of diesel fuel"/>
+		<text name="Pages.Branches.InternalWashingPrice" value="Internal Washing Price"/>
+		<text name="Pages.Branches.ExternalWashingPrice" value="External Washing Price"/>
+		<text name="Pages.Branches.ThreeThousandKiloOilPrice" value="Three ThousandKilo Oil Price"/>
+		<text name="Pages.Branches.FiveThousandKiloOilPrice" value="Five ThousandKilo Oil Price"/>
+		<text name="Pages.Branches.TenThousandKiloOilPrice" value="Ten ThousandKilo Oil Price"/>
+
+		<text name="Pages.Branches.UpdateManager" value="Update Manager"/>
+		<text name="Pages.Branches.Manager" value="Manager"/>
+		<text name="Pages.Branches.ManagerName" value="Manager Name"/>
+		<text name="Pages.Branches.UpdateBranch" value="Update Branch"/>
+
+
+		<!--City-->
+		<text name="Pages.Cities.Title" value="Cities"/>
+		<text name="Pages.Cities.ModalTitle" value="City"/>
+		<text name="Pages.Cities.ChooseCity" value="Choose City"/>
+		<text name="Pages.Cities.Error.AlreadyExist" value="This city name is already exists" />
+
+		<text name="Pages.MainProviders.ModalTitle" value="Provider" />
+		<text name="Pages.MainProviders.Title" value="Providers" />
+		<text name="Pages.MainProviders.MainProviderInfo" value="Provider Info"/>
+		<text name="Pages.MainProviders.NewMainProvider"  value="New Provider"/>
+		<text name="Pages.MainProviders.BankFile" value="A copy of the bank letter must be certified by the Chamber of Commerce."/>
+		<text name="Pages.MainProviders.BankFileName" value="A copy of the bank letter "/>
+
+		<text name="Pages.MainProviders.City" value="City"/>
+		<text name="Pages.MainProviders.Region" value="Region"/>
+		<text name="Pages.MainProviders.District" value="District"/>
+		<text name="Pages.MainProviders.PostalCode" value="Postal Code"/>
+		<text name="Pages.MainProviders.BoxNumber" value="Box Number"/>
+		<text name="Pages.MainProviders.Street" value="Street"/>
+		<text name="Pages.MainProviders.BuildingNumber" value="Building Number"/>
+		<text name="Pages.MainProviders.AdditionalCode" value="Additional Code"/>
+		<text name="Pages.MainProviders.UnitNumber" value="Unit Number"/>
+		<text name="Pages.MainProviders.AcccountType" value="Acccount Type"/>
+		<text name="Pages.MainProviders.AddExternalInvoice" value="Attach the tax invoice"/>
+
+
+		<text name="Pages.Providers.Title" value="Stations" />
+		<text name="Pages.Providers.ModalTitle" value="Station" />
+		<text name="Pages.Providers.ProviderInfo" value="Station Info"/>
+		<text name="Pages.Providers.NewProvider" value="New Station"/>
+
+		<text name="Pages.Providers.IsFuel" value="Supports fuel supply"/>
+		<text name="Pages.Providers.IsOil" value="Supports car oil change"/>
+		<text name="Pages.Providers.IsClean" value="Supports washing"/>
+		<text name="Pages.Providers.IsMaintain" value="Supports maintenance"/>
+		<text name="Pages.Providers.ManagerName" value="Manager Name"/>
+		<text name="Pages.Providers.WorkersCount" value="Workers Count"/>
+		<text name="Pages.Providers.FuelPrices" value="Fuel Prices"/>
+
+
+		<text name="Pages.Providers.Services" value="Station Services"/>
+		<text name="Pages.Providers.Services.Market" value="Super Market"/>
+		<text name="Pages.Providers.Services.Atm" value="ATM"/>
+		<text name="Pages.Providers.StationInfo" value="Station Info"/>
+		<text name="Pages.Providers.AccountInfo" value="Branch manager info"/>
+
+		<text name="Pages.Providers.VisibleInMap" value="Visible"/>
+
+		<text name="Common.IsFuel" value="Fuel"/>
+		<text name="Common.IsMaintain" value="Maintain"/>
+		<text name="Common.IsOil" value="Oil"/>
+		<text name="Common.IsClean" value="Washing"/>
+		<text name="Pages.Workers.Title" value="Workers"/>
+		<text name="Pages.Workers.ModalTitle" value="Worker"/>
+
+
+		<text name="Pages.Workers.IsFuel" value="Fuel supply"/>
+		<text name="Pages.Workers.IsOil" value="Car oil change"/>
+		<text name="Pages.Workers.IsClean" value="Washing"/>
+		<text name="Pages.Workers.IsMaintain" value="Maintenance"/>
+
+		<!--Veichles-->
+		<text name="Pages.Veichles.Title" value="Veichles"/>
+		<text name="Pages.Veichles.ModalTitle" value="Veichle"/>
+		<text name="Pages.Veichles.NewVeichle" value="New Veichle"/>
+		<text name="Pages.Veichles.VeichleInfo" value="Veichle info"/>
+		<text name="Pages.Veichles.VeichlePic" value="Veichle Pics"/>
+		<text name="Pages.Veichles.WorkingDays" value="Working Days"/>
+		<text name="Pages.Veichles.YearOfIndustry" value="Year Of Industry"/>
+		<text name="Pages.Veichles.ChooseYearOfIndustry" value="Choose Year Of Industry"/>
+		<text name="Pages.Veichles.AdditionalInformation" value="Additional Information"/>
+		<text name="Pages.Veichles.ConsumptionInfo" value="Consumption data"/>
+		<text name="Pages.Veichles.DriverInfo" value="Driver data"/>
+		<text name="Pages.Veichles.AddDriverInfo" value="Add Driver data"/>
+
+
+		<text name="Pages.Veichles.ConsumptionType" value="Consumption Type"/>
+		<text name="Pages.Veichles.ConsumptionType.Group" value="Group"/>
+		<text name="Pages.Veichles.ConsumptionType.Trip" value="Trip"/>
+
+		<text name="Pages.VeichlesAndDrivers.Title" value="Veichles And Drivers"/>
+
+
+		<text name="Pages.VeichleTrips.Title" value="Trip"/>
+		<text name="Pages.VeichleTrips.TripNumber" value="Trip Number"/>
+		<text name="Pages.VeichleTrips.StartDate" value="Start Date"/>
+		<text name="Pages.VeichleTrips.EndDate" value="End Date"/>
+		<text name="Pages.VeichleTrips.MaxLitersCount" value="Max Liters Count"/>
+		<text name="Pages.VeichleTrips.MaxConsumption" value="Max Consumption"/>
+
+		<text name="Pages.VeichleTrips.ConsumptionBySar" value="Consumption By SAR"/>
+		<text name="Pages.VeichleTrips.CurrentConsumption" value="Current Consumption"/>
+		<text name="Pages.VeichleTrips.IsActive" value="IsActive"/>
+		<text name="Pages.VeichleTrips.NotActive" value="Not Active"/>
+
+
+
+		<text name="Pages.Veichles.BodyNumber" value="Body Number"/>
+		<text name="Pages.Veichles.Mark" value=" Mark "/>
+		<text name="Pages.Veichles.Model" value="Model"/>
+		<text name="Pages.Veichles.SimNumber" value="Sim Number"/>
+		<text name="Pages.Veichles.FuelType" value="Fuel Type"/>
+		<text name="Pages.Veichles.TankSize" value="Tank Size"/>
+		<text name="Pages.Veichles.FuelAverageUsage" value="Fuel Average Usage"/>
+		<text name="Pages.Veichles.KiloCount" value="Kilo Count"/>
+		<text name="Pages.Veichles.InternalNumber" value="Internal Number"/>
+
+		<text name="Pages.Veichles.Fuel_Balance" value="Fuel_Balance"/>
+		<text name="Pages.Veichles.Maintain_Balance" value="Maintain_Balance"/>
+		<text name="Pages.Veichles.Oil_Balance" value="Oil_Balance"/>
+		<text name="Pages.Veichles.Wash_Balance" value="Wash_Balance"/>
+
+		<text name="Pages.Veichles.MoneyBalance" value="Money Balance "/>
+		<text name="Pages.Veichles.Balance" value="Balance "/>
+		<text name="BalanceInLitre" value="{0} Litre"/>
+		<text name="BalanceInSar"  value="{0} Sar"/>
+		<text name="Pages.Veichles.FuelLitreBalance" value="Fuel Litre Balance"/>
+		<text name="Pages.Veichles.MoneyBalanceStartDate" value="Money Balance Start Date"/>
+		<text name="Pages.Veichles.MoneyBalanceEndDate" value="Money Balance End Date"/>
+		<text name="Pages.Veichles.IsCurrent" value="Current veichle ?"/>
+
+		<text name="Pages.Veichles.VeichleType" value="Veichle Type"/>
+		<text name="Pages.Veichles.VeichleType.Bus" value="Bus"/>
+		<text name="Pages.Veichles.VeichleType.Private" value="Private"/>
+		<text name="Pages.Veichles.VeichleType.Transport" value="Transport"/>
+		<text name="Pages.Veichles.VeichleType.Taxi" value="Taxi"/>
+		<text name="Pages.Veichles.VeichleType.Truck" value="Truck"/>
+		<text name="Pages.Veichles.VeichleType.Van" value="Van"/>
+		<text name="Pages.Veichles.VeichleType.Motorcycle" value="Motorcycle"/>
+		<text name="Pages.Veichles.VeichleType.HeavyEquipment" value="Heavy Equipment"/>
+		<text name="Pages.Veichles.VeichleType.PrivateTransfer" value="Private Transfer"/>
+		<text name="Pages.Veichles.VeichleType.Diplomat" value="Diplomat"/>
+		<text name="Pages.Veichles.PlateNumber" value="Plate Numbers In Arabic"/>
+		<text name="Pages.Veichles.PlateNumberEn" value="Plate Numbers In English"/>
+		<text name="Pages.Veichles.PlateLetters" value="Plate Letters In Arabic"/>
+		<text name="Pages.Veichles.PlateLettersEn" value="Plate Letters In English"/>
+		<text name="Pages.Veichles.FullPlateNumbers" value="Plate Numbers"/>
+		<text name="Pages.Veichles.Status" value="Veichle Status"/>
+		<text name="Pages.Veichles.AddDriver" value="Add Driver"/>
+		<text name="Pages.Veichles.AttachDriver" value="Assign a driver to the vehicle"/>
+		<text name="Pages.Veichles.CurrentDriver" value="Current Driver"/>
+		<text name="Pages.Veichles.Messages.NotRegisteredVeichle" value="This vehicle is not registered in the system."/>
+		<text name="Pages.Veichles.Messages.DriverDonnotHaveCar" value="This driver is not associated with any vehicle."/>
+		<text name="Pages.Veichles.Messages.CarRegisteredWithAnotherChip" value="The vehicle is linked to another chip."/>
+
+		<text name="Pages.Veichles.Messages.NotRegisteredChipNumber" value="This chip number is not registered in the system."/>
+		<text name="Pages.Veichles.Messages.VeichleUpdated" value="Vehicle data updated"/>
+		<text name="Pages.Veichles.Messages.VeichleUpdatedNotification" value="Vehicle data {0} number {1} updated"/>
+		<text name="Pages.Veichles.Messages.CodeIsCorrect" value="Confirmed"/>
+		<text name="Pages.Veichles.Messages.CodeNotCorrect" value="The code is invalid."/>
+		<text name="Pages.Veichles.Messages.FuelTypeError" value="Vehicle fuel type not specified"/>
+		<text name="Pages.Veichles.Messages.ProviderFuelTypeError" value="Fuel types not specified for the station"/>
+		<text name="Pages.Veichles.Messages.FuelTypeNotAvailable" value="Fuel type not available at station"/>
+
+		<text name="Pages.Veichles.Messages.ChipNumberAlreadyLinked" value="This chip is linked to another vehicle."/>
+		<text name="Pages.Veichles.Messages.ChipNumberError" value="Error in chip details"/>
+		<text name="Pages.Veichles.Messages.ChooseBranch" value="Choose Branch First"/>
+
+		<text name="Pages.Veichles.Messages.PlateLettersError" value="Vehicle letters and numbers not specified"/>
+		<text name="Pages.Veichles.Messages.PlateLettersExists" value="Vehicle letters and numbers already exist."/>
+		<text name="Pages.Veichles.Messages.NotAvailableInThisDay" value="veichle not available today"/>
+
+		<text name="Pages.Veichles.Notes" value="Comments"/>
+		<text name="Pages.Veichles.Notes.BrandAndModel" value="You must select the vehicle brand and model from the options available in the system."/>
+		<text name="Pages.Veichles.Notes.FuelType" value="Fuel type must be specified"/>                                                                      
+		<text name="Pages.Veichles.Notes.Driver" value="Driver Info"/>
+		
+		
+		<text name="Pages.FuelTypes._80" value="80"/>
+		<text name="Pages.FuelTypes._91" value="91"/>
+		<text name="Pages.FuelTypes._95" value="95"/>
+		<text name="Pages.FuelTypes.Diesel" value="Diesel"/>
+
+
+		<!--Drivers-->
+		<text name="Pages.Drivers.Title" value="Drivers"/>
+		<text name="Pages.Drivers.ModalTitle" value="Driver"/>
+		<text name="Pages.Drivers.DriverCode" value="Driver Code"/>
+
+		<text name="Pages.Drivers.NewDriver" value="New Driver"/>
+		<text name="Pages.Drivers.DriverInfo" value="Driver info"/>
+		<text name="Pages.Drivers.Licence" value="Licence"/>
+		<text name="Pages.Drivers.LicenceExpireDate" value="Licence Expire Date"/>
+		<text name="Pages.Drivers.VeichlesCount" value="Veichles Count"/>
+
+
+		<!--VeichleRoutes-->
+		<text name="Pages.VeichleRoutes.Title" value="Veichle Routes"/>
+		<text name="Pages.VeichleRoutes.ModalTitle" value="Veichle Route"/>
+		<text name="Pages.VeichleRoutes.StartDate" value="Start Date"/>
+		<text name="Pages.VeichleRoutes.EndDate" value="End Date"/>
+		<text name="Pages.VeichleRoutes.Notes" value="Notes"/>
+
+
+		<!--FuelTransIns-->
+		<text name="Pages.FuelTransIns.Title" value="Fuel Transactions"/>
+		<text name="Pages.FuelTransIns.ModalTitle" value="Fuel Transaction"/>
+		<text name="Pages.FuelTransIns.Quantity" value="Quantity"/>
+
+
+
+		<!--MaintainTransIns-->
+		<text name="Pages.MaintainTransIns.Title" value="Maintain Transactions"/>
+		<text name="Pages.MaintainTransIns.ModalTitle" value="Maintain Transactions"/>
+		<text name="Pages.MaintainTransIns.Quantity" value="Quantity"/>                               
+
+		<!--WashTransIns-->
+		<text name="Pages.WashTransIns.Title" value="Wash Transactions"/>
+		<text name="Pages.WashTransIns.ModalTitle" value="Wash Transactions"/>
+		<text name="Pages.WashTransIns.Quantity" value="Quantity"/>
+
+		<!--OilTransIns-->
+		<text name="Pages.OilTransIns.Title" value="Oil Transactions"/>
+		<text name="Pages.OilTransIns.ModalTitle" value="Oil Transactions"/>
+		<text name="Pages.OilTransIns.Quantity" value="Quantity"/>
+
+
+
+		<!--DriverVeichles-->
+		<text name="Pages.DriverVeichles.Title" value="Driver Veichles"/>
+		<text name="Pages.DriverVeichles.ModalTitle" value="Driver Veichle"/>
+
+		<!--BranchProviders-->
+		<text name="Pages.BranchProviders.Title" value="Branch Providers"/>
+		<text name="Pages.BranchProviders.ModalTitle" value="Branch Provider"/>
+		<text name="Pages.BranchProviders.Error.AlreadyExist" value="Already exist"/>
+
+
+		<!--BranchRequests-->
+		<text name="Pages.BranchRequests.Title" value="Branch Requests"/>
+		<text name="Pages.BranchRequests.ModalTitle" value="Branch Request"/>
+		<text name="Pages.BranchRequest.Quantity" value="Quantity"/>
+		<text name="Pages.BranchRequest.Status" value="Status"/>
+		<text name="Pages.BranchRequest.DeliveyWay" value="Delivery Way"/>
+		<text name="Pages.BranchRequest.FuelType" value="FuelType"/>
+		<text name="Pages.BranchRequest.Plane" value="Plane"/>
+		<text name="Pages.BranchRequest.Car" value="Car"/>
+		<text name="Pages.BranchRequestStatus.New" value="New"/>
+		<text name="Pages.BranchRequestStatus.Accepted" value="Accepted"/>
+		<text name="Pages.BranchRequestStatus.Rejected" value="Rejected"/>
+		<text name="Pages.BranchRequestStatus._80" value="80"/>
+		<text name="Pages.BranchRequestStatus._92" value="92"/>
+		<text name="Pages.BranchRequestStatus._95" value="95"/>
+		<text name="Pages.BranchRequestStatus.DeliveyDate" value="Delivery Date"/>
+		<text name="Pages.Notifications.NewBranchRequest" value="You have an order for new fuel"/>
+		<text name="Pages.BranchRequests.Rejected" value="Rejecting the fuel order"/>
+		<text name="Pages.Branch.Name" value="Branch Name"/>
+		<text name="Pages.Notifications.Branch" value="Branch"/>
+		<text name="Pages.OrderRequest.NewRequestOrder" value="You have a new offer on order no : {0}"/>
+
+
+		<!--RequestOrders-->
+		<text name="Pages.RequestOrders.Title" value="Request Orders"/>
+		<text name="Pages.RequestOrders.ModalTitle" value="Request Order"/>
+
+		<!--FuelTransOuts-->
+		<text name="Pages.FuelTransOuts.Title" value="Fuel Transfer Outs"/>
+		<text name="Pages.FuelTransOuts.ModalTitle" value="Fuel Transfer Out Process"/>
+		<text name="Pages.FuelTransOuts.Quantity" value="Quantity"/>
+		<text name="Pages.FuelTransOuts.BeforeBoxPic" value="Pump Image Before Filling"/>
+		<text name="Pages.FuelTransOuts.AfterBoxPic" value="Pump Image After Filling"/>
+		<text name="Pages.FuelTransOuts.CounterPic" value="Meter Image"/>
+		<text name="Pages.FuelTransOuts.BeforeCounterPic" value="Meter Image Before Filling"/>
+		<text name="Pages.FuelTransOuts.AfterCounterPic" value="Meter Image After Filling"/>
+		<text name="Pages.FuelTransOuts.FuelConsumption" value="Fuel Consumption"/>
+		<text name="Pages.FuelTransOuts.LitersCount" value="Liters Count"/>
+		<text name="Pages.FuelTransOuts.Amount" value="Amount"/>
+
+
+		<!--MaintainTransOuts-->
+		<text name="Pages.MaintainTransOuts.Title" value="Maintain Transfer Outs"/>
+		<text name="Pages.MaintainTransOuts.ModalTitle" value="Maintain Transfer Out Process"/>
+		<text name="Pages.MaintainTransOuts.Quantity" value="Quantity"/>
+		<text name="Pages.MaintainTransOuts.CounterPic" value="Counter Image"/>
+
+
+		<!--WashTransOuts-->
+		<text name="Pages.WashTransOuts.Title" value="Wash Transfer Outs"/>
+		<text name="Pages.WashTransOuts.ModalTitle" value="Wash Transfer Out Process"/>
+		<text name="Pages.WashTransOuts.Quantity" value="Quantity"/>
+		<text name="Pages.WashTransOuts.BeforeCarPic" value="Car Image Before"/>
+		<text name="Pages.WashTransOuts.AfterCarPic" value="Car Image After"/>
+
+		<!--OilTransOuts-->
+		<text name="Pages.OilTransOuts.Title" value="Oil Transfer Outs"/>
+		<text name="Pages.OilTransOuts.ModalTitle" value="Oil Transfer Out Process"/>
+		<text name="Pages.OilTransOuts.Quantity" value="Quantity"/>
+		<text name="Pages.OilTransOuts.CounterPic" value="Counter Image"/>
+
+		<!--FuelGroups-->
+		<text name="Pages.FuelGroups.Title" value="Fuel Groups"/>
+		<text name="Pages.FuelGroups.ModalTitle" value="Fuel Group"/>
+		<text name="Pages.FuelGroups.Group" value="Group"/>
+
+
+		<text name="Pages.FuelGroups.Amount" value="Amount"/>
+		<text name="Pages.FuelGroups.PeriodType" value="Period Type"/>
+		<text name="Pages.FuelGroups.PeriodType.Daily" value="Daily"/>
+		<text name="Pages.FuelGroups.PeriodType.Weekly" value="Weekly"/>
+		<text name="Pages.FuelGroups.PeriodType.Monthly" value="Monthly"/>
+		<text name="Pages.FuelGroups.Transferable" value="Transferable"/>
+
+		<text name="Pages.FuelGroups.GroupType" value="Group Type"/>
+		<text name="Pages.FuelGroups.GroupType.Liter" value="By Liter"/>
+		<text name="Pages.FuelGroups.GroupType.Period" value="By Period"/>
+		<text name="Pages.FuelGroups.GroupType.Open" value="Opened"/>
+
+		<text name="Pages.FuelGroups.PeriodConsumptionType" value="Period Consumption Type"/>
+		<text name="Pages.FuelGroups.PeriodConsumptionType.Money" value="Consumption by money"/>
+		<text name="Pages.FuelGroups.PeriodConsumptionType.Litre" value="Consumption by litre"/>
+
+		<text name="Pages.FuelGroups.MaximumRechargeAmount" value="Maximum amount to fuel at one time"/>
+
+
+		<!--Brands-->
+		<text name="Pages.Brands.Title" value="Brands"/>
+		<text name="Pages.Brands.ModalTitle" value="Brand"/>
+		<text name="Pages.Brands.Error.AlreadyExist" value="Already exist"/>
+
+
+		<!--Models-->
+		<text name="Pages.Models.Title" value="Models"/>
+		<text name="Pages.Models.ModalTitle" value="Model"/>
+		<text name="Pages.Models.Error.AlreadyExist" value="Already exist"/>
+
+		<!--VeichleTransferRecords-->
+		<text name="Pages.VeichleTransferRecords.Title" value="Veichle Transfer Records"/>
+		<text name="Pages.VeichleTransferRecords.ModalTitle" value="Veichle Transfer Records"/>
+		<text name="Pages.VeichleTransferRecords.ChangeBranch" value="Change Branch"/>
+		<text name="Pages.VeichleTransferRecords.SourceBranch" value="Source Branch"/>
+		<text name="Pages.VeichleTransferRecords.TargetBranch" value="Target Branch"/>
+		<text name="Pages.VeichleTransferRecords.ChooseVeichlesFirst" value="Choose Veichles First"/>
+		<text name="Pages.VeichleTransferRecords.CreatedOn" value="Transfer Date"/>
+
+		<!--WorkerTransferRecords-->
+		<text name="Pages.WorkerTransferRecords.Title" value="Worker Transfer Records"/>
+		<text name="Pages.WorkerTransferRecords.ModalTitle" value="Worker Transfer Records"/>
+		<text name="Pages.WorkerTransferRecords.ChangeProvider" value="Change Provider"/>
+		<text name="Pages.WorkerTransferRecords.SourceProvider" value="Source Provider"/>
+		<text name="Pages.WorkerTransferRecords.TargetProvider" value="Target Provider"/>
+		<text name="Pages.WorkerTransferRecords.ChooseWorkersFirst" value="Choose Workers First"/>
+		<text name="Pages.WorkerTransferRecords.CreatedOn" value="Transfer Date"/>
+		<text name="Pages.WorkerTransferRecords.CreatedBy" value="Transfer By"/>
+
+
+
+		<!--VeichleTripsRecords-->
+		<text name="Pages.VeichleTripsRecords.Title" value="Veichle Trips Records"/>
+		<text name="Pages.VeichleTripsRecords.ModalTitle" value="Veichle Trip Record"/>
+
+		<!--FuelPriceChangeRequests-->
+		<text name="Pages.FuelPriceChangeRequests.Title" value="Fuel Price Change Requests"/>
+		<text name="Pages.FuelPriceChangeRequests.ModalTitle" value="Fuel Price Change Request"/>
+		<text name="Pages.FuelPriceChangeRequests.OldPrice" value="Old Price"/>
+		<text name="Pages.FuelPriceChangeRequests.NewPrice" value="New Price"/>
+		<text name="Pages.FuelPriceChangeRequests.File" value="File"/>
+		<text name="Pages.FuelPriceChangeRequests.Status" value="Status"/>
+
+		<text name="Pages.FuelPriceChangeRequests.Messages.Approved" value="Fuel price change request accepted"/>
+		<text name="Pages.FuelPriceChangeRequests.Messages.Refused" value="Fuel price change request rejected"/>
+		<text name="Pages.FuelPriceChangeRequests.Messages.New" value="new fuel price change request"/>
+
+
+		<text name="Pages.FuelPriceChangeRequests.Status.New" value="New"/>
+		<text name="Pages.FuelPriceChangeRequests.Status.Accepted" value="Accepted"/>
+		<text name="Pages.FuelPriceChangeRequests.Status.Rejected" value="Rejected"/>
+
+
+		<text name="Pages.StationTransactions.Title" value="Station Transactions" />
+		<text name="Pages.StationTransactions.StationTransactions" value="Stations Transactions" />
+		<text name="Pages.StationTransactions.TransactionDetails" value="Transaction Details" />
+		<text name="Pages.StationTransactions.FuelTransactions" value="Fuel Transactions" />
+		<text name="Pages.StationTransactions.FuelTransactions.Header" value="Header" />
+		<text name="Pages.StationTransactions.MaintainTransactions" value="Maintain Transactions" />
+		<text name="Pages.StationTransactions.OilTransactions" value="Oil Transactions" />
+		<text name="Pages.StationTransactions.WashTransactions" value="Wash Transactions" />
+
+
+		<text name="Pages.Invoices.Title" value="Invoices" />
+		<text name="Pages.Invoices.ModalTitle" value="Invoice" />
+		<text name="Pages.Invoices.InvoiceInfo" value="Invoice Info" />
+		<text name="Pages.Invoices.NewInvoice" value="New Invoice" />
+
+		<text name="Pages.Invoices.ElectronicInvoices" value="Electronic Invoices" />
+		<text name="Pages.Invoices.StatementOfAccount" value="Statement Of Account" />
+		<text name="Pages.Invoices.Payments" value="Payments" />
+		<text name="Pages.Invoices.Amount" value="Amount" />
+		<text name="Pages.Invoices.TotalAmount" value="Total Amount" />
+
+		<text name="Pages.Invoices.Discount" value="Discount" />
+		<text name="Pages.Invoices.Taxes" value="Taxes" />
+		<text name="Pages.Invoices.Net" value="Net" />
+		<text name="Pages.Invoices.Code" value="Code" />
+		<text name="Pages.Invoices.CreationTime" value="Invoice Date" />
+		<text name="Pages.Invoices.TransactionCreationTime" value="Transaction Date" />
+		<text name="Pages.Invoices.IsTaxable" value="Is Taxable" />
+		<text name="Pages.Invoices.CreateInvoice" value="Create Invoice" />
+
+		<text name="Pages.Invoices.PeriodFrom" value="Period From" />
+		<text name="Pages.Invoices.PeriodTo" value="Period To" />
+
+		<text name="Pages.Invoices.Search" value="Search" />
+		<text name="Pages.Invoices.Transactions" value="Transactions" />
+
+		<text name="Pages.Invoices.TransactionType" value="Transaction Type" />
+		<text name="Pages.Invoices.TransactionType.Fuel" value="Fuel" />
+		<text name="Pages.Invoices.TransactionType.Oil" value="Oil" />
+		<text name="Pages.Invoices.TransactionType.Maintain" value="Maintain" />
+		<text name="Pages.Invoices.TransactionType.Wash" value="Wash" />
+
+		<text name="Pages.Invoices.Messages.New" value="new invoice order"/>
+		<text name="Pages.Invoices.Iban" value="Invoice and iban"/>
+		<text name="Pages.Invoices.Month" value="Month"/>
+
+		<text name="Pages.Invoices.ExternalCode" value="Code"/>
+		<text name="Pages.Invoices.FilePath" value="File"/>
+		<text name="Pages.Invoices.Messages.AttatchFilePath" value="Attach invoice file first"/>
+
+
+		<text name="Pages.AccountStatement.Title" value="Statement Of Account" />
+		<text name="Pages.AccountStatement.Code" value="Document number" />
+		<text name="Pages.AccountStatement.Type" value="Type" />
+		<text name="Pages.AccountStatement.Debit" value="Debit" />
+		<text name="Pages.AccountStatement.Credit" value="Credit" />
+		<text name="Pages.AccountStatement.WalletCharge" value="Wallet Charge" />
+		<text name="Pages.AccountStatement.Package" value="Package Subscription value" />
+
+
+		<text name="Pages.Reports.Title" value="Reports" />
+		<text name="Pages.Reports.ModalTitle" value="Report" />
+		<text name="Pages.Reports.CompanyReport" value="Company Report" />
+		<text name="Pages.Reports.BranchReport" value="Branch Report" />
+		<text name="Pages.Reports.FuelReport" value="Fuel Transactions Reports" />
+		<text name="Pages.Reports.WashReport" value="Wash Transactions Reports" />
+		<text name="Pages.Reports.OilReport"  value="Oil Transactions Reports" />
+		<text name="Pages.Reports.MaintainReport" value="Maintain Transactions Reports" />
+		<text name="Pages.Reports.InvoicesReport" value="Invoices Reports" />
+		<text name="Pages.Reports.VouchersReport" value="Vouchers Reports" />
+		<text name="Pages.Reports.Chips" value="Chips installation report" />
+		<text name="Pages.Reports.RFID" value="RFID installation report" />
+		<text name="Pages.Reports.Fuel" value="Fuel" />
+		<text name="Pages.Reports.Clean" value="Washing" />
+		<text name="Pages.Reports.Maintain" value="Services" />
+
+		<text name="Pages.Reports.BranchesConsumption" value="Total branch consumption" />
+		<text name="Pages.Reports.VisitingStations" value="Frequency of stations" />
+		<text name="Pages.Reports.VeichlesConsumption" value="Vehicle consumption rate" />
+		<text name="Pages.Reports.MonthlyConsumption" value="Monthly consumption" />
+
+		<text name="Pages.Reports.TotalPrice" value="Total Price" />
+		<text name="Pages.Reports.TotalQuantity" value="Total Quantity" />
+		<text name="Pages.Reports.BranchBalance" value="Branch Balance" />
+
+		<text name="Pages.Reports.ChoosePeriodsFirst" value="Choose periods first" />
+		<text name="Pages.Reports.ChooseProviderFirst" value="Choose provider first" />
+
+		<text name="Pages.Reports.NoRecords" value="No Records Found" />
+
+
+
+		<text name="Pages.Statistics.ActiveWorkers" value="Active Workers" />
+		<text name="Pages.Statistics.NotActiveWorkers" value="Not Active Workers " />
+		<text name="Pages.Statistics.Fuel91Amount" value="Fuel consumption 91" />
+		<text name="Pages.Statistics.Fuel95Amount" value="Fuel consumption 95" />
+		<text name="Pages.Statistics.FuelDesielAmount" value="Fuel Desiel Amount" />
+		<text name="Pages.Statistics.FuelTransactionCount" value="Fuel Transaction Count " />
+		<text name="Pages.Statistics.FuelTransactionAmount" value="Fuel Transaction Amount " />
+		<text name="Pages.Statistics.InvoicesAmount" value="Invoices Amount" />
+		<text name="Pages.Statistics.InvoicesCount" value="Invoices Count" />
+
+		<text name="Pages.Statistics.LiveSubscriptionCount" value="Live Subscriptions" />
+		<text name="Pages.Statistics.PendingSubscriptionCount" value="Pending Subscriptions " />
+		<text name="Pages.Statistics.ExpiredSubscriptionCount" value="Expired Subscriptions" />
+		<text name="Pages.Statistics.SubscriptionAmount" value="Subscription Amount" />
+
+		<text name="Pages.Statistics.MaintainTransactionAmount" value="Maintain Transaction Amount" />
+		<text name="Pages.Statistics.MaintainTransactionCount" value="Maintain Transaction Count" />
+		<text name="Pages.Statistics.OilTransactionAmount" value="Oil Transaction Amount" />
+		<text name="Pages.Statistics.OilTransactionCount" value="Oil Transaction Count" />
+
+		<text name="Pages.Statistics.WashTransactionAmount" value="Wash Transaction Amount" />
+		<text name="Pages.Statistics.WashTransactionCount" value="Wash Transaction Count" />
+
+		<text name="Pages.Statistics.CompaniesCount" value="Companies Count" />
+		<text name="Pages.Statistics.BranchesCount" value="Branches Count" />
+		<text name="Pages.Statistics.MainProvidersCount" value="Providers Count" />
+		<text name="Pages.Statistics.ProvidersCount" value="Stations Count" />
+		<text name="Pages.Statistics.DriversCount" value="Drivers Count" />
+		<text name="Pages.Statistics.VeichelsCount" value="Veichels Count" />
+		<text name="Pages.Statistics.WorkersCount" value="Workers Count" />
+		<text name="Pages.Statistics.PendingCompaniesTransactionsCount" value="Wallet operations under review" />
+		<text name="Pages.Statistics.FuelChangePricesCount" value="Fuel price change requests" />
+		<text name="Pages.Statistics.WalletAmount" value="Wallet Amount" />
+		<text name="Pages.Statistics.SubscriptionEndDate" value="Subscription End Date" />
+		<text name="Pages.Statistics.BranchAmounts" value="Branches Wallet Amounts" />
+		<text name="Pages.Statistics.Expired" value="Expired" />
+
+		<text name="Pages.Statistics.StatsType" value="Display type" />
+		<text name="Pages.Statistics.StatsType.Price" value="By Price" />
+		<text name="Pages.Statistics.StatsType.Litre" value="By Quantity" />
+
+		<text name="Pages.Vouchers.Title" value="Vouchers" />
+		<text name="Pages.Vouchers.ModalTitle" value="Voucher" />
+		<text name="Pages.Vouchers.TotalAmount" value="Total balances claimed" />
+		<text name="Pages.Vouchers.Note" value="Note" />
+		<text name="Pages.Vouchers.TotalFuelTransouts" value="Total Fuel Transactions" />
+		<text name="Pages.Vouchers.FilePath" value="Voucher Image" />
+
+		<text name="Pages.Vouchers.Messages.New" value="new voucher" />
+
+		<text name="Pages.Journals.Title" value="Journals" />
+		<text name="Pages.Journals.ModalTitle" value="Journal" />
+		<text name="Pages.Journals.JournalDetails" value="Journal Details" />
+		<text name="Pages.Journals.JournalType" value="Journal Type" />
+		<text name="Pages.Journals.JournalType.Invoice" value="Invoice" />
+		<text name="Pages.Journals.JournalType.Vouchar" value="Vouchar" />
+
+		<text name="Pages.JournalDetails.Debit" value="Debit" />
+		<text name="Pages.JournalDetails.Credit" value="Credit" />
+		<text name="Pages.JournalDetails.AccountType" value="Account" />
+		<text name="Pages.JournalDetails.AccountType.Branch" value="Branch" />
+		<text name="Pages.JournalDetails.AccountType.Company" value="Company" />
+		<text name="Pages.JournalDetails.AccountType.Provider" value="Provider" />
+		<text name="Pages.JournalDetails.AccountType.MainProvider" value="Main Provider" />
+		<text name="Pages.JournalDetails.AccountType.SayarahApp" value="Syarah app" />
+
+
+		<!--Pages.Wallets-->
+		<text name="Pages.Wallets.MainTitle" value="Wallet"/>
+		<text name="Pages.Wallets.CompanyWallet" value="Company Wallet"/>
+
+		<text name="Pages.Wallets.Title" value="Wallets"/>
+		<text name="Pages.Wallets.ModalTitle" value="Wallet"/>
+		<text name="Pages.Wallets.CreateNew" value="Add new transaction"/>
+
+		<text name="Pages.Wallets.Code" value="Code"/>
+		<text name="Pages.Wallets.Amount" value="Amount"/>
+		<text name="Pages.Wallets.PointValue" value="Poin tValue"/>
+		<text name="Pages.Wallets.PointCount" value="Point Count"/>
+		<text name="Pages.Wallets.Order" value="Wallets"/>
+		<text name="Pages.Wallets.User" value="Wallets"/>
+		<text name="Pages.Wallets.WalletAmount" value="Wallet Amount"/>
+		<text name="Pages.Wallets.FuelAmount" value="Fuel Amount"/>
+		<text name="Pages.Wallets.CleanAmount" value="Washing Amount"/>
+		<text name="Pages.Wallets.MaintainAmount" value="Services Amount"/>
+
+		<text name="Pages.Wallets.ConsumptionAmount" value="Consumption Amount"/>
+		<text name="Pages.Wallets.RefundFailed" value="The balance to be deducted is greater than the wallet balance"/>
+		<text name="Pages.Wallets.BranchAmountNotEnoughForCarAmount" value="The branch wallet balance is not enough to cover the car wallet balance"/>
+		<text name="Pages.Wallets.VeichleMoneyBalanceNotEnough" value="The vehicle balance is not sufficient to complete the transaction."/>
+		<text name="Pages.Wallets.VeichleLitreBalanceNotEnough" value="The vehicle balance is not sufficient to complete the transaction."/>
+		<text name="Pages.Wallets.TransferFailed" value="The balance to be transferred is greater than the wallet balance"/>
+
+		<text name="Pages.Wallets.CompanyBranchDepositFailed" value="The company's balance is less than the balance to be deposited to the branch"/>
+
+		<text name="Pages.Wallets.BranchDepositNote" value="Transfer balance to branch wallet {0}"/>
+		<text name="Pages.Wallets.BranchRefundNote" value="Refund from Branch Wallet Balance {0}"/>
+
+		<text name="Pages.Wallets.TransferDepositWalletAmount" value="Deposit from a transfer from branch {0}"/>
+		<text name="Pages.Wallets.TransferRefundWalletAmount" value="Refund from a transfer from branch {0}"/>
+
+
+		<text name="Pages.Wallets.CompanyWalletAmount" value="The company's current wallet balance is {0} riyals."/>
+		<text name="Pages.Wallets.BranchWalletAmount" value="The branch's current wallet balance is {0} riyals."/>
+		<text name="Pages.Wallets.TotalAmount" value="Total Amount"/>
+		<text name="Pages.Wallets.Note" value="Note"/>
+		<text name="Pages.Wallets.TransactionType" value="Transaction Type"/>
+
+
+		<text name="Pages.Wallets.TransactionType.Deposit" value="Deposit"/>
+		<text name="Pages.Wallets.TransactionType.Refund" value="Refund"/>
+		<text name="Pages.Wallets.TransactionType.SystemCommission" value="Commission System"/>
+		<text name="Pages.Wallets.TransactionType.DepositAdmin" value="Admin Deposit"/>
+		<text name="Pages.Wallets.TransactionType.RefundAdmin" value="Admin Refund"/>
+		<text name="Pages.Wallets.TransactionType.Consumption" value="Consumption"/>
+
+		<text name="Pages.Wallets.TransferAmount" value="Transfer Amount For Another Branch"/>
+
+		<text name="Pages.Wallets.BranchWalletAmountNotEnough" value="The branch balance is not sufficient to complete the transaction."/>
+		<text name="Pages.Wallets.WalletAmountNotEnough" value="The balance is not sufficient to complete the transaction."/>
+
+		<text name="Pages.Wallets.SubscriptionNote" value="Subscription process"/>
+		<text name="Pages.Wallets.UpgradeSubscriptionNote" value="Upgrade Subscription"/>
+
+		<text name="Pages.Wallets.FuelTransNote" value="Fuel disbursement process"/>
+		<text name="Pages.Wallets.OilTransNote" value="Pay for an oil change"/>
+		<text name="Pages.Wallets.washTransNote" value="Push cleaning process"/>
+		<text name="Pages.Wallets.MaintainTransNote" value="Pay maintenance"/>
+
+		<text name="Pages.Wallets.DepositStatus" value="Deposit Status"/>
+		<text name="Pages.Wallets.DepositStatus.Pending" value="Pending"/>
+		<text name="Pages.Wallets.DepositStatus.Accepted" value="Accepted"/>
+		<text name="Pages.Wallets.DepositStatus.Refused" value="Refused"/>
+
+		<text name="Pages.Wallets.Messages.New" value="Wallet deposit request"/>
+		<text name="Pages.Wallets.Messages.Approved" value="Wallet deposit request accepted"/>
+		<text name="Pages.Wallets.Messages.Refused" value="Wallet deposit request accepted"/>
+
+		<text name="Pages.Wallets.Messages.AttachReceiptImage" value="A copy of the receipt must be attached."/>
+
+		<text name="Pages.Wallets.FuelWallet" value="Fuel Wallet"/>
+		<text name="Pages.Wallets.CleanWallet" value="Washing Wallet"/>
+		<text name="Pages.Wallets.MaintainWallet" value="Maintain Wallet"/>
+
+		<text name="Pages.Wallets.CurrentBalance" value="Current Balance"/>
+		<text name="Pages.Wallets.CurrentWalletBalance" value="Current Balance"/>
+		<text name="Pages.Wallets.WalletRechargeReceipt" value="Wallet Recharge Receipt"/>
+
+		<!--Banks-->
+		<text name="Pages.Banks.Title" value="Banks"/>
+		<text name="Pages.Banks.ModalTitle" value="Bank"/>
+		<text name="Pages.Banks.Errors.HasTransactions" value="This bank is used for corporate wallet charging operations."/>
+
+		<text name="Pages.Banks.Name" value="Bank name"/>
+		<text name="Pages.Banks.Iban" value="Iban number"/>
+		<text name="Pages.Banks.AccountNumber" value="Account Number"/>
+		<text name="Pages.Banks.AccountName" value="Account Name"/>
+
+		<text name="Pages.Banks.BeneficiaryName" value="Beneficiary Name"/>
+		<text name="Pages.Banks.BeneficiaryBank" value="Beneficiary Bank"/>
+
+		<text name="Pages.Banks.ReceiptImage" value="Receipt Image"/>
+
+		<text name="Pages.Banks.Send" value="Send"/>
+
+		<text name="Pages.Banks.BankTransfer" value="Bank transfer"/>
+		<text name="Pages.Banks.ChooseBank" value="Choose the bank"/>
+
+		<text name="Pages.Banks.ReceiptImageNotes" value="Please make sure the receipt contains: "/>
+		<text name="Pages.Banks.ReceiptImageNotes.One" value="Show the date and time in detail."/>
+		<text name="Pages.Banks.ReceiptImageNotes.Two" value="The last 4 or 3 digits of the account number sent with the name appear."/>
+		<text name="Pages.Banks.ReceiptImageNotes.Three" value="Display the recipient's account number and name."/>
+
+
+
+		<!--Packages-->
+		<text name="Pages.Packages.Title" value="Packages"/>
+		<text name="Pages.Packages.PackagesAndSubscriptions" value="Packages And Subscriptions"/>
+		<text name="Pages.Packages.ModalTitle" value="Package"/>
+		<text name="Pages.Packages.PackageName" value="Package Name"/>
+		<text name="Pages.Packages.PackageDesc" value="PackageDesc"/>
+		<text name="Pages.Packages.ChoosePackageType" value="-- Choose Package Type --"/>
+		<text name="Pages.Packages.PackageType" value="Subscription Type"/>
+		<text name="Pages.Packages.PackageType.Monthly" value="Monthly"/>
+		<text name="Pages.Packages.PackageType.Yearly" value="Yearly"/>
+
+		<text name="Pages.Packages.VeichlesFrom" value="Veichles From"/>
+		<text name="Pages.Packages.VeichlesTo" value="Veichles To"/>
+		<text name="Pages.Packages.VeichlesCount" value="Veichles Count"/>
+		<text name="Pages.Packages.NfcCount" value="Chips count"/>
+		<text name="Pages.Packages.AttachNfc" value="Attach NFC"/>
+		<text name="Pages.Packages.AttachNfcPrice" value="Attach Nfc Price"/>
+		<text name="Pages.Packages.MonthlyPrice" value="Monthly Price"/>
+		<text name="Pages.Packages.YearlyPrice" value="Yearly Price"/>
+		<text name="Pages.Packages.SimPrice" value="Sim Price"/>
+
+		<text name="Pages.Packages.SubscribePackage" value="Subscribe Package"/>
+		<text name="Pages.Packages.VeichlesCountPrices" value="Veichles Prices"/>
+		<text name="Pages.Packages.SubscribePrice" value="Subscription Price"/>
+
+		<text name="Pages.Packages.SuitablePackage" value="Suitable Package"/>
+
+		<text name="Pages.Packages.PackageSettings" value="Package Settings"/>
+		<text name="Pages.Packages.RenewNoteOne" value="Activate the automatic renewal service"/>
+		<text name="Pages.Packages.RenewNoteTwo" value="Protects you from sudden service downtime."/>
+
+		<text name="Pages.Packages.Price" value="Price"/>
+		<text name="Pages.Packages.Package" value="Package"/>
+		<text name="Pages.Packages.YouHaveNoSubscribe" value="You don't Have a Subscription"/>
+		<text name="Pages.Packages.CompanyNoSubscribe" value="Company don't Have a Subscription"/>
+		<text name="Pages.Packages.VeichlesCountExceeded" value="The maximum number of vehicles in the current package has been reached."/>
+
+		<text name="Pages.Packages.SubscribeNow" value="Subscribe Now"/>
+		<text name="Pages.Packages.PricesNote" value="Note: Prices are per car."/>
+		<text name="Pages.Packages.NoPackage" value="No package available for number of vehicles: {0}"/>
+		<text name="Pages.Packages.NoVeichlesSelected" value="No Veichles Selected"/>
+
+		<text name="Pages.Packages.ViewPackages" value="View Packages"/>
+
+		<text name="Pages.Packages.Error.AlreadyExist" value="Package is already exists"/>
+		<text name="Pages.Packages.Error.NotExist" value="package not exist"/>
+
+		<text name="Pages.Packages.Error.InconsistencyInVehicleNumbers" value="There is a discrepancy in the number of vehicles with one of the packages."/>
+
+
+		<!--Subscriptions-->
+		<text name="Pages.Subscriptions.Title" value="Subscriptions"/>
+		<text name="Pages.Subscriptions.ModalTitle" value="Subscription"/>
+		<text name="Pages.Subscriptions.RenewSubscription" value="Renew Subscription"/>
+		<text name="Pages.Subscriptions.ExtendSubscription" value="Increase subscription period"/>
+		<text name="Pages.Subscriptions.IncreaseVeichles" value="Add vehicles to subscription"/>
+
+		<text name="Pages.Subscriptions.Name" value="Name"/>
+		<text name="Pages.Subscriptions.Code" value="Subscription Code"/>
+
+		<text name="Pages.Subscriptions.EndDate" value="End Date"/>
+		<text name="Pages.Subscriptions.UserName" value="User Name"/>
+		<text name="Pages.Subscriptions.Error.YouAlreadySubscribedInfreePackage" value="I have already subscribed to this free package once."/>
+		<text name="Pages.Subscription.Error.ElmentNotFound" value="This package is not available"/>
+		<text name="Pages.Subscriptions.Error.DonotHaveEnoughMoney" value="The wallet does not contain enough money."/>
+		<text name="Pages.Subscriptions.Subscribe" value="subscription"/>
+		<text name="Pages.Subscriptions.CompletePayment" value="Complete the payment process and subscribe to the package"/>
+		<text name="Pages.Subscriptions.YouHaveSubscribe" value="You are already subscribed to a package now"/>
+		<text name="Pages.Subscriptions.YouHavePendingSubscription" value="You have a subscription under review now."/>
+		<text name="Pages.Subscriptions.NowYouHavePackage" value="You are now subscribed to the package"/>
+		<text name="Pages.Subscriptions.SubscribeDate" value="Subscription date"/>
+		<text name="Pages.Subscriptions.Status" value="Subscription Status"/>
+
+		<text name="Pages.Subscriptions.TransactionType" value="Transaction Type"/>
+		<text name="Pages.Subscriptions.TransactionType.Subscribe" value="Subscribe"/>
+		<text name="Pages.Subscriptions.TransactionType.Renew" value="Renew"/>
+		<text name="Pages.Subscriptions.TransactionType.Upgrade" value="Upgrade"/>
+
+
+		<text name="Pages.Subscriptions.SubscriptionsDetails" value="Subscription details"/>
+		<text name="Pages.Subscriptions.SubscriptionsPayment" value="Payment"/>
+		<text name="Pages.Subscriptions.SelectPaymethodError" value="Choose payment method first"/>
+		<text name="Pages.Subscriptions.Paymethod" value="Pay Method"/>
+		<text name="Pages.Subscriptions.Paymethod.Visa" value="Visa"/>
+		<text name="Pages.Subscriptions.Paymethod.Wallet" value="Wallet"/>
+		<text name="Pages.Subscriptions.Paymethod.BankTransfer" value="Bank Transfer"/>
+
+		<text name="Pages.Subscriptions.WalletNote" value="current wallet amount is {0} riyal"/>
+
+		<text name="Pages.Subscriptions.Messages.Approved" value="Your subscription request has been accepted."/>
+		<text name="Pages.Subscriptions.Messages.Refused" value="Your subscription request has been rejected."/>
+		<text name="Pages.Subscriptions.Messages.Expired" value="The package subscription period has expired."/>
+
+		<text name="Pages.Subscriptions.Messages.AreYouSureToRenew" value="Are you sure to renew the subscription ?"/>
+		<text name="Pages.Subscriptions.Messages.AreYouSureToSubscribe" value="Are you sure to complete the subscription ?"/>
+		<text name="Pages.Subscriptions.Messages.AreYouSureToUpgrade" value="Are you sure to upgrade the subscription ?"/>
+		<text name="Pages.Subscriptions.Messages.RenewSuccess" value="Subscription renewed successfully"/>
+
+
+		<text name="Pages.Subscriptions.Error.NotExist" value="Subscription Not Exist"/>
+
+		<text name="Pages.Subscriptions.RequestChips" value="Requesting a chip or RFID to replace a lost one"/>
+
+		<text name="Pages.Subscriptions.UpgradePackage" value="Upgrade Package"/>
+		<text name="Pages.Subscriptions.RenewPackage" value="Renew Package"/>
+		<text name="Pages.Subscriptions.ConfirmSubscription" value="Confirm Subscription"/>
+		<text name="Pages.Subscriptions.ConfirmUpgradePackage" value="Confirm Upgrade"/>
+		<text name="Pages.Subscriptions.ConfirmRenew" value="Confirm Renew Package"/>
+
+
+		<text name="Pages.Subscriptions.UpgradeVeichlesCount" value="Number of additional vehicles"/>
+
+
+		<text name="Pages.ChipDevices.Title" value="Chip Devices" />
+		<text name="Pages.ChipDevices.ModalTitle" value="Chip Device" />
+		<text name="Pages.ChipDevices.Code" value="Code" />
+		<text name="Pages.ChipDevices.Status" value="Status" />
+		<text name="Pages.ChipDevices.Reason" value="Reason" />
+		<text name="Pages.ChipDevices.Error.AlreadyExist" value="this device is already exists" />
+
+		<text name="Pages.ChipNumbers.Title" value="Smart chips" />
+		<text name="Pages.ChipNumbers.Code" value="Code" />
+
+		<text name="Pages.ChipNumbers.ModalTitle" value="Smart chip" />
+		<text name="Pages.ChipNumbers.ReleaseNumber" value="Release Number" />
+		<text name="Pages.ChipNumbers.PartnerInfo" value="Partner Info" />
+		<text name="Pages.ChipNumbers.Partners" value="Partners" />
+
+		<text name="Pages.ChipNumbers.Error.AlreadyExist" value="this chip is already exists" />
+
+		<text name="Pages.ChipNumbers.ActivationDate" value="Activation Date" />
+		<text name="Pages.ChipNumbers.ChipInfo" value="Chip Info" />
+		<text name="Pages.ChipNumbers.Status" value="Status" />
+		<text name="Pages.ChipNumbers.Status.Unused" value="Unused" />
+		<text name="Pages.ChipNumbers.Status.Used" value="Used" />
+		<text name="Pages.ChipNumbers.Status.Linked" value="Linked" />
+		<text name="Pages.ChipNumbers.Status.Blocked" value="Blocked" />
+		<text name="Pages.ChipNumbers.Status.Broken" value="Broken" />
+		<text name="Pages.ChipNumbers.Status.Archived" value="Archived" />
+
+
+		<text name="Pages.RegisterationRequests.Title" value="Registeration Requests" />
+		<text name="Pages.RegisterationRequests.ModalTitle" value="Registeration Request" />
+		<text name="Pages.RegisterationRequests.AccountType" value="Account Type" />
+
+		<text name="Pages.RegisterationRequests.AccountType.FuelProvider" value="Fuel Provider" />
+		<text name="Pages.RegisterationRequests.AccountType.Company" value="Company" />
+		<text name="Pages.RegisterationRequests.AccountType.CleanProvider" value="Washing Provider" />
+		<text name="Pages.RegisterationRequests.AccountType.ServicesProvider" value="Services Provider" />
+
+		<text name="Pages.RegisterationRequests.PhoneNumberConfirmed" value="PhoneNumber Confirmed ?" />
+		<text name="Pages.RegisterationRequests.EmailAddressConfirmed" value="EmailAddress Confirmed ?" />
+		<text name="Pages.RegisterationRequests.RefuseReason" value="Refuse Reason" />
+
+		<text name="Pages.RegisterationRequests.Status" value="Status" />
+		<text name="Pages.RegisterationRequests.Status.Pending" value="Pending" />
+		<text name="Pages.RegisterationRequests.Status.Accepted" value="Accepted" />
+		<text name="Pages.RegisterationRequests.Status.Refused" value="Refused" />
+		<text name="Pages.RegisterationRequests.Status.DuringCreation" value="During Creation" />
+		<text name="Pages.RegisterationRequests.ErrorSending" value="Error Occured!" />
+
+
+		<text name="Pages.RegisterationRequests.ShouldConfirmPhone" value="Mobile number must be verified first" />
+		<text name="Pages.RegisterationRequests.ShouldConfirmEmail" value="Email must be confirmed first." />
+
+		<text name="Pages.RegisterationRequests.Register" value="Register Account" />
+
+		<text name="Pages.RegisterationRequests.SuccessTitle" value="Your application has been registered." />
+		<text name="Pages.RegisterationRequests.SuccessDesc" value="Wait for your account to be activated through the platform management" />
+
+		<text name="Pages.RegisterationRequests.Messages.New" value="new registeration request" />
+
+		<text name="DetailsSections.MainData" value="Basic data" />
+		<text name="DetailsSections.Documents" value="Documents" />
+		<text name="DetailsSections.BankInfo" value="Bank Info" />
+		<text name="DetailsSections.NationalAddress" value="National Address" />
+		<text name="DetailsSections.Services" value="Station Services" />
+		<text name="DetailsSections.FuelTypes" value="Fuel Types" />
+
+
+		<text name="DetailsSections.Invoices" value="Invoices" />
+		<text name="DetailsSections.Other" value="Other" />
+
+
+		<text name="Pages.CompanyTypes.Title" value="Company Types" />
+		<text name="Pages.CompanyTypes.ModalTitle" value="Company Type" />
+
+		<text name="Pages.FuelPumps.Title" value="Fuel Pumps" />
+		<text name="Pages.FuelPumps.ModalTitle" value="Fuel Pump" />
+		<text name="Pages.FuelPumps.QrCode" value="Qr Code" />
+		<text name="Pages.FuelPumps.Code" value="Code" />
+		<text name="Pages.FuelPumps.Count" value="Pumps count" />
+		<text name="Pages.FuelPumps.NoSelectedPumps" value="No Selected Pumps" />
+
+		<text name="Pages.FuelPumps.Error.AlreadyExist" value="Pump with the same number already exists." />
+
+
+
+		<text name="Pages.ArtificialIntelligence.Title" value="AI Recommendations" />
+
+		<text name="Pages.Orders.Title" value="Orders" />
+		<text name="Pages.Orders.Fuel" value="Fuel" />
+		<text name="Pages.Orders.BanProvider" value="Ban Provider" />
+		<text name="Pages.Orders.FuelProvider" value="Fuel station ban" />
+		<text name="Pages.Orders.FuelProvider.Errors.AlreadyExistMainProvider" value="The service provider has already been blocked." />
+		<text name="Pages.Orders.FuelProvider.Errors.AlreadyExistProvider" value="The branch has already been blocked." />
+
+		<text name="Pages.Orders.FuelDelivery" value="Fuel Delivery" />
+
+		<text name="Pages.Orders.TransOut" value="Consumption operations" />
+		<text name="Pages.Orders.Invoices" value="Tax invoices" />
+		<text name="Pages.Orders.CompanyInvoices" value="Monthly consumption bills" />
+
+
+		<text name="Pages.AnnouncmentBanners.Title" value="Announcment Banners" />
+		<text name="Pages.AnnouncmentBanners.ModalTitle" value="Announcment Banner" />
+		<text name="Pages.AnnouncmentBanners.AnnouncementUserType" value="Announcement For" />
+		<text name="Pages.AnnouncmentBanners.AnnouncementUserType.Company" value="Companies" />
+		<text name="Pages.AnnouncmentBanners.AnnouncementUserType.MainProvider" value="Main Providers" />
+		<text name="Pages.AnnouncmentBanners.AnnouncementUserType.Branch" value="Companies Branches" />
+		<text name="Pages.AnnouncmentBanners.AnnouncementUserType.Provider" value="Providers" />
+
+
+		<text name="Pages.SyarahApp.Locations"  value="Syarah Locations" />
+		<text name="Pages.SyarahApp.Locations.FuelLocations"  value="Fuel Locations" />
+		<text name="Pages.SyarahApp.Locations.WashLocations"  value="Washing Locations" />
+		<text name="Pages.SyarahApp.Locations.MaintainLocations"  value="Maintain Locations" />
+		<text name="Pages.SyarahApp.Locations.ElectricCarsLocations"  value="Electric Cars Locations" />
+
+
+		<text name="Pages.HelpAndSupport.Title"  value="Help And Support" />
+		<text name="Pages.HelpAndSupport.Ticket"  value="Ticket" />
+		<text name="Pages.HelpAndSupport.TicketSystem"  value="Ticket System" />
+		<text name="Pages.HelpAndSupport.TicketList"  value="Ticket List" />
+		<text name="Pages.HelpAndSupport.NewTicket"  value="Support Tickets" />
+		<text name="Pages.HelpAndSupport.CompaniesNewTicket"  value="Companies Tickets" />
+		<text name="Pages.HelpAndSupport.MainProvidersNewTicket"  value="Main Providers Tickets" />
+		<text name="Pages.HelpAndSupport.ProvidersNewTicket"   value="Providers Tickets" />
+		<text name="Pages.HelpAndSupport.BranchesNewTicket"  value="Branches Tickets" />
+
+
+		<text name="Pages.Tickets.Title"  value="Tickets" />
+		<text name="Pages.Tickets.ModalTitle"  value="Ticket" />
+		<text name="Pages.Tickets.NewTicket"  value="Open new ticket" />
+		<text name="Pages.Tickets.ProblemCategory"  value="category" />
+		<text name="Pages.Tickets.Description"  value="Description" />
+		<text name="Pages.Tickets.FilePath"  value="File" />
+		<text name="Pages.Tickets.Code"  value="Ticket Number" />
+		<text name="Pages.Tickets.TicketComments"  value="Comments" />
+		<text name="Pages.Tickets.Comment"  value="Comment" />
+
+		<text name="Pages.Tickets.TicketStatus"  value="Status" />
+		<text name="Pages.Tickets.TicketStatus.Pending"  value="Pending" />
+		<text name="Pages.Tickets.TicketStatus.Completed"  value="Completed" />
+
+
+		<text name="Pages.Tickets.ProblemCategories.Dashboard"  value="Dashboard" />
+		<text name="Pages.Tickets.ProblemCategories.Wallet"  value="Wallet" />
+		<text name="Pages.Tickets.ProblemCategories.Supscriptions"  value="Supscriptions" />
+		<text name="Pages.Tickets.ProblemCategories.Employees"  value="Employees" />
+		<text name="Pages.Tickets.ProblemCategories.Branches"  value="Branches" />
+		<text name="Pages.Tickets.ProblemCategories.Veichles"  value="Veichles" />
+		<text name="Pages.Tickets.ProblemCategories.Drivers"  value="Drivers" />
+		<text name="Pages.Tickets.ProblemCategories.Trips"  value="Trips" />
+		<text name="Pages.Tickets.ProblemCategories.VeichlesTransfer"  value="Veichles Transfers" />
+		<text name="Pages.Tickets.ProblemCategories.Invoices"  value="Invoices" />
+		<text name="Pages.Tickets.ProblemCategories.Locations"  value="Locations" />
+		<text name="Pages.Tickets.ProblemCategories.Workers"  value="Workers" />
+		<text name="Pages.Tickets.ProblemCategories.WorkersTransfersRecords"  value="Workers Transfers Records" />
+		<text name="Pages.Tickets.ProblemCategories.FuelPriceChangeRequests"  value="Fuel price change requests" />
+		<text name="Pages.Tickets.ProblemCategories.Other"  value="Other" />
+
+
+		<text name="Pages.AuditLogs.Title"  value="Audit Logs" />
+		<text name="Pages.AuditLogs.ServiceName"  value="Service Name" />
+		<text name="Pages.AuditLogs.MethodName"  value="Method Name" />
+		<text name="Pages.AuditLogs.ExecutionTime"  value="Execution Time" />
+
+		<text name="Pages.EntityChanges.Title"  value="Entity Changes" />
+		<text name="Pages.EntityChanges.EntityTypeFullName"  value="Entity Type Full Name" />
+		<text name="Pages.EntityChanges.EntityId"  value="Entity Id" />
+		<text name="Pages.EntityChanges.ChangeType"  value="Change Type" />
+		<text name="Pages.EntityChanges.ChangeTime"  value="Change Time" />
+
+		<text name="Pages.EntityChanges.ChangeType.Created"  value="Created" />
+		<text name="Pages.EntityChanges.ChangeType.Updated"  value="Updated" />
+		<text name="Pages.EntityChanges.ChangeType.Deleted"  value="Deleted" />
+
+		<!--ServicesNames-->
+		<text name="BranchRequestAppService"  value="Branch Requests" />
+		<text name="RequestOrderAppService"  value="Request Orders" />
+		<text name="ChipDeviceAppService"  value="Chip Devices" />
+		<text name="ChipNumberAppService"  value="Chip Numbers" />
+		<text name="BranchAppService"  value="Branches" />
+		<text name="BranchProviderAppService"  value="Branch Providers" />
+		<text name="CompanyAppService"  value="Companies" />
+		<text name="DriverAppService"  value="Drivers" />
+		<text name="DriverVeichleAppService"  value="Driver Veichles" />
+		<text name="InvoiceAppService"  value="Invoices" />
+		<text name="VoucherAppService"  value="Vouchers" />
+		<text name="FuelPriceChangeRequestAppService"  value="Fuel Price Change Requests" />
+		<text name="MainProviderAppService"  value="Main Providers" />
+		<text name="ProviderAppService"  value="Providers" />
+		<text name="WorkerAppService"  value="Workers" />
+		<text name="WorkerTransferRecordAppService"  value="Worker Transfer Records" />
+		<text name="RegisterationRequestAppService"  value="Registeration Requests" />
+		<text name="SubscriptionAppService"  value="Subscriptions" />
+		<text name="SubscriptionTransactionAppService"  value="Subscription Transactions" />
+		<text name="FuelTransInAppService"  value="Fuel Trans In" />
+		<text name="FuelTransOutAppService"  value="Fuel Trans Out" />
+		<text name="FuelGroupAppService"  value="Fuel Groups" />
+		<text name="VeichleAppService"  value="Veichles" />
+		<text name="VeichleRouteAppService"  value="Veichle Routes" />
+		<text name="VeichleTransferRecordAppService"  value="Veichle Transfer Records" />
+		<text name="VeichleTripAppService"  value="Veichle Trips" />
+		<text name="BranchWalletTransactionAppService"  value="Branch Wallet Transactions" />
+		<text name="CompanyWalletTransactionAppService"  value="Company Wallet Transactions" />
+		<text name="Sayarah.BranchRequests.BranchRequest" value="Branch Requests"/>
+		<text name="Sayarah.BranchRequests.RequestOrder"  value="Request Orders"/>
+		<text name="Sayarah.Authorization.Users.User"  value="Users"/>
+		<text name="Sayarah.Chips.ChipNumber"  value="Chip Numbers" />
+		<text name="Sayarah.Drivers.DriverVeichle"   value="Driver Veichles" />
+		<text name="Sayarah.Invoices.Invoice" value="Invoices" />
+		<text name="Sayarah.Invoices.Voucher"  value="Vouchers" />
+		<text name="Sayarah.Packages.Package" value="Packages"/>
+		<text name="Sayarah.Packages.Subscription"   value="Subscriptions"/>
+		<text name="Sayarah.Packages.SubscriptionTransaction"   value="Subscription Transactions"/>
+		<text name="Sayarah.Providers.FuelPriceChangeRequest"  value="Fuel Price Change Requests"/>
+		<text name="Sayarah.Providers.WorkerTransferRecord"  value="Workers Transfers Records "/>
+		<text name="Sayarah.RegisterationRequests.RegisterationRequest"  value="Registeration Requests" />
+		<text name="Sayarah.Tickets.Ticket"  value="Tickets" />
+		<text name="Sayarah.Transactions.FuelTransIn" value="FuelTransIns" />
+		<text name="Sayarah.Transactions.FuelTransOut"  value="FuelTransOuts"/>
+		<text name="Sayarah.Transactions.MaintainTransIn"   value="MaintainTransIns"/>
+		<text name="Sayarah.Transactions.MaintainTransOut"   value="MaintainTransOuts"/>
+		<text name="Sayarah.Transactions.WashTransIn"  value="WashTransIns"/>
+		<text name="Sayarah.Transactions.WashTransOut"  value="WashTransOuts"/>
+		<text name="Sayarah.Veichles.Veichle"  value="Veichles" />
+		<text name="Sayarah.Veichles.VeichleRoute"  value="Veichle Routes" />
+		<text name="Sayarah.Veichles.VeichleTransferRecord"  value="Veichles Transfers Records"/>
+		<text name="Sayarah.Veichles.VeichleTrip"  value="Trips" />
+		<text name="Sayarah.Wallets.BranchWalletTransaction"   value="Branch Wallet Transactions" />
+		<text name="Sayarah.Wallets.CompanyWalletTransaction"   value="Company Wallet Transactions" />
+		<text name="Pages.AdminNav.Transactions" value="Transactions" />
+		<text name="Pages.ProviderRevenue.Title" value="Service Provider Revenue" />
+		<text name="Pages.ProviderRevenue.VouchersAmount" value="Vouchers Amount" />
+		<text name="Pages.ProviderRevenue.TransactionsAmount" value="Transactions Amount" />
+		<text name="Pages.ProviderRevenue.ClaimBalance" value="Claim Balance" />
+		<text name="Pages.MainProvidersBankInfo.Title" value="Bank data for stations" />
+		<text name="Pages.FuelTransOuts.FuelPrice" value="FuelPrice" />
+		<text name="Pages.StationTransactions.FuelFillingOperations" value="Fuel Filling Operations" />
+		<text name="Pages.StationTransactions.ModalFuelFillingOperations" value="Fuel Filling Operation" />
+		<text name="Pages.FuelTransOuts.ThisOperation" value="this operation cannot be done" />
+		<text name="Pages.Banks.PreviewImage" value="Preview the file or image" />
+		<text name="Pages.Reports.FrequencyReport" value="Frequency report on stations" />
+		<text name="Pages.FrequencyReport.Title" value="Frequency of stations" />
+		<text name="Permission.CompanyFrequencyReport" value="Frequency report on stations" />
+		<text name="Pages.Reports.RowsNumber" value="Serial" />
+		<text name="Pages.Reports.NumbersCount" value="Numbers Count" />
+		<text name="Pages.Reports.VeichlCreationTime" value="Veichle Creation Date" />
+		<text name="Permission.CompanyConsumptionReport" value="Veichle depreciation rate report" />
+		<text name="Pages.Reports.ConsumptionReport" value="Veichle Depreciation Rate" />
+		<text name="Pages.Reports.Consumptionratio" value="Consumption Ratio"/>
+		<text name="Permission.BranchConsumptionReport" value="Branch Consumption Report"/>
+		<text name="Permission.BranchFrequencyReport" value="Branch Frequency Report"/>
+		<text name="Pages.Drivers.DriverName" value="Driver Name"/>
+		<text name="Pages.Statistics.Subscriptions" value="Subscriptions" />
+		<text name="Pages.Statistics.SubscriptionsEndDate" value="Subscription End Date" />
+		<text name="Pages.Statistics.SubscribePackage" value="Subscribe Package" />
+		<text name="Pages.Company.Dashboard.FuelStatistics" value="Fuel Statistics" />
+		<text name="Pages.Company.Dashboard.CleanStatistics" value="Clean Statistics" />
+		<text name="Pages.Company.Dashboard.ServiceStatistics" value="Service Statistics" />
+		<text name="Pages.Company.Dashboard.ExportToImage" value="Export To Image" />
+		<text name="Pages.CompanyLayout.Main" value="Main" />
+		<text name="Pages.WalletDetails.LastShipmentDate" value="Last Shipment Date" />
+		<text name="Pages.WalletDetails.IBanTransfer" value="IBan To transfer from outside" />
+		<text name="Pages.WalletDetails.TransferAccountGroup" value="Account number for transfer from within" />
+		<text name="Pages.WalletDetails.NoBanksNow" value="No Banks Now" />
+		<text name="Pages.WalletDetails.BankAccountDetails" value="Bank Account Details" />
+		<text name="Pages.WalletDetails.TaxInvoice" value="Tax Invoice" />
+		<text name="Pages.WalletDetails.SellerInfo" value="Seller Info" />
+		<text name="Pages.WalletDetails.SellerName" value="Seller Name" />
+		<text name="Pages.WalletDetails.SellerAddress" value="Seller Address" />
+		<text name="Pages.WalletDetails.BuyerInformation" value="Buyer Information" />
+		<text name="Pages.WalletDetails.BuyerName" value="Buyer Name" />
+		<text name="Pages.WalletDetails.BuyerAddress" value="Buyer Address" />
+		<text name="Pages.WalletDetails.Item" value="Item" />
+		<text name="Pages.WalletDetails.SubscriptionType" value="Subscription Type" />
+		<text name="Pages.WalletDetails.VeichlePrice" value="Veichle Price" />
+		<text name="Pages.WalletDetails.SubtotalWithoutTax" value="Subtotal Without Tax" />
+		<text name="Pages.WalletDetails.TaxValue" value="Tax Value" />
+		<text name="Pages.WalletDetails.TotalIncludingVAT" value="Total Including VAT" />
+		<text name="Pages.WalletDetails.Total" value="Total" />
+		<text name="Pages.WalletDetails.ValueAddedTax" value="Value Added Tax 15" />
+		<text name="Pages.WalletDetails.TotalWithTax" value="Total With Tax 15" />
+		<text name="Pages.WalletDetails.SubscriptionDetails" value="Subscription Details" />
+		<text name="Permission.CompanyVeichleConsumptionReport" value="Veichle depreciation report" />
+		<text name="Pages.Reports.VeichleConsumptionReport" value="Veichle Depreciation Report" />
+		<text name="Permission.VeichleConsumptionReport" value="Veichle Depreciation Report" />
+		<text name="Permission.BranchVeichleConsumptionReport" value="Veichle Depreciation Report" />
+		<text name="Pages.Reports.VeichleConsumption" value="Veichle Depreciation" />
+		<text name="Pages.Wallets.CurrentFuelAmount" value="Current Fuel Amount"/>
+		<text name="Pages.Reports.ReservedBalance" value="Reserved Balance" />
+		<text name="Pages.Wallets.OldSubscriptions" value="Old Subscriptions"/>
+		<text name="Pages.Subscriptions.SubscriptionStatus.Effective" value="Effective"/>
+		<text name="Pages.Subscriptions.SubscriptionStatus.Ended" value="Ended"/>
+		<text name="Pages.Subscriptions.SubscriptionStatus.TotalBeforeTax" value="Total Before Tax"/>
+		<text name="Pages.Subscriptions.SubscriptionStatus.TotalIncludingTax" value="Total Including Tax"/>
+		<text name="Pages.AdminEmployees.Title" value="Chips Employees"/>
+		<text name="Permission.AdminEmployees" value="Chips Employee"/>
+		<text name="Pages.AdminEmployeePermissions.Title" value="Chips Employee Permissions"/>
+		<text name="Pages.AdminEmployees.ModalTitle" value="Chips Employee"/>
+		<text name="Pages.BranchWallet.AmountForm" value="Amount Form"/>
+		<text name="Pages.BranchWallet.AmountTo" value="Amount To"/>
+		<text name="Pages.BranchWallet.AddNewTrip" value="Add New Trip"/>
+		<text name="Pages.BranchWallet.SelectTrip" value="Select Trip"/>
+		<text name="Pages.AccountSystem.Balance" value="Balance"/>
+		<text name="Pages.AccountSystem.Attachments" value="Attachments"/>
+		<text name="Pages.Products.ModalTitle" value="Product"/>
+		<text name="Pages.Products.UnitPrice" value="UnitPrice"/>
+		<text name="Pages.Products.TaxPercentage" value="Tax Percentage"/>
+		<text name="Pages.CompanyInvoice.InvoiceCreationDate" value="Invoice Creation Date"/>
+		<text name="Pages.CompanyInvoice.Fuel" value="Fuel"/> 
+		<text name="Pages.Report.TotalPrice" value="Total Price"/> 
+		<text name="Pages.Reports.ServiceProviderRevenue" value="Service Provider Revenue"/>
+		<text name="Pages.Reports.Station" value="Station"/>
+		<text name="Pages.Reports.Operations" value="Operations"/>
+		<text name="Pages.Reports.ServiceProvider" value="Service Provider"/>
+
+
+		<text name="Pages.FuelReports.FuelType" value="نوع الوقود / Type Of Fuel" />
+		<text name="Pages.FuelReports.FuelPrice" value="سعر الوحدة / Unit Price" />
+		<text name="Pages.FuelReports.TotalQuantity" value="الكمية / QTY" />
+		<text name="Pages.FuelReports.Total" value="الإجمالي غ.ش.ض / Total WithOut Vat"/>
+		<text name="Pages.FuelReports.TaxValue" value="15%ضريبة القيمة المضافة / Vat Value 15%"/>
+		<text name="Pages.FuelReports.TotalWithTax" value="الإجمالي مع الضريبة / Total with Vat"/>
+		<text name="Pages.FuelReports.FuelTransactions" value="التقرير الشهري لاستهلاك الوقود"/>
+		<text name="Pages.FuelReports.FuelTransactionsEn" value="consumption bills report"/>
+		<text name="Pages.FuelReports.TotalValues" value="الإجمالي / Total"/>
+		<text name="Pages.FuelReports.ValueReyal" value="القيمة بالريال السعودي / Value In Saudi Riyals "/>
+		<text name="Pages.FuelReports.Company" value="الشركة"/>
+		<text name="Pages.FuelReports.CompanyEn" value="Company"/>
+		<text name="Pages.FuelReports.Period" value="فترة التقرير من / إلي"/>
+		<text name="Pages.FuelReports.PeriodEn" value="Report Date from - to"/>
+		<text name="Pages.FuelReports.ChooseMonth" value="Please Select The Month First"/>
+
+		<text name="Pages.Locations.SearchByName" value="Search By Name"/>
+		<text name="Pages.MainProviders.TotalBalancesClaimed" value="Total Balances Claimed"/>
+		<text name="Pages.MainProviders.ThereAreNoMovements" value="There are no movements at this time"/>
+		<text name="Pages.ManageEmailAddress.ReSend" value="ReSend"/>
+		<text name="Pages.ManageEmailAddress.CodeSent" value="Activation code has been sent to your email"/>
+		<text name="Permission.GasStationLocations" value="Gas Station Locations"/>
+		<text name="Permission.CarChargingStations" value="Electric car charging stations"/>
+		<text name="Permission.BranchDrivers" value="Branch drivers"/>
+		<text name="Pages.Login.RecoverPassword" value="Recover password"/>
+		<text name="Pages.Login.CreateAccount" value="Create Account"/>
+		<text name="Pages.MainProvider.WorkerName" value="Worker Name"/>
+		<text name="Pages.ChipsNumbers.ItsRelatedToOtherCompany" value="This chip is linked to another company"/>
+		<text name="Pages.ChipsNumbers.ItsRelatedToOtherBranch" value="This chip is linked to another Branch"/>
+
+
+		<text name="Pages.InvoiceCompany.Print" value="طباعة / Print"/>
+		<text name="Pages.InvoiceCompany.TaxInvoice" value="فاتورة ضريبية / Tax Invoice"/>
+		<text name="Pages.InvoiceCompany.RowsNumber" value="الرقم التسلسلي/ Serial Number" />
+		<text name="Pages.InvoiceCompany.InvoiceCreationDate" value="تاريخ إنشاء الفاتورة / Invoice Creation Date"/>
+		<text name="Pages.InvoiceCompany.StartDate" value="تاريخ البداية / Start Date"/>
+		<text name="Pages.InvoiceCompany.EndDate" value="تاريخ النهاية / End Date"/>
+		<text name="Pages.InvoiceCompany.SellerInfo" value="معلومات البائع / Seller Information"/>
+		<text name="Pages.InvoiceCompany.SellerName" value="إسم البائع / Seller Name"/>
+		<text name="Pages.InvoiceCompany.SellerAddress" value="عنوان البائع / Seller Address"/>
+		<text name="Pages.InvoiceCompany.TaxNumber" value="الرقم الضريبي / Tax Number"/>
+		<text name="Pages.InvoiceCompany.RegNo" value="رقم السجل التجاري / Commercial Record"/>
+		<text name="Pages.InvoiceCompany.BuyerInformation" value="معلومات المشتري / Buyer Information"/>
+		<text name="Pages.InvoiceCompany.BuyerName" value="إسم المشتري / Buyer Name"/>
+		<text name="Pages.InvoiceCompany.BuyerAddress" value="عنوان المشتري / Buyer Address"/>
+		<text name="Pages.InvoiceCompany.Product" value="المنتج / Product"/>
+		<text name="Pages.InvoiceCompany.Quantity" value=" (لتر)الكمية / Quantity(Liter)"/>
+		<text name="Pages.InvoiceCompany.SubtotalWithoutTax" value="السعر غ.ش.ض / Total WithOut Vat"/>
+		<text name="Pages.InvoiceCompany.TaxPercentage" value="نسبة الضريبة / Vat %"/>
+		<text name="Pages.InvoiceCompany.TaxValue" value="ضريبة القيمة المضافة / Vat Value"/>
+		<text name="Pages.InvoiceCompany.TotalIncludingVAT" value="الإجمالي ش.ض  / Total With Vat"/>
+		<text name="Pages.InvoiceCompany.Fuel" value="وقود  / Fuel"/>
+		<text name="Pages.InvoiceCompany.Total" value="الإجمالي غ.ش.ض / Total WithOut Vat"/>
+		<text name="Pages.InvoiceCompany.ValueAddedTax" value="ضريبة القيمة المضافة %15 / Vat 15"/>
+		<text name="Pages.InvoiceCompany.TotalWithTax" value="الإجمالي مع الضريبة  %15 / Total with Vat 15"/>
+		<text name="Pages.ChipsNumbers.NotLinkedToVehicles" value="Not Linked To Vehicles"/>
+		<text name="Pages.invoices.Code" value="Invoice" />
+		<text name="Pages.Station.Name" value="Station name" />
+		<text name="Permission.BranchFuelTransactions" value="Fuel filling operations" />
+		<text name="Pages.WalletsPending.Title" value="Operations under review" />
+		<text name="Pages.Reports.AccountStatement" value="Account Statement" />
+		<text name="Pages.Reports.TotalBalances" value="Total Balances" />
+		<text name="Pages.Dashboard.CompanyWalletBalance" value="Company Wallet Balance" />
+		<text name="Pages.Dashboard.CompanyBranchWalletBalance" value="Company wallet balance + branches" />
+		<text name="Pages.Reports.ProvidersConsumption" value="Total provider consumption" />
+		<text name="Permission.MainProviderConsumptionReport" value="rovider Consumption Report" />
+		<text name="Pages.Invoices.FullPeriod" value="Full Period" />
+		<text name="Pages.Invoices.Total" value="Total" />
+
+
+
+
+	</texts>
+</localizationDictionary>
