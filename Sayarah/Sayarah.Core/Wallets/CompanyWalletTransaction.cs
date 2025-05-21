@@ -1,7 +1,7 @@
 ﻿
 using Abp.Auditing;
 using Sayarah.Companies;
-using Sayarah.Helpers.Enums;
+using Sayarah.Core.Helpers;
 using Sayarah.Lookups;
 using System;
 using System.ComponentModel.DataAnnotations;

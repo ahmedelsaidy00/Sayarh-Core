@@ -1,7 +1,7 @@
 ﻿using Abp.Auditing;
 using Sayarah.Authorization.Users;
 using Sayarah.Companies;
-using Sayarah.Helpers.Enums;
+using Sayarah.Core.Helpers;
 using Sayarah.Interfaces;
 using Sayarah.Veichles;
 using System;

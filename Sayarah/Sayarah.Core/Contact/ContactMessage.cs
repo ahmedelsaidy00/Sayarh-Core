@@ -1,5 +1,5 @@
 ﻿using Sayarah.Authorization.Users;
-using Sayarah.Helpers.Enums;
+using Sayarah.Core.Helpers;
 using Sayarah.Interfaces;
 using System;
 using System.ComponentModel.DataAnnotations;

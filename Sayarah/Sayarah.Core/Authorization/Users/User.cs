@@ -1,7 +1,7 @@
 ﻿using Abp.Authorization.Users;
 using Microsoft.AspNetCore.Identity;
 using Sayarah.Companies;
-using Sayarah.Helpers.Enums;
+using Sayarah.Core.Helpers;
 using Sayarah.Providers;
 using System;
 using System.Collections.Generic;

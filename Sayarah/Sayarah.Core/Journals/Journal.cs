@@ -1,7 +1,7 @@
 ﻿using Abp.Auditing;
 using Abp.Domain.Entities.Auditing;
 using Sayarah.Companies;
-using Sayarah.Helpers.Enums;
+using Sayarah.Core.Helpers;
 using Sayarah.Providers;
 using System;
 using System.Collections.Generic;

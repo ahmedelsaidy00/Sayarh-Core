@@ -1,4 +1,4 @@
-namespace Sayarah.Helpers.Enums
+namespace Sayarah.Core.Helpers
 {
     public enum LanguageEnum
     {

@@ -2,9 +2,9 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System;
 using Sayarah.Authorization.Users;
-using Sayarah.Helpers.Enums;
 using Sayarah.Veichles;
 using Abp.Auditing;
+using Sayarah.Core.Helpers;
 
 namespace Sayarah.CompanyInvoices
 {
