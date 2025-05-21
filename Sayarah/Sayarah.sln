@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sayarah.Core", "Sayarah.Cor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sayarah.EntityFramework", "Sayarah.EntityFramework\Sayarah.EntityFramework.csproj", "{B3059EEF-34F0-EC5A-E964-D0A9894E2A9C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sayarah.Application", "Sayarah.Application\Sayarah.Application.csproj", "{7C452BA5-1462-4660-BC35-BEE227A0FA59}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B3059EEF-34F0-EC5A-E964-D0A9894E2A9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3059EEF-34F0-EC5A-E964-D0A9894E2A9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3059EEF-34F0-EC5A-E964-D0A9894E2A9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C452BA5-1462-4660-BC35-BEE227A0FA59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C452BA5-1462-4660-BC35-BEE227A0FA59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C452BA5-1462-4660-BC35-BEE227A0FA59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C452BA5-1462-4660-BC35-BEE227A0FA59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
