@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Abp.AspNetCore" Version="7.3.0" />
+		<PackageReference Include="Abp.AutoMapper" Version="7.3.0" />
+		<PackageReference Include="Abp.EntityFrameworkCore" Version="7.3.0" />
+		<PackageReference Include="Abp.ZeroCore" Version="7.3.0" />
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+		<PackageReference Include="ClosedXML" Version="0.105.0" />
+		<PackageReference Include="EPPlus" Version="8.0.0" />
+		<PackageReference Include="EPPlus.Interfaces" Version="8.0.0" />
+		<PackageReference Include="EPPlus.System.Drawing" Version="8.0.0" />
+		<PackageReference Include="ExcelNumberFormat" Version="1.1.0" />
+		<PackageReference Include="FirebaseAdminCore" Version="2.0.0" />
+		<PackageReference Include="Microsoft.AspNet.Identity.Core" Version="2.2.4" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.5" />
+		<PackageReference Include="QRCoder" Version="1.6.0" />
+		<PackageReference Include="System.Drawing.Common" Version="9.0.5" />
+		<PackageReference Include="System.Linq.Dynamic.Core" Version="1.6.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Sayarah.Core\Sayarah.Core.csproj" />
+	</ItemGroup>
+</Project>
