@@ -3,8 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System;
 using Sayarah.Authorization.Users;
 using Sayarah.Providers;
-using Sayarah.Helpers.Enums;
 using Abp.Auditing;
+using Sayarah.Core.Helpers;
 
 namespace Sayarah.BranchRequests
 {

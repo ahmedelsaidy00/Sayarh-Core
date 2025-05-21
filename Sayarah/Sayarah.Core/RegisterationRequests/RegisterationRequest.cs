@@ -1,6 +1,6 @@
 ﻿using Abp.Auditing;
 using Sayarah.Authorization.Users;
-using Sayarah.Helpers.Enums;
+using Sayarah.Core.Helpers;
 using Sayarah.Interfaces;
 using Sayarah.Lookups;
 using System;

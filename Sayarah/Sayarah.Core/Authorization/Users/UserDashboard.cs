@@ -1,6 +1,5 @@
 ﻿using Abp.Domain.Entities;
 using Sayarah.Companies;
-using Sayarah.Helpers.Enums;
 using Sayarah.Providers;
 using System.ComponentModel.DataAnnotations.Schema;
 

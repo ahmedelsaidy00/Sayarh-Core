@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities.Auditing;
 using Sayarah.Authorization.Users;
-using Sayarah.Helpers.Enums;
+using Sayarah.Core.Helpers;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 

@@ -1,5 +1,5 @@
 ﻿using Abp.Domain.Entities;
-using Sayarah.Helpers.Enums;
+using Sayarah.Core.Helpers;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Sayarah.Authorization.Users
