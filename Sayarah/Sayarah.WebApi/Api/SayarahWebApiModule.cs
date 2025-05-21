@@ -4,6 +4,7 @@ using Abp.AspNetCore;
 using Abp.AspNetCore.Configuration;
 using Abp.Configuration.Startup;
 using Abp.Modules;
+using Sayarah.Application;
 
 namespace Sayarah.Api
 {

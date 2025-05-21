@@ -31,10 +31,23 @@ using System.Web.Http.Results;
 using Sayarah.CompanyInvoices;
 using Abp.Auditing;
 using Microsoft.AspNetCore.Mvc;
+using Sayarah.Application.Veichles.Dto;
+using Sayarah.Application.Veichles;
+using Sayarah.Application.Helpers.StoredProcedures;
+using Sayarah.Application.Providers;
+using Sayarah.Application.Transactions.FuelTransactions;
+using Sayarah.Application.CompanyInvoices;
+using Sayarah.Application.Helpers;
+using AutoMapper.Internal.Mappers;
+using Sayarah.Application.Providers.Dto;
+using Sayarah.Application.Transactions.FuelTransactions.Dto;
+using Sayarah.Core.Helpers;
+using Abp.AspNetCore.Mvc.Controllers;
+using Sayarah.Application.Drivers.Dto;
 
 namespace Sayarah.Api.Controllers
 {
-    public class WorkerController : AbpApiController
+    public class WorkerController : AbpController
     {
         private readonly IVeichleAppService _veichleAppService;
         public readonly IRepository<Worker, long> _workerRepository;

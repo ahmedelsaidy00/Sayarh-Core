@@ -8,9 +8,12 @@
 
   <ItemGroup>
     <PackageReference Include="Abp.AspNetCore" Version="7.3.0" />
+    <PackageReference Include="Abp.Zero.Common" Version="7.3.0" />
+    <PackageReference Include="Abp.ZeroCore" Version="7.3.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Sayarah.Application\Sayarah.Application.csproj" />
     <ProjectReference Include="..\Sayarah.Core\Sayarah.Core.csproj" />
   </ItemGroup>
 
