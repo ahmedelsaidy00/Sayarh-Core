@@ -18,6 +18,8 @@ namespace Sayarah.Application.Transactions.FuelTransactions
 
         Task<string> ExportExcelAdmin(RequestFuelExcelDtoInput input);
         Task<GetFuelTransoutOutput> GetAllPaged(GetFuelTransInsInput input);
+        Task<List<FuelTransOutDto>> GetAllAsyncByWorkerIdNotCompleted(long workerId);
+        Task<List<FuelTransOutDto>> GetAllAsyncByWorkerIdMustCancel(long workerId);
 
 
         Task<GetBranchConsumptionReportOutput> GetBranchConsumptionReport(GetFuelTransInsInput input);

@@ -115,6 +115,72 @@ namespace Sayarah.Application.Veichles
         }
 
 
+        public async Task<GetVeichleBySimOutput> GetByIdForNotCompleted(long vechileId)
+        {
+
+            // get sim details 
+            var Veichle = await Repository.GetAll()
+             .Include(x => x.Branch.Company)
+             .Include(x => x.Brand)
+             .Include(x => x.Model)
+             .Include(x => x.FuelGroup)
+             .Include(x => x.Driver)
+             .Include(x => x.VeichleTrips)
+             .FirstOrDefaultAsync(x => x.Id == vechileId);
+
+            if (Veichle != null)
+            {
+
+                if (Veichle != null)
+                {
+                    var _mappedVeichle = ObjectMapper.Map<VeichleDto>(Veichle);
+                    decimal veichleBalanceInLitre = 0;
+                    decimal veichleBalanceInSar = 0;
+                    // check usage type 
+                    if (_mappedVeichle.ConsumptionType == ConsumptionType.Group && _mappedVeichle.FuelGroup != null)
+                    {
+                        if (_mappedVeichle.FuelGroup.GroupType == GroupType.Litre)
+                        {
+                            veichleBalanceInLitre = _mappedVeichle.Fuel_Balance;
+                        }
+
+                        else if (_mappedVeichle.FuelGroup.GroupType == GroupType.Period)
+                        {
+                            // check period end date 
+
+                            if (_mappedVeichle.FuelGroup.PeriodConsumptionType == PeriodConsumptionType.Money)
+                            {
+                                if (DateTime.UtcNow <= _mappedVeichle.MoneyBalanceEndDate)
+                                    veichleBalanceInSar = _mappedVeichle.MoneyBalance;
+                            }
+                            else if (_mappedVeichle.FuelGroup.PeriodConsumptionType == PeriodConsumptionType.Litre)
+                            {
+                                if (DateTime.UtcNow <= _mappedVeichle.MoneyBalanceEndDate)
+                                    veichleBalanceInLitre = _mappedVeichle.FuelLitreBalance;
+                            }
+                        }
+                    }
+
+
+                    return new GetVeichleBySimOutput
+                    {
+                        Veichle = _mappedVeichle,
+                        VeichleBalanceInLitre = veichleBalanceInLitre,
+                        VeichleBalanceInSar = veichleBalanceInSar,
+                        GroupType = _mappedVeichle.FuelGroup != null ? _mappedVeichle.FuelGroup.GroupType : GroupType.None,
+                        PeriodConsumptionType = _mappedVeichle.FuelGroup != null ? _mappedVeichle.FuelGroup.PeriodConsumptionType : PeriodConsumptionType.Money,
+                        MaximumRechargeAmount = _mappedVeichle.FuelGroup != null ? _mappedVeichle.FuelGroup.MaximumRechargeAmount : 0,
+                        CounterPicIsRequired = _mappedVeichle.Branch != null && _mappedVeichle.Branch.Company != null ? _mappedVeichle.Branch.Company.CounterPicIsRequired : false,
+                        MaximumRechargeAmountForOnce = _mappedVeichle.FuelGroup != null ? _mappedVeichle.FuelGroup.MaximumRechargeAmountForOnce : 0,
+                        Success = true,
+                    };
+                }
+                else return new GetVeichleBySimOutput { NotFoundVeichle = true };
+
+            }
+
+            return new GetVeichleBySimOutput { NotFoundSim = true, Message = L("Pages.Veichles.Messages.NotRegisteredChipNumber") };
+        }
 
         public async Task<GetVeichleBySimOutput> GetVeichle(GetVeichlesInput input)
         {

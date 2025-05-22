@@ -1,35 +1,12 @@
-﻿using Abp.WebApi.Controllers;
-using Sayarah.Api.Models;
-using Sayarah.Helpers;
-using System;
+﻿using Sayarah.Api.Models;
 using System.Globalization;
-using System.Threading.Tasks;
-using System.Web.Http;
-using System.Collections.Generic;
-using Sayarah.Drivers.Dto;
 using Sayarah.Providers;
-using Sayarah.Veichles.Dto;
-using Sayarah.Veichles;
 using Abp.Application.Services.Dto;
 using Newtonsoft.Json;
-using System.Web;
 using Abp.Domain.Repositories;
-using System.IO;
-using Sayarah.Transactions.Dto;
-using Sayarah.Transactions;
-using Sayarah.Providers.Dto;
 using Sayarah.Companies;
 using Abp.UI;
-using Sayarah.Wallets.Dto;
-using Sayarah.Helpers.Dtos;
-using Abp.AutoMapper;
-using System.Linq;
-using Sayarah.Helpers.Enums;
 using Sayarah.Configuration;
-using Sayarah.Chips;
-using System.Web.Http.Results;
-using Sayarah.CompanyInvoices;
-using Abp.Auditing;
 using Microsoft.AspNetCore.Mvc;
 using Sayarah.Application.Veichles.Dto;
 using Sayarah.Application.Veichles;
@@ -37,13 +14,15 @@ using Sayarah.Application.Helpers.StoredProcedures;
 using Sayarah.Application.Providers;
 using Sayarah.Application.Transactions.FuelTransactions;
 using Sayarah.Application.CompanyInvoices;
-using Sayarah.Application.Helpers;
-using AutoMapper.Internal.Mappers;
 using Sayarah.Application.Providers.Dto;
 using Sayarah.Application.Transactions.FuelTransactions.Dto;
 using Sayarah.Core.Helpers;
 using Abp.AspNetCore.Mvc.Controllers;
 using Sayarah.Application.Drivers.Dto;
+using Sayarah.Application.Wallets.Dto;
+using Sayarah.Application.Helpers.StoredProcedures.Dto;
+using Sayarah.Application.Helpers;
+using DocumentFormat.OpenXml.Spreadsheet;
 
 namespace Sayarah.Api.Controllers
 {
@@ -57,7 +36,7 @@ namespace Sayarah.Api.Controllers
         private readonly IFuelPumpAppService _fuelPumpAppService;
         private readonly IStoredProcedureAppService _storedProcedureAppService;
         private readonly ICompanyInvoiceJopAppService _companyInvoiceJopAppService;
-        public UploadWebPController uploadController { get; set; }
+        private readonly UploadWebPController _uploadController;
 
         public WorkerController(
 
@@ -68,7 +47,8 @@ namespace Sayarah.Api.Controllers
         IFuelPumpAppService fuelPumpAppService,
         IRepository<Branch, long> branchRepository,
         IStoredProcedureAppService storedProcedureAppService,
-        ICompanyInvoiceJopAppService companyInvoiceJopAppService
+        ICompanyInvoiceJopAppService companyInvoiceJopAppService,
+                   UploadWebPController uploadController
                                )
         {
             LocalizationSourceName = SayarahConsts.LocalizationSourceName;
@@ -81,6 +61,7 @@ namespace Sayarah.Api.Controllers
             _branchRepository = branchRepository;
             _storedProcedureAppService = storedProcedureAppService;
             _companyInvoiceJopAppService = companyInvoiceJopAppService;
+            _uploadController=uploadController;
         }
 
         CultureInfo new_lang = new CultureInfo("ar");
@@ -270,6 +251,7 @@ namespace Sayarah.Api.Controllers
 
         [HttpPost]
         [Language("Lang")]
+        [Consumes("multipart/form-data")]
         public async Task<GetVeichleDetailsOutput> UpdateVeichleDetails()
         {
             try
@@ -277,68 +259,71 @@ namespace Sayarah.Api.Controllers
                 if (!AbpSession.UserId.HasValue || AbpSession.UserId.Value <= 0)
                     return new GetVeichleDetailsOutput { Message = L("MobileApi.Messages.LoginFirst") };
 
-                var cntx = Request.Properties["MS_HttpContext"] as HttpContextWrapper;
-                UpdateVeichleSimPicDto input = JsonConvert.DeserializeObject<UpdateVeichleSimPicDto>(cntx.Request.Params["Data"]);
+                var form = HttpContext.Request.Form;
 
-                // check if car exists in system or not first 
+                if (!form.ContainsKey("Data"))
+                    return new GetVeichleDetailsOutput { Message = L("MobileApi.Messages.InvalidRequest") };
+
+                var jsonData = form["Data"];
+                var input = JsonConvert.DeserializeObject<UpdateVeichleSimPicDto>(jsonData);
+
+                // Check if vehicle exists
                 await _veichleAppService.CheckVeichleExists(input);
 
+                var _medias = new List<CreateVeichlePicDto>();
 
-                List<CreateVeichlePicDto> _medias = new List<CreateVeichlePicDto>();
-                if (HttpContext.Current.Request.Files != null && HttpContext.Current.Request.Files.Count > 0)
+                if (form.Files != null && form.Files.Count > 0)
                 {
-                    var keys = HttpContext.Current.Request.Files.AllKeys;
-                    for (int i = 0; i < HttpContext.Current.Request.Files.Count; i++)
+                    foreach (var file in form.Files)
                     {
-                        var file = HttpContext.Current.Request.Files[i];
-                        if (file.ContentLength == 0)
+                        if (file.Length == 0)
                             continue;
 
-                        var orderFile = cntx.Request.Files[i];
-                        NewUploadFilesDto _newUploadFilesDto = new NewUploadFilesDto();
-                        _newUploadFilesDto.StorageLocation = 5;
-                        _newUploadFilesDto.AllowedTypes = 0;
-                        _newUploadFilesDto.Sizes = "800&600";
-                        _newUploadFilesDto.UploadStyle = NewUploadStyle.BothOfThem;
-                        string _uniqueFileName = uploadController.UploadPhotoWebP(orderFile, _newUploadFilesDto);
-                        CreateVeichlePicDto _media = new CreateVeichlePicDto();
+                        var uploadOptions = new NewUploadFilesDto
+                        {
+                            StorageLocation = 5,
+                            AllowedTypes = 0,
+                            Sizes = "800&600",
+                            UploadStyle = NewUploadStyle.BothOfThem
+                        };
+                        // Make sure _uploadController is injected or refactor this method to a service
+                        var uploadedFileName = await _uploadController.UploadPhotoWebP(file, uploadOptions);
 
-                        _media.FilePath = _uniqueFileName;
-                        _medias.Add(_media);
+                        _medias.Add(new CreateVeichlePicDto
+                        {
+                            FilePath = uploadedFileName.Value
+                        });
                     }
                 }
 
-
                 input.VeichleMedias = _medias;
 
-                // call update 
                 var updatedVechile = await _veichleAppService.UpdateVeichleDetails(input);
 
                 if (updatedVechile != null)
                 {
-                    // get viechle details here 
-                    var _details = await GetVeichleDetails(new GetVeichlesInput { SimNumber = input.SimNumber });
+                    var details = await GetVeichleDetails(new GetVeichlesInput { SimNumber = input.SimNumber });
 
                     return new GetVeichleDetailsOutput
                     {
                         Message = L("Pages.Veichles.Messages.VeichleUpdated"),
-                        Veichle = _details.Veichle,
-                        Transactions = _details.Transactions,
-                        FuelPrice = _details.FuelPrice,
+                        Veichle = details.Veichle,
+                        Transactions = details.Transactions,
+                        FuelPrice = details.FuelPrice,
                         Success = true
                     };
                 }
                 else
+                {
                     return new GetVeichleDetailsOutput { Message = L("MobileApi.Messages.ErrorOccurred") };
-
-
+                }
             }
             catch (Exception ex)
             {
+                Logger.Error(ex.Message, ex);
                 return new GetVeichleDetailsOutput { Message = ex.Message };
             }
         }
-
 
 
         [HttpPost]
@@ -367,6 +352,8 @@ namespace Sayarah.Api.Controllers
 
         [HttpPost]
         [Language("Lang")]
+        [Consumes("multipart/form-data")]
+
         public async Task<CreateTransactionOutput> InitiateFuelTransOut()
         {
             try
@@ -374,55 +361,54 @@ namespace Sayarah.Api.Controllers
                 if (!AbpSession.UserId.HasValue || AbpSession.UserId.Value <= 0)
                     return new CreateTransactionOutput { Message = L("MobileApi.Messages.LoginFirst") };
 
-                var cntx = Request.Properties["MS_HttpContext"] as HttpContextWrapper;
-                CreateFuelTransOutDto input = JsonConvert.DeserializeObject<CreateFuelTransOutDto>(cntx.Request.Params["Data"]);
+                var form = HttpContext.Request.Form;
 
+                if (!form.ContainsKey("Data"))
+                    return new CreateTransactionOutput { Message = L("MobileApi.Messages.InvalidRequest") };
+
+                var jsonData = form["Data"];
+                var input = JsonConvert.DeserializeObject<CreateFuelTransOutDto>(jsonData);
 
                 var veichle = await _veichleAppService.GetAsync(new EntityDto<long> { Id = input.VeichleId.Value });
                 input.BranchId = veichle.BranchId;
                 input.VeichleId = veichle.Id;
                 input.DriverId = veichle.DriverId;
 
-                await CheckBranchWallet(new CheckBranchWalletInput { Amount = input.Price, BranchId = input.BranchId.Value, WalletType = Helpers.Enums.WalletType.Fuel });
-
-                List<CreateFuelTransOutDto> _medias = new List<CreateFuelTransOutDto>();
-                if (HttpContext.Current.Request.Files != null && HttpContext.Current.Request.Files.Count > 0)
+                await CheckBranchWallet(new CheckBranchWalletInput
                 {
-                    var keys = HttpContext.Current.Request.Files.AllKeys;
-                    for (int i = 0; i < HttpContext.Current.Request.Files.Count; i++)
-                    {
-                        var file = HttpContext.Current.Request.Files[i];
-                        if (file.ContentLength == 0)
-                            continue;
-                        var orderFile = cntx.Request.Files[i];
-                        NewUploadFilesDto _newUploadFilesDto = new NewUploadFilesDto();
-                        _newUploadFilesDto.StorageLocation = 9;
-                        _newUploadFilesDto.AllowedTypes = 0;
-                        _newUploadFilesDto.UploadStyle = NewUploadStyle.BothOfThem;
-                        string _uniqueFileName = uploadController.UploadPhotoWebP(orderFile, _newUploadFilesDto);
-                        CreateFuelTransOutDto _media = new CreateFuelTransOutDto();
+                    Amount = input.Price,
+                    BranchId = input.BranchId.Value,
+                    WalletType = WalletType.Fuel
+                });
 
-                        if (cntx.Request.Files.AllKeys[i].Contains("BeforeBoxPic"))
+                if (form.Files != null && form.Files.Count > 0)
+                {
+                    for (int i = 0; i < form.Files.Count; i++)
+                    {
+                        var file = form.Files[i];
+                        if (file.Length == 0)
+                            continue;
+
+                        var uploadOptions = new NewUploadFilesDto
                         {
-                            input.BeforeBoxPic = _uniqueFileName;
-                        }
-                        //if (cntx.Request.Files.AllKeys[i].Contains("AfterBoxPic"))
-                        //{
-                        //    input.AfterBoxPic = _uniqueFileName;
-                        //}
-                        if (cntx.Request.Files.AllKeys[i].Contains("BeforeCounterPic"))
+                            StorageLocation = 9,
+                            AllowedTypes = 0,
+                            UploadStyle = NewUploadStyle.BothOfThem
+                        };
+
+                        var uploadedFileName = await _uploadController.UploadPhotoWebP(file, uploadOptions);
+                        var fileKey = file.Name;
+
+                        if (fileKey.Contains("BeforeBoxPic"))
                         {
-                            input.BeforeCounterPic = _uniqueFileName;
+                            input.BeforeBoxPic = uploadedFileName.Value;
                         }
-                        //if (cntx.Request.Files.AllKeys[i].Contains("AfterCounterPic"))
-                        //{
-                        //    input.AfterCounterPic = _uniqueFileName;
-                        //}
+                        if (fileKey.Contains("BeforeCounterPic"))
+                        {
+                            input.BeforeCounterPic = uploadedFileName.Value;
+                        }
                     }
                 }
-
-
-                // get worker by id 
 
                 var worker = await _workerRepository.FirstOrDefaultAsync(a => a.UserId == AbpSession.UserId);
                 if (worker != null)
@@ -431,23 +417,25 @@ namespace Sayarah.Api.Controllers
                     input.WorkerId = worker.Id;
                 }
 
-
-
                 var fuelPrice = await _fuelTransOutAppService.GetFuelPrice(new GetFuelPriceInput
                 {
                     FuelType = veichle.FuelType.Value,
                     VeichleId = input.VeichleId
                 });
                 input.FuelPrice = fuelPrice;
-                // call Create 
+
                 var transaction = await _fuelTransOutAppService.CreateAsync(input);
 
                 if (transaction != null)
-                    return new CreateTransactionOutput { Message = L("MobileApi.Messages.BeforePicsCreated"), Success = true, Id = transaction.Id, Reserved = transaction.Reserved??0 };
+                    return new CreateTransactionOutput
+                    {
+                        Message = L("MobileApi.Messages.BeforePicsCreated"),
+                        Success = true,
+                        Id = transaction.Id,
+                        Reserved = transaction.Reserved ?? 0
+                    };
                 else
                     return new CreateTransactionOutput { Message = L("MobileApi.Messages.FaildTransaction") };
-
-
             }
             catch (Exception ex)
             {
@@ -457,6 +445,8 @@ namespace Sayarah.Api.Controllers
 
         [HttpPost]
         [Language("Lang")]
+        [Consumes("multipart/form-data")]
+
         public async Task<CreateTransactionOutput> InitiateFuelTransOuOldt()
         {
             try
@@ -464,55 +454,54 @@ namespace Sayarah.Api.Controllers
                 if (!AbpSession.UserId.HasValue || AbpSession.UserId.Value <= 0)
                     return new CreateTransactionOutput { Message = L("MobileApi.Messages.LoginFirst") };
 
-                var cntx = Request.Properties["MS_HttpContext"] as HttpContextWrapper;
-                CreateFuelTransOutDto input = JsonConvert.DeserializeObject<CreateFuelTransOutDto>(cntx.Request.Params["Data"]);
+                var form = HttpContext.Request.Form;
 
+                if (!form.ContainsKey("Data"))
+                    return new CreateTransactionOutput { Message = L("MobileApi.Messages.InvalidRequest") };
+
+                var jsonData = form["Data"];
+                var input = JsonConvert.DeserializeObject<CreateFuelTransOutDto>(jsonData);
 
                 var veichle = await _veichleAppService.GetAsync(new EntityDto<long> { Id = input.VeichleId.Value });
                 input.BranchId = veichle.BranchId;
                 input.VeichleId = veichle.Id;
                 input.DriverId = veichle.DriverId;
 
-                await CheckBranchWallet(new CheckBranchWalletInput { Amount = input.Price, BranchId = input.BranchId.Value, WalletType = Helpers.Enums.WalletType.Fuel });
-
-                List<CreateFuelTransOutDto> _medias = new List<CreateFuelTransOutDto>();
-                if (HttpContext.Current.Request.Files != null && HttpContext.Current.Request.Files.Count > 0)
+                await CheckBranchWallet(new CheckBranchWalletInput
                 {
-                    var keys = HttpContext.Current.Request.Files.AllKeys;
-                    for (int i = 0; i < HttpContext.Current.Request.Files.Count; i++)
-                    {
-                        var file = HttpContext.Current.Request.Files[i];
-                        if (file.ContentLength == 0)
-                            continue;
-                        var orderFile = cntx.Request.Files[i];
-                        NewUploadFilesDto _newUploadFilesDto = new NewUploadFilesDto();
-                        _newUploadFilesDto.StorageLocation = 9;
-                        _newUploadFilesDto.AllowedTypes = 0;
-                        _newUploadFilesDto.UploadStyle = NewUploadStyle.BothOfThem;
-                        string _uniqueFileName = uploadController.UploadPhotoWebP(orderFile, _newUploadFilesDto);
-                        CreateFuelTransOutDto _media = new CreateFuelTransOutDto();
+                    Amount = input.Price,
+                    BranchId = input.BranchId.Value,
+                    WalletType = WalletType.Fuel
+                });
 
-                        if (cntx.Request.Files.AllKeys[i].Contains("BeforeBoxPic"))
+                if (form.Files != null && form.Files.Count > 0)
+                {
+                    for (int i = 0; i < form.Files.Count; i++)
+                    {
+                        var file = form.Files[i];
+                        if (file.Length == 0)
+                            continue;
+
+                        var uploadOptions = new NewUploadFilesDto
                         {
-                            input.BeforeBoxPic = _uniqueFileName;
-                        }
-                        //if (cntx.Request.Files.AllKeys[i].Contains("AfterBoxPic"))
-                        //{
-                        //    input.AfterBoxPic = _uniqueFileName;
-                        //}
-                        if (cntx.Request.Files.AllKeys[i].Contains("BeforeCounterPic"))
+                            StorageLocation = 9,
+                            AllowedTypes = 0,
+                            UploadStyle = NewUploadStyle.BothOfThem
+                        };
+
+                        var uploadedFileName = await _uploadController.UploadPhotoWebP(file, uploadOptions);
+                        var fileKey = file.Name;
+
+                        if (fileKey.Contains("BeforeBoxPic"))
                         {
-                            input.BeforeCounterPic = _uniqueFileName;
+                            input.BeforeBoxPic = uploadedFileName.Value;
                         }
-                        //if (cntx.Request.Files.AllKeys[i].Contains("AfterCounterPic"))
-                        //{
-                        //    input.AfterCounterPic = _uniqueFileName;
-                        //}
+                        if (fileKey.Contains("BeforeCounterPic"))
+                        {
+                            input.BeforeCounterPic = uploadedFileName.Value;
+                        }
                     }
                 }
-
-
-                // get worker by id 
 
                 var worker = await _workerRepository.FirstOrDefaultAsync(a => a.UserId == AbpSession.UserId);
                 if (worker != null)
@@ -521,31 +510,36 @@ namespace Sayarah.Api.Controllers
                     input.WorkerId = worker.Id;
                 }
 
-
-
                 var fuelPrice = await _fuelTransOutAppService.GetFuelPrice(new GetFuelPriceInput
                 {
                     FuelType = veichle.FuelType.Value,
                     VeichleId = input.VeichleId
                 });
                 input.FuelPrice = fuelPrice;
-                // call Create 
+
                 var transaction = await _fuelTransOutAppService.CreateAsync(input);
 
                 if (transaction != null)
-                    return new CreateTransactionOutput { Message = L("MobileApi.Messages.BeforePicsCreated"), Success = true, Id = transaction.Id };
+                    return new CreateTransactionOutput
+                    {
+                        Message = L("MobileApi.Messages.BeforePicsCreated"),
+                        Success = true,
+                        Id = transaction.Id
+                    };
                 else
                     return new CreateTransactionOutput { Message = L("MobileApi.Messages.FaildTransaction") };
-
-
             }
             catch (Exception ex)
             {
                 return new CreateTransactionOutput { Message = ex.Message };
             }
         }
+
+
         [HttpPost]
         [Language("Lang")]
+        [Consumes("multipart/form-data")]
+
         public async Task<StringOutput> CompleteFuelTransOut()
         {
             try
@@ -553,63 +547,56 @@ namespace Sayarah.Api.Controllers
                 if (!AbpSession.UserId.HasValue || AbpSession.UserId.Value <= 0)
                     return new StringOutput { Message = L("MobileApi.Messages.LoginFirst") };
 
+                var form = HttpContext.Request.Form;
 
-                var cntx = Request.Properties["MS_HttpContext"] as HttpContextWrapper;
-                UpdateFuelTransOutDto input = JsonConvert.DeserializeObject<UpdateFuelTransOutDto>(cntx.Request.Params["Data"]);
+                if (!form.ContainsKey("Data"))
+                    return new StringOutput { Message = L("MobileApi.Messages.InvalidRequest") };
 
-                List<CreateFuelTransOutDto> _medias = new List<CreateFuelTransOutDto>();
-                if (HttpContext.Current.Request.Files != null && HttpContext.Current.Request.Files.Count > 0)
+                var jsonData = form["Data"];
+                var input = JsonConvert.DeserializeObject<UpdateFuelTransOutDto>(jsonData);
+
+                if (form.Files != null && form.Files.Count > 0)
                 {
-                    var keys = HttpContext.Current.Request.Files.AllKeys;
-                    for (int i = 0; i < HttpContext.Current.Request.Files.Count; i++)
+                    for (int i = 0; i < form.Files.Count; i++)
                     {
-                        var file = HttpContext.Current.Request.Files[i];
-                        if (file.ContentLength == 0)
+                        var file = form.Files[i];
+                        if (file.Length == 0)
                             continue;
 
-                        var orderFile = cntx.Request.Files[i];
-                        NewUploadFilesDto _newUploadFilesDto = new NewUploadFilesDto();
-                        _newUploadFilesDto.StorageLocation = 9;
-                        _newUploadFilesDto.AllowedTypes = 0;
-                        _newUploadFilesDto.UploadStyle = NewUploadStyle.BothOfThem;
-                        string _uniqueFileName = uploadController.UploadPhotoWebP(orderFile, _newUploadFilesDto);
-                        CreateFuelTransOutDto _media = new CreateFuelTransOutDto();
+                        var uploadOptions = new NewUploadFilesDto
+                        {
+                            StorageLocation = 9,
+                            AllowedTypes = 0,
+                            UploadStyle = NewUploadStyle.BothOfThem
+                        };
 
-                        //if (cntx.Request.Files.AllKeys[i].Contains("BeforeBoxPic"))
-                        //{
-                        //    input.BeforeBoxPic = _uniqueFileName;
-                        //}
-                        if (cntx.Request.Files.AllKeys[i].Contains("AfterBoxPic"))
+                        var uploadedFileName = await _uploadController.UploadPhotoWebP(file, uploadOptions);
+
+                        var fileKey = form.Files[i].Name;
+
+                        if (fileKey.Contains("AfterBoxPic"))
                         {
-                            input.AfterBoxPic = _uniqueFileName;
+                            input.AfterBoxPic = uploadedFileName.Value;
                         }
-                        //if (cntx.Request.Files.AllKeys[i].Contains("BeforeCounterPic"))
-                        //{
-                        //    input.BeforeCounterPic = _uniqueFileName;
-                        //}
-                        if (cntx.Request.Files.AllKeys[i].Contains("AfterCounterPic"))
+                        if (fileKey.Contains("AfterCounterPic"))
                         {
-                            input.AfterCounterPic = _uniqueFileName;
+                            input.AfterCounterPic = uploadedFileName.Value;
                         }
                     }
                 }
 
-
-                // call update 
                 var transaction = await _fuelTransOutAppService.UpdateTransaction(input);
 
                 if (transaction != null)
                     return new StringOutput { Message = L("MobileApi.Messages.SuccessTransaction"), Success = true };
                 else
                     return new StringOutput { Message = L("MobileApi.Messages.FaildTransaction") };
-
             }
             catch (Exception ex)
             {
                 return new StringOutput { Message = ex.Message };
             }
         }
-
 
         [HttpPost]
         [Language("Lang")]

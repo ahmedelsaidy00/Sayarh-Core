@@ -15,6 +15,7 @@ namespace Sayarah.Application.Veichles
         Task CheckVeichleExists(UpdateVeichleSimPicDto input);
         Task<VeichleDto> UpdateVeichleDetails(UpdateVeichleSimPicDto input);
         Task<VeichleDto> GetByPlateNum(UpdateVeichleSimPicDto input);
+        Task<GetVeichleBySimOutput> GetByIdForNotCompleted(long vechileId);
 
         Task<GetVeichleBySimOutput> GetBySim(GetVeichlesInput input);
         Task<GetVeichleBySimOutput> GetVeichle(GetVeichlesInput input);

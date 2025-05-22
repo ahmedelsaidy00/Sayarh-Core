@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sayarah.WebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a4fc038f4d0041c84c77691b2e0944a74f98041")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac1ff36f01357b9a294e3cfdb534901d1badcf57")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sayarah.WebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sayarah.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

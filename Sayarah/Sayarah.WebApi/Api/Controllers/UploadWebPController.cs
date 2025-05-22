@@ -1,229 +1,206 @@
-﻿using ImageProcessor;
+﻿using ImageMagick;
+using ImageProcessor;
 using ImageProcessor.Imaging;
-using ImageProcessor.Plugins.WebP.Imaging.Formats;
+
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Web;
-using System.Web.Http;
-using System.Web.Mvc;
+
 namespace Sayarah.Api.Controllers
 {
     public class UploadWebPController : Controller
     {
-        private string StorageRoot
+        private readonly IWebHostEnvironment _env;
+
+        public UploadWebPController(IWebHostEnvironment env)
         {
-            get
-            {
-                switch (fileType)
-                {
-                    case 1:
-                        return Path.Combine(HttpRuntime.AppDomainAppPath, "Files/Users");
-                    case 2:
-                        return Path.Combine(HttpRuntime.AppDomainAppPath, "files/SitePages/About");
-                    case 3:
-                        return Path.Combine(HttpRuntime.AppDomainAppPath, "files/SitePages/Index");
-                    case 4:
-                        return Path.Combine(HttpRuntime.AppDomainAppPath, "files/Companies");
-                    case 5:
-                        return Path.Combine(HttpRuntime.AppDomainAppPath, "files/Veichles");
-                    case 6:
-                        return Path.Combine(HttpRuntime.AppDomainAppPath, "files/Drivers");
-                    case 7:
-                        return Path.Combine(HttpRuntime.AppDomainAppPath, "files/Providers");
-                    case 8:
-                        return Path.Combine(HttpRuntime.AppDomainAppPath, "files/Workers");
-                    case 9:
-                        return Path.Combine(HttpRuntime.AppDomainAppPath, "files/FuelTransOut");
-                    case 10:
-                        return Path.Combine(HttpRuntime.AppDomainAppPath, "files/MaintainTransOut");
-                    case 11:
-                        return Path.Combine(HttpRuntime.AppDomainAppPath, "files/WashTransOut");
-                    case 12:
-                        return Path.Combine(HttpRuntime.AppDomainAppPath, "files/OilTransOut");
-                    default:
-                        return Path.Combine(HttpRuntime.AppDomainAppPath, "Files");
-                }
-            }
+            _env = env;
         }
 
-        public int fileType = 0;
-        #region UploadData With Options
-        //////////////////////////////UploadData With Options////////////////////////////////////////////////
-        //tested
-        public string UploadPhotoWebP(HttpPostedFileBase file, NewUploadFilesDto input)
+        private string GetStorageRoot(int fileType)
         {
-            List<string> thumbnailUrls = new List<string>();
+            string basePath = Path.Combine(_env.ContentRootPath, "files");
 
-            if (file == null || file.ContentLength <= 0)
+            return fileType switch
             {
-                return "";
-            }
-            fileType = input.StorageLocation;
-            string[] alloweImageTypes = new string[] { "image/jpeg", "image/png", "image/jpg", "image/webp", "image/*" };
-            string fileName = Path.GetFileName(file.FileName);
-            string ext = fileName.Substring(fileName.LastIndexOf("."), fileName.Length - (fileName.LastIndexOf(".")));
-            string uniqueFileName = Guid.NewGuid().ToString() + ext;
-            var path = Path.Combine(StorageRoot, uniqueFileName);
+                1 => Path.Combine(basePath, "Users"),
+                2 => Path.Combine(basePath, "SitePages", "About"),
+                3 => Path.Combine(basePath, "SitePages", "Index"),
+                4 => Path.Combine(basePath, "Companies"),
+                5 => Path.Combine(basePath, "Veichles"),
+                6 => Path.Combine(basePath, "Drivers"),
+                7 => Path.Combine(basePath, "Providers"),
+                8 => Path.Combine(basePath, "Workers"),
+                9 => Path.Combine(basePath, "FuelTransOut"),
+                10 => Path.Combine(basePath, "MaintainTransOut"),
+                11 => Path.Combine(basePath, "WashTransOut"),
+                12 => Path.Combine(basePath, "OilTransOut"),
+                _ => Path.Combine(basePath),
+            };
+        }
 
-            string _uniqueFileName = Guid.NewGuid().ToString();
-            string uniqueFileNameWebp = _uniqueFileName + ".webp";
-            var webPImagePath = Path.Combine(StorageRoot, uniqueFileNameWebp);
+        [HttpPost("upload")]
+        public async Task<ActionResult<string>> UploadPhotoWebP(IFormFile file, NewUploadFilesDto input)
+        {
             var statuses = new List<NewViewDataUploadFilesResult>();
-            JsonResult result = Json(new { files = statuses });
-            if (!alloweImageTypes.Contains(file.ContentType.ToLower()))
+            if (file == null || file.Length <= 0)
+                return BadRequest("No file uploaded.");
+
+            string[] allowedImageTypes = new[] { "image/jpeg", "image/png", "image/jpg", "image/webp", "image/*" };
+            string fileName = Path.GetFileName(file.FileName);
+            string ext = Path.GetExtension(file.FileName);
+            string uniqueFileName = Guid.NewGuid() + ext;
+            string uniqueFileNameWebp = Guid.NewGuid() + ".webp";
+
+            string storageRoot = GetStorageRoot(input.StorageLocation);
+            Directory.CreateDirectory(storageRoot);
+
+            string fullOriginalPath = Path.Combine(storageRoot, uniqueFileName);
+            string fullWebpPath = Path.Combine(storageRoot, uniqueFileNameWebp);
+
+            if (!allowedImageTypes.Contains(file.ContentType.ToLower()))
             {
-                file.SaveAs(path);
-                statuses.Add(new NewViewDataUploadFilesResult()
+                using (var stream = new FileStream(fullOriginalPath, FileMode.Create))
+                {
+                    await file.CopyToAsync(stream);
+                }
+
+                statuses.Add(new NewViewDataUploadFilesResult
                 {
                     name = fileName,
                     uniqueName = uniqueFileName,
-                    physicalPath = path,
+                    physicalPath = fullOriginalPath,
                     type = file.ContentType,
                     url = "/Upload/Download/" + uniqueFileName,
                     delete_url = "/Upload/Delete/" + uniqueFileName,
-                    thumbnailUrl = string.Empty,
-                    thumbnailUrls = new List<string>(),
-                    delete_type = "GET",
+                    delete_type = "GET"
                 });
             }
             else
             {
+                byte[] photoBytes;
+                using (var ms = new MemoryStream())
+                {
+                    await file.CopyToAsync(ms);
+                    photoBytes = ms.ToArray();
+                }
+
                 if (input.UploadStyle == NewUploadStyle.OriginalOnly || input.UploadStyle == NewUploadStyle.BothOfThem)
                 {
-                    try
+                    using (var image = new MagickImage(photoBytes))
                     {
-                        file.InputStream.Position = 0;
-                        byte[] photoBytes;
-                        using (var ms = new MemoryStream())
-                        {
-                            int length = System.Convert.ToInt32(file.InputStream.Length);
-                            file.InputStream.CopyTo(ms, length);
-                            photoBytes = ms.ToArray();
-                        }
-                        using (var inStream = new MemoryStream(photoBytes))
-                        {
-                            using (var imageFactory = new ImageFactory(preserveExifData: true))
-                            {
-                                imageFactory.Load(inStream);
-                                imageFactory.Format(new WebPFormat { Quality = 100 });
-                                imageFactory.Save(webPImagePath);
-                            }
-
-                        }
-
-                    }
-                    catch (Exception ex)
-                    {
-                        throw ex;
+                        image.Format = MagickFormat.WebP;
+                        image.Quality = 100;
+                        image.Write(fullWebpPath);
                     }
                 }
+
                 if (input.UploadStyle == NewUploadStyle.CopyOnly || input.UploadStyle == NewUploadStyle.BothOfThem)
                 {
                     foreach (var size in input.FileSizes)
                     {
-                        if (alloweImageTypes.Contains(file.ContentType.ToLower()))
+                        string resizedName = $"{size.Width}x{size.Height}_{uniqueFileNameWebp}";
+                        string resizedPath = Path.Combine(storageRoot, resizedName);
+
+                        using (var image = new MagickImage(photoBytes))
                         {
-                            var newFileName = size.Width + "x" + size.Height + "_" + uniqueFileNameWebp;
-                            var newPath = Path.Combine(StorageRoot, newFileName);
-                            try
-                            {
-                                file.InputStream.Position = 0;
-                                byte[] photoBytes;
-                                using (var ms = new MemoryStream())
-                                {
-                                    int length = System.Convert.ToInt32(file.InputStream.Length);
-                                    file.InputStream.CopyTo(ms, length);
-                                    photoBytes = ms.ToArray();
-                                }
-                                using (var inStream = new MemoryStream(photoBytes))
-                                {
-                                    using (var imageFactory2 = new ImageFactory(preserveExifData: true))
-                                    {
-                                        System.Drawing.Size _size = new System.Drawing.Size { Height = size.Height, Width = size.Width };
-                                        imageFactory2.Load(inStream);
-                                        imageFactory2.Format(new WebPFormat { Quality = 100 });
-                                        imageFactory2.Resize(new ResizeLayer(_size, ResizeMode.Stretch));
-                                        imageFactory2.Save(newPath);
-                                    }
+                            image.Format = MagickFormat.WebP;
+                            image.Quality = 100;
 
-                                }
-
-                            }
-                            catch (Exception ex)
+                            var geometry = new MagickGeometry(Convert.ToUInt32(size.Width), Convert.ToUInt32(size.Height))
                             {
-                                throw ex;
-                            }
+                                IgnoreAspectRatio = true // Stretch
+                            };
+                            image.Resize(geometry);
+
+                            image.Write(resizedPath);
                         }
                     }
                 }
-                statuses.Add(new NewViewDataUploadFilesResult()
+
+                statuses.Add(new NewViewDataUploadFilesResult
                 {
                     name = fileName,
                     uniqueName = uniqueFileNameWebp,
-                    physicalPath = webPImagePath,
+                    physicalPath = fullWebpPath,
                     type = "image/webp",
                     url = "/Upload/Download/" + uniqueFileNameWebp,
                     delete_url = "/Upload/Delete/" + uniqueFileNameWebp,
-                    delete_type = "GET",
+                    delete_type = "GET"
                 });
             }
-            return uniqueFileNameWebp;
+
+            return Ok(uniqueFileNameWebp);
+        }
+        private void ConvertToWebP(Stream input, string outputPath)
+        {
+            using var image = new MagickImage(input);
+            image.Format = MagickFormat.WebP;
+            image.Quality = 100;
+            image.Write(outputPath);
         }
     }
 
-    [Serializable]
+
     public class NewUploadFilesDto
     {
         public int StorageLocation { get; set; }
         public string Sizes { get; set; }
+        public NewAllowedTypes AllowedTypes { get; set; }
+        public NewUploadStyle UploadStyle { get; set; }
+
         public List<NewFileSize> FileSizes
         {
             get
             {
-                List<NewFileSize> fileSizes = new List<NewFileSize>();
+                var sizes = new List<NewFileSize>();
                 if (!string.IsNullOrEmpty(Sizes))
+                {
                     foreach (var size in Sizes.Split(';'))
                     {
                         try
                         {
-                            fileSizes.Add(new NewFileSize()
+                            var dimensions = size.Split('&');
+                            sizes.Add(new NewFileSize
                             {
-                                Width = Convert.ToInt32(size.Split('&')[0]),
-                                Height = Convert.ToInt32(size.Split('&')[1]),
+                                Width = int.Parse(dimensions[0]),
+                                Height = int.Parse(dimensions[1])
                             });
                         }
                         catch { }
                     }
-                return fileSizes;
+                }
+                return sizes;
             }
         }
-        public NewAllowedTypes AllowedTypes { get; set; }
-        public NewUploadStyle UploadStyle { get; set; }
     }
 
-    [Serializable]
     public class NewFileSize
     {
         public int Width { get; set; }
         public int Height { get; set; }
     }
+
     public enum NewAllowedTypes
     {
         ImagesOnly = 0,
         FilesOnly = 1,
         BothOfThem = 2
     }
+
     public enum NewUploadStyle
     {
         OriginalOnly = 0,
         CopyOnly = 1,
         BothOfThem = 2
     }
-    ///////////////////////////////////////End UploadData With Options////////////////////////////////////////////////////////
-    #endregion
+
     public class NewViewDataUploadFilesResult
     {
         public string name { get; set; }
@@ -236,6 +213,5 @@ namespace Sayarah.Api.Controllers
         public string thumbnailUrl { get; set; }
         public List<string> thumbnailUrls { get; set; }
         public string delete_type { get; set; }
-
     }
 }

@@ -212,7 +212,53 @@ namespace Sayarah.Application.Transactions.FuelTransactions
                 throw ex;
             }
         }
+        public async Task<List<FuelTransOutDto>> GetAllAsyncByWorkerIdNotCompleted(long workerId)
+        {
+            // Define the threshold time (30 minutes ago)
+            var thresholdTime = DateTime.UtcNow.AddMinutes(-30);
 
+            // Query to fetch the required transactions
+            var transactionsWithin30MinutesOrFuture = await Repository.GetAll().Include(v => v.Veichle)
+                .Where(x => !x.Completed
+                     && (x.CreationTime >= thresholdTime) // Created within last 30 minutes or in the future
+                     && x.CancelNote == null
+                     && x.CancelReason == null
+                     && x.BranchWalletTransactionId == null
+                     && x.AfterBoxPic == null
+                      && x.Price == 0
+                     && x.WorkerId == workerId)
+                .ToListAsync();
+
+            // Map the result to DTOs and return
+            // Map the list of entities to DTOs
+            //return transactionsWithin30MinutesOrFuture
+            //    .Select(entity => MapToEntityDto(entity)) // Apply the existing mapping method to each item
+            //    .ToList();
+            return ObjectMapper.Map<List<FuelTransOutDto>>(transactionsWithin30MinutesOrFuture);
+        }
+        public async Task<List<FuelTransOutDto>> GetAllAsyncByWorkerIdMustCancel(long workerId)
+        {
+            // Define the threshold time (30 minutes ago)
+            var thresholdTime = DateTime.UtcNow.AddMinutes(-30);
+
+            // Query to fetch transactions that exceed the 30-minute threshold
+            var transactionsExceeding30Minutes = await Repository.GetAll()
+                .Where(x => !x.Completed
+                     && x.CreationTime < thresholdTime // Older than 30 minutes
+                     && x.CancelNote == null
+                     && x.CancelReason == null
+                     && x.BranchWalletTransactionId == null
+                     && x.AfterBoxPic == null
+                     && x.Price == 0
+                     && x.WorkerId == workerId)
+                .ToListAsync();
+
+            // Map the list of entities to DTOs
+            //return transactionsExceeding30Minutes
+            //   .Select(entity => MapToEntityDto(entity)) // Apply the existing mapping method to each item
+            //   .ToList();
+            return ObjectMapper.Map<List<FuelTransOutDto>>(transactionsExceeding30Minutes);
+        }
         [AbpAuthorize]
         public async Task<FuelTransOutDto> UpdateTransaction(UpdateFuelTransOutDto input)
         {

@@ -88,6 +88,8 @@ namespace Sayarah.Application.Transactions.FuelTransactions.Dto
         public bool InvoiceStatus { get; set; }
         public virtual decimal? BranchBalance { get; set; }
         public virtual decimal? Reserved { get; set; }
+        public virtual string QrCode { get; set; }
+
         public virtual CancelNote CancelNote { get; set; }
         public string MappedFullPlateNumber { get; set; }
     }
