@@ -1,6 +1,7 @@
 ﻿using Abp.AspNetCore.Mvc.Controllers;
 using Abp.Domain.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using Sayarah.Api.Controllers;
 using Sayarah.Api.Models;
 using Sayarah.Application.Drivers;
 using Sayarah.Application.Drivers.Dto;
@@ -18,7 +19,7 @@ using Sayarah.Drivers;
 using Sayarah.Security;
 using System.Globalization;
 
-namespace Sayarah.Api.Controllers
+namespace Sayarah.WebApi.Api.Controllers
 {
     [ApiController]
 

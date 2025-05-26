@@ -39,7 +39,7 @@ using System.Text;
 using static Sayarah.SayarahConsts;
 using SystemClock = Microsoft.Extensions.Internal.SystemClock;
 
-namespace Sayarah.Api.Controllers
+namespace Sayarah.WebApi.Api.Controllers
 {
     [ApiController]
 
@@ -526,7 +526,7 @@ namespace Sayarah.Api.Controllers
         {
             try
             {
-                bool forceUpdate = (await SettingManager.GetSettingValueAsync(AppSettingNames.ForceUpdate)) == "false" ? false : true;
+                bool forceUpdate = await SettingManager.GetSettingValueAsync(AppSettingNames.ForceUpdate) == "false" ? false : true;
 
                 var userId = await _userAppService.UserGetByDevice(new GetUserByDeviceInput
                 {
