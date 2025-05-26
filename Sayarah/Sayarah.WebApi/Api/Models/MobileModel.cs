@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Sayarah.Application.Chips.Dto;
+using Sayarah.Application.Companies.Dto;
+using Sayarah.Application.Drivers.Dto;
+using Sayarah.Application.Helpers.StoredProcedures.Dto;
+using Sayarah.Application.Providers.Dto;
+using Sayarah.Application.Transactions.FuelTransactions.Dto;
+using Sayarah.Application.Veichles.Dto;
+using Sayarah.Core.Helpers;
 using System.ComponentModel.DataAnnotations;
-using Sayarah.Helpers.Enums;
-using Sayarah.Lookups.Dto;
-using Sayarah.Drivers.Dto;
-using Sayarah.Workers.Dto;
-using Sayarah.Providers.Dto;
-using Sayarah.Veichles.Dto;
-using Sayarah.Transactions.Dto;
-using Sayarah.Helpers.Dtos;
-using Sayarah.Companies.Dto;
-using Sayarah.Chips.Dto;
 
 namespace Sayarah.Api.Models
 {

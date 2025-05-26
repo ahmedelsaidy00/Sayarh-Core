@@ -1,22 +1,21 @@
-﻿using Abp.WebApi.Controllers;
+﻿using Abp.Application.Services.Dto;
+using Abp.AspNetCore.Mvc.Controllers;
+using Microsoft.AspNetCore.Mvc;
 using Sayarah.Api.Models;
-using Sayarah.Helpers;
-using System;
+using Sayarah.Application.Chips;
+using Sayarah.Application.Chips.Dto;
+using Sayarah.Application.Companies;
+using Sayarah.Application.Companies.Dto;
+using Sayarah.Application.Helpers;
+using Sayarah.Application.Users;
+using Sayarah.Core.Helpers;
 using System.Globalization;
-using System.Threading.Tasks;
-using System.Web.Http;
-using System.Collections.Generic;
-using Sayarah.Companies;
-using Sayarah.Companies.Dto;
-using Sayarah.Chips.Dto;
-using Sayarah.Chips;
-using Sayarah.Helpers.Enums;
-using Abp.Application.Services.Dto;
-using Sayarah.Users;
 
 namespace Sayarah.Api.Controllers
 {
-    public class EmployeeController : AbpApiController
+    [ApiController]
+
+    public class EmployeeController : AbpController
     {
         private readonly IBranchAppService _branchAppService;
         private readonly ICompanyAppService _companyAppService;
@@ -42,7 +41,7 @@ namespace Sayarah.Api.Controllers
 
         [HttpPost]
         [Language("Lang")]
-        public async Task<IHttpActionResult> GetAllCompanies(GetCompaniesInput input)
+        public async Task<IActionResult> GetAllCompanies(GetCompaniesInput input)
         {
             try
             {
@@ -61,7 +60,7 @@ namespace Sayarah.Api.Controllers
 
         [HttpPost]
         [Language("Lang")]
-        public async Task<IHttpActionResult> GetAllCompaniesByRole()
+        public async Task<IActionResult> GetAllCompaniesByRole()
         {
             try
             {
@@ -97,7 +96,7 @@ namespace Sayarah.Api.Controllers
             
         [HttpPost]
         [Language("Lang")]
-        public async Task<IHttpActionResult> GetAllBranchs(GetBranchesInput input)
+        public async Task<IActionResult> GetAllBranchs(GetBranchesInput input)
         {
             try
             {
@@ -115,7 +114,7 @@ namespace Sayarah.Api.Controllers
 
         [HttpPost]
         [Language("Lang")]
-        public async Task<IHttpActionResult> LinkByChipsEmployee(LinkByChipsEmployee input)
+        public async Task<IActionResult> LinkByChipsEmployee(LinkByChipsEmployee input)
         {
             try
             {

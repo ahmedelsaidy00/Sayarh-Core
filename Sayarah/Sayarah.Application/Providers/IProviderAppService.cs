@@ -11,4 +11,6 @@ public interface IProviderAppService : IAsyncCrudAppService<ProviderDto, long, G
     Task<ProviderDto> GetByUserId(EntityDto<long> input);
     Task<PagedResultDto<ApiProviderDto>> GetAllProvidersMobile(GetProvidersInputApi input);
     Task<PagedResultDto<PlainProviderDto>> GetAllLocations(GetProvidersInput input);
+    Task<PagedResultDto<ApiProviderDto>> GetAllProvidersByMainProviderIdMobile(GetProvidersByMainProviderIdInputApi input);
+
 }

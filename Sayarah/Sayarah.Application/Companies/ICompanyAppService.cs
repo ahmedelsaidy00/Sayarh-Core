@@ -16,4 +16,7 @@ public interface ICompanyAppService : IAsyncCrudAppService<CompanyDto, long, Get
     Task<UserDto> HandlePhoneNumber(ChangeEmailAndPhone input);
     Task<ChangeEmailAndPhone> HandleConfirmPhoneNumber(ChangeEmailAndPhone input);
     Task<List<CompanyNameDto>> GetAllCompanies(GetCompaniesInput input);
+
+    Task<List<CompanyNameDto>> GetAllCompaniesAdminEmployee();
+    Task<List<CompanyNameDto>> GetByUserIdForCompanyUser(EntityDto<long> input);
 }

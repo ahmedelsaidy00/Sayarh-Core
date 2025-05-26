@@ -1,25 +1,24 @@
-﻿using Abp.Application.Services.Dto;
-using Abp.WebApi.Controllers;
+﻿using Abp.AspNetCore.Mvc.Controllers;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Sayarah.Api.Models;
+using Sayarah.Application.Contact;
+using Sayarah.Application.Contact.Dto;
+using Sayarah.Application.Helpers;
+using Sayarah.Application.SitePages;
+using Sayarah.Application.SitePages.Dto;
+using Sayarah.Application.Users;
 using Sayarah.Contact;
-using Sayarah.Contact.Dto;
-using Sayarah.Helpers;
-using Sayarah.SitePages;
-using Sayarah.SitePages.Dto;
-using Sayarah.Users;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Threading.Tasks;
-using System.Web;
-using System.Web.Http;
-using Sayarah.Helpers.Enums;
+using Sayarah.Core.Helpers;
 using Sayarah.Security;
+using System.Globalization;
 
 
 namespace Sayarah.Api.Controllers
 {
-    public class SitePagesController : AbpApiController
+    [ApiController]
+
+    public class SitePagesController : AbpController
     {
         public AppSession AppSession { get; set; }
 
@@ -27,11 +26,13 @@ namespace Sayarah.Api.Controllers
 
         private readonly ISitePageAppService _sitePageAppService;
         private readonly IContactMessageAppService _contactMessageAppService;
+        private readonly IHttpContextAccessor _HttpContextAccessor;
 
         public SitePagesController(
                   IUserAppService userAppService,
                   ISitePageAppService sitePageAppService,
-                  IContactMessageAppService contactMessageAppService
+                  IContactMessageAppService contactMessageAppService,
+                  IHttpContextAccessor httpContextAccessor
 
                                )
         {
@@ -39,26 +40,28 @@ namespace Sayarah.Api.Controllers
             _userAppService = userAppService;
             _sitePageAppService = sitePageAppService;
             _contactMessageAppService = contactMessageAppService;
+            _HttpContextAccessor = httpContextAccessor;
+
         }
 
         CultureInfo new_lang = new CultureInfo("ar");
 
 
         #region SitePages
-        //////////////////////////////////////////////SitePages/////////////////////////////////////////////////
+        //////////////////////////////////////////////SitePages//////////////////////     
         public LanguageEnum GetLang()
         {
-            var Lang = HttpContext.Current.Request.Headers["Lang"];
+            var langHeader = _HttpContextAccessor?.HttpContext?.Request?.Headers["Lang"].ToString();
 
-            LanguageEnum lang = Lang == "ar" ? LanguageEnum.Ar : LanguageEnum.En;
-            switch (Lang)
+            LanguageEnum lang = langHeader == "ar" ? LanguageEnum.Ar : LanguageEnum.En;
+            switch (langHeader)
             {
                 case "ar":
                     lang = LanguageEnum.Ar;
                     break;
                 case "en":
                     lang = LanguageEnum.En;
-                    break; 
+                    break;
                 default:
                     lang = LanguageEnum.Ar;
                     break;
@@ -110,26 +113,25 @@ namespace Sayarah.Api.Controllers
         {
             try
             {
-                var Lang = HttpContext.Current.Request.Headers["Lang"];
-                LanguageEnum lang = Lang == "ar" ? LanguageEnum.Ar : LanguageEnum.En;
-                var _images = new List<string>();
-                AboutOutput output = new AboutOutput { };
+                // Read the "Lang" header from the request
+                var langHeader = _HttpContextAccessor?.HttpContext?.Request?.Headers["Lang"].ToString();
+                LanguageEnum lang = langHeader == "ar" ? LanguageEnum.Ar : LanguageEnum.En;
+
+                var output = new AboutOutput();
                 var about = await _sitePageAppService.GetAllAsync(new GetAllSitePages
                 {
                     PageEnum = PageEnum.Terms,
-                    Language = GetLang()
+                    Language = lang
                 });
+
                 foreach (var item in about.Items)
                 {
-                    switch (item.Section)
+                    if (item.Section == "Terms")
                     {
-                        case "Terms":
-                            output.Description = item.Value;
-                            break;
-                        default:
-                            break;
+                        output.Description = item.Value;
                     }
                 }
+
                 output.Success = true;
                 return output;
             }
@@ -144,13 +146,14 @@ namespace Sayarah.Api.Controllers
         }
 
 
+
         [HttpPost]
         [Language("Lang")]
         public async Task<AboutOutput> GetPrivacy()
         {
             try
             {
-                var Lang = HttpContext.Current.Request.Headers["Lang"];
+                var Lang = _HttpContextAccessor?.HttpContext?.Request?.Headers["Lang"].ToString();
                 LanguageEnum lang = Lang == "ar" ? LanguageEnum.Ar : LanguageEnum.En;
                 var _images = new List<string>();
                 AboutOutput output = new AboutOutput { };

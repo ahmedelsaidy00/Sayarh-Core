@@ -405,6 +405,64 @@ namespace Sayarah.Application.Providers
             var Provider = await Repository.GetAllIncluding(x => x.User).FirstOrDefaultAsync(x => x.UserId == input.Id);
             return MapToEntityDto(Provider);
         }
+        public async Task<PagedResultDto<ApiProviderDto>> GetAllProvidersByMainProviderIdMobile(GetProvidersByMainProviderIdInputApi input)
+        {
+            try
+            {
+
+                var query = Repository.GetAll().Include(a => a.MainProvider).Where(a => a.User.IsActive == true);
+                query = query.WhereIf(!string.IsNullOrEmpty(input.Name), at => at.NameAr.Contains(input.Name) || at.NameEn.Contains(input.Name));
+                query = query.WhereIf(input.IsActive.HasValue, a => a.User.IsActive == input.IsActive);
+                query = query.WhereIf(input.IsFuel.HasValue, a => a.IsFuel == input.IsFuel);
+                query = query.WhereIf(input.IsOil.HasValue, a => a.IsOil == input.IsOil);
+                query = query.WhereIf(input.IsClean.HasValue, a => a.IsClean == input.IsClean);
+                query = query.WhereIf(input.IsMaintain.HasValue, a => a.IsMaintain == input.IsMaintain);
+                query = query.WhereIf(input.MainProviderId.HasValue, a => a.MainProviderId == input.MainProviderId);
+                query = query.WhereIf(input.VisibleInMap.HasValue, a => a.VisibleInMap == input.VisibleInMap);
+
+
+                if (input.Latitude.HasValue && input.Latitude.Value > 0 && input.Longitude.HasValue && input.Longitude.Value > 0)
+                {
+                    // Replace the selected code block with the following .NET Core compatible version
+                    query = query
+                        .Where(provider => provider.Latitude.HasValue && provider.Longitude.HasValue && input.Latitude.HasValue && input.Longitude.HasValue)
+                        .OrderBy(provider =>
+                            12742 * Math.Asin(Math.Sqrt(
+                                Math.Sin(((Math.PI / 180) * (provider.Latitude.Value - input.Latitude.Value)) / 2) * Math.Sin(((Math.PI / 180) * (provider.Latitude.Value - input.Latitude.Value)) / 2) +
+                                Math.Cos((Math.PI / 180) * input.Latitude.Value) * Math.Cos((Math.PI / 180) * provider.Latitude.Value) *
+                                Math.Sin(((Math.PI / 180) * (provider.Longitude.Value - input.Longitude.Value)) / 2) * Math.Sin(((Math.PI / 180) * (provider.Longitude.Value - input.Longitude.Value)) / 2)
+                            )))
+                        .Concat(query.Where(provider => !provider.Latitude.HasValue || !provider.Longitude.HasValue));
+                }
+                else
+                {
+                    query = query.OrderBy(x => x.CreationTime);
+                }
+                int count = query.Count();
+                if (input.MaxCount == true)
+                {
+                    input.SkipCount = 0;
+                    input.MaxResultCount = query.Count();
+                }
+                var providers = await query/*.OrderByDescending(x => x.CreationTime)*/.Skip(input.SkipCount).Take(input.MaxResultCount).ToListAsync();
+                var _mappedList = ObjectMapper.Map<List<ApiProviderDto>>(providers);
+                if (input.CalculateDistance.HasValue && input.CalculateDistance == true)
+                {
+                    foreach (var item in _mappedList)
+                    {
+                        double distance = 0;
+                        if (item.Latitude.HasValue && item.Longitude.HasValue && input.Latitude.HasValue && input.Longitude.HasValue)
+                            distance = GeoCoordinateHepler.GetDistance(item.Latitude.Value, item.Longitude.Value, input.Latitude.Value, input.Longitude.Value);
+                        item.Distance = distance;
+                    }
+                }
+                return new PagedResultDto<ApiProviderDto>(count, _mappedList);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         public async Task<PagedResultDto<ApiProviderDto>> GetAllProvidersMobile(GetProvidersInputApi input)
         {

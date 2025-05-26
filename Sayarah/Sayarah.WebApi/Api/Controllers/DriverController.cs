@@ -1,29 +1,28 @@
-﻿using Abp.WebApi.Controllers;
-using Sayarah.Api.Models;
-using Sayarah.Helpers;
-using System;
-using System.Globalization;
-using System.Threading.Tasks;
-using System.Web.Http;
-using Sayarah.Security;
-using System.Collections.Generic;
-using Sayarah.Drivers.Dto;
-using Sayarah.Drivers;
-using Sayarah.Providers;
-using Sayarah.Providers.Dto;
-using System.Device.Location;
-using Sayarah.Helpers.Dtos;
+﻿using Abp.AspNetCore.Mvc.Controllers;
 using Abp.Domain.Repositories;
-using Abp.UI;
-using Sayarah.Transactions.Dto;
-using Sayarah.Veichles.Dto;
-using Sayarah.Veichles;
-using Sayarah.Transactions;
-using System.Linq;
+using Microsoft.AspNetCore.Mvc;
+using Sayarah.Api.Models;
+using Sayarah.Application.Drivers;
+using Sayarah.Application.Drivers.Dto;
+using Sayarah.Application.Helpers;
+using Sayarah.Application.Helpers.NotificationService;
+using Sayarah.Application.Helpers.StoredProcedures;
+using Sayarah.Application.Helpers.StoredProcedures.Dto;
+using Sayarah.Application.Providers;
+using Sayarah.Application.Providers.Dto;
+using Sayarah.Application.Transactions.FuelTransactions;
+using Sayarah.Application.Transactions.FuelTransactions.Dto;
+using Sayarah.Application.Veichles;
+using Sayarah.Application.Veichles.Dto;
+using Sayarah.Drivers;
+using Sayarah.Security;
+using System.Globalization;
 
 namespace Sayarah.Api.Controllers
 {
-    public class DriverController : AbpApiController
+    [ApiController]
+
+    public class DriverController : AbpController
     {
         public AppSession AppSession { get; set; }
         private readonly AbpNotificationHelper _abpNotificationHelper;
@@ -60,7 +59,7 @@ namespace Sayarah.Api.Controllers
 
         [HttpPost]
         [Language("Lang")]
-        public async Task<IHttpActionResult> GetAllDriverVeichles(GetDriverVeichlesInput input)
+        public async Task<IActionResult> GetAllDriverVeichles(GetDriverVeichlesInput input)
         {
             try
             {
@@ -104,8 +103,7 @@ namespace Sayarah.Api.Controllers
 
                         double distance = 0;
                         if (item.Latitude.HasValue && item.Longitude.HasValue && input.Latitude.HasValue && input.Longitude.HasValue)
-                            distance = (new GeoCoordinate { Latitude = item.Latitude.Value, Longitude = item.Longitude.Value })
-                                    .GetDistanceTo(new GeoCoordinate { Latitude = input.Latitude.Value, Longitude = input.Longitude.Value });
+                            distance = GeoCoordinateHepler.GetDistance(item.Latitude.Value,item.Longitude.Value, input.Latitude.Value, input.Longitude.Value);
 
                         item.Distance = distance;
                         if (!string.IsNullOrEmpty(item.FuelTypes))
@@ -156,8 +154,7 @@ namespace Sayarah.Api.Controllers
 
                         double distance = 0;
                         if (item.Latitude.HasValue && item.Longitude.HasValue && input.Latitude.HasValue && input.Longitude.HasValue)
-                            distance = (new GeoCoordinate { Latitude = item.Latitude.Value, Longitude = item.Longitude.Value })
-                                    .GetDistanceTo(new GeoCoordinate { Latitude = input.Latitude.Value, Longitude = input.Longitude.Value });
+                            distance = GeoCoordinateHepler.GetDistance(item.Latitude.Value, item.Longitude.Value, input.Latitude.Value, input.Longitude.Value);
 
                         item.Distance = distance;
                         if (!string.IsNullOrEmpty(item.FuelTypes))

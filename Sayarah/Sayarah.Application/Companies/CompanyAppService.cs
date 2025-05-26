@@ -462,5 +462,21 @@ namespace Sayarah.Application.Companies
 
             return ObjectMapper.Map<List<CompanyNameDto>>(companies);
         }
+        public async Task<List<CompanyNameDto>> GetAllCompaniesAdminEmployee()
+        {
+            var query = Repository.GetAll().Include(at => at.User);
+            var companies = await query.OrderByDescending(x => x.CreationTime).ToListAsync();
+            var _mappedList = ObjectMapper.Map<List<CompanyNameDto>>(companies);
+            return _mappedList;
+        }
+        public async Task<List<CompanyNameDto>> GetByUserIdForCompanyUser(EntityDto<long> input)
+        {
+            var companies = await Repository.GetAllIncluding(x => x.User)
+                 .Where(x => x.UserId == input.Id)
+                 .ToListAsync();
+
+            var mappedList = ObjectMapper.Map<List<CompanyNameDto>>(companies);
+            return mappedList;
+        }
     }
 }

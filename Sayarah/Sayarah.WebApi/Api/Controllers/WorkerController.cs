@@ -26,6 +26,8 @@ using DocumentFormat.OpenXml.Spreadsheet;
 
 namespace Sayarah.Api.Controllers
 {
+    [ApiController]
+
     public class WorkerController : AbpController
     {
         private readonly IVeichleAppService _veichleAppService;

@@ -1,37 +1,42 @@
 ﻿using Abp.Application.Services.Dto;
-using Abp.WebApi.Controllers;
+using Abp.AspNetCore.Mvc.Controllers;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Sayarah.Api.Models;
-using Sayarah.Helpers;
-using System;
-using System.Globalization;
-using System.IO;
-using System.Threading.Tasks;
-using System.Web;
-using System.Web.Http;
+using Sayarah.Application.Drivers;
+using Sayarah.Application.Drivers.Dto;
+using Sayarah.Application.Helpers;
+using Sayarah.Application.Helpers.NotificationService;
+using Sayarah.Application.Providers;
+using Sayarah.Application.Providers.Dto;
 using Sayarah.Security;
-using Sayarah.Drivers;
-using Sayarah.Drivers.Dto;
-using Sayarah.Workers.Dto;
-using Sayarah.Workers;
+using System.Globalization;
 using static Sayarah.SayarahConsts;
 
 namespace Sayarah.Api.Controllers
 {
-    public class ProfileController : AbpApiController
+    [ApiController]
+
+    public class ProfileController : AbpController
     {
         public AppSession AppSession { get; set; }
+
         private readonly AbpNotificationHelper _abpNotificationHelper;
         private readonly IDriverAppService _driverAppService;
         private readonly IWorkerAppService _workerAppService;
         public UploadWebPController uploadController { get; set; }
+        private readonly IHttpContextAccessor _HttpContextAccessor;
 
         public ProfileController(
+            IHttpContextAccessor httpContextAccessor,
                    AbpNotificationHelper abpNotificationHelper,
                   IDriverAppService driverAppService,
                   IWorkerAppService workerAppService
                                )
         {
             LocalizationSourceName = SayarahConsts.LocalizationSourceName;
+            this._HttpContextAccessor = httpContextAccessor;
             _abpNotificationHelper = abpNotificationHelper;
             _driverAppService = driverAppService;
             _workerAppService = workerAppService;
@@ -44,28 +49,31 @@ namespace Sayarah.Api.Controllers
         {
             get
             {
+                var env = HttpContext?.RequestServices.GetService(typeof(IWebHostEnvironment)) as IWebHostEnvironment;
+                var contentRootPath = env?.ContentRootPath ?? Directory.GetCurrentDirectory();
+
                 switch (storageLocation)
                 {
                     case 1:
-                        return Path.Combine(HttpRuntime.AppDomainAppPath, "Files/Users");
+                        return Path.Combine(contentRootPath, "Files/Users");
                     case 2:
-                        return Path.Combine(HttpRuntime.AppDomainAppPath, "files/SitePages/About");
+                        return Path.Combine(contentRootPath, "files/SitePages/About");
                     case 3:
-                        return Path.Combine(HttpRuntime.AppDomainAppPath, "files/SitePages/Index");
+                        return Path.Combine(contentRootPath, "files/SitePages/Index");
                     case 4:
-                        return Path.Combine(HttpRuntime.AppDomainAppPath, "files/Companies");
+                        return Path.Combine(contentRootPath, "files/Companies");
                     case 5:
-                        return Path.Combine(HttpRuntime.AppDomainAppPath, "files/Veichles");
+                        return Path.Combine(contentRootPath, "files/Veichles");
                     case 6:
-                        return Path.Combine(HttpRuntime.AppDomainAppPath, "files/Drivers");
+                        return Path.Combine(contentRootPath, "files/Drivers");
                     case 7:
-                        return Path.Combine(HttpRuntime.AppDomainAppPath, "files/Providers");
+                        return Path.Combine(contentRootPath, "files/Providers");
                     case 8:
-                        return Path.Combine(HttpRuntime.AppDomainAppPath, "files/Workers");
+                        return Path.Combine(contentRootPath, "files/Workers");
                     case 9:
-                        return Path.Combine(HttpRuntime.AppDomainAppPath, "files/FuelTransOut");
+                        return Path.Combine(contentRootPath, "files/FuelTransOut");
                     default:
-                        return Path.Combine(HttpRuntime.AppDomainAppPath, "Files");
+                        return Path.Combine(contentRootPath, "Files");
                 }
             }
         }
@@ -79,7 +87,7 @@ namespace Sayarah.Api.Controllers
 
         [HttpPost]
         [Language("Lang")]
-        public async Task<IHttpActionResult> GetDriverProfile()
+        public async Task<IActionResult> GetDriverProfile()
         {
             try
             {
@@ -101,7 +109,7 @@ namespace Sayarah.Api.Controllers
 
         [HttpPost]
         [Language("Lang")]
-        public async Task<IHttpActionResult> UpdateDriverProfile(UpdateDriverProfileInput input)
+        public async Task<IActionResult> UpdateDriverProfile(UpdateDriverProfileInput input)
         {
             try
             {
@@ -126,51 +134,54 @@ namespace Sayarah.Api.Controllers
 
         [HttpPost]
         [Language("Lang")]
-        public async Task<IHttpActionResult> UpdateDriverPhoto()
+        public async Task<IActionResult> UpdateDriverPhoto()
         {
             try
             {
                 if (!AbpSession.UserId.HasValue || AbpSession.UserId.Value <= 0)
                     return Unauthorized();
 
+                var httpContext = HttpContext;
+                if (httpContext == null || httpContext.Request == null || httpContext.Request.Form == null)
+                    return BadRequest(new UpdateProfilePicOutput { Message = "No file uploaded", Success = false });
 
-                UpdateDriverDto input = new UpdateDriverDto();
+                var files = httpContext.Request.Form.Files;
+                if (files == null || files.Count == 0)
+                    return BadRequest(new UpdateProfilePicOutput { Message = "No file uploaded", Success = false });
 
+                var itemFile = files[0];
+                if (itemFile == null || string.IsNullOrEmpty(itemFile.FileName))
+                    return BadRequest(new UpdateProfilePicOutput { Message = "Invalid file", Success = false });
 
-                var cntx = Request.Properties["MS_HttpContext"] as HttpContextWrapper;
-                var files = cntx.Request.Files;
-                if (files != null && files.Count > 0)
+                var input = new UpdateDriverDto();
+
+                var newUploadFilesDto = new NewUploadFilesDto
                 {
-                    var itemFile = cntx.Request.Files[0];
-                    if (!string.IsNullOrEmpty(itemFile.FileName))
-                    {
+                    StorageLocation = 6,
+                    AllowedTypes = 0,
+                    Sizes = "600&600",
+                    UploadStyle = NewUploadStyle.CopyOnly
+                };
 
-                        NewUploadFilesDto _newUploadFilesDto = new NewUploadFilesDto();
-                        _newUploadFilesDto.StorageLocation = 6;
-                        _newUploadFilesDto.AllowedTypes = 0;
-                        _newUploadFilesDto.Sizes = "600&600";
-                        _newUploadFilesDto.UploadStyle = NewUploadStyle.CopyOnly;
+                // UploadPhotoWebP is async in .NET Core
 
-                        string _uniqueFileName = uploadController.UploadPhotoWebP(itemFile, _newUploadFilesDto);
-
-                        input.Avatar = _uniqueFileName;
-                    }
-                }
-
+                var uniqueFileName = await uploadController.UploadPhotoWebP(itemFile, newUploadFilesDto);
+                input.Avatar = uniqueFileName.Value;
 
                 var result = await _driverAppService.UpdateDriverPhotoAsync(input);
 
-                string _avatarPath = string.Empty;
-
+                string avatarPath;
                 if (!string.IsNullOrEmpty(input.Avatar) && Utilities.CheckExistImage(6, "600x600_" + input.Avatar))
-                    _avatarPath = FilesPath.Drivers.ServerImagePath + "600x600_" + input.Avatar;
+                    avatarPath = FilesPath.Drivers.ServerImagePath + "600x600_" + input.Avatar;
                 else
-                    _avatarPath = FilesPath.Drivers.DefaultImagePath;
+                    avatarPath = FilesPath.Drivers.DefaultImagePath;
 
-
-
-                return Ok(new UpdateProfilePicOutput { Message = L("MobileApi.Messages.ProfileImageUpdated"), Success = true, AvatarPath = _avatarPath });
-
+                return Ok(new UpdateProfilePicOutput
+                {
+                    Message = L("MobileApi.Messages.ProfileImageUpdated"),
+                    Success = true,
+                    AvatarPath = avatarPath
+                });
             }
             catch (Exception ex)
             {
@@ -186,7 +197,7 @@ namespace Sayarah.Api.Controllers
 
         [HttpPost]
         [Language("Lang")]
-        public async Task<IHttpActionResult> GetWorkerProfile()
+        public async Task<IActionResult> GetWorkerProfile()
         {
             try
             {
@@ -209,7 +220,7 @@ namespace Sayarah.Api.Controllers
 
         [HttpPost]
         [Language("Lang")]
-        public async Task<IHttpActionResult> UpdateWorkerProfile(UpdateWorkerProfileInput input)
+        public async Task<IActionResult> UpdateWorkerProfile(UpdateWorkerProfileInput input)
         {
             try
             {
@@ -234,42 +245,49 @@ namespace Sayarah.Api.Controllers
 
         [HttpPost]
         [Language("Lang")]
-        public async Task<IHttpActionResult> UpdateWorkerPhoto()
+        public async Task<IActionResult> UpdateWorkerPhoto()
         {
             try
             {
                 if (!AbpSession.UserId.HasValue || AbpSession.UserId.Value <= 0)
                     return Unauthorized();
 
+                var httpContext = HttpContext;
+                if (httpContext == null || httpContext.Request == null || httpContext.Request.Form == null)
+                    return BadRequest(new UpdateWorkerProfileOutput { Message = "No file uploaded", Success = false });
 
-                UpdateWorkerDto input = new UpdateWorkerDto();
+                var files = httpContext.Request.Form.Files;
+                if (files == null || files.Count == 0)
+                    return BadRequest(new UpdateWorkerProfileOutput { Message = "No file uploaded", Success = false });
 
+                var itemFile = files[0];
+                if (itemFile == null || string.IsNullOrEmpty(itemFile.FileName))
+                    return BadRequest(new UpdateWorkerProfileOutput { Message = "Invalid file", Success = false });
 
-                var cntx = Request.Properties["MS_HttpContext"] as HttpContextWrapper;
-                var files = cntx.Request.Files;
-                if (files != null && files.Count > 0)
+                var input = new UpdateWorkerDto
                 {
-                    var itemFile = cntx.Request.Files[0];
-                    if (!string.IsNullOrEmpty(itemFile.FileName))
-                    {
+                    UserId = AbpSession.UserId.Value
+                };
 
-                        NewUploadFilesDto _newUploadFilesDto = new NewUploadFilesDto();
-                        _newUploadFilesDto.StorageLocation = 8;
-                        _newUploadFilesDto.AllowedTypes = 0;
-                        _newUploadFilesDto.Sizes = "400&400";
-                        _newUploadFilesDto.UploadStyle = NewUploadStyle.CopyOnly;
+                var newUploadFilesDto = new NewUploadFilesDto
+                {
+                    StorageLocation = 8,
+                    AllowedTypes = 0,
+                    Sizes = "400&400",
+                    UploadStyle = NewUploadStyle.CopyOnly
+                };
 
-                        string _uniqueFileName = uploadController.UploadPhotoWebP(itemFile, _newUploadFilesDto);
-
-                        input.Avatar = _uniqueFileName;
-                    }
-                }
-
+                var uniqueFileName = await uploadController.UploadPhotoWebP(itemFile, newUploadFilesDto);
+                input.Avatar = uniqueFileName.Value;
 
                 var result = await _workerAppService.UpdateWorkerPhotoAsync(input);
 
-                return Ok(new UpdateWorkerProfileOutput { Message = L("MobileApi.Messages.ProfileImageUpdated"), Success = true, Worker = ObjectMapper.Map<ApiWorkerDto>(result) });
-
+                return Ok(new UpdateWorkerProfileOutput
+                {
+                    Message = L("MobileApi.Messages.ProfileImageUpdated"),
+                    Success = true,
+                    Worker = ObjectMapper.Map<ApiWorkerDto>(result)
+                });
             }
             catch (Exception ex)
             {
@@ -278,15 +296,18 @@ namespace Sayarah.Api.Controllers
         }
 
         #endregion
+
         public async Task AddToHeader(EntityDto<long> input)
         {
-
             if (input.Id > 0)
             {
                 var result = await _abpNotificationHelper.GetNotificationsCount(new GetNotificationsInput { UserId = input.Id });
-                HttpContext.Current.Response.Headers.Add("UnReadCount", result.UnReadCount.ToString());
+                var httpContext = _HttpContextAccessor.HttpContext;
+                if (httpContext != null)
+                {
+                    httpContext.Response.Headers.Append("UnReadCount", result.UnReadCount.ToString());
+                }
             }
-
         }
 
     }

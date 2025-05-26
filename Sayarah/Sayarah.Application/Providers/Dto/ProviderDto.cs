@@ -404,4 +404,44 @@ namespace Sayarah.Application.Providers.Dto
 
     }
 
+    public class GetProvidersByMainProviderIdInputApi : PagedResultRequestDto
+    {
+        public long? UserId { get; set; }
+        public long? Id { get; set; }
+        public long? MainProviderId { get; set; }
+        public string Name { get; set; }
+        public double? Latitude { get; set; }
+        public double? Longitude { get; set; }
+        public string AddressOnMap { get; set; }
+        public double Distance { get; set; }
+        public string FuelTypes { get; set; }
+        public bool? IsFuel { get; set; }
+        public bool? IsOil { get; set; }
+        public bool? IsClean { get; set; }
+        public bool? IsMaintain { get; set; }
+
+        public decimal? FuelNinetyOnePrice { get; set; }
+        public decimal? FuelNinetyFivePrice { get; set; }
+        public decimal? SolarPrice { get; set; }
+
+
+        public decimal? InternalWashingPrice { get; set; }
+        public decimal? ExternalWashingPrice { get; set; }
+
+        public decimal? ThreeThousandKiloOilPrice { get; set; }
+        public decimal? FiveThousandKiloOilPrice { get; set; }
+        public decimal? TenThousandKiloOilPrice { get; set; }
+
+        public bool? IsActive { get; set; }
+        public bool? CalculateDistance { get; set; }
+        public bool MaxCount { get; set; }
+
+        public string Iban { get; set; }
+        public string AccountNumber { get; set; }// رقم الحساب
+        public string BankName { get; set; }
+        public string AccountName { get; set; }
+        public bool? VisibleInMap { get; set; }
+
+    }
+
 }

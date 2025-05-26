@@ -1,41 +1,48 @@
 ﻿using System;
 using System.Threading.Tasks;
-using System.Web.Http;
-using Abp.Authorization;
+using Abp;
 using Abp.Authorization.Users;
-using Abp.UI;
+using Abp.Domain.Uow;
+using Abp.Extensions;
+using Abp.Runtime.Session;
 using Abp.Web.Models;
-using Abp.WebApi.Controllers;
-using Sayarah.Api.Models;
-using Sayarah.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using Abp.AspNetCore.Mvc.Controllers;
+using Abp.Authorization;
+using Abp.UI;
+using Microsoft.Extensions.Logging;
 using Sayarah.Authorization.Users;
+using Sayarah.Authorization;
 using Sayarah.MultiTenancy;
-using Sayarah.Users;
-using Microsoft.Owin.Infrastructure;
-using Microsoft.Owin.Security;
-using Microsoft.Owin.Security.OAuth;
+using Sayarah;
+using Sayarah.Api.Models;
 
 namespace Sayarah.Api.Controllers
 {
-    public class AccountController : AbpApiController
-    {
-        public static OAuthBearerAuthenticationOptions OAuthBearerOptions { get; private set; }
+    //[Route("api/[controller]/[action]")]
+    [ApiController]
 
+    public class AccountController : AbpController
+    {
         private readonly LogInManager _logInManager;
 
-        static AccountController()
-        {
-            OAuthBearerOptions = new OAuthBearerAuthenticationOptions();
-        }
+        // You can inject settings or configs for JWT here
+        private readonly string _jwtSecret = "401b09eab3c013d4ca54922bb802bec8fd5318192b0a75f201d8b3727429090fb337591abd3e44453b954555b7a0812e1081c39b740293f765eae731f5a65ed1"; // Store in config securely!
+        private readonly int _jwtExpirationDays = 3;
 
         public AccountController(LogInManager logInManager)
         {
             _logInManager = logInManager;
-            LocalizationSourceName = SayarahConsts.LocalizationSourceName;
+            LocalizationSourceName = SayarahConsts.LocalizationSourceName; // If you use localization
         }
 
         [HttpPost]
-        public async Task<AjaxResponse> Authenticate(LoginModel loginModel)
+        public async Task<AjaxResponse> Authenticate([FromBody] LoginModel loginModel)
         {
             CheckModelState();
 
@@ -43,16 +50,40 @@ namespace Sayarah.Api.Controllers
                 loginModel.UsernameOrEmailAddress,
                 loginModel.Password,
                 loginModel.TenancyName
-                );
+            );
 
-            var ticket = new AuthenticationTicket(loginResult.Identity, new AuthenticationProperties());
+            // Create JWT token manually using Microsoft.IdentityModel.Tokens
+            var token = CreateJwtToken(loginResult.Identity);
 
-            var currentUtc = new SystemClock().UtcNow;
-            ticket.Properties.IssuedUtc = currentUtc;
-            ticket.Properties.ExpiresUtc = currentUtc.Add(TimeSpan.FromDays(1));
-
-            return new AjaxResponse(OAuthBearerOptions.AccessTokenFormat.Protect(ticket));
+            return new AjaxResponse(token);
         }
+
+        private string CreateJwtToken(ClaimsIdentity identity)
+        {
+            var now = DateTime.UtcNow;
+
+            var jwtTokenHandler = new JwtSecurityTokenHandler();
+
+            var key = Encoding.ASCII.GetBytes(_jwtSecret);
+
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = identity,
+                IssuedAt = now,
+                NotBefore = now,
+                Expires = now.AddDays(_jwtExpirationDays),
+
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
+                Issuer = "Sayarah", // You can set your issuer here
+                Audience = "Sayarah", // You can set your audience here
+                // You can add Issuer and Audience here if needed
+            };
+
+            var token = jwtTokenHandler.CreateToken(tokenDescriptor);
+
+            return jwtTokenHandler.WriteToken(token);
+        }
+
 
         private async Task<AbpLoginResult<Tenant, User>> GetLoginResultAsync(string usernameOrEmailAddress, string password, string tenancyName)
         {
@@ -90,7 +121,8 @@ namespace Sayarah.Api.Controllers
             }
         }
 
-        protected virtual void CheckModelState()
+        // Remove the 'override' keyword since there is no base method to override
+        protected void CheckModelState()
         {
             if (!ModelState.IsValid)
             {
