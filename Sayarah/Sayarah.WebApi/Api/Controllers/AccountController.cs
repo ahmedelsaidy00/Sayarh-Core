@@ -19,10 +19,9 @@ using Microsoft.Extensions.Logging;
 using Sayarah.Authorization.Users;
 using Sayarah.Authorization;
 using Sayarah.MultiTenancy;
-using Sayarah;
 using Sayarah.Api.Models;
 
-namespace Sayarah.Api.Controllers
+namespace Sayarah.WebApi.Api.Controllers
 {
     //[Route("api/[controller]/[action]")]
     [ApiController]
