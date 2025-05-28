@@ -1,7 +1,7 @@
 ﻿using Abp.AspNetCore.Mvc.Controllers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Sayarah.Api.Models;
+using Sayarah.WebApi.Api.Models;
 using Sayarah.Application.Contact;
 using Sayarah.Application.Contact.Dto;
 using Sayarah.Application.Helpers;
@@ -14,7 +14,7 @@ using Sayarah.Security;
 using System.Globalization;
 
 
-namespace Sayarah.Api.Controllers
+namespace Sayarah.WebApi.Api.Controllers
 {
     [ApiController]
 

@@ -1,0 +1,400 @@
+.login.login-3 .login-aside {
+    background: #0B276B;
+    -webkit-box-shadow: 0px 0px 40px rgba(177, 187, 208, 0.15);
+    box-shadow: 0px 0px 40px rgba(177, 187, 208, 0.15);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+    .login.login-3 .login-aside .wizard-nav {
+        padding: 0;
+    }
+
+        .login.login-3 .login-aside .wizard-nav .wizard-steps {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+
+            .login.login-3 .login-aside .wizard-nav .wizard-steps .wizard-step {
+                padding: 0.75rem 0;
+                -webkit-transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+                transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+                transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+                transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, -webkit-box-shadow 0.15s ease;
+                margin-bottom: 1.5rem;
+            }
+
+                .login.login-3 .login-aside .wizard-nav .wizard-steps .wizard-step:last-child {
+                    margin-bottom: 0;
+                }
+
+                .login.login-3 .login-aside .wizard-nav .wizard-steps .wizard-step .wizard-wrapper {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                }
+
+                .login.login-3 .login-aside .wizard-nav .wizard-steps .wizard-step .wizard-icon {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    -webkit-transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+                    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+                    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+                    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, -webkit-box-shadow 0.15s ease;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50px;
+                    background-color: #F3F6F9;
+                    margin-right: 1.4rem;
+                }
+
+                    .login.login-3 .login-aside .wizard-nav .wizard-steps .wizard-step .wizard-icon .wizard-check {
+                        display: none;
+                        font-size: 1.4rem;
+                    }
+
+                    .login.login-3 .login-aside .wizard-nav .wizard-steps .wizard-step .wizard-icon .wizard-number {
+                        font-weight: 600;
+                        color: #3F4254;
+                        font-size: 1.35rem;
+                    }
+
+                .login.login-3 .login-aside .wizard-nav .wizard-steps .wizard-step .wizard-label {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                }
+
+                    .login.login-3 .login-aside .wizard-nav .wizard-steps .wizard-step .wizard-label .wizard-title {
+                        color: #181C32;
+                        font-weight: 500;
+                        font-size: 1.4rem;
+                    }
+
+                    .login.login-3 .login-aside .wizard-nav .wizard-steps .wizard-step .wizard-label .wizard-desc {
+                        color: #B5B5C3;
+                        font-size: 1.08rem;
+                        font-weight: 500;
+                    }
+
+                .login.login-3 .login-aside .wizard-nav .wizard-steps .wizard-step[data-wizard-state=done] .wizard-icon {
+                    -webkit-transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+                    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+                    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+                    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, -webkit-box-shadow 0.15s ease;
+                    background-color: #E1F0FF;
+                }
+
+                    .login.login-3 .login-aside .wizard-nav .wizard-steps .wizard-step[data-wizard-state=done] .wizard-icon .wizard-check {
+                        color: #3699FF;
+                        display: inline-block;
+                    }
+
+                    .login.login-3 .login-aside .wizard-nav .wizard-steps .wizard-step[data-wizard-state=done] .wizard-icon .wizard-number {
+                        display: none;
+                    }
+
+                .login.login-3 .login-aside .wizard-nav .wizard-steps .wizard-step[data-wizard-state=done] .wizard-label .wizard-title {
+                    color: #B5B5C3;
+                }
+
+                .login.login-3 .login-aside .wizard-nav .wizard-steps .wizard-step[data-wizard-state=done] .wizard-label .wizard-desc {
+                    color: #D1D3E0;
+                }
+
+                .login.login-3 .login-aside .wizard-nav .wizard-steps .wizard-step[data-wizard-state=current] {
+                    -webkit-transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+                    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+                    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+                    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, -webkit-box-shadow 0.15s ease;
+                }
+
+                    .login.login-3 .login-aside .wizard-nav .wizard-steps .wizard-step[data-wizard-state=current] .wizard-icon {
+                        -webkit-transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+                        transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+                        transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+                        transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, -webkit-box-shadow 0.15s ease;
+                        background-color: #E1F0FF;
+                    }
+
+                        .login.login-3 .login-aside .wizard-nav .wizard-steps .wizard-step[data-wizard-state=current] .wizard-icon .wizard-check {
+                            color: #3699FF;
+                            display: none;
+                        }
+
+                        .login.login-3 .login-aside .wizard-nav .wizard-steps .wizard-step[data-wizard-state=current] .wizard-icon .wizard-number {
+                            color: #3699FF;
+                        }
+
+                    .login.login-3 .login-aside .wizard-nav .wizard-steps .wizard-step[data-wizard-state=current] .wizard-label .wizard-title {
+                        color: #181C32;
+                    }
+
+                    .login.login-3 .login-aside .wizard-nav .wizard-steps .wizard-step[data-wizard-state=current] .wizard-label .wizard-desc {
+                        color: #B5B5C3;
+                    }
+
+    .login.login-3 .login-aside .aside-img-wizard {
+        min-height: 320px !important;
+        background-size: 400px;
+    }
+
+.login.login-3 .login-content {
+    background-color: #ffffff;
+}
+
+    .login.login-3 .login-content .form-group .fv-help-block {
+        font-size: 1.1rem !important;
+        padding-top: 3px;
+    }
+
+.login-content .text-lang {
+    margin-right: 10px;
+}
+
+.text-theme {
+    color: #d3d3d3;
+}
+
+a.text-theme:hover, a.text-theme:focus {
+    color: #d3d3d3
+}
+
+.btn.btn-theme {
+    color: #FFFFFF;
+    background-color: #ec3665;
+    border-color: #ec3665;
+    transition: .4S
+}
+
+    .btn.btn-theme:hover {
+        color: #FFFFFF;
+        background-color: #c9224d;
+        border-color: #c9224d;
+    }
+
+
+.btn-theme:not(:disabled):not(.disabled):active:not(.btn-text), .btn-theme:not(:disabled):not(.disabled).active {
+    color: #FFFFFF;
+    background-color: #c9224d;
+    border-color: #c9224d;
+}
+
+.btn-theme:hover:not(.btn-text):not(:disabled):not(.disabled), .btn-theme:focus:not(.btn-text), .btn-theme.focus:not(.btn-text) {
+    color: #FFFFFF;
+    background-color: #c9224d;
+    border-color: #c9224d;
+}
+
+.btn-theme:not(:disabled):not(.disabled):active, .btn-theme:not(:disabled):not(.disabled).active {
+    color: #FFFFFF;
+    background-color: #358062;
+    border-color: #358062;
+}
+
+.box-links-page {
+    padding: 0;
+    margin-bottom: 0;
+    list-style: none;
+    text-align: end;
+    margin-top: 30px;
+}
+
+    .box-links-page p {
+        font-size: 12px;
+    }
+
+.link-page {
+    color: #181c32;
+    transition: .4s;
+}
+
+    .link-page:hover {
+        color: #181c32;
+        opacity: 0.6
+    }
+
+@media (min-width: 992px) {
+    .login.login-3 .login-aside {
+        width: 100%;
+        max-width: 400px;
+    }
+
+        .login.login-3 .login-aside .aside-img {
+            min-height: 400px !important;
+            background-size: contain;
+        }
+
+    .login.login-3 .login-content .top-signup {
+        max-width: 650px;
+        width: 100%;
+    }
+
+    .login.login-3 .login-content .top-signin {
+        max-width: 450px;
+        width: 100%;
+    }
+
+    .login.login-3 .login-content .top-forgot {
+        max-width: 450px;
+        width: 100%;
+    }
+
+    .login.login-3 .login-content .login-form {
+        width: 100%;
+        max-width: 450px;
+    }
+
+        .login.login-3 .login-content .login-form.login-form-signup {
+            max-width: 650px;
+        }
+}
+
+@media (min-width: 992px) and (max-width: 1399.98px) {
+    .login.login-3 .login-aside {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .login.login-3 .login-aside .aside-img {
+        min-height: 500px !important;
+        background-size: 500px;
+    }
+
+    .login.login-3 .login-aside .login-logo {
+        text-align: center;
+    }
+
+    .login.login-3 .login-aside .wizard-nav {
+        padding: 0;
+        -ms-flex-line-pack: center;
+        align-content: center;
+    }
+
+        .login.login-3 .login-aside .wizard-nav .wizard-steps .wizard-step {
+            margin-bottom: 0.5rem;
+        }
+
+            .login.login-3 .login-aside .wizard-nav .wizard-steps .wizard-step:last-child {
+                margin-bottom: 0;
+            }
+
+    .login.login-3 .login-content .top-signup {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .login.login-3 .login-content .top-signin {
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .login.login-3 .login-content .top-forgot {
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .login.login-3 .login-content .login-form {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .login.login-3 .login-aside .aside-img {
+        display: none !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .login.login-3 .login-aside .aside-img {
+        min-height: 300px !important;
+        background-size: 350px;
+    }
+}
+input.form-control {
+    background-color: #f4f6f9;
+}
+
+.text-pink {
+    color: #ec3665;
+}
+
+
+/* Overlay for the popup */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Popup content */
+.popup-content {
+    background-color: #fff;
+    margin: 40px auto;
+    padding: 44px 30px;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow-x: hidden;
+    height: 90%;
+}
+
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #ec3665;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50px !important
+}
+
+
+.text-terms {
+    color: #9095a3;
+    line-height: 24px;
+    font-size: 13px;
+}
+
+.mb--20 {
+    margin-bottom: 20px
+}

@@ -1,0 +1,111 @@
+﻿@using System.Threading
+@using System.Web.Optimization
+@using Abp.Timing
+@using Sayarah.Web.Helpers
+@{
+    //SetAntiForgeryCookie();
+    var currentLang = Thread.CurrentThread.CurrentUICulture.Name.Contains("ar") ? "ar" : "en";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="~/favicon.ico">
+    <title>@L("Common.SystemTitle")</title>
+    @Styles.Render("~/Bundles/account-vendor/" + currentLang + "/css")
+
+    <!-- View specific styles -->
+    @RenderSection("styles", required: false)
+    <script type="text/javascript">
+        //This is used to get the application's root path from javascript. It's useful if you're running application in a virtual directory under IIS.
+        var abp = abp || {}; abp.appPath = '@ApplicationPath';
+    </script>
+</head>
+<body>
+
+
+    <div class="d-flex flex-column flex-root">
+        <!--begin::Login-->
+        <div class="login login-3 login-4 d-flex flex-column flex-lg-row flex-column-fluid">
+                  
+
+            <!--begin::Aside-->
+            <div class="login-aside d-flex flex-column flex-row-auto">
+                <!--begin::Aside Top-->
+                <div class="d-flex flex-column-auto flex-column pt-lg-30 pt-20">
+                    <!--begin::Aside header-->
+                    <a href="@Url.Action("Index","Home")" class="login-logo text-center pt-lg-20 pb-10">
+
+                        <img src="~/Files/logo/logo-login.png" alt="logo" />
+                    </a>
+                    <!--end::Aside header-->
+                    <h3 class="font-weight-bolder text-center text-theme font-size-h3 -50 line-height-xl">
+                        @L("Pages.ControlPanel.Title")
+                    </h3>
+                </div>
+                <!--end::Aside Top-->
+                <!--begin::Aside Bottom-->
+                @*<div class="aside-img d-flex flex-row-fluid bgi-no-repeat bgi-position-x-left" style="background-position-y: calc(100% + 5rem); background-image: url('../../Files/logo/bg-login.png');"></div>*@
+                <!--end::Aside Bottom-->
+            </div>
+            <!--begin::Aside-->
+            <!--begin::Content-->
+            <div class="login-content flex-row-fluid d-flex flex-column p-6">
+                <!--begin::Top-->
+                <div class="text-right d-flex justify-content-center">
+                    <div class="top-signup text-right d-flex justify-content-end align-items-center pt-5 pb-lg-0 pb-10">
+                        <span class="font-weight-bold text-muted font-size-h5 text-lang">@L("Common.Language") </span>
+
+                        @Html.Action("_AccountLanguages", "Account")
+
+                    </div>
+                </div>
+                <!--end::Top-->
+                <!--begin::Wrapper-->
+                <div class="d-flex flex-row-fluid flex-center">
+                    @RenderBody()
+                </div>
+                <!--end::Wrapper-->
+                <!--begin::Bottom-->
+                <div class="text-center d-flex justify-content-center">
+                    <div class="box-links-page">
+                        <p class="text-dark text-center">
+                            @L("Common.CopyRights", DateTime.Now.Year)
+                            @*<a href="https://www.al7osam.com.sa/" target="_blank" class="link-page">
+                            @L("Common.Al7osam")
+                        </a>*@
+                        </p>
+                    </div>
+                </div>
+                <!--end::Bottom-->
+            </div>
+            <!--end::Content-->
+        </div>
+        <!--end::Login-->
+    </div>
+
+
+
+    @*@if (ViewBag.IsMultiTenancyEnabled)
+        {
+            @Html.Action("TenantChange", "Account")
+        }*@
+
+
+    @Scripts.Render("~/Bundles/account-vendor/js/bottom")
+    <script>
+        //Localizing momentjs
+        moment.locale('@Thread.CurrentThread.CurrentUICulture.Name');
+    </script>
+    <!-- Dynamic scripts of ABP system (They are created on runtime and can not be bundled) -->
+    <script src="~/api/AbpServiceProxies/GetAll?v=@(Clock.Now.Ticks)"></script>
+    <script src="~/AbpScripts/GetScripts?v=@(Clock.Now.Ticks)" type="text/javascript"></script>
+    <!-- View specific scripts -->
+    @RenderSection("scripts", required: false)
+    @Html.PartialViewScripts()
+</body>
+</html>

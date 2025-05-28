@@ -1,0 +1,764 @@
+﻿@using Abp.Authorization.Users
+@model Sayarah.Web.Models.Account.RegisterViewModel
+@section Styles
+{
+    <link href="~/Views/Account/Login.css" rel="stylesheet" />
+    @*<link href="~/Scripts/plugins/ng-intl-tel-input/intlTelInput-rtl.css" rel="stylesheet" />*@
+    <link href="~/Scripts/plugins/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet" />
+}
+@section Scripts{
+    <script type="text/javascript" src="~/Views/Account/Register.js"></script>
+    <script type="text/javascript" src="~/Views/Account/StoreRegisterSteps.js"></script>
+    <script type="text/javascript" src="~/Scripts/plugins/bootstrap-fileinput/bootstrap-fileinput.js"></script>
+
+}
+
+<link href="~/Scripts/account-plugins/css/new-css/login-4-rtl.css" rel="stylesheet" />
+
+@*@if (currentLang == "ar")
+
+    {
+
+        <link href="~/Scripts/account-plugins/css/new-css/login-4-rtl.css" rel="stylesheet" />
+
+    }
+    else
+    {
+        <link href="~/Scripts/account-plugins/css/new-css/login-4.css" rel="stylesheet" />
+    }*@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="~/Scripts/plugins/ng-intl-tel-input/intlTelInput.js"></script>
+
+@*<div class="login-form login-form-signup">
+
+        <form class="form" id="RegisterForm" asp-action="Register" method="POST">
+
+            <div class="pb-5 pb-lg-10">
+                <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">@L("Register.Store") </h3>
+
+            </div>
+
+            @if (@ViewBag.ErrorMessage != null)
+            {
+                <div class="alert alert-danger">
+                    <i class="fa fa-warning"></i> @ViewBag.ErrorMessage
+                </div>
+            }
+
+            <div class="pb-lg-0 pb-5">
+                <button id="RegisterButton" type="submit" class="btn btn-theme font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3" data-wizard-type="action-next">
+                    @L("Common.Register")
+                </button>
+            </div>
+
+            <div class="py-5 py-lg-15">
+                <div class="text-muted font-weight-bold font-size-h4">
+                    @L("Pages.Login.AreRegistered")
+                    <a href="@Url.Action("Login", "Account")" class="text-theme font-weight-bolder"> @L("Pages.Login.Login")</a>
+                </div>
+            </div>
+        </form>
+
+    </div>*@
+
+
+
+
+<!--begin::SuccessfullyRegistered-->
+<div class="login-form" style="display: none" id="confirmationResult">
+    <!--begin::Title-->
+    <div class="pb-5">
+        <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg mb-4">
+            @L("Pages.Register.SuccessfullyRegistered")
+        </h3>
+
+        <p class="text-muted font-weight-bold font-size-h4">
+            @L("Pages.Register.WaitingForActivationMessageEmail")
+        </p>
+
+        <p class="text-muted font-weight-bold font-size-h4">
+            <span class="text-muted" id="RegisteredEmail">
+
+            </span>
+        </p>
+    </div>
+    <!--end::Title-->
+    <!--begin::Form group-->
+    <div class="form-group d-flex flex-wrap">
+        <a href="@Url.Action("Login", "Account")" class="btn btn-secondary font-weight-bolder font-size-h6 px-8 py-4 my-3">@L("Common.Back")</a>
+    </div>
+    <!--end::Form group-->
+
+
+</div>
+<!--end::SuccessfullyRegistered-->
+<!--begin::Signup-->
+<div class="login-form login-form-signup" id="signUpForm">
+    <div class="wizard-nav pt-5 pt-lg-15 pb-10">
+        <!--begin::Wizard Steps-->
+        <div class="wizard-steps d-flex flex-column flex-sm-row">
+            <!--begin::Wizard Step 1 Nav-->
+            <div id="firstStep" class="wizard-step flex-grow-1 flex-basis-0 current">
+                <div class="wizard-wrapper pr-4">
+                    <div class="wizard-icon">
+                        <i class="fa fa-check"></i>
+                        <span class="wizard-number">1</span>
+                    </div>
+                    <div class="wizard-label">
+                        <h3 class="wizard-title">
+                            نوع الحساب
+                        </h3>
+                        <div class="wizard-desc">  الأولى</div>
+                    </div>
+                    <span class="svg-icon pr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                                <rect fill="#000000" opacity="0.3" transform="translate(8.500000, 12.000000) rotate(-90.000000) translate(-8.500000, -12.000000)" x="7.5" y="7.5" width="2" height="9" rx="1"></rect>
+                                <path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+            <!--end::Wizard Step 1 Nav-->
+            <!--begin::Wizard Step 2 Nav-->
+            <div id="secondStep" class="wizard-step flex-grow-1 flex-basis-0 ">
+                <div class="wizard-wrapper pr-4">
+                    <div class="wizard-icon">
+                        <i class="fa fa-check"></i>
+                        <span class="wizard-number">2</span>
+                    </div>
+                    <div class="wizard-label">
+                        <h3 class="wizard-title">بيانات الحساب </h3>
+                        <div class="wizard-desc">
+                            الثانية
+                        </div>
+                    </div>
+                    <span class="svg-icon pr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                                <rect fill="#000000" opacity="0.3" transform="translate(8.500000, 12.000000) rotate(-90.000000) translate(-8.500000, -12.000000)" x="7.5" y="7.5" width="2" height="9" rx="1"></rect>
+                                <path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+            <!--end::Wizard Step 2 Nav-->
+            <!--begin::Wizard Step 3 Nav-->
+            <div id="thirdStep" class="wizard-step flex-grow-1 flex-basis-0 ">
+                <div class="wizard-wrapper pr-4">
+                    <div class="wizard-icon">
+                        <i class="fa fa-check"></i>
+                        <span class="wizard-number">3</span>
+                    </div>
+                    <div class="wizard-label">
+                        <h3 class="wizard-title">تفعيل الجوال</h3>
+                        <div class="wizard-desc">
+                            الثالثة
+                        </div>
+                    </div>
+                    <span class="svg-icon pr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                                <rect fill="#000000" opacity="0.3" transform="translate(8.500000, 12.000000) rotate(-90.000000) translate(-8.500000, -12.000000)" x="7.5" y="7.5" width="2" height="9" rx="1"></rect>
+                                <path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+            <!--end::Wizard Step 3 Nav-->
+            <!--begin::Wizard Step 4 Nav-->
+            <div id="fourthStep" class="wizard-step flex-grow-1 flex-basis-0 ">
+                <div class="wizard-wrapper">
+                    <div class="wizard-icon">
+                        <i class="fa fa-check"></i>
+                        <span class="wizard-number">4</span>
+                    </div>
+                    <div class="wizard-label">
+                        <h3 class="wizard-title">تفعيل البريد</h3>
+                        <div class="wizard-desc">
+                            الرابعة
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end::Wizard Step 4 Nav-->
+        </div>
+        <!--end::Wizard Steps-->
+    </div>
+
+
+
+    <!--begin::Form Step 1-->
+    <form class="form step-1" id="AccountDataForm" method="POST" enctype="multipart/form-data" @*style="display:none"*@>
+        <!--begin::Title-->
+        <div class="pb-5 pb-lg-10">
+            <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg"> أختار نوع الحساب </h3>
+        </div>
+        <!--end::Title-->
+
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="list-type-account">
+                    <li class="item-account active-type">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class="icon-type"><g><path d="M3.5 22h-3a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5c3.401 0 5.198 1.146 5.273 1.195a.5.5 0 0 1 .211.542l-2 7.886A.498.498 0 0 1 3.5 22zM1 21h2.111l1.808-7.13c-.562-.27-1.888-.786-3.919-.861z" fill="#181C32" opacity="1" data-original="#000000"></path><path d="M13 24c-2.356 0-6.922-1.985-9.433-3.168a.5.5 0 1 1 .426-.904C8.138 21.88 11.421 23 13 23c2.433 0 8.165-2.857 9.814-3.707-.26-.339-.797-.793-1.814-.793-.923 0-2.093.37-3.225.727-1.203.38-2.448.773-3.525.773-2.064 0-4.806-.988-4.921-1.03a.499.499 0 1 1 .342-.94c.026.01 2.692.97 4.579.97.923 0 2.093-.37 3.225-.727 1.203-.38 2.448-.773 3.525-.773 2.334 0 2.949 1.767 2.975 1.842a.501.501 0 0 1-.239.6C23.425 20.107 16.09 24 13 24z" fill="#181C32" opacity="1" data-original="#000000"></path><path d="M16.5 19.59a.5.5 0 0 1-.5-.5v-.5c0-.698-.471-1.296-1.144-1.453l-9.653-2.331a.499.499 0 1 1 .235-.972l9.649 2.33A2.475 2.475 0 0 1 17 18.59v.5a.5.5 0 0 1-.5.5zM17.5 9C16.121 9 15 7.878 15 6.5S16.121 4 17.5 4 20 5.122 20 6.5 18.879 9 17.5 9zm0-4c-.827 0-1.5.673-1.5 1.5S16.673 8 17.5 8 19 7.327 19 6.5 18.327 5 17.5 5z" fill="#181C32" opacity="1" data-original="#000000"></path><path d="M18.298 13h-1.596a.996.996 0 0 1-.994-.901l-.128-1.271a4.696 4.696 0 0 1-.865-.503l-1.167.527a.996.996 0 0 1-1.278-.411l-.797-1.381a.996.996 0 0 1 .281-1.312l1.03-.74c-.019-.155-.034-.328-.034-.508s.015-.353.034-.507l-1.03-.74a.997.997 0 0 1-.281-1.313l.797-1.38a.996.996 0 0 1 1.277-.412l1.168.528c.273-.2.562-.368.865-.503L15.708.9a.996.996 0 0 1 .994-.9h1.596c.516 0 .943.387.994.901l.128 1.271c.303.135.593.304.865.503l1.167-.527a.997.997 0 0 1 1.278.411l.797 1.381a.996.996 0 0 1-.281 1.312l-1.03.74c.019.155.034.328.034.508s-.015.353-.034.507l1.03.74c.419.302.54.867.281 1.313l-.797 1.38a1 1 0 0 1-1.277.412l-1.168-.528c-.273.2-.562.368-.865.503l-.128 1.273a.996.996 0 0 1-.994.9zm-3.513-3.755a.5.5 0 0 1 .321.117c.339.284.714.501 1.113.647.18.066.307.229.325.42L16.702 12h1.596l.157-1.571a.501.501 0 0 1 .325-.42 3.745 3.745 0 0 0 1.113-.647.5.5 0 0 1 .527-.072l1.443.652.798-1.381-1.278-.918a.503.503 0 0 1-.2-.493c.038-.213.067-.427.067-.65s-.029-.437-.066-.648a.503.503 0 0 1 .2-.493l1.278-.918-.797-1.381-1.444.651a.502.502 0 0 1-.527-.072 3.7 3.7 0 0 0-1.113-.647.498.498 0 0 1-.325-.42L18.298 1h-1.596l-.157 1.571a.501.501 0 0 1-.325.42 3.745 3.745 0 0 0-1.113.647.5.5 0 0 1-.527.072l-1.443-.652-.799 1.382 1.278.918a.503.503 0 0 1 .2.493c-.037.212-.066.426-.066.649s.029.437.066.648a.503.503 0 0 1-.2.493l-1.278.919.797 1.381 1.444-.651a.488.488 0 0 1 .206-.045z" fill="#181C32" opacity="1" data-original="#000000"></path></g></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" x="0" y="0" viewBox="0 0 43.349 43.349" style="enable-background:new 0 0 512 512" xml:space="preserve" fill-rule="evenodd" class="active-svg"><g><path d="M18.792 40.467C8.426 40.467 0 32.04 0 21.675S8.426 2.883 18.792 2.883c4.753 0 9.214 1.726 12.689 4.912a34.152 34.152 0 0 0-3.344 2.26 14.836 14.836 0 0 0-9.345-3.294c-8.215 0-14.914 6.699-14.914 14.914s6.699 14.913 14.914 14.913c11.43 0 18.216-12.218 13.3-21.717a51.384 51.384 0 0 1 3.002-2.584c1.645 2.84 2.49 6.061 2.49 9.387 0 10.366-8.426 18.793-18.792 18.793z" fill="#FFFFFF" opacity="1" data-original="#000000" class=""></path><path d="M19.286 31.335a.502.502 0 0 1-.459-.317c-.035-.07-3.067-7.898-7.756-10.86-.917-.564-1.622-1.163-1.34-2.503.282-1.304 1.163-2.045 2.75-2.397 2.82-.6 5.853 3.772 6.98 5.57 3.95-5.746 11.847-14.772 23.341-15.83.554-.065.76.757.247.987-.176.07-16.606 7.58-23.27 25.068a.563.563 0 0 1-.493.282z" fill="#FFFFFF" opacity="1" data-original="#000000" class=""></path></g></svg>
+                        <p>
+                            حساب مزود خدمة
+                        </p>
+                    </li>
+                    <li class="item-account">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class="icon-type"><g><path d="m14 9.09 8.81 1.75c.71.15 1.19.75 1.19 1.46v10.2c0 .83-.67 1.5-1.5 1.5h-9c.28 0 .5-.22.5-.5V23h8.5c.27 0 .5-.22.5-.5V12.3c0-.23-.16-.44-.39-.49L14 10.11z" fill="#181C32" opacity="1" data-original="#000000"></path><path d="M19.5 14c.28 0 .5.22.5.5s-.22.5-.5.5h-2c-.28 0-.5-.22-.5-.5s.22-.5.5-.5zM19.5 17c.28 0 .5.22.5.5s-.22.5-.5.5h-2c-.28 0-.5-.22-.5-.5s.22-.5.5-.5zM19.5 20c.28 0 .5.22.5.5s-.22.5-.5.5h-2c-.28 0-.5-.22-.5-.5s.22-.5.5-.5zM14 23.5c0 .28-.22.5-.5.5s-.5-.22-.5-.5v-14c0-.15.07-.29.18-.39.12-.09.27-.13.42-.1l.4.08V23z" fill="#181C32" opacity="1" data-original="#000000"></path><path d="M13 23v.5c0 .28.22.5.5.5h-4c.28 0 .5-.22.5-.5V23zM10.5 5c.28 0 .5.22.5.5s-.22.5-.5.5h-2c-.28 0-.5-.22-.5-.5s.22-.5.5-.5zM11 8.5c0 .28-.22.5-.5.5h-2c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h2c.28 0 .5.22.5.5zM10.5 11c.28 0 .5.22.5.5s-.22.5-.5.5h-2c-.28 0-.5-.22-.5-.5s.22-.5.5-.5zM10.5 14c.28 0 .5.22.5.5s-.22.5-.5.5h-2c-.28 0-.5-.22-.5-.5s.22-.5.5-.5zM6 14.5c0 .28-.22.5-.5.5h-2c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h2c.28 0 .5.22.5.5zM5.5 5c.28 0 .5.22.5.5s-.22.5-.5.5h-2c-.28 0-.5-.22-.5-.5s.22-.5.5-.5zM5.5 8c.28 0 .5.22.5.5s-.22.5-.5.5h-2c-.28 0-.5-.22-.5-.5s.22-.5.5-.5zM5.5 11c.28 0 .5.22.5.5s-.22.5-.5.5h-2c-.28 0-.5-.22-.5-.5s.22-.5.5-.5zM9 18.5c0-.28-.23-.5-.5-.5h-3c-.28 0-.5.22-.5.5V23H4v-4.5c0-.83.67-1.5 1.5-1.5h3c.83 0 1.5.67 1.5 1.5V23H9z" fill="#181C32" opacity="1" data-original="#000000"></path><path d="M5 23h5v.5c0 .28-.22.5-.5.5h-5c-.28 0-.5-.22-.5-.5V23z" fill="#181C32" opacity="1" data-original="#000000"></path><path d="m1.75.2 10.99 1.67c.73.12 1.26.74 1.26 1.48v5.74l-.4-.08c-.15-.03-.3.01-.42.1-.11.1-.18.24-.18.39V3.35c0-.25-.18-.46-.42-.5L1.59 1.19c-.03-.01-.06-.01-.09-.01-.12 0-.23.04-.32.12-.12.1-.18.23-.18.38V22.5c0 .28.23.5.5.5H4v.5c0 .28.22.5.5.5h-3C.67 24 0 23.33 0 22.5V1.68C0 1.24.19.82.53.54.87.25 1.31.13 1.75.2z" fill="#181C32" opacity="1" data-original="#000000"></path></g></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" x="0" y="0" viewBox="0 0 43.349 43.349" style="enable-background:new 0 0 512 512" xml:space="preserve" fill-rule="evenodd" class="active-svg"><g><path d="M18.792 40.467C8.426 40.467 0 32.04 0 21.675S8.426 2.883 18.792 2.883c4.753 0 9.214 1.726 12.689 4.912a34.152 34.152 0 0 0-3.344 2.26 14.836 14.836 0 0 0-9.345-3.294c-8.215 0-14.914 6.699-14.914 14.914s6.699 14.913 14.914 14.913c11.43 0 18.216-12.218 13.3-21.717a51.384 51.384 0 0 1 3.002-2.584c1.645 2.84 2.49 6.061 2.49 9.387 0 10.366-8.426 18.793-18.792 18.793z" fill="#FFFFFF" opacity="1" data-original="#000000" class=""></path><path d="M19.286 31.335a.502.502 0 0 1-.459-.317c-.035-.07-3.067-7.898-7.756-10.86-.917-.564-1.622-1.163-1.34-2.503.282-1.304 1.163-2.045 2.75-2.397 2.82-.6 5.853 3.772 6.98 5.57 3.95-5.746 11.847-14.772 23.341-15.83.554-.065.76.757.247.987-.176.07-16.606 7.58-23.27 25.068a.563.563 0 0 1-.493.282z" fill="#FFFFFF" opacity="1" data-original="#000000" class=""></path></g></svg>
+
+                        <p>
+                            حساب شركة
+                        </p>
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+        </div>
+        <!--begin::Form Buttons-->
+        <div class="pb-lg-0 pb-5 d-flex justify-content-between align-center">
+            <a href="#" class="btn btn-theme  font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3 ml-auto" onclick="Next(1);event.preventDefault();">
+                @L("Common.Next")
+            </a>
+        </div>
+        <!--end::Form Buttons-->
+
+    </form>
+    <!--end::Form Step 1-->
+    <!--begin::Form Step 2-->
+    <form class="form step-2" id="StoreRegisterForm" method="POST" enctype="multipart/form-data" style="display:none">
+        <!--begin::Title-->
+        <div class="pb-5 pb-lg-10">
+            <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">بيانات الحساب</h3>
+        </div>
+        <!--end::Title-->
+        <!--begin: -->
+        @if (@ViewBag.ErrorMessage != null)
+        {
+            <div class="alert alert-danger">
+                <i class="fa fa-warning"></i> @ViewBag.ErrorMessage
+            </div>
+        }
+        <div class="row">
+            @*<div class="col-md-12">
+                    <div class="box-radio-btn">
+                        <label class="rad-label">
+                            <input type="radio" class="rad-input" name="rad" checked>
+                            <div class="rad-design"></div>
+                            <div class="rad-text">مزود خدمة</div>
+                        </label>
+                        <label class="rad-label">
+                            <input type="radio" class="rad-input" name="rad">
+                            <div class="rad-design"></div>
+                            <div class="rad-text">شركة</div>
+                        </label>
+                    </div>
+                </div>*@
+
+            @*ArabicName*@
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="font-size-h6 font-weight-bolder text-dark"> @L("Common.ArabicName") <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control h-50px rounded-lg font-size-h6" name="NameAr" required maxlength="@AbpUserBase.MaxNameLength">
+                </div>
+            </div>
+            @*EnglishName*@
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="font-size-h6 font-weight-bolder text-dark"> @L("Common.EnglishName") <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control h-50px rounded-lg font-size-h6" name="NameEn" required maxlength="@AbpUserBase.MaxSurnameLength">
+                </div>
+            </div>
+            @*descAr*@
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="font-size-h6 font-weight-bolder text-dark">  @L("Common.DescriptionAr") <span class="text-danger">*</span></label>
+                    <textarea class="form-control no-resize rounded-lg font-size-h6" name="DescAr" required rows="4"></textarea>
+                </div>
+            </div>
+            @*descEn*@
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="font-size-h6 font-weight-bolder text-dark">  @L("Common.DescriptionEn") <span class="text-danger">*</span></label>
+                    <textarea class="form-control no-resize rounded-lg font-size-h6" name="DescEn" required rows="4"></textarea>
+                </div>
+            </div>
+
+ 
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="font-size-h6 font-weight-bolder text-dark"> الصورة<span class="text-danger">*</span></label>
+                    <div class="col-md-12">
+                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                            <div class="fileinput-preview fileinput-exists thumbnail" style="max-height: 121px; max-width: 121px; line-height: 10px;">
+                            </div>
+                            <div>
+                                <span class="btn btn-outline-dark btn-file focused">
+                                    <span class="fileinput-new">
+                                        <i class="fa fa-upload"></i>
+                                        @L("Common.SelectImage")
+                                    </span>
+                                    <span class="fileinput-exists">
+                                        <i class="fas fa-redo"></i>
+                                        @L("Common.ChangeImage")
+                                    </span>
+                                    <input type="hidden"><input type="file" class="form-control edit" id="Avatar" name="Avatar" required accept="image/*" />
+                                </span>
+                                <a href="javascript:;" class="fileinput-exists" data-dismiss="fileinput">
+                                    <span class="fileinput-exists btn btn-danger">
+                                        <i class="fa fa-times"></i>
+                                        @L("Common.Delete")
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            @*password*@
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="font-size-h6 font-weight-bolder text-dark">@L("Common.Password") <span class="text-danger">*</span></label>
+                    <input type="password" class="form-control h-50px rounded-lg font-size-h6" name="Password" id="Password" autocomplete="new-password" required minlength="6" maxlength="@AbpUserBase.MaxPlainPasswordLength">
+                </div>
+            </div>
+            @*confirm*@
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="font-size-h6 font-weight-bolder text-dark">@L("Common.ConfirmPassword")<span class="text-danger">*</span></label>
+                    <input type="password" class="form-control h-50px rounded-lg font-size-h6" id="ConfirmPassword" name="ConfirmPassword" pw-check="Password">
+                </div>
+            </div>
+
+
+            <div class="col-md-12">
+                <div class="form-group  row p-t-10">
+                    <div class="col-md-12">
+                        <input class="filled-in chk-col-amber check-box" id="termsCheckbox" type="checkbox" value="true">
+                        <label for="termsCheckbox">
+                            أوافق على <a href="#" id="termsLink">الشروط والأحكام</a>
+                        </label>
+                    </div>
+
+                    <!-- Popup Div -->
+                    <div id="popupDiv" class="popup-overlay">
+                        <div class="popup-content">
+                            <span class="close-btn" id="closePopup">&times;</span>
+                            <h2 class="text-center mb--10">الشروط والأحكام</h2>
+
+                            <p class="text-terms">
+                                الشروط والأحكام لمنصة سيارة آب
+                                مرحبًا بك في منصة “سيارة آب”، الوسيط الرقمي بين الشركات المالكة للسيارات ومحطات الوقود. تتيح هذه الشروط والأحكام تنظيم استخدام المنصة والخدمات المقدمة من خلالها. يُرجى قراءة هذه الشروط بعناية قبل استخدام المنصة.
+
+                                1. التعريفات
+                                “المنصة”: تشير إلى منصة “سيارة آب” التي تقدم خدمات إدارة تزويد الوقود.
+                                “الشركة”: تشير إلى أي شركة تمتلك أسطولًا من السيارات وتستخدم المنصة للحصول على خدمات تزويد الوقود.
+                                “محطة الوقود”: تشير إلى محطات الوقود التي تقدم خدمات تزويد الوقود من خلال المنصة.
+                                “المستخدم”: يشير إلى أي فرد أو شركة يستخدم خدمات المنصة سواء كانوا شركات أو محطات وقود.
+                                2. قبول الشروط
+                                باستخدام منصة “سيارة آب”، فإنك تقبل وتوافق على الالتزام بهذه الشروط والأحكام. في حال عدم موافقتك على أي من هذه الشروط، يُرجى عدم استخدام المنصة.
+
+                                3. طبيعة الخدمة
+                                تعمل “سيارة آب” كوسيط بين الشركات ومحطات الوقود لتسهيل عملية تزويد الوقود.
+                                لا تتحمل “سيارة آب” مسؤولية مباشرة عن جودة أو توافر الخدمة المقدمة من محطات الوقود.
+                                يجب على المستخدمين التحقق من تفاصيل الخدمة وموثوقية محطات الوقود قبل إتمام الطلب.
+                                4. الحساب والتسجيل
+                                يتطلب استخدام بعض خدمات المنصة التسجيل بحساب شخصي أو مؤسسي.
+                                يتحمل المستخدم مسؤولية الحفاظ على سرية بيانات الحساب وعدم مشاركتها مع الآخرين.
+                                يحق لـ”سيارة آب” تعليق أو إلغاء أي حساب ينتهك هذه الشروط أو يستخدم بطريقة غير قانونية.
+                                5. استخدام المنصة
+                                يُمنع استخدام المنصة لأي أغراض غير قانونية أو تنتهك حقوق الملكية الفكرية للآخرين.
+                                يُحظر أي محاولة للوصول غير المصرح به إلى أنظمة المنصة أو التلاعب بها.
+                                يجب على المستخدمين استخدام المنصة بشكل معقول والالتزام بجميع القوانين المحلية والدولية.
+                                6. الرسوم والمدفوعات
+                                قد يتم تطبيق رسوم على استخدام بعض خدمات المنصة. يتم إعلام المستخدمين بهذه الرسوم قبل تأكيد الطلب.
+                                تتعهد الشركة بسداد المبالغ المستحقة وفقًا للشروط المحددة عند إتمام الطلب.
+                                تحتفظ “سيارة آب” بالحق في تعديل رسوم الخدمات في أي وقت، وسيتم إخطار المستخدمين مسبقًا.
+                                7. إخلاء المسؤولية
+                                تعمل “سيارة آب” كوسيط فقط ولا تتحمل أي مسؤولية عن أي أخطاء أو تأخيرات في تقديم الخدمة من قبل محطات الوقود.
+                                لا تقدم المنصة أي ضمانات بشأن توافر الخدمة أو جودة الوقود المقدم.
+                                “سيارة آب” غير مسؤولة عن أي أضرار ناتجة عن الاستخدام غير الصحيح للمنصة أو الخدمة.
+                                8. الملكية الفكرية
+                                جميع حقوق الملكية الفكرية المتعلقة بالمنصة (بما في ذلك الشعارات، النصوص، التصميمات) هي ملكية حصرية لـ”سيارة آب” ولا يجوز استخدامها بدون إذن خطي مسبق.
+                                9. التعويض
+                                يوافق المستخدم على تعويض “سيارة آب” وحمايتها من أي مطالبات أو خسائر أو أضرار ناتجة عن خرق المستخدم لأي من هذه الشروط أو نتيجة استخدامه غير القانوني للمنصة.
+
+                                10. إنهاء الاستخدام
+                                يحتفظ “سيارة آب” بالحق في تعليق أو إنهاء حساب المستخدم في حالة عدم الامتثال لهذه الشروط أو في حال استخدام المنصة بطريقة تنتهك القانون أو حقوق الآخرين.
+
+                                11. التعديلات على الشروط
+                                تحتفظ “سيارة آب” بالحق في تعديل هذه الشروط والأحكام في أي وقت. سيتم إخطار المستخدمين بأي تغييرات كبيرة عبر البريد الإلكتروني أو إشعار على التطبيق. استمرار استخدام المنصة بعد أي تعديل يعني قبول هذه التعديلات.
+
+                                12. القانون الواجب التطبيق
+                                تخضع هذه الشروط والأحكام لقوانين الدولة التي تعمل فيها المنصة، ويتم حل أي نزاع ينشأ بخصوص هذه الشروط وفقًا للقوانين المحلية.
+                            </p>
+
+                            <div class="pb-lg-0 pb-5 d-flex justify-content-center align-center">
+                                <a href="#" id="closePopup" class="btn btn-theme  font-weight-bolder font-size-h6 px-8  m-auto" >
+                                    قراءت الشروط و الاحكام
+                                </a>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+        <!--begin::Form Buttons-->
+        <div class="pb-lg-0 pb-5 d-flex justify-content-between align-center">
+            <a href="#" class="btn btn-theme btn-theme-2  font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3 " onclick="Prev(1);event.preventDefault();">
+                @L("Common.Previous")
+            </a>
+            <a href="#" class="btn btn-theme  font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3 ml-auto" onclick="Next(2);event.preventDefault();">
+                @L("Common.Next")
+            </a>
+        </div>
+        <!--end::Form Buttons-->
+    </form>
+    <!--end::Form Step 2-->
+    <!--begin::Form Step 3-->
+    <form class="form step-3" id="activatePhone" asp-action="StoreRegisterSteps" method="POST" enctype="multipart/form-data" style="display:none">
+
+        <!--begin::Title-->
+        <div class="pb-5 pb-lg-10">
+            <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">تأكيد رقم الجوال</h3>
+            <p class="text-center mb--10">يُرجى إدخال الكود المرسل الي رقم الجوال</p>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group input-send-box">
+
+                <input type="tel" class="form-control h-50px rounded-lg font-size-h6" name="phone" id="phone" placeholder="إدخل رقم الجوال" required>
+
+                <span class="input-group-btn">
+                    <button id="genpassword" class="btn btn-success" type="button">
+                        إرسال
+                        <i class="fa fa-arrow-left fa-fw"></i>
+                    </button>
+                </span>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+
+
+            <fieldset class="verification-inputs" name="number-code" data-number-code-form="">
+                <input type="number" maxlength="1" class="verification-code" min="0" max="9" name="number-code-0" data-number-code-input="0" />
+                <input type="number" maxlength="1" class="verification-code" min="0" max="9" name="number-code-1" data-number-code-input="1" />
+                <input type="number" maxlength="1" class="verification-code" min="0" max="9" name="number-code-2" data-number-code-input="2" />
+                <input type="number" maxlength="1" class="verification-code" min="0" max="9" name="number-code-3" data-number-code-input="3" />
+            </fieldset>
+            <div class="d-flex justify-content-between align-items-center mt--15 footer-send">
+                <div class="text-center time-code"><a href="#"> 00:59</a></div>
+                <div class="text-center resend-code"><a href="#">اعادة الارسال</a></div>
+            </div>
+            <div class="box-btn-send">
+                <div class="block__cell">
+                    <a href="#" class="btn btn--activate" id="btnActivation">
+                        <span class="btn__icon"></span>
+                        <span class="btn__text" data-wait="إنتظر" data-after="تم الإرسال"> تأكيد الكود</span>
+                    </a>
+                </div>
+
+                @*<button href="#" class="btn btn-theme btn-theme-3">
+                    تأكيد الكود
+                </button>*@
+            </div>
+        </div>
+            <!--begin::Form Buttons-->
+            <div class="pt-lg-15 pb-5 d-flex justify-content-between align-center">
+                <a href="#" class="btn btn-theme btn-theme-2  font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3 " onclick="Prev(2);event.preventDefault();">
+                    @L("Common.Previous")
+                </a>
+                <a href="#" class="btn btn-theme  font-weight-bolder font-size-h6 px-8 py-4 my-3" onclick="submitRegister();event.preventDefault();">
+                    @L("Common.Register")
+                </a>
+            </div>
+            <!--end::Form Buttons-->
+</form>
+    <!--end::Form Step 3-->
+    <!--begin::Form Step 3-->
+    <form class="form step-4" id="activateEmail" asp-action="StoreRegisterSteps" method="POST" enctype="multipart/form-data" style="display:none">
+
+        <!--begin::Title-->
+        <div class="pb-5 pb-lg-10">
+            <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">تفعيل البريد </h3>
+        </div>
+
+        <div class="row">
+            @*email*@
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="font-size-h6 font-weight-bolder text-dark">@L("Common.Email") <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control h-50px rounded-lg font-size-h6" name="EmailAddress" id="EmailAddress" required maxlength="@AbpUserBase.MaxEmailAddressLength">
+                </div>
+            </div>
+          
+        </div>
+        <!--begin::Form Buttons-->
+        <div class="pt-lg-15 pb-5 d-flex justify-content-between align-center">
+            <a href="#" class="btn btn-theme btn-theme-2  font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3 " onclick="Prev(3);event.preventDefault();">
+                @L("Common.Previous")
+            </a>
+            <a href="#" class="btn btn-theme  font-weight-bolder font-size-h6 px-8 py-4 my-3" onclick="submitRegister();event.preventDefault();">
+                @L("Common.Register")
+            </a>
+        </div>
+        <!--end::Form Buttons-->
+    </form>
+    <!--end::Form Step 3-->
+</div>
+
+<!--end::Signup-->
+
+
+
+<script type="text/javascript">
+    //(function ($) {
+    //    $.validator.unobtrusive.adapters.addBool("checkboxrequired", "required");
+    //}(jQuery));
+</script>
+
+
+@*<script>
+        var telInput = $("#phone");
+
+        telInput.intlTelInput({
+            utilsScript: "../Scripts/plugins/ng-intl-tel-input/utils.js"
+        });
+        telInput.intlTelInput("setCountry", "sa");
+
+        var telInput2 = $("#managementContactNumber");
+
+        telInput2.intlTelInput({
+            utilsScript: "../Scripts/plugins/ng-intl-tel-input/utils.js"
+        });
+        telInput2.intlTelInput("setCountry", "sa");
+
+        var telInput3 = $("#marketingDepartmentContactNumber");
+
+        telInput3.intlTelInput({
+            utilsScript: "../Scripts/plugins/ng-intl-tel-input/utils.js"
+        });
+        telInput3.intlTelInput("setCountry", "sa");
+
+
+    </script>*@
+
+<script>
+
+     var branches = @Html.Raw(Json.Encode(ViewBag.StoreBranchesList));
+    function Prev(type) {
+        if (type == 1) {
+            $('#StoreRegisterForm').css("display", "none");
+            $('#AccountDataForm').css("display", "block");
+            $("#secondStep").removeClass("current");
+            $("#firstStep").removeClass("done");
+            $("#firstStep").addClass("current");
+        }
+        else {
+            $('#activatePhone').css("display", "none");
+            $('#StoreRegisterForm').css("display", "block");
+            $("#thirdStep").removeClass("current");
+            $("#secondStep").removeClass("done");
+            $("#secondStep").addClass("current");
+        }
+    }
+    function Next(type) {
+        if (type == 1) {
+            checkLoginData();
+        }
+        else {
+            checkStoreData();
+        }
+    }
+    function checkLoginData() {
+        $('#AccountDataForm').validate();
+        if ($('#AccountDataForm').valid()) {
+            // ajax call
+            $('#AccountDataForm').css("display", "none");
+            $('#StoreRegisterForm').css("display", "block");
+            $("#firstStep").removeClass("current");
+            $("#firstStep").addClass("done");
+            $("#secondStep").addClass("current");
+        }
+        //else {
+        //    // Failed show errors
+        //}
+    }
+    function checkStoreData() {
+        $('#StoreRegisterForm').validate();
+        if ($('#StoreRegisterForm').valid()) {
+            // ajax call
+            $('#StoreRegisterForm').css("display", "none");
+            $('#activatePhone').css("display", "block");
+            $("#secondStep").removeClass("current");
+            $("#secondStep").addClass("done");
+            $("#thirdStep").addClass("current");
+        }
+        //else {
+        //    // Failed show errors
+        //}
+    }
+
+
+    function AddBranch() {
+        //var arabicBranchName = $('#ArabicBranchName').val();
+        //var englishBranchName = $('#EnglishBranchName').val();
+        var latitude = $('#lat').val();
+        var longitude = $('#lng').val();
+        var addressOnMap = $('#addressOnMap').val();
+
+        if (branches != null) {
+            branches.push({ /*nameAr: arabicBranchName, nameEn: englishBranchName,*/ latitude: parseFloat(latitude), longitude: parseFloat(longitude), addressOnMap: addressOnMap });
+        }
+
+        @*$('#branhesListContainer').append('<div class="branch-div w-100 mb-5"><div class="row"><div class="col-md-6"><label> @L("Pages.StoreBranches.ArabicBranchName") </label><h6>' + arabicBranchName + '</h6></div><div class="col-md-6"><label> @L("Pages.StoreBranches.EnglishBranchName") </label><h6>' + englishBranchName +'</h6></div><div class="col-md-12 mt-5"><label> @L("Pages.StoreBranches.AddressOnMap") </label><h6>'+ addressOnMap + '</h6></div></div></div>');*@
+
+         $('#branhesListContainer').append('<div class="branch-div w-100 mb-5"><div class="row"><div class="col-md-12 mt-5"><label> @L("Pages.StoreBranches.AddressOnMap") </label><h6>'+ addressOnMap + '</h6></div></div></div>');
+
+
+        //$('#ArabicBranchName').val('');
+        //$('#EnglishBranchName').val('');
+        $('#lat').val('');
+        $('#lng').val('');
+        $('#addressOnMap').val('');
+
+        $('#formAddBranch').css("display", "none");
+    }
+    function openBranchFrom() {
+        myMap();
+        $('#formAddBranch').css("display", "block");
+    }
+    function submitRegister() {
+        $('#errorAlert').val('');
+        $('#RegisteredEmail').val('');
+        $('#errorAlert').css("display", "none");
+
+        var branchesResult = checkHasBranches(branches);
+        if (branchesResult == true) {
+     var fdata = new FormData();
+        var avatar = $("#Avatar")[0].files[0];
+        var CommercialRegistry = $("#CommercialRegistry")[0].files[0];
+        var AnotherDocument = $("#AnotherDocument")[0].files[0];
+        var ModelObject = $('#StoreRegisterForm').serializeArray();
+
+
+        var ModelObject2 = $('#AccountDataForm').serializeArray();
+
+        fdata.append('1', avatar);
+        fdata.append('2', CommercialRegistry);
+        fdata.append('3', AnotherDocument);
+        for (var i = 0; i < ModelObject.length; i++) {
+            fdata.append(ModelObject[i].name, ModelObject[i].value);
+        }
+        for (var i = 0; i < ModelObject2.length; i++) {
+            fdata.append(ModelObject2[i].name, ModelObject2[i].value);
+        }
+        fdata.append("Surname", $("#Name").val());
+        fdata.append("StoreBranches", JSON.stringify(branches));
+         $.ajax({
+        type: "POST",
+        url: "@Url.Action("StoreRegisterSteps", "Account")",
+             data: fdata,
+             //dataType: "json",
+            /* async: false,*/
+             processData: false,
+             contentType: false,
+             success: function (response) {
+                 
+                 if (response.success == true) {
+                     if (response.result.success == true) {
+                         $('#RegisteredEmail').text(response.result.emailAddress);
+                         if (response.result.isLogin == true) {
+                           var url = '@Url.Action("Index", "Home")';
+                           window.location.href = url;
+                         }
+                        else {
+                         $('#signUpForm').css("display", "none");
+                         $('#confirmationResult').css("display", "block");
+                        }
+                     }
+                     else {
+                         $('#errorAlert').text(response.result.message);
+                         $('#errorAlert').css("display", "block");
+                     }
+                 }
+                 else {
+                     $('#errorAlert').text(response.error);
+                     $('#errorAlert').css("display", "block");
+                 }
+             },
+             error: function (xhr, ajaxOptions, error) {
+                 
+                 $('#errorAlert').text("error!");
+                 $('#errorAlert').css("display", "block");
+             }
+         });
+        }
+    }
+    function checkHasBranches(newBranches) {
+        if (newBranches.length <= 0) {
+            $('#errorAlert').text('@L("Pages.StoreRegister.AddAtLeastOneBranch")');
+            $('#errorAlert').css("display", "block");
+            //$('#validationMessage').html('You must select at least one option');
+            return false;
+        }
+        return true;
+    }
+
+    function submitWith() {
+        var checkedCount = $("input:checked").length;
+        var valid = checkedCount > 0;
+        if (!valid) {
+            alert('You must select at least one option');
+            //$('#validationMessage').html('You must select at least one option');
+        }
+        return valid;
+    }
+
+</script>
+<script>
+    $(document).ready(function () {
+        $('#btnActivation').click(function () {
+            if (!$('#btnActivation').hasClass(('btn--activated'))) {
+                $('#btnActivation').removeClass('btn--activate');
+                $('#btnActivation').addClass('btn--waiting');
+                setTimeout(function () {
+                    removeWaiting();
+                }, 3000);
+            }
+
+        });
+
+        function removeWaiting() {
+            $('#btnActivation').removeClass('btn--waiting');
+            $('#btnActivation').addClass('btn--activated');
+        }
+
+    });
+</script>
+

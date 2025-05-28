@@ -8,7 +8,7 @@ using Sayarah.Application.Veichles.Dto;
 using Sayarah.Core.Helpers;
 using System.ComponentModel.DataAnnotations;
 
-namespace Sayarah.Api.Models
+namespace Sayarah.WebApi.Api.Models
 {
     public class StringOutput
     {

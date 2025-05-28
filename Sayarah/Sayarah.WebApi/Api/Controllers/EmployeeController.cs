@@ -1,7 +1,7 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.AspNetCore.Mvc.Controllers;
 using Microsoft.AspNetCore.Mvc;
-using Sayarah.Api.Models;
+using Sayarah.WebApi.Api.Models;
 using Sayarah.Application.Chips;
 using Sayarah.Application.Chips.Dto;
 using Sayarah.Application.Companies;
@@ -11,7 +11,7 @@ using Sayarah.Application.Users;
 using Sayarah.Core.Helpers;
 using System.Globalization;
 
-namespace Sayarah.Api.Controllers
+namespace Sayarah.WebApi.Api.Controllers
 {
     [ApiController]
 

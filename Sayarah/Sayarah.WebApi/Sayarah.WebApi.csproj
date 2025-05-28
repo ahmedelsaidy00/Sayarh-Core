@@ -10,7 +10,6 @@
     <PackageReference Include="Abp.AspNetCore" Version="7.3.0" />
     <PackageReference Include="Abp.Zero.Common" Version="7.3.0" />
     <PackageReference Include="Abp.ZeroCore" Version="7.3.0" />
-    <PackageReference Include="ImageProcessor" Version="2.9.0" />
     <PackageReference Include="Magick.NET-Q8-AnyCPU" Version="14.6.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.16" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.0" />

@@ -1,6 +1,4 @@
 ﻿using ImageMagick;
-using ImageProcessor;
-using ImageProcessor.Imaging;
 
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -12,7 +10,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Sayarah.Api.Controllers
+namespace Sayarah.WebApi.Api.Controllers
 {
     public class UploadWebPController : Controller
     {

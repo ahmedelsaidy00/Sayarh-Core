@@ -1,0 +1,143 @@
+/* Put your css in here */
+
+multiselect {
+    display: block;
+}
+
+    multiselect .btn {
+        background-color: #FFF;
+        color: #999;
+        width: 100%;
+        padding: 10px 13px;
+        margin: 0;
+        border: 1px solid #428bca;
+        border-radius: 4px;
+    }
+
+        multiselect .btn.error {
+            border: 1px solid #da4f49 !important;
+        }
+
+    multiselect .dropdown-menu {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    multiselect .dropdown-menu {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 2px;
+        z-index: 9;
+        margin-top: 0 !important;
+    }
+
+        multiselect .dropdown-menu > li {
+            width: 100%;
+            float: none;
+            margin-bottom: 0 !important;
+        }
+
+            multiselect .dropdown-menu > li > a {
+                padding: 5px 10px;
+                cursor: pointer;
+                direction: rtl;
+                text-align: right;
+            }
+
+                multiselect .dropdown-menu > li > a:hover, multiselect .dropdown-menu > li > a:focus, multiselect .dropdown-submenu:hover > a, multiselect .dropdown-submenu:focus > a {
+                    text-decoration: none;
+                    color: #ffffff;
+                    background-color: #0081c2;
+                    background-image: -moz-linear-gradient(top, #428bca, #3a7ab1);
+                    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#428bca), to(#3a7ab1));
+                    background-image: -webkit-linear-gradient(top, #428bca, #3a7ab1);
+                    background-image: -o-linear-gradient(top, #428bca, #3a7ab1);
+                    background-image: linear-gradient(to bottom, #428bca, #3a7ab1);
+                    background-repeat: repeat-x;
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff3a7ab1', GradientType=0);
+                }
+
+        multiselect .dropdown-menu > .active > a, multiselect .dropdown-menu > .active > a:hover, multiselect .dropdown-menu > .active > a:focus {
+            color: #ffffff;
+            text-decoration: none;
+            outline: 0;
+            background-color: #0081c2;
+            background-image: -moz-linear-gradient(top, #428bca, #3a7ab1);
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#428bca), to(#3a7ab1));
+            background-image: -webkit-linear-gradient(top, #428bca, #3a7ab1);
+            background-image: -o-linear-gradient(top, #428bca, #3a7ab1);
+            background-image: linear-gradient(to bottom, #428bca, #3a7ab1);
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff3a7ab1', GradientType=0);
+        }
+
+        multiselect .dropdown-menu > li > button.btn-link {
+            width: 50%;
+            text-decoration: none;
+            background: #f1efef;
+            color: #000;
+            margin: 0;
+            border: 0;
+            float: right;
+            padding: 10px 5px;
+        }
+
+            multiselect .dropdown-menu > li > button.btn-link:hover {
+                background-image: -moz-linear-gradient(top, #428bca, #3a7ab1);
+                background-image: -webkit-linear-gradient(top, #428bca, #3a7ab1);
+                background-image: -o-linear-gradient(top, #428bca, #3a7ab1);
+                background-image: linear-gradient(to bottom, #428bca, #3a7ab1);
+                color: #fff;
+            }
+
+
+
+    multiselect input.input-block-level {
+        border: 1px solid #cecece !important;
+        margin-top: 0px !important;
+        width: 100%;
+        padding: 5px;
+    }
+
+
+/**/
+multiselect [class^="icon-"], multiselect [class*=" icon-"] {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    *margin-right: .3em;
+    line-height: 14px;
+    vertical-align: text-top;
+    background-image: url("glyphicons-halflings.png");
+    background-position: 14px 14px;
+    background-repeat: no-repeat;
+    margin-top: 2px;
+}
+
+    multiselect .icon-white,
+    multiselect .nav-pills > .active > a > [class^="icon-"],
+    multiselect .nav-pills > .active > a > [class*=" icon-"],
+    multiselect .nav-list > .active > a > [class^="icon-"],
+    multiselect .nav-list > .active > a > [class*=" icon-"],
+    multiselect .navbar-inverse .nav > .active > a > [class^="icon-"],
+    multiselect .navbar-inverse .nav > .active > a > [class*=" icon-"],
+    multiselect .dropdown-menu > li > a:hover > [class^="icon-"],
+    multiselect .dropdown-menu > li > a:focus > [class^="icon-"],
+    multiselect .dropdown-menu > li > a:hover > [class*=" icon-"],
+    multiselect .dropdown-menu > li > a:focus > [class*=" icon-"],
+    multiselect .dropdown-menu > .active > a > [class^="icon-"],
+    multiselect .dropdown-menu > .active > a > [class*=" icon-"],
+    multiselect .dropdown-submenu:hover > a > [class^="icon-"],
+    multiselect .dropdown-submenu:focus > a > [class^="icon-"],
+    multiselect .dropdown-submenu:hover > a > [class*=" icon-"],
+    multiselect .dropdown-submenu:focus > a > [class*=" icon-"] {
+        background-image: url("glyphicons-halflings-white.png");
+    }
+
+multiselect .icon-ok {
+    background-position: -288px 0;
+}
+
+multiselect .icon-remove {
+    background-position: -312px 0;
+}

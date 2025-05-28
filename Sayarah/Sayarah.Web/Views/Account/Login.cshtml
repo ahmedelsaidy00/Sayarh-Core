@@ -1,0 +1,95 @@
+﻿@using Abp.Web.Mvc.Extensions
+@model Sayarah.Web.Models.Account.LoginFormViewModel
+@section Scripts
+{
+    @Html.IncludeScript("~/Views/Account/Login.js")
+}
+
+<!--begin::Signin-->
+<div class="login-form">
+    <!--begin::Form-->
+    <form class="form" id="LoginForm" method="POST" asp-action="Login">
+
+        @*@Html.AntiForgeryToken()*@
+
+        <!--begin::Title-->
+        <div class="pb-5 pb-lg-10">
+            <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">@L("Pages.Login.Login") </h3>
+
+        </div>
+        <!--end::Title-->
+
+
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12">
+                <!--begin::Form group-->
+                <div class="form-group">
+                    <label class="font-size-h6 font-weight-bolder text-dark">@L("Pages.Login.UserName")</label>
+                    <input class="form-control h-auto py-5 px-5 rounded-lg" type="text" name="UsernameOrEmailAddress" required autofocus maxlength="100" autocomplete="off" />
+                </div>
+            </div>
+            <!--end::Form group-->
+            <div class="col-xl-12 col-lg-12 col-md-12">
+                <!--begin::Form group-->
+                <div class="form-group">
+                    <div class="d-flex justify-content-between mt-n5">
+                        <label class="font-size-h6 font-weight-bolder text-dark pt-5">@L("Pages.Login.Password")</label>
+                    </div>
+                    <input class="form-control h-auto py-5 px-5 rounded-lg" type="password" name="password" required maxlength="100" @*autocomplete="new-password"*@ />
+                </div>
+                <div class="col-md-12 text-right">
+                    <a href="/Register/ForgetPassword" class="text-pink font-weight-bolder">@L("Pages.Login.ForgotPassword")</a>
+                </div>
+
+              
+                <!--end::Form group-->
+            </div>
+            <div class="col-xl-12 col-lg-12 col-md-12">
+                <!--begin::Action-->
+                <div class="pb-lg-0 pb-5">
+                    <button id="LoginButton" type="submit" class="btn  btn-theme font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3">@L("Pages.Login.Login")</button>
+                </div>
+                <!--end::Action-->
+            </div>
+
+        </div>
+
+
+        <!--begin::Store Register-->
+        <div class="pt-5 pt-lg-15">
+            <div class="text-muted font-weight-bold font-size-h4">
+                @L("Pages.Login.DontHavAccount")
+                <a href="/Register" class="text-pink font-weight-bolder">@L("Pages.Login.CreateAccount")</a>
+            </div>
+        </div>
+        <!--end::Store Register-->
+
+
+
+
+
+    </form>
+        <!--end::Form-->
+
+
+</div>
+<!--end::Signin-->
+
+<script>
+
+    // delete cookie value
+
+    function deleteCookie(name) {
+        // Check if the cookie exists
+        if (document.cookie.split(';').some((item) => item.trim().startsWith(name + '='))) {
+            // Delete the cookie by setting its expiration to a past date
+            document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            console.log(`Cookie '${name}' deleted.`);
+        } else {
+            console.log(`Cookie '${name}' does not exist.`);
+        }
+    }
+
+    deleteCookie('adminCredentials');
+
+</script>

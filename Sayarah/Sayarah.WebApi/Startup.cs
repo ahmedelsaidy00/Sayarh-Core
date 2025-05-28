@@ -8,7 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
-using Sayarah.Api;
+using Sayarah.WebApi.Api;
 using System.Text;
 
 namespace Sayarah.WebApi

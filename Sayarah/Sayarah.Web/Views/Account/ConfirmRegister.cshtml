@@ -1,0 +1,35 @@
+﻿@model Sayarah.Web.Models.Account.ConfirmEmailViewModel
+@{
+    ViewBag.Title = L("Pages.Register.SuccessfullyConfirmed");
+}
+
+<!--begin::SuccessfullyRegistered-->
+<div class="login-form">
+    <!--begin::Title-->
+    <div class="pb-5">
+        @if (Model.Success)
+        {
+            <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">@ViewBag.Title</h3>
+        }
+        else
+        {
+            <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">@ViewBag.ErrorMessage</h3>
+        }
+
+    </div>
+    <!--end::Title-->
+    <!--begin::Form group-->
+    <div class="form-group d-flex flex-wrap">
+        @if (Model.DeviceType == "Android")
+        {
+            <a class="btn bg-orange waves-effect" href="#">@L("Pages.Login.Login")</a>
+        }
+        else if (Model.DeviceType == "IOS")
+        {
+            <a class="btn bg-orange waves-effect" href="#">@L("Pages.Login.Login")</a>
+        }
+    </div>
+    <!--end::Form group-->
+
+</div>
+<!--end::SuccessfullyRegistered-->

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Sayarah.Api.Models
+namespace Sayarah.WebApi.Api.Models
 {
     public class LoginModel
     {

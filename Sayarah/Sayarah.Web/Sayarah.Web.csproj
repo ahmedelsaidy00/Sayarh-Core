@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="scripts\plugins\lightbox2-master\.github\ISSUE_TEMPLATE.md" />
+    <None Include="scripts\plugins\lightbox2-master\.github\PULL_REQUEST_TEMPLATE.md" />
+    <None Include="scripts\plugins\lightbox2-master\.github\vssver2.scc" />
+    <None Include="scripts\plugins\ui-select\.github\ISSUE_TEMPLATE.md" />
+    <None Include="scripts\plugins\ui-select\.github\vssver2.scc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Abp.AspNetCore" Version="7.3.0" />
+	  <PackageReference Include="Magick.NET-Q8-AnyCPU" Version="14.6.0" />
+
+	  <PackageReference Include="Abp.Zero.Common" Version="7.3.0" />
+	  <PackageReference Include="Abp.ZeroCore" Version="7.3.0" />
+	  <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sayarah.Application\Sayarah.Application.csproj" />
+  </ItemGroup>
+
+</Project>

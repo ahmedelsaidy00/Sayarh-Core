@@ -1,8 +1,8 @@
 ﻿using Abp.AspNetCore.Mvc.Controllers;
 using Abp.Domain.Repositories;
 using Microsoft.AspNetCore.Mvc;
-using Sayarah.Api.Controllers;
-using Sayarah.Api.Models;
+using Sayarah.WebApi.Api.Controllers;
+using Sayarah.WebApi.Api.Models;
 using Sayarah.Application.Drivers;
 using Sayarah.Application.Drivers.Dto;
 using Sayarah.Application.Helpers;

@@ -1,0 +1,103 @@
+﻿#LoginArea {
+  max-width: 400px;
+  margin: 120px auto 10px auto;
+}
+/* MAIN */
+/* =============================================== */
+.box-radio-btn {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+    .box-radio-btn .rad-label {
+        display: inline-flex;
+        align-items: center;
+        border-radius: 100px;
+        padding: 10px 16px;
+        cursor: pointer;
+        transition: 0.3s;
+        margin-left: 8px;
+    }
+
+        .box-radio-btn .rad-label:last-of-type {
+            margin-left: 0px;
+        }
+
+        .box-radio-btn .rad-label:hover,
+        .box-radio-btn .rad-label:focus-within {
+            background: hsla(0, 0%, 80%, 0.14);
+        }
+
+    .box-radio-btn .rad-input {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        z-index: -1;
+    }
+
+    .box-radio-btn .rad-design {
+        width: 16px;
+        height: 16px;
+        border-radius: 100px;
+        background: linear-gradient(to left bottom, #19499f, #0b224f);
+        position: relative;
+        margin-left: 10px;
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+        .box-radio-btn .rad-design::before {
+            content: "";
+            display: inline-block;
+            width: inherit;
+            height: inherit;
+            border-radius: inherit;
+            background: hsl(0, 0%, 90%);
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+
+    .box-radio-btn .rad-input:checked + .rad-design::before {
+        transform: scale(0);
+    }
+
+    .box-radio-btn .rad-text {
+        color: hsl(0, 0%, 60%);
+        margin-right: 14px;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 900;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+        transition: 0.3s;
+    }
+
+    .box-radio-btn .rad-input:checked ~ .rad-text {
+        color: var(--main-color1);
+    }
+
+.box-radio-btn {
+    margin-bottom: 20px;
+    text-align: center;
+}
+    .box-radio-btn .rad-label:has(input:checked) {
+        background: hsla(0, 0%, 80%, 0.14);
+    }
+.login-form-signup .form-group label a {
+    color: #0b276b;
+}
+    .login-form-signup .form-group label a:hover {
+        color: #ec3665;
+    }
+
+
+.login-content .btn-theme.btn:hover {
+    color: #fdfdfd;
+}
+    /*# sourceMappingURL=Login.css.map */
+

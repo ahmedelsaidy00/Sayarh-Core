@@ -1,0 +1,295 @@
+﻿@using Abp.Authorization.Users
+@model Sayarah.Web.Models.Account.RegisterViewModel
+@section Styles
+{
+    <link href="~/Scripts/plugins/ng-intl-tel-input/intlTelInput-rtl.css" rel="stylesheet" />
+    <link href="~/Scripts/plugins/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet" />
+}
+    @section Scripts{
+        <script type="text/javascript" src="~/Views/Account/Register.js"></script>
+        <script type="text/javascript" src="~/Scripts/plugins/bootstrap-fileinput/bootstrap-fileinput.js"></script>
+    }
+
+<!--begin::Signup-->
+<div class="login-form login-form-signup">
+    <!--begin::Form-->
+    <form class="form" id="StoreRegisterForm" asp-action="StoreRegister" method="POST" enctype="multipart/form-data">
+        <!--begin::Title-->
+        <div class="pb-5 pb-lg-10">
+            <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">@L("Register.Store") </h3>
+
+        </div>
+        <!--end::Title-->
+        <!--begin: -->
+        @if (@ViewBag.ErrorMessage != null)
+        {
+        <div class="alert alert-danger">
+            <i class="fa fa-warning"></i> @ViewBag.ErrorMessage
+        </div>
+        }
+        <div class="row">
+            @*<div class="col-md-6">
+                    <div class="form-group">
+                        <label class="font-size-h6 font-weight-bolder text-dark">@L("Pages.Restaurants.Logo")<span class="text-danger">*</span></label>
+                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                            <div class="fileinput-preview fileinput-exists thumbnail" style="max-height: 121px; max-width: 121px; line-height: 10px;">
+                            </div>
+                            <div>
+                                <span class="btn btn-outline-dark btn-file focused">
+                                    <span class="fileinput-new">
+                                        <i class="fa fa-upload"></i>
+                                        @L("Common.SelectImage")
+                                    </span>
+                                    <span class="fileinput-exists">
+                                        <i class="fa fa-refresh"></i>
+                                        @L("Common.ChangeImage")
+                                    </span>
+                                    <input type="hidden"><input type="file" class="form-control edit" id="Logo" name="Logo" required>
+                                </span>
+                                <a href="javascript:;" class="fileinput-exists" data-dismiss="fileinput">
+                                    <span class="fileinput-exists btn btn-danger">
+                                        <i class="fa fa-times"></i>
+                                        @L("Common.Delete")
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
+            @*<div class="col-md-6">
+                    <div class="form-group">
+                        <label class="font-size-h6 font-weight-bolder text-dark">@L("Pages.Restaurants.Banner")<span class="text-danger">*</span></label>
+                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                            <div class="fileinput-preview fileinput-exists thumbnail" style="max-height: 121px; max-width: 121px; line-height: 10px;">
+                            </div>
+                            <div>
+                                <span class="btn btn-outline-dark btn-file focused">
+                                    <span class="fileinput-new">
+                                        <i class="fa fa-upload"></i>
+                                        @L("Common.SelectImage")
+                                    </span>
+                                    <span class="fileinput-exists">
+                                        <i class="fa fa-refresh"></i>
+                                        @L("Common.ChangeImage")
+                                    </span>
+                                    <input type="hidden"><input type="file" class="form-control edit" id="Banner" name="Banner" required>
+                                </span>
+                                <a href="javascript:;" class="fileinput-exists" data-dismiss="fileinput">
+                                    <span class="fileinput-exists btn btn-danger">
+                                        <i class="fa fa-times"></i>
+                                        @L("Common.Delete")
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
+            <!--City -->
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="font-size-h6 font-weight-bolder text-dark">@L("Pages.Cities.ModalTitle") <span class="text-danger">*</span></label>
+                    @Html.DropDownListFor(x => x.CityId, (SelectList)ViewBag.Cities, L("Common.Select"), new { @class = "form-control h-50px rounded-lg font-size-h6", required = "required" })
+                </div>
+            </div>
+            @*ArabicName*@
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="font-size-h6 font-weight-bolder text-dark"> @L("Common.ArabicName") <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control h-50px rounded-lg font-size-h6" name="NameAr" value="@Model.NameAr" required maxlength="@AbpUserBase.MaxNameLength">
+                </div>
+            </div>
+            @*EnglishName*@
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="font-size-h6 font-weight-bolder text-dark"> @L("Common.EnglishName") <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control h-50px rounded-lg font-size-h6" name="NameEn" value="@Model.NameEn" required maxlength="@AbpUserBase.MaxSurnameLength">
+                </div>
+            </div>
+            @*descAr*@
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="font-size-h6 font-weight-bolder text-dark">  @L("Common.DescriptionAr") <span class="text-danger">*</span></label>
+                    <textarea class="form-control no-resize rounded-lg font-size-h6" name="DescAr" value="@Model.DescAr" required rows="4"></textarea>
+                </div>
+            </div>
+            @*descEn*@
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="font-size-h6 font-weight-bolder text-dark">  @L("Common.DescriptionEn") <span class="text-danger">*</span></label>
+                    <textarea class="form-control no-resize rounded-lg font-size-h6" name="DescEn" value="@Model.DescEn" required rows="4"></textarea>
+                </div>
+            </div>
+
+            @*OrderBefore*@
+            @*<div class="col-md-6">
+                    <div class="form-group">
+                        <label class="font-size-h6 font-weight-bolder text-dark">  @L("Pages.Restaurants.OrderBefore") <small>@L("Common.ByHour")</small> <span class="text-danger">*</span></label>
+                        <input type="number" min="0" step="1" name="orderBefore" class="form-control h-50px rounded-lg font-size-h6" value="@Model.OrderBefore" required />
+                    </div>
+                </div>*@
+            @*OrderBefore*@
+            @*<div class="col-md-6">
+                    <div class="form-group">
+                        <label class="font-size-h6 font-weight-bolder text-dark">  @L("Pages.Restaurants.TimeToCancel") <small>@L("Common.ByHour")</small> <span class="text-danger">*</span></label>
+                        <input type="number" min="0" step="1" name="timeToCancel" class="form-control h-50px rounded-lg font-size-h6" value="@Model.TimeToCancel" required />
+                    </div>
+                </div>*@
+
+            @*email*@
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="font-size-h6 font-weight-bolder text-dark">@L("Common.Email") <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control h-50px rounded-lg font-size-h6" name="EmailAddress" id="EmailAddress" value="@Model.EmailAddress" required maxlength="@AbpUserBase.MaxEmailAddressLength">
+                </div>
+            </div>
+            @*phone*@
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="font-size-h6 font-weight-bolder text-dark">  @L("Common.PhoneNumber") <span class="text-danger">*</span></label>
+                    <input type="tel" id="phone" class="form-control h-50px rounded-lg font-size-h6" name="phone" ng-intl-tel-input>
+                    <input type="hidden" id="PhoneNumber" name="PhoneNumber" value="@Model.PhoneNumber">
+                </div>
+            </div>
+            @*password*@
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="font-size-h6 font-weight-bolder text-dark">@L("Common.Password") <span class="text-danger">*</span></label>
+                    <input type="password" class="form-control h-50px rounded-lg font-size-h6" name="Password" id="Password" autocomplete="new-password" required minlength="6" maxlength="@AbpUserBase.MaxPlainPasswordLength">
+                </div>
+            </div>
+            @*confirm*@
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="font-size-h6 font-weight-bolder text-dark">@L("Common.ConfirmPassword")<span class="text-danger">*</span></label>
+                    <input type="password" class="form-control h-50px rounded-lg font-size-h6" id="ConfirmPassword" name="ConfirmPassword" pw-check="Password">
+                </div>
+            </div>
+
+            @*Longitude*@
+            @*<div class="col-md-6">
+                    <label class="font-size-h6 font-weight-bolder text-dark">
+                        @L("Common.Longitude")
+                    </label>
+                    <input type="text" id="lat" name="longitude" class="form-control" value="@Model.Longitude" />
+                </div>*@
+
+            @*Latitude*@
+            @*<div class="col-md-6">
+                    <label class="font-size-h6 font-weight-bolder text-dark">
+                        @L("Common.Latitude")
+                    </label>
+                    <input type="text" id="lng" name="latitude" class="form-control" value="@Model.Latitude" />
+                </div>*@
+
+            @*map*@
+            <div class="col-md-12">
+                <div class="form-group">
+                    <fieldset>
+                        <meta charset="utf-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1">
+                        <div id="googleMap" class="rounded-lg" onchange="myMap()"></div>
+                        <input type="hidden" id="lat" name="Latitude" value="@Model.Latitude">
+                        <input type="hidden" id="lng" name="Longitude" value="@Model.Longitude">
+                        <script>
+                            var currentLat = 24.685306, currentLng = 46.679685 ;
+                            //var currentLat, currentLng;
+                           
+                            if (navigator.geolocation) {
+                                navigator.geolocation.getCurrentPosition(function (position) {
+                                    currentLat=position.coords.latitude;
+                                    currentLng = position.coords.longitude;
+                                    $('#lat').val(currentLat);
+                                    $('#lng').val(currentLng);
+                                    myMap();
+                                });
+                            } else {
+                                alert("Sorry, your browser does not support HTML5 geolocation.");
+                            }
+                        
+                            function myMap() {
+                                var map = new google.maps.Map(document.getElementById('googleMap'), {
+                                    zoom: 13,
+                                    center: { lat: currentLat, lng: currentLng}
+                                });
+                             
+                                var myCenter = new google.maps.LatLng(currentLat, currentLng);
+                                //var mapProp = { center: myCenter, zoom: 12, scrollwheel: false, draggable: true, mapTypeId: google.maps.MapTypeId.ROADMAP };
+                                //var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+                                var marker = new google.maps.Marker({
+                                    map: map,
+                                    position: { lat: currentLat, lng: currentLng},
+                                    draggable: true,
+                                    events: {
+                                        dragend: function (marker, eventName, args) {
+                                            //$('#lat').val(marker.getPosition().lat());
+                                            //$('#lng').val(marker.getPosition().lng());
+                                        }
+                                    }
+                                })
+
+                                marker.addListener('dragend', function (e) {
+                                    
+                                    if (e) {
+                                        $('#lat').val(e.latLng.lat());
+                                        $('#lng').val(e.latLng.lng());
+                                    }
+                                });
+
+                                function getLatLng(e) {
+                                    
+                                    if (e) {
+                                        $('#lat').val(e.latLng.lat());
+                                        $('#lng').val(e.latLng.lng());
+                                    }
+                                }
+                                marker.setMap(map);
+                                }
+                        </script>
+                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJotTMpIGGI5qftsYODhHXwSK5zMtIS0Y&callback=myMap"></script>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+
+        <div class="pb-lg-0 pb-5">
+            <button id="RegisterButton" type="submit" class="btn btn-theme font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3" data-wizard-type="action-next">
+                @L("Common.Register")
+            </button>
+        </div>
+        <!--end: -->
+        <!--begin::Signin-->
+        <div class="py-5 py-lg-15">
+            <div class="text-muted font-weight-bold font-size-h4">
+                @L("Pages.Login.AreRegistered")
+                <a href="@Url.Action("Login", "Account")" class="text-theme font-weight-bolder"> @L("Pages.Login.Login")</a>
+            </div>
+        </div>
+        <!--end::Signin-->
+    </form>
+    <!--end::Form-->
+</div>
+<!--end::Signup-->
+<!---->
+
+
+
+<script type="text/javascript">
+    //(function ($) {
+    //    $.validator.unobtrusive.adapters.addBool("checkboxrequired", "required");
+    //}(jQuery));
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="~/Scripts/plugins/ng-intl-tel-input/intlTelInput.js"></script>
+
+<script>
+    var telInput = $("#phone");
+    // initialise plugin
+    telInput.intlTelInput({
+        utilsScript: "../Scripts/plugins/ng-intl-tel-input/utils.js"
+    });
+    telInput.intlTelInput("setCountry", "sa");
+    ///////////////////
+
+   
+</script>

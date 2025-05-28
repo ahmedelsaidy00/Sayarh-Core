@@ -1,4 +1,4 @@
-﻿namespace Sayarah.Api.Controllers
+﻿namespace Sayarah.WebApi.Api.Controllers
 {
     internal class GeoCoordinate
     {

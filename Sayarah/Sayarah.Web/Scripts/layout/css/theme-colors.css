@@ -1,0 +1,241 @@
+
+.table-bordered.table tr.heading > th {
+
+    border-right: none !important;
+}
+.table-bordered tr.heading th:first-child {
+    border-radius: 0 100px 100px 0 !important;
+}
+
+.table-bordered tr.heading th:last-child {
+    border-radius: 100px 0 0 100px !important;
+}
+
+
+.table-bordered.table tr.heading > th {
+    background: var(--card-bg-color) !important;
+
+}
+
+.table-bordered.table tr.heading > th {
+    background: var(--card-bg-color) !important;
+
+}
+
+.table-bordered.table-striped > tbody > tr:nth-child(odd) {
+    background-color: white !important
+}
+
+.table-bordered.table-striped > tbody > tr:nth-child(even) {
+    background-color: #f4f7fb !important;
+    border-radius: 15px !important;
+}
+
+
+
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.active > a,
+ .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.active.open > a,
+ .page-sidebar .page-sidebar-menu > li.active > a,
+ .page-sidebar .page-sidebar-menu > li.active.open > a {
+    background: var(--card-bg-color) !important;
+}
+
+
+ .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li:hover > a,
+ .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.open > a,
+ .page-sidebar .page-sidebar-menu > li:hover > a,
+ .page-sidebar .page-sidebar-menu > li.open > a {
+    background: var(--card-bg-color) !important;
+}
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.active > a:hover,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.active.open > a:hover,
+.page-sidebar .page-sidebar-menu > li.active > a:hover,
+.page-sidebar .page-sidebar-menu > li.active.open > a:hover
+
+.card-pink.card-spitial.general-card {
+    background: var(--card-bg-color) !important;
+}
+
+ .card-pink.card-spitial.general-card {
+    background-color: var(--card-bg-color); /* Use the variable */
+}
+
+
+.dashboard-stat2 .display .number h3.font-count {
+    background-color: var(--card-bg-color); /* Use the variable */
+}
+
+.fixed-button {
+    background-color: var(--card-bg-color); /* Use the variable */
+}
+
+.page-footer-fixed .page-footer .page-footer-inner {
+   color: var(--card-bg-color); /* Use the variable */
+}
+
+.theme-btn.btn {
+    background-color: var(--card-bg-color); /* Use the variable */
+}
+
+.icon-wallet-dash svg {
+    fill: var(--card-bg-color)!important;
+}
+
+.car svg {
+    fill: var(--card-bg-color) !important;
+}
+
+
+.box-charts .titleCard {
+    color: var(--card-bg-color)!important; /* Use the variable */
+}
+
+.page-sidebar-select .form-control {
+    color: var(--card-bg-color)!important; /* Use the variable */
+}
+.theme-font, .page-bar .page-breadcrumb {
+    color: var(--card-bg-color)!important; /* Use the variable */
+}
+
+.portlet > .portlet-title > .actions > .btn.btn-sm.blue {
+    background-color: var(--card-bg-color); /* Use the variable */
+}
+.table-bordered2.table tr.heading > th {
+    background-color: var(--card-bg-color)!important; /* Use the variable */
+}
+
+
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu > li:hover > a,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu > li.open > a,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu > li.active > a,
+.page-sidebar .page-sidebar-menu .sub-menu > li:hover > a, .page-sidebar .page-sidebar-menu .sub-menu > li.open > a,
+.page-sidebar .page-sidebar-menu .sub-menu > li.active > a {
+
+    color: var(--card-bg-color) !important; /* Use the variable */
+}
+.table tr.heading > th {
+    background-color: var(--card-bg-color) !important; /* Use the variable */
+}
+
+
+
+.portlet.light > .portlet-title > .caption {
+    color: var(--card-bg-color) !important; /* Use the variable */
+}
+.page-spinner-bar > div, .block-spinner-bar > div {
+    background: var(--card-bg-color) !important;
+    
+}
+
+.page-spinner-bar > div, .block-spinner-bar > div {
+    background-color: var(--card-bg-color) !important; /* Use the variable */
+}
+
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu > li:hover > a > .arrow:before,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu > li:hover > a > .arrow.open:before,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu > li.open > a > .arrow:before,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu > li.open > a > .arrow.open:before,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu > li.active > a > .arrow:before,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu > li.active > a > .arrow.open:before,
+.page-sidebar .page-sidebar-menu .sub-menu > li:hover > a > .arrow:before,
+.page-sidebar .page-sidebar-menu .sub-menu > li:hover > a > .arrow.open:before,
+.page-sidebar .page-sidebar-menu .sub-menu > li.open > a > .arrow:before,
+.page-sidebar .page-sidebar-menu .sub-menu > li.open > a > .arrow.open:before,
+.page-sidebar .page-sidebar-menu .sub-menu > li.active > a > .arrow:before,
+.page-sidebar .page-sidebar-menu .sub-menu > li.active > a > .arrow.open:before {
+    color: var(--card-bg-color) !important; /* Use the variable */
+}
+
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu > li:hover > a > .arrow:before,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu > li:hover > a > .arrow.open:before,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu > li.open > a > .arrow:before,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu > li.open > a > .arrow.open:before,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu > li.active > a > .arrow:before,
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu > li.active > a > .arrow.open:before,
+.page-sidebar .page-sidebar-menu .sub-menu > li:hover > a > .arrow:before,
+.page-sidebar .page-sidebar-menu .sub-menu > li:hover > a > .arrow.open:before,
+.page-sidebar .page-sidebar-menu .sub-menu > li.open > a > .arrow:before,
+.page-sidebar .page-sidebar-menu .sub-menu > li.open > a > .arrow.open:before,
+.page-sidebar .page-sidebar-menu .sub-menu > li.active > a > .arrow:before,
+.page-sidebar .page-sidebar-menu .sub-menu > li.active > a > .arrow.open:before {
+    color: var(--card-bg-color) !important; /* Use the variable */
+}
+
+tbody a {
+    color: var(--card-bg-color) !important; /* Use the variable */
+  
+    font-weight: 700;
+}
+
+tbody a.btn{
+    color:white!important
+}
+
+.page-header.navbar .top-menu .navbar-nav > li.dropdown-dark .dropdown-menu.dropdown-menu-default > li a > i,
+.page-header.navbar .top-menu .navbar-nav > li.dropdown-dark .dropdown-menu .dropdown-menu-list > li a > i {
+    color: var(--card-bg-color) !important; /* Use the variable */
+}
+
+
+.toast-info {
+    background-color: var(--card-bg-color) !important;
+    border-radius: 50px !important;
+    border: 3px solid var(--card-bg-color) !important;
+    opacity:1!important
+}
+
+.toast {
+    border-radius: 50px !important;
+}
+
+.row.smaller-paging .col-md-8.col-sm-12 {
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.theme-btn.btn.disabled,
+.theme-btn.btn.disabled:hover,
+.theme-btn.btn.disabled:focus,
+.theme-btn.btn.disabled:active,
+.theme-btn.btn.disabled.active,
+.theme-btn.btn[disabled],
+.theme-btn.btn[disabled]:hover,
+.theme-btn.btn[disabled]:focus,
+.theme-btn.btn[disabled]:active,
+.theme-btn.btn[disabled].active,
+fieldset[disabled] .theme-btn.btn,
+fieldset[disabled] .theme-btn.btn:hover,
+fieldset[disabled] .theme-btn.btn:focus,
+fieldset[disabled] .theme-btn.btn:active,
+fieldset[disabled] .theme-btn.btn.active {
+    background-color: var(--card-bg-color) !important;
+}
+
+body .inbox .inbox-nav li.active a,
+body .inbox .inbox-nav li.active:hover a {
+    background-color: var(--card-bg-color) !important;
+}
+
+.inbox .inbox-nav li.active b {
+    border-right: 6px solid var(--card-bg-color) !important;
+}
+
+.blue.btn {
+    color: #FFFFFF;
+    background-color: #19499f;
+    border-color: "";
+}
+
+
+tfoot.bg-grey-gallery {
+    border-color: var(--card-bg-color) !important;
+    background-color: var(--card-bg-color) !important;
+
+}
+
+
+.table thead th {
+    background: var(--card-bg-color) !important;
+    border-bottom: 2px solid var(--card-bg-color) !important;
+}

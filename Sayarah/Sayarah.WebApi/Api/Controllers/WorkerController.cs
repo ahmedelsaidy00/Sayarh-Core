@@ -1,4 +1,4 @@
-﻿using Sayarah.Api.Models;
+﻿using Sayarah.WebApi.Api.Models;
 using System.Globalization;
 using Sayarah.Providers;
 using Abp.Application.Services.Dto;
@@ -24,7 +24,7 @@ using Sayarah.Application.Helpers.StoredProcedures.Dto;
 using Sayarah.Application.Helpers;
 using DocumentFormat.OpenXml.Spreadsheet;
 
-namespace Sayarah.Api.Controllers
+namespace Sayarah.WebApi.Api.Controllers
 {
     [ApiController]
 

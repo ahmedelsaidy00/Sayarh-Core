@@ -19,7 +19,7 @@ using Microsoft.Extensions.Logging;
 using Sayarah.Authorization.Users;
 using Sayarah.Authorization;
 using Sayarah.MultiTenancy;
-using Sayarah.Api.Models;
+using Sayarah.WebApi.Api.Models;
 
 namespace Sayarah.WebApi.Api.Controllers
 {

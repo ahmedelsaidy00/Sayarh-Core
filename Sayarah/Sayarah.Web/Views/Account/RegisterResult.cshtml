@@ -1,0 +1,31 @@
+﻿@model Sayarah.Web.Models.Account.RegisterResultViewModel
+@{
+    ViewBag.Title = L("Pages.Register.SuccessfullyRegistered");
+}
+
+<!--begin::SuccessfullyRegistered-->
+<div class="login-form">
+    <!--begin::Title-->
+    <div class="pb-5">
+        <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">@ViewBag.Title</h3>
+        @if (!Model.IsActive)
+        {
+            <p class="text-muted font-weight-bold font-size-h4">@L("Pages.Register.WaitingForActivationMessage")</p>
+        }
+        <p class="text-muted font-weight-bold font-size-h4">
+            <span class="text-muted">
+                @L("Common.EmailAddress"):
+            </span>
+            @Model.EmailAddress
+        </p>
+    </div>
+    <!--end::Title-->
+    <!--begin::Form group-->
+    <div class="form-group d-flex flex-wrap">
+        <a href="@Url.Action("Login", "Account")" class="btn btn-secondary font-weight-bolder font-size-h6 px-8 py-4 my-3">@L("Common.Back")</a>
+    </div>
+    <!--end::Form group--> 
+
+
+</div>
+<!--end::SuccessfullyRegistered-->

@@ -1,0 +1,277 @@
+/***
+Invoice page
+***/
+.invoice table {
+    margin: 30px 0 30px;
+}
+
+.invoice .invoice-logo {
+    margin-bottom: 20px;
+}
+
+    .invoice .invoice-logo p {
+        padding: 5px 0;
+        font-size: 26px;
+        line-height: 28px;
+        text-align: right;
+    }
+
+        .invoice .invoice-logo p span {
+            display: block;
+            font-size: 14px;
+        }
+
+.invoice .invoice-logo-space {
+    margin-bottom: 15px;
+}
+
+.invoice .invoice-payment strong {
+    margin-right: 5px;
+}
+
+.invoice .invoice-block {
+    text-align: right;
+}
+
+    .invoice .invoice-block .amounts {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+h2.mb--20 {
+    margin-bottom: 20px;
+    margin-top: 0
+}
+
+.col-6 {
+    width: 50%;
+    float: left;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.invoice-box {
+    background: white;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 10px !important;
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+    line-height: 24px;
+    color: #555;
+}
+
+.invoice-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #0b224f14;
+    padding-bottom: 20px;
+}
+
+    .invoice-header .title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #0b224f;
+        margin-top: 20px;
+    }
+
+    .invoice-header .qr-code img {
+        width: 80px;
+    }
+
+.info-section {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px !important;
+    background-color: #f9f9f9 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+}
+
+    .info-section h6 {
+        font-weight: bold;
+        color: #19499f;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .info-section p {
+        margin: 0;
+        font-size: 15px;
+    }
+
+.table thead th {
+    background-color: #19499f;
+    border-bottom: 2px solid #ddd;
+    text-align: center;
+    color: #fff;
+}
+.table-bordered td,
+.table-bordered th {
+    border: 1px solid #ddd;
+}
+
+.totals-section {
+    margin-top: 20px;
+}
+
+    .totals-section .total-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border-top: 2px solid #f4f4f4;
+    }
+
+        .totals-section .total-row .label {
+            font-weight: bold;
+            color: #19499f;
+        }
+
+        .totals-section .total-row .value {
+            font-weight: bold;
+            color: #333;
+        }
+
+.total-final {
+    border-top: 3px solid #19499f;
+    border-bottom: 3px solid #19499f;
+}
+
+.mt-4 {
+    margin-top: 2.5rem
+}
+
+.invoice-box .table td {
+    text-align: center;
+}
+
+.info-section p strong {
+    margin-right: 4px;
+}
+
+@media print {
+    .page-breadcrumb, .searchInput {
+        display: none
+    }
+
+    .col-sm-4 {
+        width: 33.33333333%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-sm-8 {
+        width: 66.66666667%;
+    }
+
+    .info-section {
+        border: 1px solid #ddd !important;
+        background-color: #f9f9f9 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+        .info-section h6 {
+            color: #19499f !important;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            font-size: 14px;
+        }
+
+        .info-section p strong,
+        .info-section p {
+            color: #555 !important;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            font-size: 13px;
+        }
+
+    .table thead tr th {
+        color: #555 !important;
+        font-size: 11px;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .table thead th {
+        background-color: #f4f4f4 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color:#333;
+    }
+
+    .totals-section .total-row .label {
+        border: 0;
+        outline: none;
+        font-size: 12px;
+        color: #19499f !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .invoice-box p,
+    .invoice-box {
+        color: #555 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .invoice-header .title {
+        font-size: 20px;
+        color: #19499f !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .col-6.text-right {
+        text-align: right !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .col-6 {
+        width: 100%;
+    }
+
+    .invoice-header .title {
+        font-size: 18px;
+    }
+
+    .col-6.text-right {
+        text-align: left !important;
+    }
+
+    .invoice-box {
+        padding: 20px 20px;
+    }
+}
+
+.qr-code {
+    text-align: center;
+    border: 1px solid gainsboro;
+    border-radius: 10px !important;
+    padding: 20px;
+    min-height: 80vh;
+}
+
+.contact-info {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+    .contact-info i {
+        margin-right: 8px;
+    }

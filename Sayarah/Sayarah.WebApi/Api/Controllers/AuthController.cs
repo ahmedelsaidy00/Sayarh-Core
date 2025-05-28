@@ -16,7 +16,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
-using Sayarah.Api.Models;
+using Sayarah.WebApi.Api.Models;
 using Sayarah.Application.Companies;
 using Sayarah.Application.Companies.Dto;
 using Sayarah.Application.Drivers;

@@ -1,0 +1,142 @@
+﻿@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>alert</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            text-align: center;
+        }
+
+            body > div {
+                width: 100%;
+                margin: 15% auto;
+            }
+
+        button.btn {
+            background-color: #333;
+            color: #fff;
+            font-weight: 600;
+            padding: 10px 35px;
+            text-decoration: none;
+            font-family: 'Cairo', sans-serif;
+            border: 0;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+            button.btn:hover {
+                background-color: #000;
+                cursor: pointer;
+            }
+    </style>
+</head>
+
+<body style="margin:0">
+    @if (ViewBag.Result == true)
+    {
+        <div>
+            <img src="~/Views/Payment/success.png" />
+            <h2 style="font-family: 'Cairo', sans-serif;">
+
+                @L("Pages.Payment.Success")
+
+            </h2>
+
+            @if (ViewBag.Web == true)
+            {
+
+                <button class="btn btn-success" onclick="backToSite()">الرجوع للموقع</button>
+
+            }
+
+        </div>
+    }
+    else
+    {
+        <div>
+            <img src="~/Views/Payment/error.png" />
+            <h2 style="font-family: 'Cairo', sans-serif;">
+                @L("Pages.Payment.Error")
+            </h2>
+        </div>
+    }
+    @*<button class="btn" onclick="location.href='closePayment'"> @L("Pages.Payment.Close")</button>*@
+
+
+
+    @{
+        // set the ViewBag value
+        ViewBag.id = ViewBag.id;
+        ViewBag.paymentType = ViewBag.paymentType;
+    }
+
+    <!-- render the value as a JavaScript variable -->
+
+<script>
+
+    var id = '@ViewBag.Id';
+    var advertisementId = '@ViewBag.AdvertisementId';
+    var paymentType = '@ViewBag.PaymentType';
+    var result = '@ViewBag.Result';
+    var web = '@ViewBag.Web';
+    var fromStorePanel = '@ViewBag.FromStorePanel';
+
+    if (result == 'True' && web == 'True' && fromStorePanel == 'False') {
+        if (paymentType == 1) {
+
+            // remove local storage data
+            localStorage.removeItem('advertisement')
+            localStorage.removeItem('currentAdvertisementFlag')
+            localStorage.removeItem('currentTab')
+
+            setTimeout(function () {
+                location.href = location.origin + '/advertisementDetails/' + id
+            }, 4000)
+        }
+    }
+
+    else if (result == 'True' && web == 'True' && fromStorePanel == 'True') {
+        if (paymentType == 1) {
+             
+            setTimeout(function () {
+                location.href = location.origin + '/admin#/advertisements'
+            }, 4000)
+        }
+    }
+
+    function backToSite() {
+        // change location here
+
+        if (paymentType == 0) {
+            location.href = location.origin + '/advertisementDetails/' + advertisementId
+        }
+        else if (paymentType == 1) {
+
+            if (web == 'True' && fromStorePanel == 'False') {
+                location.href = location.origin + '/advertisementDetails/' + advertisementId
+            } else if (web == 'True' && fromStorePanel == 'True') {
+                location.href = location.origin + '/admin#/advertisements'
+            }
+        }
+        else if (paymentType == 2) {
+            location.href = location.origin + '/userProfile?type=wallet'
+        }
+    }
+
+</script>
+
+</body>
+
+
+</html>

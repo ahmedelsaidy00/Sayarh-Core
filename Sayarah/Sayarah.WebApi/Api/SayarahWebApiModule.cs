@@ -6,7 +6,7 @@ using Abp.Configuration.Startup;
 using Abp.Modules;
 using Sayarah.Application;
 
-namespace Sayarah.Api
+namespace Sayarah.WebApi.Api
 {
     [DependsOn(typeof(AbpAspNetCoreModule), typeof(SayarahApplicationModule))]
     public class SayarahWebApiModule : AbpModule
