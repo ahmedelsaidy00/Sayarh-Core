@@ -1,50 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using System.Web;
-using System.Web.Mvc;
-using Abp.Auditing;
+﻿using Abp.Auditing;
 using Abp.Authorization;
 using Abp.Authorization.Users;
 using Abp.Configuration.Startup;
+using Abp.Domain.Repositories;
 using Abp.Domain.Uow;
 using Abp.Extensions;
 using Abp.Localization;
 using Abp.MultiTenancy;
+using Abp.Runtime.Security;
 using Abp.Runtime.Session;
 using Abp.Threading;
 using Abp.UI;
 using Abp.Web.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.WebUtilities;
+using Microsoft.EntityFrameworkCore;
+using   Sayarah.Application.Helpers;
+using Sayarah.Application.Helpers.Dto;
+using Sayarah.Application.Helpers.NotificationService;
+using Sayarah.Application.Sessions;
 using Sayarah.Authorization;
 using Sayarah.Authorization.Roles;
 using Sayarah.Authorization.Users;
+using Sayarah.Companies;
+using Sayarah.Core.Helpers;
 using Sayarah.MultiTenancy;
-using Sayarah.Sessions;
-using Sayarah.Web.Controllers.Results;
+using Sayarah.Providers;
 using Sayarah.Web.Models;
 using Sayarah.Web.Models.Account;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.Owin;
-using Microsoft.Owin.Security;
-using static Sayarah.SayarahConsts;
-using Sayarah.Helpers;
-using Microsoft.Owin.Security.DataProtection;
-using System.Globalization;
-using Abp.Domain.Repositories;
-using Abp.Application.Services.Dto;
-using Sayarah.Helpers.Enums;
-using Sayarah.Companies;
-using Sayarah.Providers;
 using System.ComponentModel.DataAnnotations;
-using Sayarah.Application.Sessions;
-using Sayarah.Application.Helpers.NotificationService;
-using Sayarah.Application.Helpers;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authentication;
+using System.Globalization;
+using System.Security.Claims;
+using System.Text;
+using static Sayarah.SayarahConsts;
+using UserLoginInfo = Microsoft.AspNetCore.Identity.UserLoginInfo;
 
 namespace Sayarah.Web.Controllers
 {
@@ -67,13 +60,7 @@ namespace Sayarah.Web.Controllers
         private readonly IRepository<MainProvider, long> _mainProviderRepository;
         private readonly IRepository<Branch, long> _branchRepository;
         private readonly IRepository<Provider, long> _providerRepository;
-        private IAuthenticationManager AuthenticationManager
-        {
-            get
-            {
-                return HttpContext.GetOwinContext().Authentication;
-            }
-        }
+        private readonly SignInManager<User> _signInManager;
 
         public AccountController(
             TenantManager tenantManager,
@@ -91,7 +78,8 @@ namespace Sayarah.Web.Controllers
             IRepository<Company, long> companyRepository,
             IRepository<MainProvider, long> mainProviderRepository,
             IRepository<Branch, long> branchRepository,
-            IRepository<Provider, long> providerRepository
+            IRepository<Provider, long> providerRepository,
+            SignInManager<User> signInManager
             )
         {
             _tenantManager = tenantManager;
@@ -110,16 +98,16 @@ namespace Sayarah.Web.Controllers
             _mainProviderRepository = mainProviderRepository;
             _branchRepository = branchRepository;
             _providerRepository = providerRepository;
+            _signInManager = signInManager;
         }
 
         #region Login / Logout
-
         [DisableAuditing]
-        public ActionResult Login(string returnUrl = "")
+        public IActionResult Login(string returnUrl = "")
         {
             if (string.IsNullOrWhiteSpace(returnUrl))
             {
-                returnUrl = Request.ApplicationPath;
+                returnUrl = "/"; // Changed from Request.ApplicationPath to root
             }
 
             ViewBag.IsMultiTenancyEnabled = _multiTenancyConfig.IsEnabled;
@@ -146,31 +134,42 @@ namespace Sayarah.Web.Controllers
                 GetTenancyNameOrNull()
             );
 
-            var ticket = new AuthenticationTicket(loginResult.Identity, new AuthenticationProperties());
-            //
-            IEnumerable<Claim> rolesList = ticket.Identity.Claims;
-            var roleClaim = rolesList.FirstOrDefault(c => c.Type == ticket.Identity.RoleClaimType);
-            if (roleClaim.Value != RolesNames.Client && roleClaim.Value != RolesNames.Worker && roleClaim.Value != RolesNames.Driver)
+            // Check roles (using modern claim checking)
+            var roleClaim = loginResult.Identity.Claims
+                .FirstOrDefault(c => c.Type == ClaimTypes.Role);
+
+            if (roleClaim != null &&
+                roleClaim.Value != RolesNames.Client &&
+                roleClaim.Value != RolesNames.Worker &&
+                roleClaim.Value != RolesNames.Driver)
             {
                 await SignInAsync(loginResult.User, loginResult.Identity, loginModel.RememberMe);
             }
             else
-                throw CreateExceptionForFailedLoginAttempt(AbpLoginResultType.InvalidUserNameOrEmailAddress, loginModel.UsernameOrEmailAddress, "Default");
+            {
+                throw CreateExceptionForFailedLoginAttempt(
+                    AbpLoginResultType.InvalidUserNameOrEmailAddress,
+                    loginModel.UsernameOrEmailAddress,
+                    "Default");
+            }
 
-            // check if user 
-            await CheckUsers(loginResult.User.UserType, loginResult.User.CompanyId, loginResult.User.BranchId, loginResult.User.MainProviderId, loginResult.User.ProviderId);
+            await CheckUsers(
+                loginResult.User.UserType,
+                loginResult.User.CompanyId,
+                loginResult.User.BranchId,
+                loginResult.User.MainProviderId,
+                loginResult.User.ProviderId);
 
             returnUrl = "/admin";
-            // 
 
             if (string.IsNullOrWhiteSpace(returnUrl))
             {
-                returnUrl = Request.ApplicationPath;
+                returnUrl = "/"; // Changed from Request.ApplicationPath
             }
 
             if (!string.IsNullOrWhiteSpace(returnUrlHash))
             {
-                returnUrl = returnUrl + returnUrlHash;
+                returnUrl += returnUrlHash;
             }
 
             return Json(new AjaxResponse { TargetUrl = returnUrl });
@@ -314,40 +313,47 @@ namespace Sayarah.Web.Controllers
             }
         }
 
+        private async Task<ClaimsIdentity> CreateUserIdentityAsync(User user)
+        {
+            // Manually create claims identity since CreateIdentityAsync is gone
+            var claims = new List<Claim>
+    {
+        new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+        new Claim(ClaimTypes.Name, user.UserName),
+        new Claim(AbpClaimTypes.TenantId, user.TenantId?.ToString() ?? "")
+    };
+
+            // Add roles
+            var roles = await _userManager.GetRolesAsync(user);
+            foreach (var role in roles)
+            {
+                claims.Add(new Claim(ClaimTypes.Role, role));
+            }
+
+            return new ClaimsIdentity(claims, IdentityConstants.ApplicationScheme);
+        }
+
         private async Task SignInAsync(User user, ClaimsIdentity identity = null, bool rememberMe = false)
         {
             if (identity == null)
             {
-                identity = await _userManager.CreateIdentityAsync(user, DefaultAuthenticationTypes.ApplicationCookie);
+                identity = await CreateUserIdentityAsync(user); // Use our custom method
             }
 
-            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            await _signInManager.SignOutAsync();
 
-            // Gp - fix code for NOT using session cookies
-            // Don’t rely solely on browser behaviour for proper clean-up of session cookies during a given browsing session. 
-            // It’s safer to use non-session cookies (IsPersistent == true) with an expiration date for having a 
-            // consistent behaviour across all browsers and versions.
-            // See http://blog.petersondave.com/cookies/Session-Cookies-in-Chrome-Firefox-and-Sitecore/
-
-            // Gp Commented out: AuthenticationManager.SignIn(new AuthenticationProperties { IsPersistent = rememberMe }, identity);
-            if (rememberMe)
+            var authProperties = new AuthenticationProperties
             {
-                //var rememberBrowserIdentity = AuthenticationManager.CreateTwoFactorRememberBrowserIdentity(user.Id.ToString());
-                AuthenticationManager.SignIn(
-                    new AuthenticationProperties { IsPersistent = true },
-                    identity /*, rememberBrowserIdentity*/);
-            }
-            else
-            {
-                AuthenticationManager.SignIn(
-                    new AuthenticationProperties
-                    {
-                        IsPersistent = true,
-                        ExpiresUtc =
-                            DateTimeOffset.UtcNow.AddDays(365)
-                    },
-                    identity);
-            }
+                IsPersistent = true,
+                ExpiresUtc = rememberMe
+                    ? DateTimeOffset.UtcNow.AddDays(365)
+                    : DateTimeOffset.UtcNow.AddDays(1)
+            };
+
+            await HttpContext.SignInAsync(
+                IdentityConstants.ApplicationScheme,
+                new ClaimsPrincipal(identity),
+                authProperties);
         }
 
         private Exception CreateExceptionForFailedLoginAttempt(AbpLoginResultType result, string usernameOrEmailAddress, string tenancyName)
@@ -400,9 +406,9 @@ namespace Sayarah.Web.Controllers
             }
         }
 
-        public ActionResult Logout()
+        public async Task<ActionResult> Logout()
         {
-            AuthenticationManager.SignOut();
+            await _signInManager.SignOutAsync(); // Replaced AuthenticationManager.SignOut()
             return RedirectToAction("Login");
         }
 
@@ -410,7 +416,7 @@ namespace Sayarah.Web.Controllers
 
         #region Register
 
- 
+
 
 
 
@@ -419,7 +425,7 @@ namespace Sayarah.Web.Controllers
             return RegisterView(new RegisterViewModel());
         }
 
-       
+
 
         private ActionResult RegisterView(RegisterViewModel model)
         {
@@ -446,7 +452,6 @@ namespace Sayarah.Web.Controllers
             {
                 CheckModelState();
 
-                //Create user
                 var user = new User
                 {
                     Name = model.Name,
@@ -455,24 +460,23 @@ namespace Sayarah.Web.Controllers
                     IsActive = true
                 };
 
-                //Get external login info if possible
                 ExternalLoginInfo externalLoginInfo = null;
                 if (model.IsExternalLogin)
                 {
-                    externalLoginInfo = await AuthenticationManager.GetExternalLoginInfoAsync();
+                    externalLoginInfo = await _signInManager.GetExternalLoginInfoAsync(); // Changed from AuthenticationManager
                     if (externalLoginInfo == null)
                     {
                         throw new ApplicationException("Can not external login!");
                     }
 
                     user.Logins = new List<UserLogin>
-                    {
-                        new UserLogin
-                        {
-                            LoginProvider = externalLoginInfo.Login.LoginProvider,
-                            ProviderKey = externalLoginInfo.Login.ProviderKey
-                        }
-                    };
+            {
+                new UserLogin
+                {
+                    LoginProvider = externalLoginInfo.LoginProvider, // Changed property names
+                    ProviderKey = externalLoginInfo.ProviderKey
+                }
+            };
 
                     if (model.UserName.IsNullOrEmpty())
                     {
@@ -481,14 +485,13 @@ namespace Sayarah.Web.Controllers
 
                     model.Password = Authorization.Users.User.CreateRandomPassword();
 
-                    if (string.Equals(externalLoginInfo.Email, model.EmailAddress, StringComparison.InvariantCultureIgnoreCase))
+                    if (string.Equals(externalLoginInfo.Principal.FindFirstValue(ClaimTypes.Email), model.EmailAddress, StringComparison.InvariantCultureIgnoreCase))
                     {
                         user.IsEmailConfirmed = true;
                     }
                 }
                 else
                 {
-                    //Username and Password are required if not external login
                     if (model.UserName.IsNullOrEmpty() || model.Password.IsNullOrEmpty())
                     {
                         throw new UserFriendlyException(L("FormIsNotValidMessage"));
@@ -496,30 +499,26 @@ namespace Sayarah.Web.Controllers
                 }
 
                 user.UserName = model.UserName;
-                user.Password = new PasswordHasher().HashPassword(model.Password);
+                user.Password = new PasswordHasher<User>().HashPassword(user, model.Password); // Updated password hasher
 
-                //Switch to the tenant
-                _unitOfWorkManager.Current.EnableFilter(AbpDataFilters.MayHaveTenant); //TODO: Needed?
+                _unitOfWorkManager.Current.EnableFilter(AbpDataFilters.MayHaveTenant);
                 _unitOfWorkManager.Current.SetTenantId(AbpSession.GetTenantId());
 
-                //Add default roles
                 user.Roles = new List<UserRole>();
                 foreach (var defaultRole in await _roleManager.Roles.Where(r => r.IsDefault).ToListAsync())
                 {
                     user.Roles.Add(new UserRole { RoleId = defaultRole.Id });
                 }
 
-                //Save user
                 CheckErrors(await _userManager.CreateAsync(user));
                 await _unitOfWorkManager.Current.SaveChangesAsync();
 
-                //Directly login if possible
                 if (user.IsActive)
                 {
                     AbpLoginResult<Tenant, User> loginResult;
                     if (externalLoginInfo != null)
                     {
-                        loginResult = await _logInManager.LoginAsync(externalLoginInfo.Login, GetTenancyNameOrNull());
+                        loginResult = await _logInManager.LoginAsync(externalLoginInfo, GetTenancyNameOrNull()); // Changed parameter
                     }
                     else
                     {
@@ -535,7 +534,6 @@ namespace Sayarah.Web.Controllers
                     Logger.Warn("New registered user could not be login. This should not be normally. login result: " + loginResult.Result);
                 }
 
-                //If can not login, show a register result page
                 return View("RegisterResult", new RegisterResultViewModel
                 {
                     TenancyName = GetTenancyNameOrNull(),
@@ -579,7 +577,7 @@ namespace Sayarah.Web.Controllers
                             user.IsEmailConfirmed = true;
                             await _userManager.UpdateAsync(user);
                             await _unitOfWorkManager.Current.SaveChangesAsync();
-                            AuthenticationManager.SignOut();
+                            await _signInManager.SignOutAsync(); // Replaced AuthenticationManager.SignOut()
 
                             return Json(new
                             {
@@ -593,7 +591,6 @@ namespace Sayarah.Web.Controllers
                             {
                                 Success = false,
                                 Message = L("Pages.ConfirmRegisteration.NotFound")
-
                             });
                         }
                     }
@@ -602,7 +599,6 @@ namespace Sayarah.Web.Controllers
                 {
                     Success = false,
                     Message = L("Pages.ConfirmRegisteration.NotFound")
-
                 });
             }
             catch (Exception ex)
@@ -614,7 +610,6 @@ namespace Sayarah.Web.Controllers
                 });
             }
         }
-
         #endregion
 
         #region ForgotPassword AngularJs
@@ -622,7 +617,7 @@ namespace Sayarah.Web.Controllers
         // POST: /Account/ForgotPassword
         //[HttpPost]
         [AllowAnonymous]
-        //[ValidateAntiForgeryToken]
+        [HttpPost]
         public async Task<ActionResult> ForgotPassword(ForgotPasswordViewModel input)
         {
             try
@@ -631,33 +626,16 @@ namespace Sayarah.Web.Controllers
                 if (ModelState.IsValid)
                 {
                     var user = await _userManager.FindByEmailAsync(input.EmailAddress);
-                    if (user == null || !(await _userManager.IsEmailConfirmedAsync(user.Id)))
+                    if (user == null || !(await _userManager.IsEmailConfirmedAsync(user)))
                     {
-                        // Don't reveal that the user does not exist or is not confirmed
                         return Json(new { Success = false, Message = new ErrorInfo(L("Common.Error.InvalidEmail", new_lang)) });
                     }
 
-                    ////As U Need To User////
-                    //IList<string> _userRoles = await _userManager.GetRolesAsync(user.Id);
-                    //if (_userRoles != null && _userRoles.Count > 0)
-                    //{
-                    //    switch (_userRoles[0])
-                    //    {
-                    //        case StaticRoleNames.Host.Admin:
-                    //            return Json(new { Success = false, Error = new ErrorInfo(L("Pages.Login.InvalidRole", new_lang)) });
+                    // Generate password reset token (no need for DpapiDataProtectionProvider in .NET Core)
+                    string code = await _userManager.GeneratePasswordResetTokenAsync(user);
+                    code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+                    var callbackUrl = $"{input.LocationHost}/#/resetPassword?id={code}";
 
-                    //        default:
-                    //            break;
-                    //    }
-                    //}
-
-                    // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
-                    // Send an email with this link
-                    var dataProtectionProvider = new DpapiDataProtectionProvider(SayarahConsts.DataProtectionProviderName);
-                    _userManager.UserTokenProvider = new DataProtectorTokenProvider<User, long>(dataProtectionProvider.Create("ASP.NET Identity")) as IUserTokenProvider<User, long>;
-                    string code = await _userManager.GeneratePasswordResetTokenAsync(user.Id);
-                    code = HttpUtility.UrlEncode(code);
-                    var callbackUrl = input.LocationHost + "/#/resetPassword?id=" + code;
                     try
                     {
                         bool result = await _commonAppService.SendEmail(new SendEmailRequest
@@ -677,7 +655,6 @@ namespace Sayarah.Web.Controllers
                     return Json(new { Success = true, Message = L("Pages.ResetPassword.checkEmail", new_lang) });
                 }
 
-                // If we got this far, something failed, redisplay form
                 return Json(new { Success = false, Message = new ErrorInfo(L("FormIsNotValidMessage", new_lang)) });
             }
             catch (UserFriendlyException ex)
@@ -685,11 +662,9 @@ namespace Sayarah.Web.Controllers
                 return Json(new { Success = false, Message = new ErrorInfo(ex.Message) });
             }
         }
-        //
-        // POST: /Account/ResetPassword
-        //  [HttpPost]
+
         [AllowAnonymous]
-        // [ValidateAntiForgeryToken]
+        [HttpPost]
         public async Task<ActionResult> ResetPassword(ResetPasswordViewModel input)
         {
             CultureInfo new_lang = new CultureInfo((!string.IsNullOrEmpty(input.Lang) && input.Lang.Equals("ar")) ? "ar" : "en");
@@ -701,22 +676,34 @@ namespace Sayarah.Web.Controllers
             var user = await _userManager.FindByEmailAsync(input.EmailAddress);
             if (user == null)
             {
-                // Don't reveal that the user does not exist
                 return Json(new { Success = false, Message = new ErrorInfo(L("Common.Error.InvalidEmail", new_lang)) });
             }
 
-            var dataProtectionProvider = new DpapiDataProtectionProvider(SayarahConsts.DataProtectionProviderName);
-            _userManager.UserTokenProvider = new DataProtectorTokenProvider<User, long>(dataProtectionProvider.Create("ASP.NET Identity")) as IUserTokenProvider<User, long>;
-            var result = await _userManager.ResetPasswordAsync(user.Id, HttpUtility.UrlDecode(input.Code), input.Password);
-            if (result.Succeeded)
+            try
             {
-                return Json(new { Success = true });
+                var code = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(input.Code));
+                var result = await _userManager.ResetPasswordAsync(user, code, input.Password);
+
+                if (result.Succeeded)
+                {
+                    return Json(new { Success = true });
+                }
+                else
+                {
+                    return Json(new
+                    {
+                        Success = false,
+                        Message = new ErrorInfo(result.Errors.First().Description)
+                    });
+                }
             }
-            else
+            catch (FormatException)
             {
-                return Json(new { Success = false, Message = new ErrorInfo(((string[])(result.Errors))[0]) });
-                ///OR///
-                //return Json(new { Success = false, Message = new ErrorInfo(L("ValidationError")) });
+                return Json(new
+                {
+                    Success = false,
+                    Message = new ErrorInfo(L("InvalidToken"))
+                });
             }
         }
 
@@ -724,34 +711,27 @@ namespace Sayarah.Web.Controllers
 
         #region External Login
 
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult ExternalLogin(string provider, string returnUrl)
+        public IActionResult ExternalLogin(string provider, string returnUrl)
         {
-            return new ChallengeResult(
-                provider,
-                Url.Action(
-                    "ExternalLoginCallback",
-                    "Account",
-                    new
-                    {
-                        ReturnUrl = returnUrl
-                    })
-            );
+            var redirectUrl = Url.Action("ExternalLoginCallback", "Account", new { ReturnUrl = returnUrl });
+            var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
+            return Challenge(properties, provider); // Use built-in Challenge method
         }
 
         public virtual async Task<ActionResult> ExternalLoginCallback(string returnUrl, string tenancyName = "")
         {
-            var loginInfo = await AuthenticationManager.GetExternalLoginInfoAsync();
+            var loginInfo = await _signInManager.GetExternalLoginInfoAsync();
             if (loginInfo == null)
             {
                 return RedirectToAction("Login");
             }
 
-            //Try to find tenancy name
             if (tenancyName.IsNullOrEmpty())
             {
-                var tenants = await FindPossibleTenantsOfUserAsync(loginInfo.Login);
+                var tenants = await FindPossibleTenantsOfUserAsync(loginInfo);
                 switch (tenants.Count)
                 {
                     case 0:
@@ -768,36 +748,36 @@ namespace Sayarah.Web.Controllers
                 }
             }
 
-            var loginResult = await _logInManager.LoginAsync(loginInfo.Login, tenancyName);
+            var loginResult = await _logInManager.LoginAsync(loginInfo, tenancyName);
 
             switch (loginResult.Result)
             {
                 case AbpLoginResultType.Success:
                     await SignInAsync(loginResult.User, loginResult.Identity);
-
-                    if (string.IsNullOrWhiteSpace(returnUrl))
-                    {
-                        returnUrl = Url.Action("Index", "Home");
-                    }
-
-                    return Redirect(returnUrl);
+                    return Redirect(returnUrl ?? Url.Action("Index", "Home"));
                 case AbpLoginResultType.UnknownExternalLogin:
                     return await RegisterView(loginInfo, tenancyName);
                 default:
-                    throw CreateExceptionForFailedLoginAttempt(loginResult.Result, loginInfo.Email ?? loginInfo.DefaultUserName, tenancyName);
+                    throw CreateExceptionForFailedLoginAttempt(
+                        loginResult.Result,
+                        loginInfo.Principal.FindFirstValue(ClaimTypes.Email) ?? loginInfo.ProviderKey,
+                        tenancyName);
             }
         }
 
         private async Task<ActionResult> RegisterView(ExternalLoginInfo loginInfo, string tenancyName = null)
         {
-            var name = loginInfo.DefaultUserName;
-            var surname = loginInfo.DefaultUserName;
+            var name = loginInfo.Principal.Identity.Name;
+            var surname = loginInfo.Principal.Identity.Name;
 
-            var extractedNameAndSurname = TryExtractNameAndSurnameFromClaims(loginInfo.ExternalIdentity.Claims.ToList(), ref name, ref surname);
+            var extractedNameAndSurname = TryExtractNameAndSurnameFromClaims(
+                loginInfo.Principal.Claims.ToList(),
+                ref name,
+                ref surname);
 
             var viewModel = new RegisterViewModel
             {
-                EmailAddress = loginInfo.Email,
+                EmailAddress = loginInfo.Principal.FindFirstValue(ClaimTypes.Email),
                 Name = name,
                 Surname = surname,
                 IsExternalLogin = true
@@ -912,7 +892,7 @@ namespace Sayarah.Web.Controllers
         #region Common Partial Views
 
 
-        [ChildActionOnly]
+
         public PartialViewResult TenantChange()
         {
             var loginInformations = AsyncHelper.RunSync(() => _sessionAppService.GetCurrentLoginInformations());
@@ -933,7 +913,7 @@ namespace Sayarah.Web.Controllers
         }
 
 
-        [ChildActionOnly]
+
         public PartialViewResult _AccountLanguages()
         {
             var model = new LanguageSelectionViewModel
@@ -1029,7 +1009,9 @@ namespace Sayarah.Web.Controllers
 
             if (string.IsNullOrWhiteSpace(input.ReturnUrl))
             {
-                input.ReturnUrl = Request.ApplicationPath;
+                input.ReturnUrl = "/"; // Simple root path replacement
+                                       // OR for more accurate handling:
+                input.ReturnUrl = Url.Content("~/"); // Handles virtual paths if needed
             }
 
             return Json(new { Success = true, TargetUrl = input.ReturnUrl });
@@ -1092,7 +1074,9 @@ namespace Sayarah.Web.Controllers
 
             if (string.IsNullOrWhiteSpace(input.ReturnUrl))
             {
-                input.ReturnUrl = Request.ApplicationPath;
+                input.ReturnUrl = "/"; // Simple root path replacement
+                                       // OR for more accurate handling:
+                input.ReturnUrl = Url.Content("~/"); // Handles virtual paths if needed
             }
 
             return Json(new { Success = true, TargetUrl = input.ReturnUrl });
@@ -1145,9 +1129,9 @@ namespace Sayarah.Web.Controllers
         }
 
 
-        public JsonResult FrontLogout()
+        public async Task<JsonResult> FrontLogout()
         {
-            AuthenticationManager.SignOut();
+            await _signInManager.SignOutAsync(); // Replaces AuthenticationManager.SignOut()
             return Json(new AjaxResponse { TargetUrl = "/" });
         }
 
@@ -1176,7 +1160,9 @@ namespace Sayarah.Web.Controllers
 
             if (string.IsNullOrWhiteSpace(returnUrl))
             {
-                returnUrl = Request.ApplicationPath;
+                returnUrl = "/"; // Simple root path replacement
+                                       // OR for more accurate handling:
+                returnUrl = Url.Content("~/"); // Handles virtual paths if needed
             }
 
             if (!string.IsNullOrWhiteSpace(returnUrlHash))
@@ -1191,19 +1177,17 @@ namespace Sayarah.Web.Controllers
 
 
 
+
+
         [HttpGet]
         public async Task<JsonResult> MagicLogin(long id)
         {
             var user = await _userManager.GetUserByIdAsync(id);
-
             var loginResult = await _logInManager.LoginAsync(user.EmailAddress, "123");
-            ////////////////////////////////////////
             await SignInAsync(loginResult.User, loginResult.Identity, false);
 
-            return Json(new { TargetUrl = "/" }, JsonRequestBehavior.AllowGet); // Allow GET request
+            return Json(new { TargetUrl = "/" }); // JsonRequestBehavior is not needed in .NET Core
         }
-
-
         public class PublicLoginModel
         {
             [Required]

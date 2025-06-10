@@ -1,7 +1,8 @@
 ﻿using Abp.AspNetCore.Mvc.Controllers;
 using Abp.IdentityFramework;
 using Abp.UI;
-using Microsoft.AspNet.Identity;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace Sayarah.Web.Controllers
 {
@@ -19,13 +20,21 @@ namespace Sayarah.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                throw new UserFriendlyException(L("FormIsNotValidMessage"));
+                // Collect all validation errors
+                var errors = ModelState.Values
+                    .SelectMany(v => v.Errors)
+                    .Select(e => e.ErrorMessage)
+                    .ToList();
+
+                throw new UserFriendlyException(
+                    L("FormIsNotValidMessage") + ": " + string.Join("; ", errors)
+                );
             }
         }
-        //uncommentthis method if you want to use it
-        //protected void CheckErrors(IdentityResult identityResult)
-        //{
-        //    identityResult.CheckErrors(LocalizationManager);
-        //}
+
+        protected void CheckErrors(IdentityResult identityResult)
+        {
+            identityResult.CheckErrors(LocalizationManager);
+        }
     }
 }
